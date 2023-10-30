@@ -3,6 +3,10 @@ options(warn = -1)
 suppressMessages(library(MplusAutomation, quietly = TRUE))
 options(warn = 1)
 
+create_r_data <- function(mplusdatafile, mplusinputvariablenames) {
+  parts <- strsplit(mplusdatafile, ".", fixed = TRUE)[[1]]
+  paste0(parts[1], ".rds")
+}
 # match Mplus parameters with lavaan parameters
 # (based on the names and variable type)
 match_mplus_param <- function(lav = NULL, mpl = NULL, group.label = character(0)) {
