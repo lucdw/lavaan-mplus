@@ -1,0 +1,12 @@
+mplus.out: HS.missing.MLF.mplus.out
+model: HS.missing.raw.lmd
+model.type: sem
+estimator: MLF
+information: default
+se: default
+meanstructure: default
+missing: ml
+group:
+group.equal:
+group.partial:
+mimic: Both

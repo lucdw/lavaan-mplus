@@ -1,0 +1,12 @@
+mplus.out: ex3.4.WLSMV.mplus.out
+model: ex3.4.dat.lmd
+model.type: sem
+estimator: WLSMV
+information: default
+se: default
+meanstructure: FALSE
+missing: default
+group:
+group.equal:
+group.partial:
+mimic: Both

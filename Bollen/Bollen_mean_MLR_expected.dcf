@@ -1,0 +1,12 @@
+mplus.out: Bollen.mean.MLR.expected.mplus.out
+model: democindus.txt.lmd
+model.type: sem
+estimator: MLR
+information: expected
+se: default
+meanstructure: TRUE
+missing: default
+group:
+group.equal:
+group.partial:
+mimic: Both

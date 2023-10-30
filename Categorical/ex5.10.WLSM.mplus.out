@@ -1,0 +1,287 @@
+Mplus VERSION 6.11 (Linux)
+MUTHEN & MUTHEN
+07/18/2012   4:23 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:        this is an example of a threshold
+          structure CFA for categorical factor indicators
+  DATA:        FILE IS ex5.10.dat;
+  VARIABLE:        NAMES ARE  u1a-u1c u2a-u2c;
+          CATEGORICAL ARE u1a-u1c u2a-u2c;
+  ANALYSIS: estimator=WLSM;
+  convergence = 1e-9;
+  MODEL:        f1 BY u1a u1b@1 u1c@1;
+          f2 BY u2a u2b@1 u2c@1;
+          [u1a$1 u1b$1 u1c$1] (1);
+          [u2a$1 u2b$1 u2c$1] (2);
+  OUTPUT: standardized;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a threshold
+structure CFA for categorical factor indicators
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   U1A         U1B         U1C         U2A         U2B         U2C
+
+Continuous latent variables
+   F1          F2
+
+
+Estimator                                                     WLSM
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.100D-08
+Maximum number of steepest descent iterations                   20
+Parameterization                                             DELTA
+
+Input data file(s)
+  ex5.10.dat
+
+Input data format  FREE
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    U1A
+      Category 1    0.316      158.000
+      Category 2    0.684      342.000
+    U1B
+      Category 1    0.282      141.000
+      Category 2    0.718      359.000
+    U1C
+      Category 1    0.312      156.000
+      Category 2    0.688      344.000
+    U2A
+      Category 1    0.718      359.000
+      Category 2    0.282      141.000
+    U2B
+      Category 1    0.704      352.000
+      Category 2    0.296      148.000
+    U2C
+      Category 1    0.694      347.000
+      Category 2    0.306      153.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        5
+
+Chi-Square Test of Model Fit
+
+          Value                             15.050*
+          Degrees of Freedom                    16
+          P-Value                           0.5210
+          Scaling Correction Factor          0.769
+            for WLSM
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.039
+          Probability RMSEA <= .05           0.992
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.002
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            468.118
+          Degrees of Freedom                    15
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.742
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F1       BY
+    U1A                1.000      0.000    999.000    999.000
+    U1B                1.000      0.000    999.000    999.000
+    U1C                1.000      0.000    999.000    999.000
+
+ F2       BY
+    U2A                1.000      0.000    999.000    999.000
+    U2B                1.000      0.000    999.000    999.000
+    U2C                1.000      0.000    999.000    999.000
+
+ F2       WITH
+    F1                 0.176      0.040      4.400      0.000
+
+ Thresholds
+    U1A$1             -0.515      0.043    -11.874      0.000
+    U1B$1             -0.515      0.043    -11.874      0.000
+    U1C$1             -0.515      0.043    -11.874      0.000
+    U2A$1              0.540      0.044     12.247      0.000
+    U2B$1              0.540      0.044     12.247      0.000
+    U2C$1              0.540      0.044     12.247      0.000
+
+ Variances
+    F1                 0.494      0.043     11.454      0.000
+    F2                 0.526      0.044     12.078      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F1       BY
+    U1A                0.703      0.031     22.907      0.000
+    U1B                0.703      0.031     22.907      0.000
+    U1C                0.703      0.031     22.907      0.000
+
+ F2       BY
+    U2A                0.725      0.030     24.156      0.000
+    U2B                0.725      0.030     24.156      0.000
+    U2C                0.725      0.030     24.156      0.000
+
+ F2       WITH
+    F1                 0.345      0.077      4.510      0.000
+
+ Thresholds
+    U1A$1             -0.515      0.043    -11.874      0.000
+    U1B$1             -0.515      0.043    -11.874      0.000
+    U1C$1             -0.515      0.043    -11.874      0.000
+    U2A$1              0.540      0.044     12.247      0.000
+    U2B$1              0.540      0.044     12.247      0.000
+    U2C$1              0.540      0.044     12.247      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+    F2                 1.000      0.000    999.000    999.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F1       BY
+    U1A                0.703      0.031     22.907      0.000
+    U1B                0.703      0.031     22.907      0.000
+    U1C                0.703      0.031     22.907      0.000
+
+ F2       BY
+    U2A                0.725      0.030     24.156      0.000
+    U2B                0.725      0.030     24.156      0.000
+    U2C                0.725      0.030     24.156      0.000
+
+ F2       WITH
+    F1                 0.345      0.077      4.510      0.000
+
+ Thresholds
+    U1A$1             -0.515      0.043    -11.874      0.000
+    U1B$1             -0.515      0.043    -11.874      0.000
+    U1C$1             -0.515      0.043    -11.874      0.000
+    U2A$1              0.540      0.044     12.247      0.000
+    U2B$1              0.540      0.044     12.247      0.000
+    U2C$1              0.540      0.044     12.247      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+    F2                 1.000      0.000    999.000    999.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ F1       BY
+    U1A                0.703      0.031     22.907      0.000
+    U1B                0.703      0.031     22.907      0.000
+    U1C                0.703      0.031     22.907      0.000
+
+ F2       BY
+    U2A                0.725      0.030     24.156      0.000
+    U2B                0.725      0.030     24.156      0.000
+    U2C                0.725      0.030     24.156      0.000
+
+ F2       WITH
+    F1                 0.345      0.077      4.510      0.000
+
+ Thresholds
+    U1A$1             -0.515      0.043    -11.874      0.000
+    U1B$1             -0.515      0.043    -11.874      0.000
+    U1C$1             -0.515      0.043    -11.874      0.000
+    U2A$1              0.540      0.044     12.247      0.000
+    U2B$1              0.540      0.044     12.247      0.000
+    U2C$1              0.540      0.044     12.247      0.000
+
+ Variances
+    F1                 1.000      0.000    999.000    999.000
+    F2                 1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    U1A                0.494      0.043     11.454      0.000      0.506
+    U1B                0.494      0.043     11.454      0.000      0.506
+    U1C                0.494      0.043     11.454      0.000      0.506
+    U2A                0.526      0.044     12.078      0.000      0.474
+    U2B                0.526      0.044     12.078      0.000      0.474
+    U2C                0.526      0.044     12.078      0.000      0.474
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.504E+00
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  16:23:17
+        Ending Time:  16:23:17
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2011 Muthen & Muthen

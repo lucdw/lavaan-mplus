@@ -1,0 +1,12 @@
+mplus.out: ex5.14.mplus.out
+model: ex5.14.dat.lmd
+model.type: sem
+estimator: ML
+information: expected
+se: default
+meanstructure: FALSE
+missing: listwise
+group: g
+group.equal: loadings
+group.partial: f1=~y3
+mimic: Both

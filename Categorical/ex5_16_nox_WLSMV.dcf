@@ -1,0 +1,12 @@
+mplus.out: ex5.16_nox.WLSMV.mplus.out
+model: ex5.16_nox.dat.lmd
+model.type: sem
+estimator: WLSMV
+information: default
+se: default
+meanstructure: FALSE
+missing: default
+group: g
+group.equal: loadings;thresholds
+group.partial:
+mimic: Both

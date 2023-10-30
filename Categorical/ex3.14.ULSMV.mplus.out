@@ -1,0 +1,203 @@
+Mplus VERSION 6.11 (Linux)
+MUTHEN & MUTHEN
+07/18/2012   4:23 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:        this is an example of a path analysis
+          with a combination of continuous and
+          categorical dependent variables
+  DATA:        FILE IS ex3.14.dat;
+  VARIABLE:        NAMES ARE y1 y2 u1 x1-x3;
+          CATEGORICAL IS u1;
+  ANALYSIS: estimator=ULSMV;
+  CONVERGENCE = 1E-9;
+  MODEL:        y1 y2 ON x1 x2 x3;
+          u1 ON y1 y2 x2;
+  OUTPUT: standardized;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a path analysis
+with a combination of continuous and
+categorical dependent variables
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    3
+Number of independent variables                                  3
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   Y1          Y2
+
+  Binary and ordered categorical (ordinal)
+   U1
+
+Observed independent variables
+   X1          X2          X3
+
+
+Estimator                                                    ULSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.100D-08
+Maximum number of steepest descent iterations                   20
+Parameterization                                             DELTA
+
+Input data file(s)
+  ex3.14.dat
+
+Input data format  FREE
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    U1
+      Category 1    0.664      332.000
+      Category 2    0.336      168.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       14
+
+Chi-Square Test of Model Fit
+
+          Value                              2.838*
+          Degrees of Freedom                     3
+          P-Value                           0.4173
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.074
+          Probability RMSEA <= .05           0.799
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.002
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            434.304
+          Degrees of Freedom                    12
+          P-Value                           0.0000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.078      0.033      2.367      0.018
+    X2                 0.201      0.032      6.271      0.000
+    X3                 0.360      0.041      8.801      0.000
+
+ Y2       ON
+    X1                 0.288      0.028     10.413      0.000
+    X2                 0.196      0.024      8.242      0.000
+    X3                 0.085      0.032      2.683      0.007
+
+ U1       ON
+    Y1                 1.044      0.068     15.409      0.000
+    Y2                -1.105      0.116     -9.532      0.000
+    X2                 2.060      0.196     10.531      0.000
+
+ Intercepts
+    Y1                 0.955      0.033     29.106      0.000
+    Y2                 1.981      0.024     82.469      0.000
+
+ Thresholds
+    U1$1              -0.135      0.259     -0.521      0.602
+
+ Residual Variances
+    Y1                 0.517      0.038     13.476      0.000
+    Y2                 0.271      0.025     10.979      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX        Std
+                    Estimate   Estimate
+
+ Y1       ON
+    X1                 0.099      0.078
+    X2                 0.245      0.201
+    X3                 0.441      0.360
+
+ Y2       ON
+    X1                 0.476      0.288
+    X2                 0.313      0.196
+    X3                 0.137      0.085
+
+ U1       ON
+    Y1                 0.370      1.044
+    Y2                -0.299     -1.105
+    X2                 0.889      2.060
+
+ Intercepts
+    Y1                 1.127      0.955
+    Y2                 3.057      1.981
+
+ Thresholds
+    U1$1              -0.056     -0.135
+
+ Residual Variances
+    Y1                 0.719      0.517
+    Y2                 0.646      0.271
+
+
+R-SQUARE
+
+    Observed                   Residual
+    Variable        Estimate   Variance
+
+    Y1                 0.281
+    Y2                 0.354
+    U1                 0.982      0.106
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.133E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  16:23:16
+        Ending Time:  16:23:16
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2011 Muthen & Muthen

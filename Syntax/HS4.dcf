@@ -1,0 +1,12 @@
+mplus.out: HS3.mplus.out
+model: HS4.lmd
+model.type: sem
+estimator: ML
+information: observed
+se: default
+meanstructure: TRUE
+missing: default
+group:
+group.equal:
+group.partial:
+mimic: Both

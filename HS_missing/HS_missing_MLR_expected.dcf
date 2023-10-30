@@ -1,0 +1,12 @@
+mplus.out: HS.missing.MLR.expected.mplus.out
+model: HS.missing.raw.lmd
+model.type: sem
+estimator: MLR
+information: expected
+se: default
+meanstructure: default
+missing: ml
+group:
+group.equal:
+group.partial:
+mimic: Both

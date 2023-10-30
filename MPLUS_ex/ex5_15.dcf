@@ -1,0 +1,12 @@
+mplus.out: ex5.15.mplus.out
+model: ex5.15.dat.lmd
+model.type: sem
+estimator: ML
+information: observed
+se: default
+meanstructure: TRUE
+missing: default
+group: g
+group.equal: loadings;intercepts
+group.partial: f1=~y3;y3~1
+mimic: Both

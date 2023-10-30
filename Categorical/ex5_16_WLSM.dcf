@@ -1,0 +1,12 @@
+mplus.out: ex5.16.WLSM.mplus.out
+model: ex5.16.dat.lmd
+model.type: sem
+estimator: WLSM
+information: default
+se: default
+meanstructure: FALSE
+missing: default
+group: g
+group.equal: loadings;thresholds
+group.partial:
+mimic: Both

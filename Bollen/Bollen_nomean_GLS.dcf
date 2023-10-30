@@ -1,0 +1,12 @@
+mplus.out: Bollen.nomean.GLS.mplus.out
+model: democindus.txt.lmd
+model.type: sem
+estimator: GLS
+information: default
+se: default
+meanstructure: FALSE
+missing: listwise
+group:
+group.equal:
+group.partial:
+mimic: Both

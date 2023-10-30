@@ -1,0 +1,11 @@
+data: BB.missing.raw.rds
+model.type: sem
+estimator: ML
+information: default
+se: default
+meanstructure: true
+mimic: default
+missing: default
+group:
+group.equal:
+group.partial:

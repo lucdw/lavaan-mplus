@@ -1,0 +1,163 @@
+Mplus VERSION 6.11 (Linux)
+MUTHEN & MUTHEN
+07/18/2012   4:23 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:        this is an example of a probit regression
+          for a binary or categorical observed
+          dependent variable with two covariates
+  DATA:        FILE IS ex3.4.dat;
+  VARIABLE:        NAMES ARE u1 x1 x3;
+          CATEGORICAL = u1;
+  ANALYSIS: estimator=WLSMV;
+  CONVERGENCE = 1E-10;
+  MODEL:        u1 ON x1 x3;
+  OUTPUT: standardized;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a probit regression
+for a binary or categorical observed
+dependent variable with two covariates
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    1
+Number of independent variables                                  2
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   U1
+
+Observed independent variables
+   X1          X3
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.100D-09
+Maximum number of steepest descent iterations                   20
+Parameterization                                             DELTA
+
+Input data file(s)
+  ex3.4.dat
+
+Input data format  FREE
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    U1
+      Category 1    0.642      321.000
+      Category 2    0.358      179.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        3
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000*
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            193.239
+          Degrees of Freedom                     2
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ U1       ON
+    X1                 1.022      0.121      8.459      0.000
+    X3                 2.474      0.224     11.031      0.000
+
+ Thresholds
+    U1$1               0.984      0.119      8.298      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX        Std
+                    Estimate   Estimate
+
+ U1       ON
+    X1                 0.375      1.022
+    X3                 0.848      2.474
+
+ Thresholds
+    U1$1               0.344      0.984
+
+
+R-SQUARE
+
+    Observed                   Residual
+    Variable        Estimate   Variance
+
+    U1                 0.877      1.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.428E+00
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  16:23:17
+        Ending Time:  16:23:17
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2011 Muthen & Muthen

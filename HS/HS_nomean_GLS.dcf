@@ -1,0 +1,12 @@
+mplus.out: HS.nomean.GLS.mplus.out
+model: HS.raw.lmd
+model.type: sem
+estimator: GLS
+information: default
+se: default
+meanstructure: FALSE
+missing: listwise
+group:
+group.equal:
+group.partial:
+mimic: Both

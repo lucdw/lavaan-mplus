@@ -1,0 +1,12 @@
+mplus.out: Bollen.mean.MLF.mplus.out
+model: democindus.txt.lmd
+model.type: sem
+estimator: MLF
+information: default
+se: default
+meanstructure: TRUE
+missing: default
+group:
+group.equal:
+group.partial:
+mimic: Both

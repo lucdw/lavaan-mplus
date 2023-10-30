@@ -1,0 +1,12 @@
+mplus.out: HS.mean.ML.bootstrap.mplus.out
+model: HS.raw.lmd
+model.type: sem
+estimator: ML
+information: observed
+se: bootstrap
+meanstructure: TRUE
+missing: default
+group:
+group.equal:
+group.partial:
+mimic: Both

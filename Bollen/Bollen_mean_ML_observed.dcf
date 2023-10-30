@@ -1,0 +1,12 @@
+mplus.out: Bollen.mean.ML.observed.mplus.out
+model: democindus.txt.lmd
+model.type: sem
+estimator: ML
+information: observed
+se: default
+meanstructure: TRUE
+missing: default
+group:
+group.equal:
+group.partial:
+mimic: Both

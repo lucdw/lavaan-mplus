@@ -1,0 +1,12 @@
+mplus.out: BB.mean.MLR.mplus.out
+model: BB.missing.raw.lmd
+model.type: sem
+estimator: MLR
+information: observed
+se: default
+meanstructure: TRUE
+missing: ml
+group:
+group.equal:
+group.partial:
+mimic: Both

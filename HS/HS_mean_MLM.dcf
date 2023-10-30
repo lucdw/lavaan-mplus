@@ -1,0 +1,12 @@
+mplus.out: HS.mean.MLM.mplus.out
+model: HS.raw.lmd
+model.type: sem
+estimator: MLM
+information: default
+se: default
+meanstructure: TRUE
+missing: default
+group:
+group.equal:
+group.partial:
+mimic: Both

@@ -1,0 +1,12 @@
+mplus.out: HS.mean.WLS.mplus.out
+model: HS.raw.lmd
+model.type: sem
+estimator: WLS
+information: default
+se: default
+meanstructure: TRUE
+missing: default
+group:
+group.equal:
+group.partial:
+mimic: Both

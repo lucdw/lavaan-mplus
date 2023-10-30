@@ -1,0 +1,12 @@
+mplus.out: HS.nomean.ML.expected.mplus.out
+model: HS.raw.lmd
+model.type: sem
+estimator: ML
+information: expected
+se: default
+meanstructure: FALSE
+missing: listwise
+group:
+group.equal:
+group.partial:
+mimic: Both
