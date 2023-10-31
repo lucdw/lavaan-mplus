@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 lavaan-mplus.Rproj
+*.log
+*.mplus.in
+*.rds
+mplus_gen/*.*

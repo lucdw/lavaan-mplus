@@ -4,9 +4,15 @@ suppressMessages(library(MplusAutomation, quietly = TRUE))
 options(warn = 1)
 
 create_r_data <- function(mplusdatafile, mplusinputvariablenames) {
-  parts <- strsplit(mplusdatafile, ".", fixed = TRUE)[[1]]
-  paste0(parts[1], ".rds")
+  rdatafile <- paste0(mplusdatafile, ".rds")
+  if (!file.exists(rdatafile) || file.mtime(mplusdatafile) > file.mtime(rdatafile)) {
+    the.data <- read.table(mplusdatafile, sep=" ", na.strings = "-999999",
+                           col.names = strsplit(mplusinputvariablenames, " ", fixed = TRUE)[[1]])
+    saveRDS(the.data, file = rdatafile)
+  }
+  rdatafile
 }
+
 # match Mplus parameters with lavaan parameters
 # (based on the names and variable type)
 match_mplus_param <- function(lav = NULL, mpl = NULL, group.label = character(0)) {
@@ -34,7 +40,7 @@ match_mplus_param <- function(lav = NULL, mpl = NULL, group.label = character(0)
     #lav$group <- rep(1L, length(lav$lhs))
   }
 
-  for (i in seq_along(lav)) {
+  for (i in seq_along(lav$lhs)) {
     idx <- integer(0L)
     # find corresponding Mplus parameter
     if (lav$op[i] == "=~") {
@@ -224,49 +230,38 @@ join_fit_lav_mplus <- function(lav, mpl) {
   lav.df
 }
 
-one_test_mplus <- function(model = NULL, data = NULL, model.type = "sem",
-                         estimator = "default", information = "default",
-                         se = "default",
-                         meanstructure = "default",
-                         mimic = "default",
-                         missing = "default",
-                         group = NULL, group.equal = "", group.partial = "",
-                         mpl.prefix = NULL, mpl.file = NULL, log = TRUE) {
-  if (is.null(mpl.file)) {
-    if (meanstructure == "default") {
-      txt.mean <- ""
-    } else if (is.logical(meanstructure)) {
-      if (meanstructure) txt.mean <- ".mean" else txt.mean <- ".nomean"
-    }
-    if (information == "default") {
-      txt.info <- ""
-    } else {
-      txt.info <- paste(".", information, sep = "")
-    }
-    mpl.file <- paste(mpl.prefix, txt.mean, ".", estimator, txt.info,
-                      ".mplus.out", sep = "")
+one_test_mplus <- function(mpl.file, test.object, mplus.model, logfile) {
+  cat("Mplus file: ", mpl.file, "\n", file = logfile)
+  cat("estimator =", test.object$estimator, "information =",
+        test.object$information, "meanstructure =", test.object$meanstructure, "\n", file = logfile)
+  if (test.object$se == "boot" || test.object$se == "bootstrap") cat("se = BOOTSTRAP\n", file = logfile)
+  if (test.object$group != "") {
+    cat("grouping variable: ", test.object$group, "\n", file = logfile)
+    cat("group equality constraints: ",
+        ifelse(is.null(test.object$group.equal), "none",
+               paste(test.object$group.equal, collapse = " ")), "\n", file = logfile)
+    cat("group partial equality: ",
+        ifelse(is.null(test.object$group.partial), "none", test.object$group.partial), "\n", file = logfile)
+  } else {
+    test.object$group <- NULL
   }
-  cat("Mplus file: ", mpl.file, "\n")
-  if (model.type == "sem" || model.type == "cfa") {
-    fit <- sem(model, data = data, estimator = estimator, information = information,
-               meanstructure = meanstructure, mimic = mimic, se = se,
-               group = group, missing = missing, bootstrap = 100L,
-               group.equal = group.equal, group.partial = group.partial)
-  } else if (model.type == "growth") {
-    fit <- growth(model, data = data, estimator = estimator,
-                  information = information, mimic = mimic, se = se,
-                  group = group, missing = missing,  bootstrap = 100L,
-                  group.equal = group.equal, group.partial = group.partial)
+  if (!is.null(test.object$missing)) cat("missing = ", test.object$missing, "\n", file = logfile)
+  if (test.object$model.type == "sem" || test.object$model.type == "cfa") {
+    fit <- sem(test.object$model, data = readRDS(test.object$data), estimator = test.object$estimator,
+               information = test.object$information, meanstructure = test.object$meanstructure,
+               mimic = test.object$mimic, se = test.object$se,
+               group = test.object$group, missing = test.object$missing, bootstrap = 100L,
+               group.equal = test.object$group.equal, group.partial = test.object$group.partial)
+  } else if (test.object$model.type == "growth") {
+    fit <- growth(test.object$model, data = readRDS(test.object$data), estimator = test.object$estimator,
+                  information = test.object$information, mimic = test.object$mimic, se = test.object$se,
+                  group = test.object$group, missing = test.object$missing,  bootstrap = 100L,
+                  group.equal = test.object$group.equal, group.partial = test.object$group.partial)
   }
-  cat("Lavaan total timing: ", fit@timing$total)
-  cat(" -- mimic = ", fit@Options$mimic, "\n")
-  cat(" Number of iterations: ", fit@optim$iterations, "\n")
-  # get parameters
-  #mpl.par <- extractModelParameters(mpl.file)
-  #sink(tempfile()) # to avoid cat() output
-  sink(tempfile())
-  mpl.par <- readModels(mpl.file)$parameters
-  sink()
+  cat("Lavaan total timing: ", fit@timing$total, file = logfile)
+  cat(" -- mimic = ", fit@Options$mimic, "\n", file = logfile)
+  cat(" Number of iterations: ", fit@optim$iterations, "\n", file = logfile)
+  mpl.par <- mplus.model
   lav.par <- parameterEstimates(fit, ci = FALSE, fmi = FALSE,
                                 remove.system.eq = FALSE,
                                 remove.eq = FALSE, remove.ineq = FALSE,
@@ -343,15 +338,15 @@ one_test_mplus <- function(model = NULL, data = NULL, model.type = "sem",
   sink()
   lav.fit <- fitMeasures(fit)
   # remove some fit values
-  if (estimator %in% c("WLS", "WLSM", "WLSMV", "ULS", "ULSM", "ULSMV")) {
+  if (test.object$estimator %in% c("WLS", "WLSM", "WLSMV", "ULS", "ULSM", "ULSMV")) {
     idx <- which(names(lav.fit) == "srmr")
     if (length(idx) > 0L) lav.fit <- lav.fit[-idx]
   }
-  if (estimator %in% c("MLMV", "MLMVS", "WLSM", "WLSMV", "ULSM", "ULSMV")) {
+  if (test.object$estimator %in% c("MLMV", "MLMVS", "WLSM", "WLSMV", "ULSM", "ULSMV")) {
     idx <- which(names(lav.fit) == "chisq.scaling.factor")
     if (length(idx) > 0L) lav.fit <- lav.fit[-idx]
   }
-  if (estimator %in% c("MLM", "MLMV", "MLMVS", "MLR",
+  if (test.object$estimator %in% c("MLM", "MLMV", "MLMVS", "MLR",
                       "WLSM", "WLSMV", "ULSM", "ULSMV")) {
     # remove all non-scaled versions
     idx <- which(names(lav.fit) %in% c("chisq", "df", "pvalue",
@@ -361,15 +356,15 @@ one_test_mplus <- function(model = NULL, data = NULL, model.type = "sem",
                                         "rmsea.pvalue"))
     lav.fit <- lav.fit[-idx]
   }
-  if (!is.null(group)) {
+  if (!is.null(test.object$group)) {
     idx <- which(names(lav.fit) == "ntotal")
     if (length(idx)) lav.fit <- lav.fit[-idx]
   }
   # joint fit measures lav mpl
   lav.df.fit <- join_fit_lav_mplus(lav = lav.fit, mpl = mpl.fit)
-  if (log) {
+  if (test.object$log) {
     # write log
-    log.file <- paste(mpl.file, ".log", sep = "")
+    log.file <- paste(mpl.file, "mim", test.object$mimic, ".log", sep = "")
     sink(log.file)
     # header
     version <- read.dcf(file = system.file("DESCRIPTION", package = "lavaan"),
@@ -377,85 +372,34 @@ one_test_mplus <- function(model = NULL, data = NULL, model.type = "sem",
     cat("# lavaan TESTsuite -- lavaan version ", version, "\n")
     cat("# date: ", date(), "\n")
     cat("# file: ", mpl.file, "\n\n")
-    print(lav.df.par)
+    print(lav.df.par, max = 10000L)
     cat("\n")
-    print(lav.df.fit)
+    print(lav.df.fit, max = 10000L)
     sink()
   }
+  par.idx <- which(abs(lav.df.par$delta) > 0.0005)
+  cat("parameter values: number of delta's > 0.0005: ",
+      length(par.idx), "\n", file = logfile)
+  if (length(par.idx) > 0L) {
+    sink(logfile)
+    print(lav.df.par[par.idx, ])
+    sink()
+  }
+  na.idx <- which(is.na(lav.df.par$delta))
+  if (length(na.idx) > 0L) {
+    cat("parameter values: number of NA's:", length(na.idx), "\n", file = logfile)
+    sink(logfile)
+    print(lav.df.par[na.idx, ])
+    sink()
+  }
+  fit.idx <- which(abs(lav.df.fit$delta) > 0.0005)
+  cat("fit values:       number of delta's > 0.0005: ",
+      length(fit.idx), "\n", file = logfile)
+  if (length(fit.idx) > 0L) {
+    sink(logfile)
+    print(lav.df.fit[fit.idx, ])
+    sink()
+  }
+  cat("\n", file = logfile)
   return(list(lav.df.par, lav.df.fit))
-}
-
-# test
-all_test_mplus <- function(model = NULL, data = NULL, test_objects = NULL, mpl.prefix = NULL,
-                         mpl.file = NULL, mimic = "default", model.type = "sem",
-                         verbose = TRUE, log = TRUE) {
-  if (verbose) {
-    # header
-    version <- read.dcf(file = system.file("DESCRIPTION", package = "lavaan"),
-                        fields = "Version")
-    cat("\n")
-    cat("# lavaan TESTsuite -- lavaan version: ", version, "\n")
-    cat("# date: ", date(), "\n")
-    cat("# file: ", mpl.prefix, "\n\n")
-  }
-  # run over all TESTs
-  for (t in seq_along(test_objects)) {
-    se            <- test_objects[[t]]$se
-    if (is.null(se)) se <- "default"
-    estimator     <- test_objects[[t]]$estimator
-    if (is.null(estimator)) estimator <- "default"
-    information   <- test_objects[[t]]$information
-    if (is.null(information)) information <- "default"
-    meanstructure <- test_objects[[t]]$meanstructure
-    if (is.null(meanstructure)) meanstructure <- "default"
-    group         <- test_objects[[t]]$group
-    group.equal   <- test_objects[[t]]$group.equal
-    group.partial <- test_objects[[t]]$group.partial
-    missing       <- test_objects[[t]]$missing
-    if (is.null(missing)) missing <- "default"
-    if (is.null(group.equal)) group.equal <- ""
-    if (is.null(group.partial)) group.partial <- ""
-    cat("test", t, "estimator =", estimator, "information =",
-        information, "meanstructure =", meanstructure, "\n")
-    if (se == "boot" || se == "bootstrap") cat("se = BOOTSTRAP\n")
-    if (!is.null(group)) {
-      cat("grouping variable: ", group, "\n")
-      cat("group equality constraints: ",
-          ifelse(is.null(group.equal), "none",
-                 paste(group.equal, collapse = " ")), "\n")
-      cat("group partial equality: ",
-          ifelse(is.null(group.partial), "none", group.partial), "\n")
-    }
-    if (!is.null(missing)) cat("missing = ", missing, "\n")
-    # do test, log results
-    out <- one_test_mplus(model = model, data = data, model.type = model.type,
-                        estimator = estimator, information = information, se = se,
-                        meanstructure = meanstructure, mimic = mimic,
-                        group = group, missing = missing,
-                        group.equal = group.equal, group.partial = group.partial,
-                        mpl.prefix = mpl.prefix, mpl.file = mpl.file, log = log)
-    # report on this test
-    par.idx <- which(abs(out[[1]]$delta) > 0.0005)
-    cat("parameter values: number of delta's > 0.0005: ",
-        length(par.idx), "\n")
-    if (length(par.idx) > 0L) {
-      print(out[[1]][par.idx, ])
-    }
-    na.idx <- which(is.na(out[[1]]$delta))
-    if (length(na.idx) > 0L) {
-      cat("parameter values: number of NA's:", length(na.idx), "\n")
-      print(out[[1]][na.idx, ])
-    }
-    fit.idx <- which(abs(out[[2]]$delta) > 0.0005)
-    cat("fit values:       number of delta's > 0.0005: ",
-        length(fit.idx), "\n")
-    if (length(fit.idx) > 0L) {
-      print(out[[2]][fit.idx, ])
-    }
-    cat("\n")
-  }
-  if (verbose) {
-    # footer
-    cat("# end file: ", mpl.prefix, "\n\n")
-  }
 }
