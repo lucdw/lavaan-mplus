@@ -1,0 +1,413 @@
+Mplus VERSION 8 (Linux)
+MUTHEN & MUTHEN
+10/17/2017  11:28 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:	this is an example of a linear growth
+  	model for a continuous outcome with time-
+  	invariant and time-varying covariates
+  DATA:	FILE IS ex6.10.dat;
+  VARIABLE:	NAMES ARE y11-y14 x1 x2 a31-a34;
+  analysis: convergence = 0.0000001;
+  MODEL:	i s | y11@0 y12@1 y13@2 y14@3;
+  	i s ON x1 x2;
+  	y11 ON a31;
+  	y12 ON a32;
+  	y13 ON a33;
+  	y14 ON a34;
+  output: standardized;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a linear growth
+model for a continuous outcome with time-
+invariant and time-varying covariates
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    4
+Number of independent variables                                  6
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Continuous
+   Y11         Y12         Y13         Y14
+
+Observed independent variables
+   X1          X2          A31         A32         A33         A34
+
+Continuous latent variables
+   I           S
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.100D-06
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  ex6.10.dat
+
+Input data format  FREE
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y11                   0.607      -0.100      -4.515    0.20%      -0.545      0.196      0.550
+             500.000       2.392       0.156       4.417    0.20%       0.978      1.863
+     Y12                   1.695      -0.027      -4.760    0.20%      -0.146      1.233      1.701
+             500.000       4.371      -0.244       7.307    0.20%       2.279      3.419
+     Y13                   2.717       0.082      -6.275    0.20%       0.398      2.064      2.727
+             500.000       7.045      -0.054      10.187    0.20%       3.373      4.751
+     Y14                   3.759       0.069      -7.203    0.20%       1.188      2.864      3.706
+             500.000      10.026      -0.021      12.686    0.20%       4.464      6.257
+     X1                   -0.073       0.041      -2.518    0.20%      -0.928     -0.356     -0.050
+             500.000       0.990      -0.354       2.797    0.20%       0.175      0.743
+     X2                    0.127       0.256      -2.012    0.20%      -0.657     -0.155      0.061
+             500.000       0.945      -0.004       3.176    0.20%       0.300      0.938
+     A31                   0.030      -0.123      -2.576    0.20%      -0.706     -0.242     -0.011
+             500.000       0.909      -0.351       2.704    0.20%       0.300      0.899
+     A32                  -0.058      -0.095      -3.990    0.20%      -0.880     -0.356     -0.096
+             500.000       1.026       0.184       2.766    0.20%       0.212      0.828
+     A33                   0.037       0.007      -2.799    0.20%      -0.799     -0.217      0.053
+             500.000       0.961       0.120       3.446    0.20%       0.295      0.856
+     A34                  -0.036      -0.067      -2.736    0.20%      -0.872     -0.279     -0.064
+             500.000       0.928      -0.266       2.542    0.20%       0.243      0.784
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       17
+
+Loglikelihood
+
+          H0 Value                       -3070.619
+          H1 Value                       -3057.726
+
+Information Criteria
+
+          Akaike (AIC)                    6175.239
+          Bayesian (BIC)                  6246.887
+          Sample-Size Adjusted BIC        6192.928
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             25.786
+          Degrees of Freedom                    21
+          P-Value                           0.2147
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.021
+          90 Percent C.I.                    0.000  0.046
+          Probability RMSEA <= .05           0.978
+
+CFI/TLI
+
+          CFI                                0.998
+          TLI                                0.998
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2862.582
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.013
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ I        |
+    Y11                1.000      0.000    999.000    999.000
+    Y12                1.000      0.000    999.000    999.000
+    Y13                1.000      0.000    999.000    999.000
+    Y14                1.000      0.000    999.000    999.000
+
+ S        |
+    Y11                0.000      0.000    999.000    999.000
+    Y12                1.000      0.000    999.000    999.000
+    Y13                2.000      0.000    999.000    999.000
+    Y14                3.000      0.000    999.000    999.000
+
+ I        ON
+    X1                 0.557      0.054     10.278      0.000
+    X2                 0.718      0.055     12.950      0.000
+
+ S        ON
+    X1                 0.264      0.025     10.543      0.000
+    X2                 0.473      0.026     18.402      0.000
+
+ Y11      ON
+    A31                0.190      0.044      4.294      0.000
+
+ Y12      ON
+    A32                0.323      0.038      8.429      0.000
+
+ Y13      ON
+    A33                0.344      0.038      8.985      0.000
+
+ Y14      ON
+    A34                0.303      0.050      6.002      0.000
+
+ S        WITH
+    I                  0.055      0.035      1.570      0.116
+
+ Intercepts
+    Y11                0.000      0.000    999.000    999.000
+    Y12                0.000      0.000    999.000    999.000
+    Y13                0.000      0.000    999.000    999.000
+    Y14                0.000      0.000    999.000    999.000
+    I                  0.570      0.054     10.465      0.000
+    S                  1.010      0.025     40.075      0.000
+
+ Residual Variances
+    Y11                0.509      0.068      7.474      0.000
+    Y12                0.597      0.049     12.268      0.000
+    Y13                0.481      0.050      9.703      0.000
+    Y14                0.579      0.089      6.492      0.000
+    I                  1.074      0.097     11.121      0.000
+    S                  0.201      0.022      9.001      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ I        |
+    Y11                0.883      0.016     55.678      0.000
+    Y12                0.672      0.016     43.122      0.000
+    Y13                0.529      0.016     32.943      0.000
+    Y14                0.432      0.015     28.064      0.000
+
+ S        |
+    Y11                0.000      0.000    999.000    999.000
+    Y12                0.342      0.013     26.372      0.000
+    Y13                0.540      0.017     32.606      0.000
+    Y14                0.661      0.018     37.475      0.000
+
+ I        ON
+    X1                 0.400      0.037     10.781      0.000
+    X2                 0.503      0.035     14.324      0.000
+
+ S        ON
+    X1                 0.372      0.035     10.711      0.000
+    X2                 0.651      0.030     21.454      0.000
+
+ Y11      ON
+    A31                0.115      0.027      4.272      0.000
+
+ Y12      ON
+    A32                0.158      0.019      8.140      0.000
+
+ Y13      ON
+    A33                0.129      0.015      8.569      0.000
+
+ Y14      ON
+    A34                0.091      0.016      5.837      0.000
+
+ S        WITH
+    I                  0.119      0.080      1.475      0.140
+
+ Intercepts
+    Y11                0.000      0.000    999.000    999.000
+    Y12                0.000      0.000    999.000    999.000
+    Y13                0.000      0.000    999.000    999.000
+    Y14                0.000      0.000    999.000    999.000
+    I                  0.411      0.043      9.568      0.000
+    S                  1.428      0.068     20.911      0.000
+
+ Residual Variances
+    Y11                0.206      0.027      7.583      0.000
+    Y12                0.140      0.013     10.988      0.000
+    Y13                0.070      0.008      8.718      0.000
+    Y14                0.056      0.009      6.314      0.000
+    I                  0.558      0.040     14.083      0.000
+    S                  0.402      0.038     10.598      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ I        |
+    Y11                0.883      0.016     55.678      0.000
+    Y12                0.672      0.016     43.122      0.000
+    Y13                0.529      0.016     32.943      0.000
+    Y14                0.432      0.015     28.064      0.000
+
+ S        |
+    Y11                0.000      0.000    999.000    999.000
+    Y12                0.342      0.013     26.372      0.000
+    Y13                0.540      0.017     32.606      0.000
+    Y14                0.661      0.018     37.475      0.000
+
+ I        ON
+    X1                 0.402      0.036     11.192      0.000
+    X2                 0.518      0.034     15.007      0.000
+
+ S        ON
+    X1                 0.374      0.034     11.133      0.000
+    X2                 0.670      0.031     21.862      0.000
+
+ Y11      ON
+    A31                0.121      0.028      4.310      0.000
+
+ Y12      ON
+    A32                0.156      0.019      8.405      0.000
+
+ Y13      ON
+    A33                0.131      0.015      8.873      0.000
+
+ Y14      ON
+    A34                0.094      0.016      5.938      0.000
+
+ S        WITH
+    I                  0.119      0.080      1.475      0.140
+
+ Intercepts
+    Y11                0.000      0.000    999.000    999.000
+    Y12                0.000      0.000    999.000    999.000
+    Y13                0.000      0.000    999.000    999.000
+    Y14                0.000      0.000    999.000    999.000
+    I                  0.411      0.043      9.568      0.000
+    S                  1.428      0.068     20.911      0.000
+
+ Residual Variances
+    Y11                0.206      0.027      7.583      0.000
+    Y12                0.140      0.013     10.988      0.000
+    Y13                0.070      0.008      8.718      0.000
+    Y14                0.056      0.009      6.314      0.000
+    I                  0.558      0.040     14.083      0.000
+    S                  0.402      0.038     10.598      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ I        |
+    Y11                1.387      0.053     25.981      0.000
+    Y12                1.387      0.053     25.981      0.000
+    Y13                1.387      0.053     25.981      0.000
+    Y14                1.387      0.053     25.981      0.000
+
+ S        |
+    Y11                0.000      0.000    999.000    999.000
+    Y12                0.707      0.028     25.116      0.000
+    Y13                1.414      0.056     25.116      0.000
+    Y14                2.121      0.084     25.116      0.000
+
+ I        ON
+    X1                 0.402      0.036     11.192      0.000
+    X2                 0.518      0.034     15.007      0.000
+
+ S        ON
+    X1                 0.374      0.034     11.133      0.000
+    X2                 0.670      0.031     21.862      0.000
+
+ Y11      ON
+    A31                0.190      0.044      4.294      0.000
+
+ Y12      ON
+    A32                0.323      0.038      8.429      0.000
+
+ Y13      ON
+    A33                0.344      0.038      8.985      0.000
+
+ Y14      ON
+    A34                0.303      0.050      6.002      0.000
+
+ S        WITH
+    I                  0.119      0.080      1.475      0.140
+
+ Intercepts
+    Y11                0.000      0.000    999.000    999.000
+    Y12                0.000      0.000    999.000    999.000
+    Y13                0.000      0.000    999.000    999.000
+    Y14                0.000      0.000    999.000    999.000
+    I                  0.411      0.043      9.568      0.000
+    S                  1.428      0.068     20.911      0.000
+
+ Residual Variances
+    Y11                0.509      0.068      7.474      0.000
+    Y12                0.597      0.049     12.268      0.000
+    Y13                0.481      0.050      9.703      0.000
+    Y14                0.579      0.089      6.492      0.000
+    I                  0.558      0.040     14.083      0.000
+    S                  0.402      0.038     10.598      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    Y11                0.794      0.027     29.184      0.000
+    Y12                0.860      0.013     67.484      0.000
+    Y13                0.930      0.008    115.610      0.000
+    Y14                0.944      0.009    106.042      0.000
+
+     Latent                                         Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    I                  0.442      0.040     11.156      0.000
+    S                  0.598      0.038     15.735      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.307E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:28:32
+        Ending Time:  11:28:33
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen
