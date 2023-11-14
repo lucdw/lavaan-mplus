@@ -16,25 +16,33 @@ At this moment the available subdirectories are
 
 To perform a test one must have the output of a Mplus run, in a file which you let end in ".out", and the input data for the Mplus program.
 
-Then we have a file in DCF format (see help for read.dcf in R), typically looking as follows:
+Then we have a R source file, typically looking as follows:
 ```
-mplus.out: HS.mean.ML.expected.mplus.out 
-model: HS.raw.lmd
-model.type: sem
-estimator: ML
-information: expected
-se: default
-meanstructure: TRUE
-missing: default
-group:
-group.equal:
-group.partial:
-mimic: Both
+mplus.out <- "HS.mean.GLS.mplus.out" 
+lavaan.model <- '
+  visual  =~ x1 + x2 + x3
+  textual =~ x4 + x5 + x6
+  speed   =~ x7 + x8 + x9
+'
+lavaan.call <-  "sem" 
+lavaan.args <- list(
+   estimator = "GLS",
+   meanstructure = TRUE)
+if (!exists("group.environment") || is.null(group.environment)) {
+   source("../utilities.R", chdir = TRUE)
+   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args)
+}
 ```
+The following values are set:
+mplus.out : the name of the mplus out file
+lavaan.model : the model to use in lavaan
+lavaan.call : the model type to use in lavaan (sem, cfa, growth, ...)
+lavaan.args : the parameters to specify for the call (except model, data and mimic)
+The following lines execute the test if the file is sourced directly (not as a result of sourcing run.all.tests.r, where this is done the 'calling' script).
 
-The first value is the name of the mplus out file, the second the name of the file where we put the lavaan model, the other parameters are input for the lavaan function.
-The value "Both" for the mimic item means: test with mimic = 'lavaan' and with mimic = 'Mplus'.
+When executing:
 
-The name and structure of the mplus input file is, with the help of the MplusAutomation R package, derived from the content of the mplus output file, whereafter the input data.frame for lavaan is created and stored in an RDS file.
+The name and structure of the mplus input file is, with the help of the MplusAutomation R package, derived from the content of the mplus output file, whereafter the input data.frame for lavaan is created.
 
-When all tests are done the results in counts of differences are shown in a data.frame dfrestot, which is also stored in an RDS file.
+Then the lavaan function is called and the resulting parameters are compared with those from Mplus. 
+A logging of the differences and the output summary of the lavaan calls are generated.
