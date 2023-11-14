@@ -1,8 +1,0 @@
-f1 =~ 1*y1a + 1*y1b + 1*y1c
-f2 =~ 1*y2a + 1*y2b + 1*y2c
-y1a ~ 1
-y1b ~ equal("y1a~1") * 1
-y1c ~ equal("y1a~1") * 1
-y2a ~ 1
-y2b ~ equal("y2a~1") * 1
-y2c ~ equal("y2a~1") * 1

@@ -1,5 +1,0 @@
-visual  =~ x1 + label("A")*x2  + equal("A")*x3
-textual =~ equal("textual=~x4")*x4 +
-            equal("textual=~x4")*x5 + x6
-speed   =~ label("NA")*x7 + label("abc")*x8 +
-            equal("speed~~speed")*x9

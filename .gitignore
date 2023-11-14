@@ -9,4 +9,5 @@ lavaan-mplus.Rproj
 *.sh
 *.rds
 */mplus_gen/*
-.*.R
+_*
+*/_*

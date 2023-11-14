@@ -1,66 +1,42 @@
 wd <- getwd()
-if (exists("dfrestot")) rm(dfrestot)
 testdirs <- list.dirs(full.names = FALSE, recursive = FALSE)
 testdirs <- testdirs[grepl("^[^.]", testdirs)]
-source("test-utilities.R")
+source("utilities.R")
+group.environment <- new.env()
+assign("i", 0L, group.environment)
 cat("STARTING TIME:", format(Sys.time()), "\n")
 for (testdir.i in seq_along(testdirs)) {
   setwd(testdirs[testdir.i])
-  logcon <- file("test_result.log", "wt")
   on.exit({
-    try(close(logcon), silent = TRUE)
     setwd(wd)
     })
   cat("Processing of tests in", basename(getwd()), "\n")
-  cat("Processing of tests in", basename(getwd()), "\n", file = logcon)
-  testfiles <- list.files(pattern = "\\.dcf$")
-  for (dcf.i in seq_along(testfiles)) {
-    dcffile <- testfiles[dcf.i]
-    cat("        handling ", dcffile, "\n")
-    dcf <- read.dcf(dcffile, all = TRUE)
-    if (dcf$meanstructure == "TRUE") dcf$meanstructure = TRUE
-    if (dcf$meanstructure == "FALSE") dcf$meanstructure = FALSE
-    mplusfile <- dcf$mplus.out
-    sink(tempfile())
-    mplus.model <- readModels(mplusfile)
-    sink()
-    dcf$data <- create_r_data(mplus.model$input$data$file, 
-                              mplus.model$input$variable$names,
-                              mplus.model$input$variable$categorical,
-                              mplus.model$input$variable$grouping)
-    if (dcf$mimic == "Both") {
-      dcf$mimic <- "lavaan"
-      res <- one_test_mplus(mplusfile, as.list(dcf), mplus.model$parameters, logcon)
-      dcf$Dpar <- res[1]
-      dcf$NApar <- res[2]
-      dcf$Dfit <- res[3]
-      if (!exists("dfres")) {
-        dfres <- dcf
-      } else {
-        dfres <- rbind(dfres, dcf, make.row.names = FALSE)
-      }
-      dcf$mimic <- "Mplus"
-    }
-    res <- one_test_mplus(mplusfile, as.list(dcf), mplus.model$parameters, logcon)
-    dcf$Dpar <- res[1]
-    dcf$NApar <- res[2]
-    dcf$Dfit <- res[3]
-    if (!exists("dfres")) {
-      dfres <- dcf
-    } else {
-      dfres <- rbind(dfres, dcf, make.row.names = FALSE)
-    }
+  testfiles <- list.files(pattern = "\\.R$")
+  for (test.i in seq_along(testfiles)) {
+    testfile <- testfiles[test.i]
+    cat("        handling ", testfile, "\n")
+    source(testfile)
+    execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, group.environment)
   }
-  cat("End processing of tests in", basename(getwd()), "\n", file = logcon)
-  close(logcon)
-  saveRDS(dfres, "result.RDS")
-  if (!exists("dfrestot")) {
-    dfrestot <- dfres
-  } else {
-    dfrestot <- rbind(dfrestot, dfres, make.row.names = FALSE)
-  }
-  rm(dfres)
   setwd(wd)
 }
+max.i <- get("i", group.environment)
+reportcon <- file("report.txt", "wt")
+for (i in seq_len(max.i)) {
+  ich <- formatC(i, width=4, flag="0")
+  df1 <- get(paste0("res", ich), group.environment)
+  res1 <- get(paste0("lav", ich), group.environment)
+  res2 <- get(paste0("mpl", ich), group.environment)
+  cat(paste(res1, collapse="\n"), file=reportcon)
+  cat(paste(res2, collapse="\n"), file=reportcon)
+  if (i == 1) {
+    df <- df1
+  } else {
+    df <- rbind(df, df1)
+  }
+}
+close(reportcon)
+saveRDS(df, file = "result.rds")
+cat("Logging of tests are in report.txt\n")
+cat("Data.frame with overview is in result.rds\n")
 cat("ENDING TIME:", format(Sys.time()), "\n")
-View(dfrestot)
