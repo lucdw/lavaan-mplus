@@ -16,7 +16,7 @@ for (testdir.i in seq_along(testdirs)) {
     testfile <- testfiles[test.i]
     cat("        handling ", testfile, "\n")
     source(testfile)
-    execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, group.environment)
+    execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment, group.environment)
   }
   setwd(wd)
 }
@@ -38,5 +38,5 @@ for (i in seq_len(max.i)) {
 close(reportcon)
 saveRDS(df, file = "result.rds")
 cat("Logging of tests are in report.txt\n")
-cat("Data.frame with overview is in result.rds\n")
+cat("Data.frame with overview (variable df) is saved in result.rds\n")
 cat("ENDING TIME:", format(Sys.time()), "\n")

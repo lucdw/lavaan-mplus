@@ -13,7 +13,8 @@ lavaan.args <- list(
    group = "g",
    group.equal = "loadings",
    group.partial = "f1=~y3")
+test.comment <- ''
 if (!exists("group.environment") || is.null(group.environment)) {
    source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args)
+   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
 }

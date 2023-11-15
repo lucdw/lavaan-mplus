@@ -15,7 +15,8 @@ lavaan.args <- list(
    estimator = "ML",
    information = "observed",
    meanstructure = FALSE)
+test.comment <- ''
 if (!exists("group.environment") || is.null(group.environment)) {
    source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args)
+   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
 }

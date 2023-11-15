@@ -5,7 +5,7 @@ options(warn = 1)
 # function to execute test with parameters set in .R files in subdirectories
 # group.environment is NULL when function is called from this R-file
 # the logging of differences is stored in the group.environment or displayed immediately
-execute_test <- function(mplus.out,lavaan.model, lavaan.call, lavaan.args, group.environment = NULL) {
+execute_test <- function(mplus.out,lavaan.model, lavaan.call, lavaan.args, comment = "", group.environment = NULL) {
   stopifnot(is.character(mplus.out), length(mplus.out) == 1L)
   stopifnot(is.character(lavaan.call), length(lavaan.call) == 1L)
   stopifnot(is.character(lavaan.model))
@@ -20,10 +20,10 @@ execute_test <- function(mplus.out,lavaan.model, lavaan.call, lavaan.args, group
   lavaan.args$model <- lavaan.model
   lavaan.args$data <- create_r_data(mplus.model)
   lavaan.args$mimic <- "lavaan"
-  res1 <- one_test_mplus(mplus.out, lavaan.args, mplus.model$parameters, group.environment = group.environment)
+  res1 <- one_test_mplus(mplus.out, lavaan.args, mplus.model$parameters, comment)
   if (is.null(group.environment)) cat(paste(res1[[2]], collapse="\n"))
   lavaan.args$mimic <- "Mplus"
-  res2 <- one_test_mplus(mplus.out, lavaan.args, mplus.model$parameters, group.environment = group.environment)
+  res2 <- one_test_mplus(mplus.out, lavaan.args, mplus.model$parameters, comment)
   if (is.null(group.environment)) cat(paste(res2[[2]], collapse="\n"))
   if (!is.null(group.environment)) {
     i <- get("i", group.environment)
@@ -315,7 +315,7 @@ join_fit_lav_mplus <- function(lav, mpl) {
   lav.df
 }
 
-one_test_mplus <- function(mpl.file, test.object, mplus.model, group.environment, log.lavoutput = TRUE) {
+one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   logfile <- file() # anonymous file connection, see R-help for file, examples
   on.exit({if (isOpen(logfile)) close(logfile)})
   cat("Mplus file:", mpl.file, "\n", file = logfile)
@@ -329,10 +329,15 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, group.environment
             collapse = ", "),
       ")\n",
       sep = "", file = logfile)
+  if (test.comment != "") {
+    cat("test comment:\n", 
+        gsub("\n","\n# ",gsub("^ *\n", "# ", gsub("\n *$", "", test.comment))),
+        "\n", sep="", file = logfile)
+  }
   lavfunc <- test.object$call
   test.object$call <- NULL
   fit <- do.call(lavfunc, test.object)
-  cat("\nLavaan total timing: ", fit@timing$total, "\n", file = logfile)
+  cat("Lavaan total timing: ", fit@timing$total, "\n", file = logfile)
   cat("       number of iterations: ", fit@optim$iterations, "\n", file = logfile)
   mpl.par <- mplus.model
   lav.par <- parameterEstimates(fit, ci = FALSE, fmi = FALSE,
@@ -435,22 +440,20 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, group.environment
   }
   # joint fit measures lav mpl
   lav.df.fit <- join_fit_lav_mplus(lav = lav.fit, mpl = mpl.fit)
-  if (log.lavoutput) {
-    # write log
-    log.file <- paste(mpl.file, "_mim", test.object$mimic, ".log", sep = "")
-    sink(log.file)
-    # header
-    version <- read.dcf(file = system.file("DESCRIPTION", package = "lavaan"),
-                        fields = "Version")
-    cat("# lavaan TESTsuite -- lavaan version ", version, "\n")
-    cat("# date: ", date(), "\n")
-    cat("# file: ", mpl.file, "\n\n")
-    print(lav.df.par, max = 10000L)
-    cat("\n")
-    print(lav.df.fit, max = 10000L)
-    sink()
-    cat("Detailed output lavaan in", normalizePath(log.file), "\n", file = logfile)
-  }
+  # write log 
+  log.file <- paste(mpl.file, "_mim", test.object$mimic, ".log", sep = "")
+  sink(log.file)
+  # header
+  version <- read.dcf(file = system.file("DESCRIPTION", package = "lavaan"),
+                      fields = "Version")
+  cat("# lavaan TESTsuite -- lavaan version ", version, "\n")
+  cat("# date: ", date(), "\n")
+  cat("# file: ", mpl.file, "\n\n")
+  print(lav.df.par, max = 10000L)
+  cat("\n")
+  print(lav.df.fit, max = 10000L)
+  sink()
+  cat("Detailed output lavaan in", normalizePath(log.file), "\n", file = logfile)
   par.idx <- which(abs(lav.df.par$delta) > 0.0005)
   cat("parameter values: number of delta's > 0.0005: ",
       length(par.idx), "\n", file = logfile)

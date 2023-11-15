@@ -22,7 +22,8 @@ lavaan.call <-  "sem"
 lavaan.args <- list(
    estimator = "GLS",
    meanstructure = TRUE)
+test.comment <- ''
 if (!exists("group.environment") || is.null(group.environment)) {
    source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args)
+   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
 }

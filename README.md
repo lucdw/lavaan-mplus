@@ -18,7 +18,7 @@ To perform a test one must have the output of a Mplus run, in a file which you l
 
 Then we have a R source file, typically looking as follows:
 ```
-mplus.out <- "HS.mean.GLS.mplus.out" 
+mplus.out <- "HS.mean.ML.bootstrap.mplus.out" 
 lavaan.model <- '
   visual  =~ x1 + x2 + x3
   textual =~ x4 + x5 + x6
@@ -26,11 +26,18 @@ lavaan.model <- '
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-   estimator = "GLS",
+   estimator = "ML",
+   information = "observed",
+   se = "bootstrap",
+   bootstrap = 200,
    meanstructure = TRUE)
+test.comment <- '
+because of random samples in bootstrap, 
+fitted values will change on every run!
+'
 if (!exists("group.environment") || is.null(group.environment)) {
    source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args)
+   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
 }
 ```
 The following values are set:
@@ -38,6 +45,7 @@ mplus.out : the name of the mplus out file
 lavaan.model : the model to use in lavaan
 lavaan.call : the model type to use in lavaan (sem, cfa, growth, ...)
 lavaan.args : the parameters to specify for the call (except model, data and mimic)
+test.comment : optional comment on the test, which will also be copied in the logging
 The following lines execute the test if the file is sourced directly (not as a result of sourcing run.all.tests.r, where this is done the 'calling' script).
 
 When executing:
