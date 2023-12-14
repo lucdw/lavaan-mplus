@@ -36,6 +36,7 @@ for (i in seq_len(max.i)) {
   }
 }
 close(reportcon)
+rm(group.environment)
 saveRDS(df, file = "result.rds")
 cat("Logging of tests are in report.txt\n")
 cat("Data.frame with overview (variable df) is saved in result.rds\n")

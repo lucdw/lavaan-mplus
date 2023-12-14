@@ -3,7 +3,7 @@ Mplus file: BB.mean.ML.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, missing = "ml", mimic = "lavaan")
-Lavaan total timing:  9.08 
+Lavaan total timing:  0.74 
        number of iterations:  76 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\BB.mean.ML.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -20,7 +20,7 @@ Mplus file: BB.mean.ML.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, missing = "ml", mimic = "Mplus")
-Lavaan total timing:  5.18 
+Lavaan total timing:  0.47 
        number of iterations:  76 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\BB.mean.ML.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -35,7 +35,7 @@ Mplus file: BB.mean.MLR.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", meanstructure = TRUE, missing = "ml", mimic = "lavaan")
-Lavaan total timing:  1.25 
+Lavaan total timing:  0.44 
        number of iterations:  76 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\BB.mean.MLR.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -55,7 +55,7 @@ Mplus file: BB.mean.MLR.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", meanstructure = TRUE, missing = "ml", mimic = "Mplus")
-Lavaan total timing:  1.04 
+Lavaan total timing:  0.47 
        number of iterations:  76 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\BB.mean.MLR.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -74,7 +74,7 @@ Mplus file: Bollen.mean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.5 
+Lavaan total timing:  0.15 
        number of iterations:  64 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.GLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  12 
@@ -100,7 +100,7 @@ Mplus file: Bollen.mean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.59 
+Lavaan total timing:  0.24 
        number of iterations:  64 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.GLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -116,7 +116,7 @@ Mplus file: Bollen.mean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.26 
+Lavaan total timing:  0.09 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.ML.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -130,7 +130,7 @@ Mplus file: Bollen.mean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.22 
        number of iterations:  77 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.ML.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -144,7 +144,7 @@ Mplus file: Bollen.mean.ML.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.45 
+Lavaan total timing:  0.16 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.ML.observed.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -160,7 +160,7 @@ Mplus file: Bollen.mean.ML.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.53 
+Lavaan total timing:  0.25 
        number of iterations:  77 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.ML.observed.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -174,7 +174,7 @@ Mplus file: Bollen.mean.MLF.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLF", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.25 
+Lavaan total timing:  0.11 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLF.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -190,7 +190,7 @@ Mplus file: Bollen.mean.MLF.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLF", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.27 
+Lavaan total timing:  0.14 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLF.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -204,7 +204,7 @@ Mplus file: Bollen.mean.MLM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLM", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.56 
+Lavaan total timing:  0.11 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  33 
@@ -243,21 +243,21 @@ parameter values: number of delta's > 0.0005:  33
 79  ind60 ~~ ind60     1      se 0.072 0.069  0.003
 114    y4 ~~    y4     1 est.std 3.225 3.224  0.001
 fit values:       number of delta's > 0.0005:  7 
-                     fit     lav     mpl   delta
-3           chisq.scaled  43.070  43.633  -0.563
-5          pvalue.scaled   0.263   0.244   0.019
-6   chisq.scaling.factor   0.933   0.921   0.012
-7  baseline.chisq.scaled 750.388 777.013 -26.625
-11            cfi.scaled   0.993   0.992   0.001
-39          rmsea.scaled   0.042   0.044  -0.002
-42   rmsea.pvalue.scaled   0.548   0.529   0.019
+                     fit     lav      mpl    delta
+3           chisq.scaled  43.070  43.6330  -0.5630
+5          pvalue.scaled   0.263   0.2440   0.0190
+6   chisq.scaling.factor   0.933   0.9208   0.0122
+7  baseline.chisq.scaled 750.388 777.0130 -26.6250
+11            cfi.scaled   0.993   0.9920   0.0010
+39          rmsea.scaled   0.042   0.0440  -0.0020
+42   rmsea.pvalue.scaled   0.548   0.5290   0.0190
 
 Mplus file: Bollen.mean.MLM.mplus.out 
 ===================================== 
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLM", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.63 
+Lavaan total timing:  0.15 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -274,7 +274,7 @@ Mplus file: Bollen.mean.MLMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMV", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.22 
+Lavaan total timing:  0.11 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  33 
@@ -328,7 +328,7 @@ Mplus file: Bollen.mean.MLMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMV", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.27 
+Lavaan total timing:  0.16 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -342,7 +342,7 @@ Mplus file: Bollen.mean.MLMVS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMVS", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.26 
+Lavaan total timing:  0.1 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLMVS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  33 
@@ -397,7 +397,7 @@ Mplus file: Bollen.mean.MLMVS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMVS", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.26 
+Lavaan total timing:  0.1 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLMVS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -414,7 +414,7 @@ Mplus file: Bollen.mean.MLR.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "expected", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.28 
+Lavaan total timing:  0.09 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLR.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -432,7 +432,7 @@ Mplus file: Bollen.mean.MLR.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "expected", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.35 
+Lavaan total timing:  0.19 
        number of iterations:  77 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLR.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -450,7 +450,7 @@ Mplus file: Bollen.mean.MLR.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.53 
+Lavaan total timing:  0.19 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLR.observed.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -468,7 +468,7 @@ Mplus file: Bollen.mean.MLR.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.67 
+Lavaan total timing:  0.28 
        number of iterations:  77 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.mean.MLR.observed.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -485,7 +485,7 @@ Mplus file: Bollen.nomean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = FALSE, missing = "listwise", mimic = "lavaan")
-Lavaan total timing:  0.38 
+Lavaan total timing:  0.14 
        number of iterations:  64 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.nomean.GLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -501,7 +501,7 @@ Mplus file: Bollen.nomean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = FALSE, missing = "listwise", mimic = "Mplus")
-Lavaan total timing:  0.36 
+Lavaan total timing:  0.12 
        number of iterations:  64 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.nomean.GLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -517,7 +517,7 @@ Mplus file: Bollen.nomean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = FALSE, missing = "listwise", mimic = "lavaan")
-Lavaan total timing:  0.25 
+Lavaan total timing:  0.09 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.nomean.ML.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -531,7 +531,7 @@ Mplus file: Bollen.nomean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = FALSE, missing = "listwise", mimic = "Mplus")
-Lavaan total timing:  0.22 
+Lavaan total timing:  0.08 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Bollen\Bollen.nomean.ML.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -545,7 +545,7 @@ Mplus file: ex3.12.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", mimic = "lavaan")
-Lavaan total timing:  1.33 
+Lavaan total timing:  0.23 
        number of iterations:  15 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.12.ULSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -562,7 +562,7 @@ Mplus file: ex3.12.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", mimic = "Mplus")
-Lavaan total timing:  0.89 
+Lavaan total timing:  0.23 
        number of iterations:  15 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.12.ULSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -581,7 +581,7 @@ Mplus file: ex3.12.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", mimic = "lavaan")
-Lavaan total timing:  0.66 
+Lavaan total timing:  0.28 
        number of iterations:  48 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.12.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -598,7 +598,7 @@ Mplus file: ex3.12.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", mimic = "Mplus")
-Lavaan total timing:  0.66 
+Lavaan total timing:  0.28 
        number of iterations:  48 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.12.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -615,7 +615,7 @@ Mplus file: ex3.12.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", mimic = "lavaan")
-Lavaan total timing:  0.5 
+Lavaan total timing:  0.21 
        number of iterations:  42 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.12.WLSM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -635,7 +635,7 @@ Mplus file: ex3.12.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", mimic = "Mplus")
-Lavaan total timing:  0.52 
+Lavaan total timing:  0.25 
        number of iterations:  42 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.12.WLSM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  4 
@@ -657,7 +657,7 @@ Mplus file: ex3.12.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", mimic = "lavaan")
-Lavaan total timing:  0.53 
+Lavaan total timing:  0.25 
        number of iterations:  42 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.12.WLSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -676,7 +676,7 @@ Mplus file: ex3.12.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", mimic = "Mplus")
-Lavaan total timing:  0.55 
+Lavaan total timing:  0.2 
        number of iterations:  42 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.12.WLSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  4 
@@ -696,7 +696,7 @@ Mplus file: ex3.14.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.87 
+Lavaan total timing:  0.15 
        number of iterations:  28 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.14.ULSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -713,7 +713,7 @@ Mplus file: ex3.14.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.54 
+Lavaan total timing:  0.17 
        number of iterations:  28 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.14.ULSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -729,7 +729,7 @@ Mplus file: ex3.14.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.59 
+Lavaan total timing:  0.16 
        number of iterations:  29 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.14.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -746,7 +746,7 @@ Mplus file: ex3.14.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.58 
+Lavaan total timing:  0.25 
        number of iterations:  29 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.14.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -763,7 +763,7 @@ Mplus file: ex3.14.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.44 
+Lavaan total timing:  0.2 
        number of iterations:  29 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.14.WLSM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -782,7 +782,7 @@ Mplus file: ex3.14.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.42 
+Lavaan total timing:  0.17 
        number of iterations:  29 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.14.WLSM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -801,7 +801,7 @@ Mplus file: ex3.14.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.45 
+Lavaan total timing:  0.13 
        number of iterations:  29 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.14.WLSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -818,7 +818,7 @@ Mplus file: ex3.14.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.43 
+Lavaan total timing:  0.17 
        number of iterations:  29 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.14.WLSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -835,7 +835,7 @@ Mplus file: ex3.4.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.21 
+Lavaan total timing:  0.05 
        number of iterations:  2 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.4.ULSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -851,7 +851,7 @@ Mplus file: ex3.4.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.16 
+Lavaan total timing:  0.06 
        number of iterations:  2 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.4.ULSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -867,7 +867,7 @@ Mplus file: ex3.4.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.2 
+Lavaan total timing:  0.06 
        number of iterations:  14 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.4.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -883,7 +883,7 @@ Mplus file: ex3.4.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.3 
+Lavaan total timing:  0.06 
        number of iterations:  14 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.4.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -899,7 +899,7 @@ Mplus file: ex3.4.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.2 
+Lavaan total timing:  0.06 
        number of iterations:  9 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.4.WLSM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -915,7 +915,7 @@ Mplus file: ex3.4.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.17 
+Lavaan total timing:  0.11 
        number of iterations:  9 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.4.WLSM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -931,7 +931,7 @@ Mplus file: ex3.4.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.22 
+Lavaan total timing:  0.06 
        number of iterations:  9 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.4.WLSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -947,7 +947,7 @@ Mplus file: ex3.4.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.21 
+Lavaan total timing:  0.07 
        number of iterations:  9 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex3.4.WLSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -963,7 +963,7 @@ Mplus file: ex5.10.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.42 
+Lavaan total timing:  0.14 
        number of iterations:  7 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.10.ULSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -978,7 +978,7 @@ Mplus file: ex5.10.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.28 
+Lavaan total timing:  0.18 
        number of iterations:  7 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.10.ULSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -991,7 +991,7 @@ Mplus file: ex5.10.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.17 
        number of iterations:  11 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.10.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -1009,7 +1009,7 @@ Mplus file: ex5.10.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.12 
        number of iterations:  11 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.10.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -1027,7 +1027,7 @@ Mplus file: ex5.10.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.31 
+Lavaan total timing:  0.11 
        number of iterations:  10 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.10.WLSM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1044,7 +1044,7 @@ Mplus file: ex5.10.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.32 
+Lavaan total timing:  0.13 
        number of iterations:  10 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.10.WLSM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1058,7 +1058,7 @@ Mplus file: ex5.10.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.29 
+Lavaan total timing:  0.11 
        number of iterations:  10 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.10.WLSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1073,7 +1073,7 @@ Mplus file: ex5.10.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.32 
+Lavaan total timing:  0.16 
        number of iterations:  10 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.10.WLSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1086,7 +1086,7 @@ Mplus file: ex5.16.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "lavaan")
-Lavaan total timing:  2.27 
+Lavaan total timing:  1.45 
        number of iterations:  56 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16.ULSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  11 
@@ -1115,7 +1115,7 @@ Mplus file: ex5.16.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "Mplus")
-Lavaan total timing:  2.63 
+Lavaan total timing:  1.5 
        number of iterations:  56 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16.ULSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  15 
@@ -1148,7 +1148,7 @@ Mplus file: ex5.16.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "lavaan")
-Lavaan total timing:  2.31 
+Lavaan total timing:  1.72 
        number of iterations:  65 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -1168,7 +1168,7 @@ Mplus file: ex5.16.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "Mplus")
-Lavaan total timing:  2.31 
+Lavaan total timing:  1.53 
        number of iterations:  65 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -1188,7 +1188,7 @@ Mplus file: ex5.16.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "lavaan")
-Lavaan total timing:  2.24 
+Lavaan total timing:  1.49 
        number of iterations:  79 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16.WLSM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -1209,7 +1209,7 @@ Mplus file: ex5.16.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "Mplus")
-Lavaan total timing:  2.27 
+Lavaan total timing:  1.52 
        number of iterations:  79 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16.WLSM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  5 
@@ -1230,7 +1230,7 @@ Mplus file: ex5.16.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "lavaan")
-Lavaan total timing:  2.67 
+Lavaan total timing:  1.49 
        number of iterations:  79 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16.WLSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -1250,7 +1250,7 @@ Mplus file: ex5.16.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "Mplus")
-Lavaan total timing:  2.25 
+Lavaan total timing:  1.68 
        number of iterations:  79 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16.WLSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  5 
@@ -1270,7 +1270,7 @@ Mplus file: ex5.16_nox.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "lavaan")
-Lavaan total timing:  0.89 
+Lavaan total timing:  0.37 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16_nox.ULSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  16 
@@ -1303,7 +1303,7 @@ Mplus file: ex5.16_nox.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "Mplus")
-Lavaan total timing:  0.94 
+Lavaan total timing:  0.43 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16_nox.ULSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  16 
@@ -1336,7 +1336,7 @@ Mplus file: ex5.16_nox.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "lavaan")
-Lavaan total timing:  0.98 
+Lavaan total timing:  0.39 
        number of iterations:  61 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16_nox.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  5 
@@ -1356,7 +1356,7 @@ Mplus file: ex5.16_nox.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "Mplus")
-Lavaan total timing:  1.19 
+Lavaan total timing:  0.46 
        number of iterations:  61 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16_nox.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  5 
@@ -1376,7 +1376,7 @@ Mplus file: ex5.16_nox.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "lavaan")
-Lavaan total timing:  1.07 
+Lavaan total timing:  0.4 
        number of iterations:  75 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16_nox.WLSM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -1393,7 +1393,7 @@ Mplus file: ex5.16_nox.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "Mplus")
-Lavaan total timing:  1.07 
+Lavaan total timing:  0.47 
        number of iterations:  75 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16_nox.WLSM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -1410,7 +1410,7 @@ Mplus file: ex5.16_nox.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "lavaan")
-Lavaan total timing:  1.04 
+Lavaan total timing:  0.42 
        number of iterations:  75 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16_nox.WLSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -1427,7 +1427,7 @@ Mplus file: ex5.16_nox.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, group = "g", group.equal = "loadings", mimic = "Mplus")
-Lavaan total timing:  1.07 
+Lavaan total timing:  0.52 
        number of iterations:  75 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.16_nox.WLSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -1443,7 +1443,7 @@ Mplus file: ex5.2.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.37 
+Lavaan total timing:  0.14 
        number of iterations:  17 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.2.ULSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1458,7 +1458,7 @@ Mplus file: ex5.2.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.32 
+Lavaan total timing:  0.11 
        number of iterations:  17 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.2.ULSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1471,7 +1471,7 @@ Mplus file: ex5.2.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.36 
+Lavaan total timing:  0.11 
        number of iterations:  19 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.2.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1486,7 +1486,7 @@ Mplus file: ex5.2.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.35 
+Lavaan total timing:  0.15 
        number of iterations:  19 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.2.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1501,7 +1501,7 @@ Mplus file: ex5.2.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.29 
+Lavaan total timing:  0.13 
        number of iterations:  15 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.2.WLSM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1518,7 +1518,7 @@ Mplus file: ex5.2.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.3 
+Lavaan total timing:  0.15 
        number of iterations:  15 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.2.WLSM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1533,7 +1533,7 @@ Mplus file: ex5.2.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.3 
+Lavaan total timing:  0.14 
        number of iterations:  15 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.2.WLSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1548,7 +1548,7 @@ Mplus file: ex5.2.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.29 
+Lavaan total timing:  0.11 
        number of iterations:  15 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.2.WLSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1561,7 +1561,7 @@ Mplus file: ex5.3.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.34 
+Lavaan total timing:  0.13 
        number of iterations:  26 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.3.ULSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -1577,7 +1577,7 @@ Mplus file: ex5.3.ULSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ULSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.16 
        number of iterations:  26 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.3.ULSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -1594,7 +1594,7 @@ Mplus file: ex5.3.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.39 
+Lavaan total timing:  0.12 
        number of iterations:  27 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.3.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -1612,7 +1612,7 @@ Mplus file: ex5.3.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.41 
+Lavaan total timing:  0.13 
        number of iterations:  27 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.3.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -1630,7 +1630,7 @@ Mplus file: ex5.3.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.34 
+Lavaan total timing:  0.12 
        number of iterations:  27 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.3.WLSM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -1650,7 +1650,7 @@ Mplus file: ex5.3.WLSM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSM", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.34 
+Lavaan total timing:  0.16 
        number of iterations:  27 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.3.WLSM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  4 
@@ -1671,7 +1671,7 @@ Mplus file: ex5.3.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.11 
        number of iterations:  27 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.3.WLSMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  3 
@@ -1689,7 +1689,7 @@ Mplus file: ex5.3.WLSMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLSMV", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.39 
+Lavaan total timing:  0.16 
        number of iterations:  27 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Categorical\ex5.3.WLSMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  4 
@@ -1708,7 +1708,7 @@ Mplus file: HS.mean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.26 
+Lavaan total timing:  0.07 
        number of iterations:  31 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.GLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -1721,7 +1721,7 @@ Mplus file: HS.mean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.23 
+Lavaan total timing:  0.09 
        number of iterations:  31 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.GLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1732,7 +1732,7 @@ Mplus file: HS.mean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.16 
+Lavaan total timing:  0.06 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.ML.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1743,7 +1743,7 @@ Mplus file: HS.mean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.18 
+Lavaan total timing:  0.11 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.ML.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1754,7 +1754,7 @@ Mplus file: HS.mean.ML.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.28 
+Lavaan total timing:  0.08 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.ML.observed.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1765,7 +1765,7 @@ Mplus file: HS.mean.ML.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.11 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.ML.observed.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1776,7 +1776,7 @@ Mplus file: HS.mean.MLF.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLF", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.19 
+Lavaan total timing:  0.06 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLF.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1787,7 +1787,7 @@ Mplus file: HS.mean.MLF.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLF", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.14 
+Lavaan total timing:  0.04 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLF.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1798,7 +1798,7 @@ Mplus file: HS.mean.MLM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLM", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.15 
+Lavaan total timing:  0.07 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  20 
@@ -1824,35 +1824,35 @@ parameter values: number of delta's > 0.0005:  20
 55  visual ~~ textual     1   se 0.082 0.080  0.002
 56  visual ~~   speed     1   se 0.055 0.054  0.001
 fit values:       number of delta's > 0.0005:  8 
-                     fit     lav     mpl   delta
-3           chisq.scaled  80.872  81.908  -1.036
-6   chisq.scaling.factor   1.055   1.042   0.013
-7  baseline.chisq.scaled 789.298 888.912 -99.614
-11            cfi.scaled   0.925   0.932  -0.007
-12            tli.scaled   0.887   0.898  -0.011
-39          rmsea.scaled   0.089   0.090  -0.001
-40 rmsea.ci.lower.scaled   0.068   0.069  -0.001
-41 rmsea.ci.upper.scaled   0.110   0.111  -0.001
+                     fit     lav      mpl    delta
+3           chisq.scaled  80.872  81.9080  -1.0360
+6   chisq.scaling.factor   1.055   1.0415   0.0135
+7  baseline.chisq.scaled 789.298 888.9120 -99.6140
+11            cfi.scaled   0.925   0.9320  -0.0070
+12            tli.scaled   0.887   0.8980  -0.0110
+39          rmsea.scaled   0.089   0.0900  -0.0010
+40 rmsea.ci.lower.scaled   0.068   0.0690  -0.0010
+41 rmsea.ci.upper.scaled   0.110   0.1110  -0.0010
 
 Mplus file: HS.mean.MLM.mplus.out 
 ================================= 
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLM", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.2 
+Lavaan total timing:  0.06 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
 fit values:       number of delta's > 0.0005:  1 
-                   fit   lav   mpl  delta
-6 chisq.scaling.factor 1.041 1.042 -0.001
+                   fit   lav    mpl  delta
+6 chisq.scaling.factor 1.041 1.0415 -5e-04
 
 Mplus file: HS.mean.MLMV.mplus.out 
 ================================== 
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMV", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.18 
+Lavaan total timing:  0.07 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  20 
@@ -1893,7 +1893,7 @@ Mplus file: HS.mean.MLMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMV", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.15 
+Lavaan total timing:  0.06 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1904,7 +1904,7 @@ Mplus file: HS.mean.MLMVS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMVS", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.17 
+Lavaan total timing:  0.04 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLMVS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  20 
@@ -1947,7 +1947,7 @@ Mplus file: HS.mean.MLMVS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMVS", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.15 
+Lavaan total timing:  0.04 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLMVS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1962,7 +1962,7 @@ Mplus file: HS.mean.MLR.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "expected", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.28 
+Lavaan total timing:  0.06 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLR.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1973,7 +1973,7 @@ Mplus file: HS.mean.MLR.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "expected", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.22 
+Lavaan total timing:  0.06 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLR.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1984,7 +1984,7 @@ Mplus file: HS.mean.MLR.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.39 
+Lavaan total timing:  0.11 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLR.observed.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -1997,7 +1997,7 @@ Mplus file: HS.mean.MLR.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.44 
+Lavaan total timing:  0.17 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.MLR.observed.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2010,7 +2010,7 @@ Mplus file: HS.mean.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.45 
+Lavaan total timing:  0.13 
        number of iterations:  56 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  48 
@@ -2075,7 +2075,7 @@ Mplus file: HS.mean.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.46 
+Lavaan total timing:  0.1 
        number of iterations:  54 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.mean.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2088,7 +2088,7 @@ Mplus file: HS.nomean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = FALSE, missing = "listwise", mimic = "lavaan")
-Lavaan total timing:  0.17 
+Lavaan total timing:  0.09 
        number of iterations:  31 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.nomean.GLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2099,7 +2099,7 @@ Mplus file: HS.nomean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = FALSE, missing = "listwise", mimic = "Mplus")
-Lavaan total timing:  0.23 
+Lavaan total timing:  0.06 
        number of iterations:  31 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.nomean.GLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2110,7 +2110,7 @@ Mplus file: HS.nomean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = FALSE, missing = "listwise", mimic = "lavaan")
-Lavaan total timing:  0.2 
+Lavaan total timing:  0.11 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.nomean.ML.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2121,7 +2121,7 @@ Mplus file: HS.nomean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = FALSE, missing = "listwise", mimic = "Mplus")
-Lavaan total timing:  0.14 
+Lavaan total timing:  0.05 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.nomean.ML.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2132,7 +2132,7 @@ Mplus file: HS.nomean.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, missing = "listwise", mimic = "lavaan")
-Lavaan total timing:  0.18 
+Lavaan total timing:  0.06 
        number of iterations:  31 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.nomean.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  30 
@@ -2179,7 +2179,7 @@ Mplus file: HS.nomean.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, missing = "listwise", mimic = "Mplus")
-Lavaan total timing:  0.27 
+Lavaan total timing:  0.08 
        number of iterations:  31 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS\HS.nomean.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2192,7 +2192,7 @@ Mplus file: HS.missing.mean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = TRUE, missing = "ml", mimic = "lavaan")
-Lavaan total timing:  0.82 
+Lavaan total timing:  0.3 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.mean.ML.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2205,7 +2205,7 @@ Mplus file: HS.missing.mean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = TRUE, missing = "ml", mimic = "Mplus")
-Lavaan total timing:  0.83 
+Lavaan total timing:  0.33 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.mean.ML.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2218,7 +2218,7 @@ Mplus file: HS.missing.mean.ML.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, missing = "ml", mimic = "lavaan")
-Lavaan total timing:  1.31 
+Lavaan total timing:  0.52 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.mean.ML.observed.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2231,7 +2231,7 @@ Mplus file: HS.missing.mean.ML.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, missing = "ml", mimic = "Mplus")
-Lavaan total timing:  1.42 
+Lavaan total timing:  0.55 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.mean.ML.observed.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2242,7 +2242,7 @@ Mplus file: HS.missing.MLF.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLF", missing = "ml", mimic = "lavaan")
-Lavaan total timing:  0.82 
+Lavaan total timing:  0.27 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.MLF.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2255,7 +2255,7 @@ Mplus file: HS.missing.MLF.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLF", missing = "ml", mimic = "Mplus")
-Lavaan total timing:  0.81 
+Lavaan total timing:  0.46 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.MLF.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2266,7 +2266,7 @@ Mplus file: HS.missing.MLR.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "expected", missing = "ml", mimic = "lavaan")
-Lavaan total timing:  0.91 
+Lavaan total timing:  0.36 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.MLR.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2279,7 +2279,7 @@ Mplus file: HS.missing.MLR.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "expected", missing = "ml", mimic = "Mplus")
-Lavaan total timing:  0.93 
+Lavaan total timing:  0.64 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.MLR.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2292,7 +2292,7 @@ Mplus file: HS.missing.MLR.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", missing = "ml", mimic = "lavaan")
-Lavaan total timing:  1.97 
+Lavaan total timing:  0.65 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.MLR.observed.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2306,7 +2306,7 @@ Mplus file: HS.missing.MLR.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", missing = "ml", mimic = "Mplus")
-Lavaan total timing:  1.47 
+Lavaan total timing:  0.69 
        number of iterations:  51 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_missing\HS.missing.MLR.observed.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2319,7 +2319,7 @@ Mplus file: HS.multi.mean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.46 
+Lavaan total timing:  0.14 
        number of iterations:  61 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.GLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  11 
@@ -2345,7 +2345,7 @@ Mplus file: HS.multi.mean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.48 
+Lavaan total timing:  0.14 
        number of iterations:  62 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.GLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -2362,7 +2362,7 @@ Mplus file: HS.multi.mean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.26 
+Lavaan total timing:  0.09 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.ML.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2373,7 +2373,7 @@ Mplus file: HS.multi.mean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.39 
+Lavaan total timing:  0.17 
        number of iterations:  63 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.ML.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2384,7 +2384,7 @@ Mplus file: HS.multi.mean.ML.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.66 
+Lavaan total timing:  0.21 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.ML.observed.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2395,7 +2395,7 @@ Mplus file: HS.multi.mean.ML.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.76 
+Lavaan total timing:  0.31 
        number of iterations:  63 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.ML.observed.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2406,7 +2406,7 @@ Mplus file: HS.multi.mean.MLF.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLF", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.32 
+Lavaan total timing:  0.1 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLF.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2417,7 +2417,7 @@ Mplus file: HS.multi.mean.MLF.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLF", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.1 
        number of iterations:  58 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLF.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2428,7 +2428,7 @@ Mplus file: HS.multi.mean.MLM.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLM", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.31 
+Lavaan total timing:  0.11 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLM.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  40 
@@ -2474,22 +2474,22 @@ parameter values: number of delta's > 0.0005:  40
 121  visual ~~ textual     2   se 0.105 0.107 -0.002
 123 textual ~~   speed     2   se 0.094 0.092  0.002
 fit values:       number of delta's > 0.0005:  8 
-                     fit     lav     mpl    delta
-3           chisq.scaled 111.728 113.460   -1.732
-6   chisq.scaling.factor   1.037   1.021    0.016
-7  baseline.chisq.scaled 811.220 934.748 -123.528
-11            cfi.scaled   0.914   0.924   -0.010
-12            tli.scaled   0.871   0.886   -0.015
-38          rmsea.scaled   0.094   0.095   -0.001
-39 rmsea.ci.lower.scaled   0.072   0.073   -0.001
-40 rmsea.ci.upper.scaled   0.116   0.118   -0.002
+                     fit     lav      mpl     delta
+3           chisq.scaled 111.728 113.4600   -1.7320
+6   chisq.scaling.factor   1.037   1.0211    0.0159
+7  baseline.chisq.scaled 811.220 934.7480 -123.5280
+11            cfi.scaled   0.914   0.9240   -0.0100
+12            tli.scaled   0.871   0.8860   -0.0150
+38          rmsea.scaled   0.094   0.0950   -0.0010
+39 rmsea.ci.lower.scaled   0.072   0.0730   -0.0010
+40 rmsea.ci.upper.scaled   0.116   0.1180   -0.0020
 
 Mplus file: HS.multi.mean.MLM.mplus.out 
 ======================================= 
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLM", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.17 
        number of iterations:  58 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLM.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2500,7 +2500,7 @@ Mplus file: HS.multi.mean.MLMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMV", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.11 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLMV.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  40 
@@ -2561,7 +2561,7 @@ Mplus file: HS.multi.mean.MLMV.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMV", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.1 
        number of iterations:  58 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLMV.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2572,7 +2572,7 @@ Mplus file: HS.multi.mean.MLMVS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMVS", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.11 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLMVS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  40 
@@ -2635,7 +2635,7 @@ Mplus file: HS.multi.mean.MLMVS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLMVS", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.14 
        number of iterations:  58 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLMVS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2650,7 +2650,7 @@ Mplus file: HS.multi.mean.MLR.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "expected", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.34 
+Lavaan total timing:  0.12 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLR.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2661,7 +2661,7 @@ Mplus file: HS.multi.mean.MLR.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "expected", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.44 
+Lavaan total timing:  0.16 
        number of iterations:  63 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLR.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2672,7 +2672,7 @@ Mplus file: HS.multi.mean.MLR.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.9 
+Lavaan total timing:  0.28 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLR.observed.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2686,7 +2686,7 @@ Mplus file: HS.multi.mean.MLR.observed.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "MLR", information = "observed", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  1.08 
+Lavaan total timing:  0.49 
        number of iterations:  63 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.MLR.observed.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -2700,7 +2700,7 @@ Mplus file: HS.multi.mean.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.89 
+Lavaan total timing:  0.25 
        number of iterations:  102 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  150 
@@ -2830,31 +2830,7 @@ parameter values: number of delta's > 0.0005:  150
 231      x9 ~1             1 est.std.all 6.046 6.111 -0.065
 256      x1 ~1             2 est.std.all 4.767 4.754  0.013
 257      x2 ~1             2 est.std.all 6.115 6.098  0.017
-258      x3 ~1             2 est.std.all 1.938 1.933  0.005
-259      x4 ~1             2 est.std.all 3.047 3.039  0.008
-260      x5 ~1             2 est.std.all 4.041 4.030  0.011
-261      x6 ~1             2 est.std.all 2.205 2.199  0.006
-262      x7 ~1             2 est.std.all 3.703 3.693  0.010
-263      x8 ~1             2 est.std.all 5.918 5.902  0.016
-264      x9 ~1             2 est.std.all 5.231 5.217  0.014
-289      x1 ~1             1 est.std.nox 4.708 4.757 -0.049
-290      x2 ~1             1 est.std.nox 5.350 5.412 -0.062
-291      x3 ~1             1 est.std.nox 2.422 2.446 -0.024
-292      x4 ~1             1 est.std.nox 2.380 2.406 -0.026
-293      x5 ~1             1 est.std.nox 3.252 3.287 -0.035
-294      x6 ~1             1 est.std.nox 1.942 1.963 -0.021
-295      x7 ~1             1 est.std.nox 4.438 4.485 -0.047
-296      x8 ~1             1 est.std.nox 5.816 5.880 -0.064
-297      x9 ~1             1 est.std.nox 6.046 6.111 -0.065
-322      x1 ~1             2 est.std.nox 4.767 4.754  0.013
-323      x2 ~1             2 est.std.nox 6.115 6.098  0.017
-324      x3 ~1             2 est.std.nox 1.938 1.933  0.005
-325      x4 ~1             2 est.std.nox 3.047 3.039  0.008
-326      x5 ~1             2 est.std.nox 4.041 4.030  0.011
-327      x6 ~1             2 est.std.nox 2.205 2.199  0.006
-328      x7 ~1             2 est.std.nox 3.703 3.693  0.010
-329      x8 ~1             2 est.std.nox 5.918 5.902  0.016
-330      x9 ~1             2 est.std.nox 5.231 5.217  0.014
+ [ reached 'max' / getOption("max.print") -- omitted 25 rows ]
 fit values:       number of delta's > 0.0005:  8 
               fit     lav     mpl  delta
 3           chisq 116.052 107.376  8.676
@@ -2871,7 +2847,7 @@ Mplus file: HS.multi.mean.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = TRUE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.95 
+Lavaan total timing:  0.31 
        number of iterations:  106 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.mean.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  89 
@@ -2981,7 +2957,7 @@ Mplus file: HS.multi.nomean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = FALSE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.41 
+Lavaan total timing:  0.12 
        number of iterations:  61 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.nomean.GLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -2996,7 +2972,7 @@ Mplus file: HS.multi.nomean.GLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "GLS", meanstructure = FALSE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.42 
+Lavaan total timing:  0.15 
        number of iterations:  62 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.nomean.GLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -3011,7 +2987,7 @@ Mplus file: HS.multi.nomean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = FALSE, missing = "listwise", group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.3 
+Lavaan total timing:  0.08 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.nomean.ML.expected.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3022,7 +2998,7 @@ Mplus file: HS.multi.nomean.ML.expected.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = FALSE, missing = "listwise", group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.5 
+Lavaan total timing:  0.11 
        number of iterations:  58 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.nomean.ML.expected.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3033,7 +3009,7 @@ Mplus file: HS.multi.nomean.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, group = "school", group.equal = "none", mimic = "lavaan")
-Lavaan total timing:  0.46 
+Lavaan total timing:  0.12 
        number of iterations:  60 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.nomean.WLS.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  93 
@@ -3147,7 +3123,7 @@ Mplus file: HS.multi.nomean.WLS.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "WLS", meanstructure = FALSE, group = "school", group.equal = "none", mimic = "Mplus")
-Lavaan total timing:  0.43 
+Lavaan total timing:  0.18 
        number of iterations:  59 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\HS_multi\HS.multi.nomean.WLS.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  54 
@@ -3222,7 +3198,7 @@ Mplus file: ex3.1.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.11 
+Lavaan total timing:  0.05 
        number of iterations:  1 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.1.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3233,7 +3209,7 @@ Mplus file: ex3.1.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.12 
+Lavaan total timing:  0.04 
        number of iterations:  1 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.1.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3244,7 +3220,7 @@ Mplus file: ex3.11.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.17 
+Lavaan total timing:  0.11 
        number of iterations:  1 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.11.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3255,127 +3231,18 @@ Mplus file: ex3.11.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.23 
+Lavaan total timing:  0.11 
        number of iterations:  1 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.11.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
 fit values:       number of delta's > 0.0005:  0 
-
-Mplus file: ex3.12.out 
-====================== 
-lavaan call:
-sem(model = lavaan.model, data = <data.via.mplusfile>,
-    estimator = "WLSMV", mimic = "lavaan")
-Lavaan total timing:  0.54 
-       number of iterations:  42 
-Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.12.out_mimlavaan.log 
-parameter values: number of delta's > 0.0005:  2 
-   lhs op rhs group type   lav   mpl  delta
-3   u1  ~  x3     1  est 0.927 0.928 -0.001
-24  u3  ~  x2     1   se 0.169 0.168  0.001
-fit values:       number of delta's > 0.0005:  3 
-                     fit    lav     mpl    delta
-6  baseline.chisq.scaled 50.352 875.406 -825.054
-7     baseline.df.scaled  3.000  12.000   -9.000
-11            tli.scaled  1.044   1.010    0.034
-
-Mplus file: ex3.12.out 
-====================== 
-lavaan call:
-sem(model = lavaan.model, data = <data.via.mplusfile>,
-    estimator = "WLSMV", mimic = "Mplus")
-Lavaan total timing:  0.51 
-       number of iterations:  42 
-Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.12.out_mimMplus.log 
-parameter values: number of delta's > 0.0005:  5 
-   lhs op rhs group type   lav   mpl  delta
-3   u1  ~  x3     1  est 0.927 0.928 -0.001
-16  u1  ~  x1     1   se 0.198 0.197  0.001
-21  u2  ~  x3     1   se 0.464 0.463  0.001
-24  u3  ~  x2     1   se 0.169 0.168  0.001
-25  u1  |  t1     1   se 0.109 0.108  0.001
-fit values:       number of delta's > 0.0005:  5 
-                     fit    lav     mpl    delta
-3           chisq.scaled  0.937   0.936    0.001
-5          pvalue.scaled  0.816   0.817   -0.001
-6  baseline.chisq.scaled 50.453 875.406 -824.953
-7     baseline.df.scaled  3.000  12.000   -9.000
-11            tli.scaled  1.043   1.010    0.033
-
-Mplus file: ex3.14.out 
-====================== 
-lavaan call:
-sem(model = lavaan.model, data = <data.via.mplusfile>,
-    estimator = "WLSMV", mimic = "lavaan")
-Lavaan total timing:  0.45 
-       number of iterations:  29 
-Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.14.out_mimlavaan.log 
-parameter values: number of delta's > 0.0005:  0 
-fit values:       number of delta's > 0.0005:  5 
-                     fit     lav     mpl    delta
-3           chisq.scaled   1.575   1.578   -0.003
-5          pvalue.scaled   0.665   0.664    0.001
-6  baseline.chisq.scaled 209.848 670.933 -461.085
-7     baseline.df.scaled   3.000  12.000   -9.000
-11            tli.scaled   1.007   1.009   -0.002
-
-Mplus file: ex3.14.out 
-====================== 
-lavaan call:
-sem(model = lavaan.model, data = <data.via.mplusfile>,
-    estimator = "WLSMV", mimic = "Mplus")
-Lavaan total timing:  0.44 
-       number of iterations:  29 
-Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.14.out_mimMplus.log 
-parameter values: number of delta's > 0.0005:  1 
-   lhs op rhs group type   lav   mpl delta
-24  u1  |  t1     1   se 0.244 0.243 0.001
-fit values:       number of delta's > 0.0005:  3 
-                     fit     lav     mpl    delta
-6  baseline.chisq.scaled 210.268 670.933 -460.665
-7     baseline.df.scaled   3.000  12.000   -9.000
-11            tli.scaled   1.007   1.009   -0.002
-
-Mplus file: ex3.4.out 
-===================== 
-lavaan call:
-sem(model = lavaan.model, data = <data.via.mplusfile>,
-    estimator = "WLSMV", mimic = "lavaan")
-Lavaan total timing:  0.18 
-       number of iterations:  9 
-Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.4.out_mimlavaan.log 
-parameter values: number of delta's > 0.0005:  2 
-  lhs op rhs group type   lav   mpl  delta
-1  u1  ~  x1     1  est 1.022 1.023 -0.001
-5  u1  ~  x3     1   se 0.225 0.224  0.001
-fit values:       number of delta's > 0.0005:  2 
-                    fit lav     mpl    delta
-6 baseline.chisq.scaled   0 193.243 -193.243
-7    baseline.df.scaled   0   2.000   -2.000
-
-Mplus file: ex3.4.out 
-===================== 
-lavaan call:
-sem(model = lavaan.model, data = <data.via.mplusfile>,
-    estimator = "WLSMV", mimic = "Mplus")
-Lavaan total timing:  0.17 
-       number of iterations:  9 
-Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex3.4.out_mimMplus.log 
-parameter values: number of delta's > 0.0005:  2 
-  lhs op rhs group type   lav   mpl  delta
-1  u1  ~  x1     1  est 1.022 1.023 -0.001
-5  u1  ~  x3     1   se 0.225 0.224  0.001
-fit values:       number of delta's > 0.0005:  2 
-                    fit lav     mpl    delta
-6 baseline.chisq.scaled   0 193.243 -193.243
-7    baseline.df.scaled   0   2.000   -2.000
 
 Mplus file: ex5.1.mplus.out 
 =========================== 
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.18 
+Lavaan total timing:  0.07 
        number of iterations:  34 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.1.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3386,7 +3253,7 @@ Mplus file: ex5.1.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.28 
+Lavaan total timing:  0.07 
        number of iterations:  34 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.1.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3397,7 +3264,7 @@ Mplus file: ex5.11.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.46 
+Lavaan total timing:  0.14 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.11.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3408,7 +3275,7 @@ Mplus file: ex5.11.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.46 
+Lavaan total timing:  0.19 
        number of iterations:  35 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.11.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3419,7 +3286,7 @@ Mplus file: ex5.14.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = FALSE, missing = "listwise", group = "g", group.equal = "loadings", group.partial = "f1=~y3", mimic = "lavaan")
-Lavaan total timing:  0.28 
+Lavaan total timing:  0.12 
        number of iterations:  32 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.14.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3432,7 +3299,7 @@ Mplus file: ex5.14.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "expected", meanstructure = FALSE, missing = "listwise", group = "g", group.equal = "loadings", group.partial = "f1=~y3", mimic = "Mplus")
-Lavaan total timing:  0.34 
+Lavaan total timing:  0.14 
        number of iterations:  37 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.14.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3445,7 +3312,7 @@ Mplus file: ex5.15.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, group = "g", group.equal = "loadings", group.partial = "f1=~y3", mimic = "lavaan")
-Lavaan total timing:  0.94 
+Lavaan total timing:  0.32 
        number of iterations:  54 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.15.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -3460,7 +3327,7 @@ Mplus file: ex5.15.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, group = "g", group.equal = "loadings", group.partial = "f1=~y3", mimic = "Mplus")
-Lavaan total timing:  1.04 
+Lavaan total timing:  0.4 
        number of iterations:  57 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.15.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  1 
@@ -3473,7 +3340,7 @@ Mplus file: ex5.6.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.44 
+Lavaan total timing:  0.14 
        number of iterations:  46 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.6.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3484,7 +3351,7 @@ Mplus file: ex5.6.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.52 
+Lavaan total timing:  0.21 
        number of iterations:  46 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.6.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3495,7 +3362,7 @@ Mplus file: ex5.8.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.36 
+Lavaan total timing:  0.11 
        number of iterations:  41 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.8.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3508,7 +3375,7 @@ Mplus file: ex5.8.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.39 
+Lavaan total timing:  0.12 
        number of iterations:  41 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.8.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3521,7 +3388,7 @@ Mplus file: ex5.9.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.23 
+Lavaan total timing:  0.06 
        number of iterations:  21 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.9.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3534,7 +3401,7 @@ Mplus file: ex5.9.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.22 
+Lavaan total timing:  0.08 
        number of iterations:  21 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex5.9.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3545,7 +3412,7 @@ Mplus file: ex6.1.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.3 
+Lavaan total timing:  0.23 
        number of iterations:  25 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.1.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3558,7 +3425,7 @@ Mplus file: ex6.1.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.24 
+Lavaan total timing:  0.06 
        number of iterations:  25 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.1.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3569,7 +3436,7 @@ Mplus file: ex6.10.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = FALSE, mimic = "lavaan")
-Lavaan total timing:  0.36 
+Lavaan total timing:  0.09 
        number of iterations:  29 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.10.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3582,7 +3449,7 @@ Mplus file: ex6.10.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = FALSE, mimic = "Mplus")
-Lavaan total timing:  0.37 
+Lavaan total timing:  0.12 
        number of iterations:  29 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.10.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3593,7 +3460,7 @@ Mplus file: ex6.11.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.28 
+Lavaan total timing:  0.06 
        number of iterations:  44 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.11.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3606,7 +3473,7 @@ Mplus file: ex6.11.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.1 
        number of iterations:  44 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.11.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3617,7 +3484,7 @@ Mplus file: ex6.8.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.19 
+Lavaan total timing:  0.08 
        number of iterations:  26 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.8.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3630,7 +3497,7 @@ Mplus file: ex6.8.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.27 
+Lavaan total timing:  0.06 
        number of iterations:  26 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.8.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3641,7 +3508,7 @@ Mplus file: ex6.9.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.27 
+Lavaan total timing:  0.09 
        number of iterations:  44 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.9.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3652,7 +3519,7 @@ Mplus file: ex6.9.mplus.out
 lavaan call:
 growth(model = lavaan.model, data = <data.via.mplusfile>,
        estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.32 
+Lavaan total timing:  0.08 
        number of iterations:  44 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\MPLUS_ex\ex6.9.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3663,7 +3530,7 @@ Mplus file: HS0.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.63 
+Lavaan total timing:  0.16 
        number of iterations:  170 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS0.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  4 
@@ -3679,7 +3546,7 @@ Mplus file: HS0.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.93 
+Lavaan total timing:  0.23 
        number of iterations:  176 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS0.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  2 
@@ -3693,7 +3560,7 @@ Mplus file: HS1.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.31 
+Lavaan total timing:  0.08 
        number of iterations:  20 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS1.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3704,7 +3571,7 @@ Mplus file: HS1.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.4 
+Lavaan total timing:  0.11 
        number of iterations:  42 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS1.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3715,7 +3582,7 @@ Mplus file: HS3.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.32 
+Lavaan total timing:  0.12 
        number of iterations:  28 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS3.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3728,7 +3595,7 @@ Mplus file: HS3.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.33 
+Lavaan total timing:  0.11 
        number of iterations:  28 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS3.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3739,7 +3606,7 @@ Mplus file: HS5.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "lavaan")
-Lavaan total timing:  0.47 
+Lavaan total timing:  0.09 
        number of iterations:  56 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS5.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3752,7 +3619,7 @@ Mplus file: HS5.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, mimic = "Mplus")
-Lavaan total timing:  0.42 
+Lavaan total timing:  0.2 
        number of iterations:  56 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS5.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3763,7 +3630,7 @@ Mplus file: HS6.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, group = "school", mimic = "lavaan")
-Lavaan total timing:  0.86 
+Lavaan total timing:  0.22 
        number of iterations:  36 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS6.mplus.out_mimlavaan.log 
 parameter values: number of delta's > 0.0005:  0 
@@ -3776,308 +3643,137 @@ Mplus file: HS6.mplus.out
 lavaan call:
 sem(model = lavaan.model, data = <data.via.mplusfile>,
     estimator = "ML", information = "observed", meanstructure = TRUE, group = "school", mimic = "Mplus")
-Lavaan total timing:  0.8 
+Lavaan total timing:  0.33 
        number of iterations:  54 
 Detailed output lavaan in C:\GitHub\lavaan-mplus\Syntax\HS6.mplus.out_mimMplus.log 
 parameter values: number of delta's > 0.0005:  297 
-        lhs op     rhs group        type    lav   mpl  delta
-5   textual =~      x5     1         est  1.111 1.141 -0.030
-6   textual =~      x6     1         est  0.884 0.888 -0.004
-8     speed =~      x8     1         est  1.111 1.141 -0.030
-9     speed =~      x9     1         est  0.884 0.888 -0.004
-10    speed ~~   speed     1         est  0.446 0.463 -0.017
-11   visual ~~  visual     1         est  1.007 1.012 -0.005
-13       x2 ~~      x2     1         est  1.330 1.305  0.025
-14       x3 ~~      x3     1         est  1.038 0.966  0.072
-15       x4 ~~      x4     1         est  0.426 0.427 -0.001
-16       x5 ~~      x5     1         est  0.493 0.476  0.017
-17       x6 ~~      x6     1         est  0.278 0.281 -0.003
-18       x7 ~~      x7     1         est  0.853 0.807  0.046
-19       x8 ~~      x8     1         est  0.491 0.465  0.026
-20       x9 ~~      x9     1         est  0.682 0.687 -0.005
-21  textual ~~ textual     1         est  0.933 0.918  0.015
-22   visual ~~ textual     1         est  0.487 0.480  0.007
-25       x1 ~1             1         est  4.974 4.941  0.033
-26       x2 ~1             1         est  6.131 5.984  0.147
-27       x3 ~1             1         est  2.240 2.487 -0.247
-28       x4 ~1             1         est  2.787 2.823 -0.036
-29       x5 ~1             1         est  4.046 3.995  0.051
-30       x6 ~1             1         est  1.915 1.922 -0.007
-31       x7 ~1             1         est  4.240 4.432 -0.192
-32       x8 ~1             1         est  5.632 5.563  0.069
-33       x9 ~1             1         est  5.449 5.418  0.031
-36   visual =~      x3     2         est  0.600 0.800 -0.200
-38  textual =~      x5     2         est  1.111 1.079  0.032
-39  textual =~      x6     2         est  1.007 1.006  0.001
-41    speed =~      x8     2         est  1.181 1.079  0.102
-42    speed =~      x9     2         est  0.884 0.888 -0.004
-43    speed ~~   speed     2         est  0.446 0.463 -0.017
-44   visual ~~  visual     2         est  0.831 0.713  0.118
-45       x1 ~~      x1     2         est  0.549 0.641 -0.092
-46       x2 ~~      x2     2         est  0.985 0.966  0.019
-47       x3 ~~      x3     2         est  0.729 0.599  0.130
-48       x4 ~~      x4     2         est  0.349 0.340  0.009
-49       x5 ~~      x5     2         est  0.390 0.396 -0.006
-50       x6 ~~      x6     2         est  0.411 0.405  0.006
-51       x7 ~~      x7     2         est  0.613 0.574  0.039
-52       x8 ~~      x8     2         est  0.392 0.427 -0.035
-53       x9 ~~      x9     2         est  0.583 0.567  0.016
-54  textual ~~ textual     2         est  0.836 0.854 -0.018
-55   visual ~~ textual     2         est  0.437 0.419  0.018
-56   visual ~~   speed     2         est  0.307 0.287  0.020
-57  textual ~~   speed     2         est  0.194 0.206 -0.012
-58       x1 ~1             2         est  4.974 4.930  0.044
-59       x2 ~1             2         est  6.131 6.200 -0.069
-60       x3 ~1             2         est  2.240 1.996  0.244
-61       x4 ~1             2         est  2.787 3.317 -0.530
-62       x5 ~1             2         est  4.046 4.712 -0.666
-63       x6 ~1             2         est  1.915 2.469 -0.554
-64       x7 ~1             2         est  4.240 3.921  0.319
-65       x8 ~1             2         est  5.632 5.488  0.144
-66       x9 ~1             2         est  5.449 5.327  0.122
-67   visual ~1             2         est -0.096 0.000 -0.096
-68  textual ~1             2         est  0.562 0.000  0.562
-69    speed ~1             2         est -0.174 0.000 -0.174
-74  textual =~      x5     1          se  0.062 0.086 -0.024
-75  textual =~      x6     1          se  0.063 0.067 -0.004
-77    speed =~      x8     1          se  0.062 0.086 -0.024
-78    speed =~      x9     1          se  0.063 0.067 -0.004
-79    speed ~~   speed     1          se  0.066 0.064  0.002
-80   visual ~~  visual     1          se  0.175 0.172  0.003
-81       x1 ~~      x1     1          se  0.128 0.124  0.004
-82       x2 ~~      x2     1          se  0.160 0.156  0.004
-83       x3 ~~      x3     1          se  0.133 0.121  0.012
-84       x4 ~~      x4     1          se  0.071 0.070  0.001
-87       x7 ~~      x7     1          se  0.121 0.112  0.009
-90  textual ~~ textual     1          se  0.140 0.145 -0.005
-92   visual ~~   speed     1          se  0.081 0.083 -0.002
-93  textual ~~   speed     1          se  0.074 0.075 -0.001
-94       x1 ~1             1          se  0.094 0.095 -0.001
-95       x2 ~1             1          se  0.077 0.100 -0.023
-96       x3 ~1             1          se  0.079 0.092 -0.013
-97       x4 ~1             1          se  0.088 0.093 -0.005
-98       x5 ~1             1          se  0.097 0.104 -0.007
-100      x7 ~1             1          se  0.082 0.090 -0.008
-101      x8 ~1             1          se  0.079 0.083 -0.004
-102      x9 ~1             1          se  0.072 0.082 -0.010
-107 textual =~      x5     2          se  0.062 0.080 -0.018
-108 textual =~      x6     2          se  0.077 0.089 -0.012
-110   speed =~      x8     2          se  0.154 0.080  0.074
-111   speed =~      x9     2          se  0.063 0.067 -0.004
-112   speed ~~   speed     2          se  0.066 0.064  0.002
-113  visual ~~  visual     2          se  0.149 0.126  0.023
-114      x1 ~~      x1     2          se  0.123 0.114  0.009
-115      x2 ~~      x2     2          se  0.124 0.120  0.004
-116      x3 ~~      x3     2          se  0.101 0.092  0.009
-117      x4 ~~      x4     2          se  0.062 0.064 -0.002
-118      x5 ~~      x5     2          se  0.072 0.071  0.001
-120      x7 ~~      x7     2          se  0.094 0.089  0.005
-121      x8 ~~      x8     2          se  0.105 0.088  0.017
-122      x9 ~~      x9     2          se  0.089 0.086  0.003
-123 textual ~~ textual     2          se  0.129 0.139 -0.010
-124  visual ~~ textual     2          se  0.098 0.092  0.006
-125  visual ~~   speed     2          se  0.071 0.066  0.005
-126 textual ~~   speed     2          se  0.065 0.064  0.001
-127      x1 ~1             2          se  0.094 0.097 -0.003
-128      x2 ~1             2          se  0.077 0.089 -0.012
-129      x3 ~1             2          se  0.079 0.085 -0.006
-130      x4 ~1             2          se  0.088 0.091 -0.003
-131      x5 ~1             2          se  0.097 0.098 -0.001
-132      x6 ~1             2          se  0.080 0.094 -0.014
-133      x7 ~1             2          se  0.082 0.085 -0.003
-134      x8 ~1             2          se  0.079 0.082 -0.003
-135      x9 ~1             2          se  0.072 0.080 -0.008
-136  visual ~1             2          se  0.132 0.000  0.132
-137 textual ~1             2          se  0.116 0.000  0.116
-138   speed ~1             2          se  0.097 0.000  0.097
-139  visual =~      x1     1     est.std  1.003 1.006 -0.003
-140  visual =~      x2     1     est.std  0.502 0.503 -0.001
-141  visual =~      x3     1     est.std  0.602 0.604 -0.002
-142 textual =~      x4     1     est.std  0.966 0.958  0.008
-143 textual =~      x5     1     est.std  1.073 1.093 -0.020
-144 textual =~      x6     1     est.std  0.854 0.851  0.003
-145   speed =~      x7     1     est.std  0.668 0.681 -0.013
-146   speed =~      x8     1     est.std  0.742 0.777 -0.035
-147   speed =~      x9     1     est.std  0.591 0.604 -0.013
-151      x2 ~~      x2     1     est.std  1.330 1.305  0.025
-152      x3 ~~      x3     1     est.std  1.038 0.966  0.072
-153      x4 ~~      x4     1     est.std  0.426 0.427 -0.001
-154      x5 ~~      x5     1     est.std  0.493 0.476  0.017
-155      x6 ~~      x6     1     est.std  0.278 0.281 -0.003
-156      x7 ~~      x7     1     est.std  0.853 0.807  0.046
-157      x8 ~~      x8     1     est.std  0.491 0.465  0.026
-158      x9 ~~      x9     1     est.std  0.682 0.687 -0.005
-160  visual ~~ textual     1     est.std  0.503 0.498  0.005
-161  visual ~~   speed     1     est.std  0.313 0.306  0.007
-162 textual ~~   speed     1     est.std  0.337 0.333  0.004
-163      x1 ~1             1     est.std  4.974 4.941  0.033
-164      x2 ~1             1     est.std  6.131 5.984  0.147
-165      x3 ~1             1     est.std  2.240 2.487 -0.247
-166      x4 ~1             1     est.std  2.787 2.823 -0.036
-167      x5 ~1             1     est.std  4.046 3.995  0.051
-168      x6 ~1             1     est.std  1.915 1.922 -0.007
-169      x7 ~1             1     est.std  4.240 4.432 -0.192
-170      x8 ~1             1     est.std  5.632 5.563  0.069
-171      x9 ~1             1     est.std  5.449 5.418  0.031
-172  visual =~      x1     2     est.std  0.912 0.845  0.067
-173  visual =~      x2     2     est.std  0.456 0.422  0.034
-174  visual =~      x3     2     est.std  0.547 0.676 -0.129
-175 textual =~      x4     2     est.std  0.914 0.924 -0.010
-176 textual =~      x5     2     est.std  1.015 0.997  0.018
-177 textual =~      x6     2     est.std  0.921 0.929 -0.008
-178   speed =~      x7     2     est.std  0.668 0.681 -0.013
-179   speed =~      x8     2     est.std  0.789 0.734  0.055
-180   speed =~      x9     2     est.std  0.591 0.604 -0.013
-183      x1 ~~      x1     2     est.std  0.549 0.641 -0.092
-184      x2 ~~      x2     2     est.std  0.985 0.966  0.019
-185      x3 ~~      x3     2     est.std  0.729 0.599  0.130
-186      x4 ~~      x4     2     est.std  0.349 0.340  0.009
-187      x5 ~~      x5     2     est.std  0.390 0.396 -0.006
-188      x6 ~~      x6     2     est.std  0.411 0.405  0.006
-189      x7 ~~      x7     2     est.std  0.613 0.574  0.039
-190      x8 ~~      x8     2     est.std  0.392 0.427 -0.035
-191      x9 ~~      x9     2     est.std  0.583 0.567  0.016
-193  visual ~~ textual     2     est.std  0.524 0.537 -0.013
-194  visual ~~   speed     2     est.std  0.504 0.499  0.005
-195 textual ~~   speed     2     est.std  0.317 0.327 -0.010
-196      x1 ~1             2     est.std  4.974 4.930  0.044
-197      x2 ~1             2     est.std  6.131 6.200 -0.069
-198      x3 ~1             2     est.std  2.240 1.996  0.244
-199      x4 ~1             2     est.std  2.787 3.317 -0.530
-200      x5 ~1             2     est.std  4.046 4.712 -0.666
-201      x6 ~1             2     est.std  1.915 2.469 -0.554
-202      x7 ~1             2     est.std  4.240 3.921  0.319
-203      x8 ~1             2     est.std  5.632 5.488  0.144
-204      x9 ~1             2     est.std  5.449 5.327  0.122
-205  visual ~1             2     est.std -0.105 0.000 -0.105
-206 textual ~1             2     est.std  0.614 0.000  0.614
-207   speed ~1             2     est.std -0.261 0.000 -0.261
-208  visual =~      x1     1 est.std.all  0.850 0.851 -0.001
-209  visual =~      x2     1 est.std.all  0.399 0.403 -0.004
-210  visual =~      x3     1 est.std.all  0.509 0.523 -0.014
-211 textual =~      x4     1 est.std.all  0.829 0.826  0.003
-212 textual =~      x5     1 est.std.all  0.837 0.846 -0.009
-213 textual =~      x6     1 est.std.all  0.851 0.849  0.002
-214   speed =~      x7     1 est.std.all  0.586 0.604 -0.018
-215   speed =~      x8     1 est.std.all  0.727 0.751 -0.024
-216   speed =~      x9     1 est.std.all  0.582 0.589 -0.007
-219      x1 ~~      x1     1 est.std.all  0.277 0.276  0.001
-220      x2 ~~      x2     1 est.std.all  0.841 0.838  0.003
-221      x3 ~~      x3     1 est.std.all  0.741 0.726  0.015
-222      x4 ~~      x4     1 est.std.all  0.314 0.317 -0.003
-223      x5 ~~      x5     1 est.std.all  0.300 0.285  0.015
-224      x6 ~~      x6     1 est.std.all  0.276 0.279 -0.003
-225      x7 ~~      x7     1 est.std.all  0.657 0.635  0.022
-226      x8 ~~      x8     1 est.std.all  0.471 0.435  0.036
-227      x9 ~~      x9     1 est.std.all  0.661 0.653  0.008
-229  visual ~~ textual     1 est.std.all  0.503 0.498  0.005
-230  visual ~~   speed     1 est.std.all  0.313 0.306  0.007
-231 textual ~~   speed     1 est.std.all  0.337 0.333  0.004
-232      x1 ~1             1 est.std.all  4.216 4.179  0.037
-233      x2 ~1             1 est.std.all  4.874 4.795  0.079
-234      x3 ~1             1 est.std.all  1.892 2.157 -0.265
-235      x4 ~1             1 est.std.all  2.391 2.434 -0.043
-236      x5 ~1             1 est.std.all  3.156 3.090  0.066
-237      x6 ~1             1 est.std.all  1.909 1.918 -0.009
-238      x7 ~1             1 est.std.all  3.719 3.932 -0.213
-239      x8 ~1             1 est.std.all  5.517 5.384  0.133
-240      x9 ~1             1 est.std.all  5.368 5.282  0.086
-241  visual =~      x1     2 est.std.all  0.776 0.726  0.050
-242  visual =~      x2     2 est.std.all  0.417 0.395  0.022
-243  visual =~      x3     2 est.std.all  0.539 0.658 -0.119
-244 textual =~      x4     2 est.std.all  0.840 0.846 -0.006
-245 textual =~      x5     2 est.std.all  0.852 0.846  0.006
-246 textual =~      x6     2 est.std.all  0.821 0.825 -0.004
-247   speed =~      x7     2 est.std.all  0.649 0.668 -0.019
-248   speed =~      x8     2 est.std.all  0.784 0.747  0.037
-249   speed =~      x9     2 est.std.all  0.612 0.626 -0.014
-252      x1 ~~      x1     2 est.std.all  0.398 0.473 -0.075
-253      x2 ~~      x2     2 est.std.all  0.826 0.844 -0.018
-254      x3 ~~      x3     2 est.std.all  0.709 0.567  0.142
-255      x4 ~~      x4     2 est.std.all  0.294 0.285  0.009
-256      x5 ~~      x5     2 est.std.all  0.274 0.285 -0.011
-257      x6 ~~      x6     2 est.std.all  0.326 0.319  0.007
-258      x7 ~~      x7     2 est.std.all  0.579 0.553  0.026
-259      x8 ~~      x8     2 est.std.all  0.386 0.442 -0.056
-260      x9 ~~      x9     2 est.std.all  0.626 0.608  0.018
-262  visual ~~ textual     2 est.std.all  0.524 0.537 -0.013
-263  visual ~~   speed     2 est.std.all  0.504 0.499  0.005
-264 textual ~~   speed     2 est.std.all  0.317 0.327 -0.010
-265      x1 ~1             2 est.std.all  4.234 4.237 -0.003
-266      x2 ~1             2 est.std.all  5.613 5.796 -0.183
-267      x3 ~1             2 est.std.all  2.209 1.943  0.266
-268      x4 ~1             2 est.std.all  2.562 3.035 -0.473
-269      x5 ~1             2 est.std.all  3.394 3.997 -0.603
-270      x6 ~1             2 est.std.all  1.707 2.191 -0.484
-271      x7 ~1             2 est.std.all  4.119 3.850  0.269
-272      x8 ~1             2 est.std.all  5.591 5.585  0.006
-273      x9 ~1             2 est.std.all  5.644 5.518  0.126
-274  visual ~1             2 est.std.all -0.105 0.000 -0.105
-275 textual ~1             2 est.std.all  0.614 0.000  0.614
-276   speed ~1             2 est.std.all -0.261 0.000 -0.261
-277  visual =~      x1     1 est.std.nox  0.850 0.851 -0.001
-278  visual =~      x2     1 est.std.nox  0.399 0.403 -0.004
-279  visual =~      x3     1 est.std.nox  0.509 0.523 -0.014
-280 textual =~      x4     1 est.std.nox  0.829 0.826  0.003
-281 textual =~      x5     1 est.std.nox  0.837 0.846 -0.009
-282 textual =~      x6     1 est.std.nox  0.851 0.849  0.002
-283   speed =~      x7     1 est.std.nox  0.586 0.604 -0.018
-284   speed =~      x8     1 est.std.nox  0.727 0.751 -0.024
-285   speed =~      x9     1 est.std.nox  0.582 0.589 -0.007
-288      x1 ~~      x1     1 est.std.nox  0.277 0.276  0.001
-289      x2 ~~      x2     1 est.std.nox  0.841 0.838  0.003
-290      x3 ~~      x3     1 est.std.nox  0.741 0.726  0.015
-291      x4 ~~      x4     1 est.std.nox  0.314 0.317 -0.003
-292      x5 ~~      x5     1 est.std.nox  0.300 0.285  0.015
-293      x6 ~~      x6     1 est.std.nox  0.276 0.279 -0.003
-294      x7 ~~      x7     1 est.std.nox  0.657 0.635  0.022
-295      x8 ~~      x8     1 est.std.nox  0.471 0.435  0.036
-296      x9 ~~      x9     1 est.std.nox  0.661 0.653  0.008
-298  visual ~~ textual     1 est.std.nox  0.503 0.498  0.005
-299  visual ~~   speed     1 est.std.nox  0.313 0.306  0.007
-300 textual ~~   speed     1 est.std.nox  0.337 0.333  0.004
-301      x1 ~1             1 est.std.nox  4.216 4.179  0.037
-302      x2 ~1             1 est.std.nox  4.874 4.795  0.079
-303      x3 ~1             1 est.std.nox  1.892 2.157 -0.265
-304      x4 ~1             1 est.std.nox  2.391 2.434 -0.043
-305      x5 ~1             1 est.std.nox  3.156 3.090  0.066
-306      x6 ~1             1 est.std.nox  1.909 1.918 -0.009
-307      x7 ~1             1 est.std.nox  3.719 3.932 -0.213
-308      x8 ~1             1 est.std.nox  5.517 5.384  0.133
-309      x9 ~1             1 est.std.nox  5.368 5.282  0.086
-310  visual =~      x1     2 est.std.nox  0.776 0.726  0.050
-311  visual =~      x2     2 est.std.nox  0.417 0.395  0.022
-312  visual =~      x3     2 est.std.nox  0.539 0.658 -0.119
-313 textual =~      x4     2 est.std.nox  0.840 0.846 -0.006
-314 textual =~      x5     2 est.std.nox  0.852 0.846  0.006
-315 textual =~      x6     2 est.std.nox  0.821 0.825 -0.004
-316   speed =~      x7     2 est.std.nox  0.649 0.668 -0.019
-317   speed =~      x8     2 est.std.nox  0.784 0.747  0.037
-318   speed =~      x9     2 est.std.nox  0.612 0.626 -0.014
-321      x1 ~~      x1     2 est.std.nox  0.398 0.473 -0.075
-322      x2 ~~      x2     2 est.std.nox  0.826 0.844 -0.018
-323      x3 ~~      x3     2 est.std.nox  0.709 0.567  0.142
-324      x4 ~~      x4     2 est.std.nox  0.294 0.285  0.009
-325      x5 ~~      x5     2 est.std.nox  0.274 0.285 -0.011
-326      x6 ~~      x6     2 est.std.nox  0.326 0.319  0.007
-327      x7 ~~      x7     2 est.std.nox  0.579 0.553  0.026
-328      x8 ~~      x8     2 est.std.nox  0.386 0.442 -0.056
-329      x9 ~~      x9     2 est.std.nox  0.626 0.608  0.018
-331  visual ~~ textual     2 est.std.nox  0.524 0.537 -0.013
-332  visual ~~   speed     2 est.std.nox  0.504 0.499  0.005
-333 textual ~~   speed     2 est.std.nox  0.317 0.327 -0.010
-334      x1 ~1             2 est.std.nox  4.234 4.237 -0.003
-335      x2 ~1             2 est.std.nox  5.613 5.796 -0.183
-336      x3 ~1             2 est.std.nox  2.209 1.943  0.266
-337      x4 ~1             2 est.std.nox  2.562 3.035 -0.473
-338      x5 ~1             2 est.std.nox  3.394 3.997 -0.603
-339      x6 ~1             2 est.std.nox  1.707 2.191 -0.484
-340      x7 ~1             2 est.std.nox  4.119 3.850  0.269
-341      x8 ~1             2 est.std.nox  5.591 5.585  0.006
-342      x9 ~1             2 est.std.nox  5.644 5.518  0.126
-343  visual ~1             2 est.std.nox -0.105 0.000 -0.105
-344 textual ~1             2 est.std.nox  0.614 0.000  0.614
-345   speed ~1             2 est.std.nox -0.261 0.000 -0.261
+        lhs op     rhs group    type    lav   mpl  delta
+5   textual =~      x5     1     est  1.111 1.141 -0.030
+6   textual =~      x6     1     est  0.884 0.888 -0.004
+8     speed =~      x8     1     est  1.111 1.141 -0.030
+9     speed =~      x9     1     est  0.884 0.888 -0.004
+10    speed ~~   speed     1     est  0.446 0.463 -0.017
+11   visual ~~  visual     1     est  1.007 1.012 -0.005
+13       x2 ~~      x2     1     est  1.330 1.305  0.025
+14       x3 ~~      x3     1     est  1.038 0.966  0.072
+15       x4 ~~      x4     1     est  0.426 0.427 -0.001
+16       x5 ~~      x5     1     est  0.493 0.476  0.017
+17       x6 ~~      x6     1     est  0.278 0.281 -0.003
+18       x7 ~~      x7     1     est  0.853 0.807  0.046
+19       x8 ~~      x8     1     est  0.491 0.465  0.026
+20       x9 ~~      x9     1     est  0.682 0.687 -0.005
+21  textual ~~ textual     1     est  0.933 0.918  0.015
+22   visual ~~ textual     1     est  0.487 0.480  0.007
+25       x1 ~1             1     est  4.974 4.941  0.033
+26       x2 ~1             1     est  6.131 5.984  0.147
+27       x3 ~1             1     est  2.240 2.487 -0.247
+28       x4 ~1             1     est  2.787 2.823 -0.036
+29       x5 ~1             1     est  4.046 3.995  0.051
+30       x6 ~1             1     est  1.915 1.922 -0.007
+31       x7 ~1             1     est  4.240 4.432 -0.192
+32       x8 ~1             1     est  5.632 5.563  0.069
+33       x9 ~1             1     est  5.449 5.418  0.031
+36   visual =~      x3     2     est  0.600 0.800 -0.200
+38  textual =~      x5     2     est  1.111 1.079  0.032
+39  textual =~      x6     2     est  1.007 1.006  0.001
+41    speed =~      x8     2     est  1.181 1.079  0.102
+42    speed =~      x9     2     est  0.884 0.888 -0.004
+43    speed ~~   speed     2     est  0.446 0.463 -0.017
+44   visual ~~  visual     2     est  0.831 0.713  0.118
+45       x1 ~~      x1     2     est  0.549 0.641 -0.092
+46       x2 ~~      x2     2     est  0.985 0.966  0.019
+47       x3 ~~      x3     2     est  0.729 0.599  0.130
+48       x4 ~~      x4     2     est  0.349 0.340  0.009
+49       x5 ~~      x5     2     est  0.390 0.396 -0.006
+50       x6 ~~      x6     2     est  0.411 0.405  0.006
+51       x7 ~~      x7     2     est  0.613 0.574  0.039
+52       x8 ~~      x8     2     est  0.392 0.427 -0.035
+53       x9 ~~      x9     2     est  0.583 0.567  0.016
+54  textual ~~ textual     2     est  0.836 0.854 -0.018
+55   visual ~~ textual     2     est  0.437 0.419  0.018
+56   visual ~~   speed     2     est  0.307 0.287  0.020
+57  textual ~~   speed     2     est  0.194 0.206 -0.012
+58       x1 ~1             2     est  4.974 4.930  0.044
+59       x2 ~1             2     est  6.131 6.200 -0.069
+60       x3 ~1             2     est  2.240 1.996  0.244
+61       x4 ~1             2     est  2.787 3.317 -0.530
+62       x5 ~1             2     est  4.046 4.712 -0.666
+63       x6 ~1             2     est  1.915 2.469 -0.554
+64       x7 ~1             2     est  4.240 3.921  0.319
+65       x8 ~1             2     est  5.632 5.488  0.144
+66       x9 ~1             2     est  5.449 5.327  0.122
+67   visual ~1             2     est -0.096 0.000 -0.096
+68  textual ~1             2     est  0.562 0.000  0.562
+69    speed ~1             2     est -0.174 0.000 -0.174
+74  textual =~      x5     1      se  0.062 0.086 -0.024
+75  textual =~      x6     1      se  0.063 0.067 -0.004
+77    speed =~      x8     1      se  0.062 0.086 -0.024
+78    speed =~      x9     1      se  0.063 0.067 -0.004
+79    speed ~~   speed     1      se  0.066 0.064  0.002
+80   visual ~~  visual     1      se  0.175 0.172  0.003
+81       x1 ~~      x1     1      se  0.128 0.124  0.004
+82       x2 ~~      x2     1      se  0.160 0.156  0.004
+83       x3 ~~      x3     1      se  0.133 0.121  0.012
+84       x4 ~~      x4     1      se  0.071 0.070  0.001
+87       x7 ~~      x7     1      se  0.121 0.112  0.009
+90  textual ~~ textual     1      se  0.140 0.145 -0.005
+92   visual ~~   speed     1      se  0.081 0.083 -0.002
+93  textual ~~   speed     1      se  0.074 0.075 -0.001
+94       x1 ~1             1      se  0.094 0.095 -0.001
+95       x2 ~1             1      se  0.077 0.100 -0.023
+96       x3 ~1             1      se  0.079 0.092 -0.013
+97       x4 ~1             1      se  0.088 0.093 -0.005
+98       x5 ~1             1      se  0.097 0.104 -0.007
+100      x7 ~1             1      se  0.082 0.090 -0.008
+101      x8 ~1             1      se  0.079 0.083 -0.004
+102      x9 ~1             1      se  0.072 0.082 -0.010
+107 textual =~      x5     2      se  0.062 0.080 -0.018
+108 textual =~      x6     2      se  0.077 0.089 -0.012
+110   speed =~      x8     2      se  0.154 0.080  0.074
+111   speed =~      x9     2      se  0.063 0.067 -0.004
+112   speed ~~   speed     2      se  0.066 0.064  0.002
+113  visual ~~  visual     2      se  0.149 0.126  0.023
+114      x1 ~~      x1     2      se  0.123 0.114  0.009
+115      x2 ~~      x2     2      se  0.124 0.120  0.004
+116      x3 ~~      x3     2      se  0.101 0.092  0.009
+117      x4 ~~      x4     2      se  0.062 0.064 -0.002
+118      x5 ~~      x5     2      se  0.072 0.071  0.001
+120      x7 ~~      x7     2      se  0.094 0.089  0.005
+121      x8 ~~      x8     2      se  0.105 0.088  0.017
+122      x9 ~~      x9     2      se  0.089 0.086  0.003
+123 textual ~~ textual     2      se  0.129 0.139 -0.010
+124  visual ~~ textual     2      se  0.098 0.092  0.006
+125  visual ~~   speed     2      se  0.071 0.066  0.005
+126 textual ~~   speed     2      se  0.065 0.064  0.001
+127      x1 ~1             2      se  0.094 0.097 -0.003
+128      x2 ~1             2      se  0.077 0.089 -0.012
+129      x3 ~1             2      se  0.079 0.085 -0.006
+130      x4 ~1             2      se  0.088 0.091 -0.003
+131      x5 ~1             2      se  0.097 0.098 -0.001
+132      x6 ~1             2      se  0.080 0.094 -0.014
+133      x7 ~1             2      se  0.082 0.085 -0.003
+134      x8 ~1             2      se  0.079 0.082 -0.003
+135      x9 ~1             2      se  0.072 0.080 -0.008
+136  visual ~1             2      se  0.132 0.000  0.132
+137 textual ~1             2      se  0.116 0.000  0.116
+138   speed ~1             2      se  0.097 0.000  0.097
+139  visual =~      x1     1 est.std  1.003 1.006 -0.003
+140  visual =~      x2     1 est.std  0.502 0.503 -0.001
+141  visual =~      x3     1 est.std  0.602 0.604 -0.002
+142 textual =~      x4     1 est.std  0.966 0.958  0.008
+143 textual =~      x5     1 est.std  1.073 1.093 -0.020
+144 textual =~      x6     1 est.std  0.854 0.851  0.003
+145   speed =~      x7     1 est.std  0.668 0.681 -0.013
+146   speed =~      x8     1 est.std  0.742 0.777 -0.035
+147   speed =~      x9     1 est.std  0.591 0.604 -0.013
+151      x2 ~~      x2     1 est.std  1.330 1.305  0.025
+152      x3 ~~      x3     1 est.std  1.038 0.966  0.072
+153      x4 ~~      x4     1 est.std  0.426 0.427 -0.001
+154      x5 ~~      x5     1 est.std  0.493 0.476  0.017
+155      x6 ~~      x6     1 est.std  0.278 0.281 -0.003
+156      x7 ~~      x7     1 est.std  0.853 0.807  0.046
+157      x8 ~~      x8     1 est.std  0.491 0.465  0.026
+ [ reached 'max' / getOption("max.print") -- omitted 172 rows ]
 fit values:       number of delta's > 0.0005:  14 
               fit       lav       mpl   delta
 1            npar    45.000    51.000  -6.000

@@ -20,10 +20,10 @@ execute_test <- function(mplus.out,lavaan.model, lavaan.call, lavaan.args, comme
   lavaan.args$model <- lavaan.model
   lavaan.args$data <- create_r_data(mplus.model)
   lavaan.args$mimic <- "lavaan"
-  res1 <- one_test_mplus(mplus.out, lavaan.args, mplus.model$parameters, comment)
+  res1 <- one_test_mplus(mplus.out, lavaan.args, mplus.model, comment)
   if (is.null(group.environment)) cat(paste(res1[[2]], collapse="\n"))
   lavaan.args$mimic <- "Mplus"
-  res2 <- one_test_mplus(mplus.out, lavaan.args, mplus.model$parameters, comment)
+  res2 <- one_test_mplus(mplus.out, lavaan.args, mplus.model, comment)
   if (is.null(group.environment)) cat(paste(res2[[2]], collapse="\n"))
   if (!is.null(group.environment)) {
     i <- get("i", group.environment)
@@ -250,63 +250,77 @@ join_par_lav_mplus <- function(lav = NULL, mpl = NULL, group.label = character(0
 join_fit_lav_mplus <- function(lav, mpl) {
   # match fit names in mpl
   lav.names <- names(lav)
+  names.lav <- c("chisq", "df", "pvalue", "baseline.chisq", "chisq.scaling.factor",
+                 "baseline.df", "baseline.pvalue", "cfi", "tli", "logl",
+                 "unrestricted.logl", "npar", "aic", "bic", "ntotal", "bic2",
+                 "rmsea", "rmsea.ci.lower", "rmsea.ci.upper", "rmsea.pvalue", "srmr")
+  names.mpl <- c("ChiSqM_Value", "ChiSqM_DF", "ChiSqM_PValue", "ChiSqBaseline_Value", "ChiSqM_ScalingCorrection",
+                 "ChiSqBaseline_DF", "ChiSqBaseline_PValue", "CFI", "TLI", "LL",
+                 "UnrestrictedLL", "Parameters", "AIC", "BIC", "Observations", "aBIC",
+                 "RMSEA_Estimate", "RMSEA_90CI_LB", "RMSEA_90CI_UB", "RMSEA_pLT05", "SRMR")
   fit <- rep(as.numeric(NA), length(lav))
   for (i in seq_along(lav)) {
-    if (lav.names[i] == "chisq" ||
-       lav.names[i] == "chisq.scaled") {
-      fit[i] <- mpl[1, "ChiSqM_Value"]
-    } else if (lav.names[i] == "df" ||
-              lav.names[i] == "df.scaled") {
-      fit[i] <- mpl[1, "ChiSqM_DF"]
-    } else if (lav.names[i] == "pvalue" ||
-              lav.names[i] == "pvalue.scaled") {
-      fit[i] <- round(mpl[1, "ChiSqM_PValue"], 3)
-    } else if (lav.names[i] == "baseline.chisq" ||
-              lav.names[i] == "baseline.chisq.scaled") {
-      fit[i] <- mpl[1, "ChiSqBaseline_Value"]
-    } else if (lav.names[i] == "chisq.scaling.factor") {
-      fit[i] <- mpl[1, "ChiSqM_ScalingCorrection"]
-    }else if (lav.names[i] == "baseline.df" ||
-             lav.names[i] == "baseline.df.scaled") {
-      fit[i] <- mpl[1, "ChiSqBaseline_DF"]
-    } else if (lav.names[i] == "baseline.pvalue" ||
-              lav.names[i] == "baseline.pvalue.scaled") {
-      fit[i] <- mpl[1, "ChiSqBaseline_PValue"]
-    } else if (lav.names[i] == "cfi" ||
-              lav.names[i] == "cfi.scaled") {
-      fit[i] <- mpl[1, "CFI"]
-    } else if (lav.names[i] == "tli" ||
-              lav.names[i] == "tli.scaled") {
-      fit[i] <- mpl[1, "TLI"]
-    } else if (lav.names[i] == "logl") {
-      fit[i] <- mpl[1, "LL"]
-    } else if (lav.names[i] == "unrestricted.logl") {
-      fit[i] <- mpl[1, "UnrestrictedLL"]
-    } else if (lav.names[i] == "npar") {
-      fit[i] <- mpl[1, "Parameters"]
-    } else if (lav.names[i] == "aic") {
-      fit[i] <- mpl[1, "AIC"]
-    } else if (lav.names[i] == "bic") {
-      fit[i] <- mpl[1, "BIC"]
-    } else if (lav.names[i] == "ntotal") {
-      fit[i] <- mpl[1, "Observations"]
-    } else if (lav.names[i] == "bic2") {
-      fit[i] <- mpl[1, "aBIC"]
-    } else if (lav.names[i] == "rmsea" ||
-              lav.names[i] == "rmsea.scaled") {
-      fit[i] <- mpl[1, "RMSEA_Estimate"]
-    } else if (lav.names[i] == "rmsea.ci.lower" ||
-              lav.names[i] == "rmsea.ci.lower.scaled") {
-      fit[i] <- mpl[1, "RMSEA_90CI_LB"]
-    } else if (lav.names[i] == "rmsea.ci.upper" ||
-              lav.names[i] == "rmsea.ci.upper.scaled") {
-      fit[i] <- mpl[1, "RMSEA_90CI_UB"]
-    } else if (lav.names[i] == "rmsea.pvalue" ||
-              lav.names[i] == "rmsea.pvalue.scaled") {
-      fit[i] <- mpl[1, "RMSEA_pLT05"]
-    } else if (lav.names[i] == "srmr") {
-      fit[i] <- mpl[1, "SRMR"]
+    j <- which(lav.names[i] == names.lav)
+    if (length(j) == 0) j <- which(lav.names[i] == paste0(names.lav, ".scaled"))
+    if (length(j) > 0) {
+      mplname <- names.mpl[j]
+      if (any(mplname == names(mpl))) fit[i] <- round(mpl[1, mplname], 3)
     }
+    # if (lav.names[i] == "chisq" ||
+    #    lav.names[i] == "chisq.scaled") {
+    #   fit[i] <- mpl[1, "ChiSqM_Value"]
+    # } else if (lav.names[i] == "df" ||
+    #           lav.names[i] == "df.scaled") {
+    #   fit[i] <- mpl[1, "ChiSqM_DF"]
+    # } else if (lav.names[i] == "pvalue" ||
+    #           lav.names[i] == "pvalue.scaled") {
+    #   fit[i] <- round(mpl[1, "ChiSqM_PValue"], 3)
+    # } else if (lav.names[i] == "baseline.chisq" ||
+    #           lav.names[i] == "baseline.chisq.scaled") {
+    #   fit[i] <- mpl[1, "ChiSqBaseline_Value"]
+    # } else if (lav.names[i] == "chisq.scaling.factor") {
+    #   fit[i] <- mpl[1, "ChiSqM_ScalingCorrection"]
+    # }else if (lav.names[i] == "baseline.df" ||
+    #          lav.names[i] == "baseline.df.scaled") {
+    #   fit[i] <- mpl[1, "ChiSqBaseline_DF"]
+    # } else if (lav.names[i] == "baseline.pvalue" ||
+    #           lav.names[i] == "baseline.pvalue.scaled") {
+    #   fit[i] <- mpl[1, "ChiSqBaseline_PValue"]
+    # } else if (lav.names[i] == "cfi" ||
+    #           lav.names[i] == "cfi.scaled") {
+    #   fit[i] <- mpl[1, "CFI"]
+    # } else if (lav.names[i] == "tli" ||
+    #           lav.names[i] == "tli.scaled") {
+    #   fit[i] <- mpl[1, "TLI"]
+    # } else if (lav.names[i] == "logl") {
+    #   fit[i] <- mpl[1, "LL"]
+    # } else if (lav.names[i] == "unrestricted.logl") {
+    #   fit[i] <- mpl[1, "UnrestrictedLL"]
+    # } else if (lav.names[i] == "npar") {
+    #   fit[i] <- mpl[1, "Parameters"]
+    # } else if (lav.names[i] == "aic") {
+    #   fit[i] <- mpl[1, "AIC"]
+    # } else if (lav.names[i] == "bic") {
+    #   fit[i] <- mpl[1, "BIC"]
+    # } else if (lav.names[i] == "ntotal") {
+    #   fit[i] <- mpl[1, "Observations"]
+    # } else if (lav.names[i] == "bic2") {
+    #   fit[i] <- mpl[1, "aBIC"]
+    # } else if (lav.names[i] == "rmsea" ||
+    #           lav.names[i] == "rmsea.scaled") {
+    #   fit[i] <- mpl[1, "RMSEA_Estimate"]
+    # } else if (lav.names[i] == "rmsea.ci.lower" ||
+    #           lav.names[i] == "rmsea.ci.lower.scaled") {
+    #   fit[i] <- mpl[1, "RMSEA_90CI_LB"]
+    # } else if (lav.names[i] == "rmsea.ci.upper" ||
+    #           lav.names[i] == "rmsea.ci.upper.scaled") {
+    #   fit[i] <- mpl[1, "RMSEA_90CI_UB"]
+    # } else if (lav.names[i] == "rmsea.pvalue" ||
+    #           lav.names[i] == "rmsea.pvalue.scaled") {
+    #   fit[i] <- mpl[1, "RMSEA_pLT05"]
+    # } else if (lav.names[i] == "srmr") {
+    #   fit[i] <- mpl[1, "SRMR"]
+    # }
   }
   lav.df <- data.frame(fit = names(lav),
                      lav = round(as.numeric(lav), 3),
@@ -339,7 +353,7 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   fit <- do.call(lavfunc, test.object)
   cat("Lavaan total timing: ", fit@timing$total, "\n", file = logfile)
   cat("       number of iterations: ", fit@optim$iterations, "\n", file = logfile)
-  mpl.par <- mplus.model
+  mpl.par <- mplus.model$parameters
   lav.par <- parameterEstimates(fit, ci = FALSE, fmi = FALSE,
                                 remove.system.eq = FALSE,
                                 remove.eq = FALSE, remove.ineq = FALSE,
@@ -409,11 +423,7 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   lav.df.par <- join_par_lav_mplus(lav = lav.par, mpl = mpl.par,
                              group.label = fit@Data@group.label)
   # get fit measures
-  #mpl.fit <- extractModelSummaries(mpl.file)
-  #sink(tempfile()) # to avoid cat() output
-  sink(tempfile())
-  mpl.fit <- readModels(mpl.file)$summaries
-  sink()
+  mpl.fit <- mplus.model$summaries
   lav.fit <- fitMeasures(fit)
   # remove some fit values
   if (test.object$estimator %in% c("WLS", "WLSM", "WLSMV", "ULS", "ULSM", "ULSMV")) {
