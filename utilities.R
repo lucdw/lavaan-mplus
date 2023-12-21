@@ -5,7 +5,7 @@ options(warn = 1)
 # function to execute test with parameters set in .R files in subdirectories
 # group.environment is NULL when function is called from this R-file
 # the logging of differences is stored in the group.environment or displayed immediately
-execute_test <- function(mplus.out,lavaan.model, lavaan.call, lavaan.args, comment = "", group.environment = NULL) {
+execute_test <- function(mplus.out, lavaan.model, lavaan.call, lavaan.args, comment = "", group.environment = NULL) {
   stopifnot(is.character(mplus.out), length(mplus.out) == 1L)
   stopifnot(is.character(lavaan.call), length(lavaan.call) == 1L)
   stopifnot(is.character(lavaan.model))
@@ -21,15 +21,15 @@ execute_test <- function(mplus.out,lavaan.model, lavaan.call, lavaan.args, comme
   lavaan.args$data <- create_r_data(mplus.model)
   lavaan.args$mimic <- "lavaan"
   res1 <- one_test_mplus(mplus.out, lavaan.args, mplus.model, comment)
-  if (is.null(group.environment)) cat(paste(res1[[2]], collapse="\n"))
+  if (is.null(group.environment)) cat(paste(res1[[2]], collapse = "\n"))
   lavaan.args$mimic <- "Mplus"
   res2 <- one_test_mplus(mplus.out, lavaan.args, mplus.model, comment)
-  if (is.null(group.environment)) cat(paste(res2[[2]], collapse="\n"))
+  if (is.null(group.environment)) cat(paste(res2[[2]], collapse = "\n"))
   if (!is.null(group.environment)) {
     i <- get("i", group.environment)
     i <- i + 1L
     assign("i", i, group.environment)
-    ich <- formatC(i, width=4, flag="0")
+    ich <- formatC(i, width = 4, flag = "0")
     df1 <- data.frame(
       mplus.out = mplus.out,
       lavDpar = res1[[1]][1],
@@ -50,9 +50,9 @@ split_range <- function(x) {
   if (!grepl("-", x, fixed = TRUE)) return(x)
   delen <- strsplit(x, "-", fixed = TRUE)[[1]]
   jj <- 1
-  while(substr(delen[1], 1, jj) == substr(delen[2], 1, jj) && all(jj < nchar(delen))) jj <- jj + 1
-  jja1 <- substring(delen[1],jj)
-  jja2 <- substring(delen[2],jj)
+  while (substr(delen[1], 1, jj) == substr(delen[2], 1, jj) && all(jj < nchar(delen))) jj <- jj + 1
+  jja1 <- substring(delen[1], jj)
+  jja2 <- substring(delen[2], jj)
   if (any(jja1 == letters)) {
     jj1 <- which(jja1 == letters)
     jj2 <- which(jja2 == letters)
@@ -63,12 +63,12 @@ split_range <- function(x) {
     jj2 <- which(jja2 == LETTERS)
     return(paste0(substr(delen[1], 1, jj - 1L), LETTERS[seq.int(jj1, jj2)]))
   }
-  jj1 <- as.integer(substring(delen[1],jj))
-  jj2 <- as.integer(substring(delen[2],jj))
+  jj1 <- as.integer(substring(delen[1], jj))
+  jj2 <- as.integer(substring(delen[2], jj))
   return(paste0(substr(delen[1], 1, jj - 1L), seq.int(jj1, jj2)))
 }
 create_r_data <- function(mplus.model) {
-  mplusdatafile <- mplus.model$input$data$file 
+  mplusdatafile <- mplus.model$input$data$file
   mplusinputvariablenames <-  mplus.model$input$variable$names
   mplusinputcategoricals <- mplus.model$input$variable$categorical
   mplusinputgrouping <- mplus.model$input$variable$grouping
@@ -331,22 +331,28 @@ join_fit_lav_mplus <- function(lav, mpl) {
 
 one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   logfile <- file() # anonymous file connection, see R-help for file, examples
-  on.exit({if (isOpen(logfile)) close(logfile)})
+  on.exit({
+    if (isOpen(logfile)) close(logfile)
+    })
   cat("Mplus file:", mpl.file, "\n", file = logfile)
   cat(strrep("=", 12 + nchar(mpl.file)), "\n", file = logfile)
-  showarguments <- within(test.object, {rm (model, data, call)})
+  showarguments <- within(test.object, {
+    rm(data, call)
+    })
   cat("lavaan call:\n", test.object$call, "(model = lavaan.model, data = <data.via.mplusfile>,\n",
       strrep(" ", nchar(test.object$call) + 1L),
-      paste(sapply(seq_along(showarguments), function(ii) paste(names(showarguments)[[ii]], "=", 
+      paste(sapply(seq_along(showarguments), function(ii) {
+        paste(names(showarguments)[[ii]], "=",
             ifelse(is.character(showarguments[[ii]]), encodeString(showarguments[[ii]], quote = '"'),
-                   showarguments[[ii]]))),
-            collapse = ", "),
+                   showarguments[[ii]]))
+        }),
+        collapse = ", "),
       ")\n",
       sep = "", file = logfile)
   if (test.comment != "") {
-    cat("test comment:\n", 
-        gsub("\n","\n# ",gsub("^ *\n", "# ", gsub("\n *$", "", test.comment))),
-        "\n", sep="", file = logfile)
+    cat("test comment:\n",
+        gsub("\n", "\n# ", gsub("^ *\n", "# ", gsub("\n *$", "", test.comment))),
+        "\n", sep = "", file = logfile)
   }
   lavfunc <- test.object$call
   test.object$call <- NULL
@@ -450,7 +456,7 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   }
   # joint fit measures lav mpl
   lav.df.fit <- join_fit_lav_mplus(lav = lav.fit, mpl = mpl.fit)
-  # write log 
+  # write log
   log.file <- paste(mpl.file, "_mim", test.object$mimic, ".log", sep = "")
   sink(log.file)
   # header
