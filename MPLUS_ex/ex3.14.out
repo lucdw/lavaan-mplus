@@ -1,17 +1,29 @@
-Mplus VERSION 8
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-04/10/2017   4:39 AM
+01/09/2024  11:19 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:	this is an example of a path analysis
-  	with a combination of continuous and
-  	categorical dependent variables
-  DATA:	FILE IS ex3.14.dat;
-  VARIABLE:	NAMES ARE y1 y2 u1 x1-x3;
-  	CATEGORICAL IS u1;
-  MODEL:	y1 y2 ON x1 x2 x3;
-  	u1 ON y1 y2 x2;
+
+
+
+        TITLE:	this is an example of a path analysis
+        	with a combination of continuous and
+        	categorical dependent variables
+        DATA:	FILE IS ex3.14.dat;
+        VARIABLE:	NAMES ARE y1 y2 u1 x1-x3;
+        	CATEGORICAL IS u1;
+        MODEL:	y1 y2 ON x1 x2 x3;
+        	u1 ON y1 y2 x2;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -121,9 +133,13 @@ Chi-Square Test of Model Fit for the Baseline Model
           Degrees of Freedom                    12
           P-Value                           0.0000
 
-WRMR (Weighted Root Mean Square Residual)
+SRMR (Standardized Root Mean Square Residual)
 
-          Value                              0.265
+          Value                              0.010
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.11912860D-02
 
 
 
@@ -175,8 +191,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  04:39:37
-        Ending Time:  04:39:37
+     Beginning Time:  11:19:52
+        Ending Time:  11:19:52
        Elapsed Time:  00:00:00
 
 
@@ -190,4 +206,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2017 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

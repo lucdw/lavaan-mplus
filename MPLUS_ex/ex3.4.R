@@ -4,7 +4,7 @@ lavaan.model <- '
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-   estimator = "WLSMV")
+  baseline.conditional.x.free.slopes = FALSE)
 test.comment <- ''
 if (!exists("group.environment") || is.null(group.environment)) {
    source("../utilities.R", chdir = TRUE)

@@ -4,9 +4,7 @@ lavaan.model <- '
  f2 =~ y4 + y5 + y6 
 '
 lavaan.call <-  "sem" 
-lavaan.args <- list(
-  estimator = "WLSMV"
-)
+lavaan.args <- list()
 test.comment <- ''
 if (!exists("group.environment") || is.null(group.environment)) {
    source("../utilities.R", chdir = TRUE)

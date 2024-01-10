@@ -4,7 +4,6 @@ lavaan.model <- '
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-   estimator = "ML",
    information = "observed",
    meanstructure = TRUE)
 test.comment <- ''

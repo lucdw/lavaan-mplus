@@ -1,0 +1,260 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/09/2024  11:19 AM
+
+INPUT INSTRUCTIONS
+
+
+    TITLE:	this is an example of a two-level CFA with
+    	continuous factor indicators, a random intercept
+        factor, and covariates
+    DATA:	FILE IS ex9.6.dat;
+    VARIABLE:	NAMES ARE y1-y4 x1 x2 w clus;
+    	WITHIN = x1 x2;
+    	BETWEEN = w;
+    	CLUSTER = clus;
+    ANALYSIS:	TYPE = TWOLEVEL;
+    MODEL:
+    	%WITHIN%
+    	fw BY y1-y4;	
+    	fw ON x1 x2;
+    	%BETWEEN%
+    	fb BY y1-y4;	
+    	y1-y4@0;
+    	fb ON w;
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a two-level CFA with
+continuous factor indicators, a random intercept
+factor, and covariates
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        1000
+
+Number of dependent variables                                    4
+Number of independent variables                                  3
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Continuous
+   Y1          Y2          Y3          Y4
+
+Observed independent variables
+   X1          X2          W
+
+Continuous latent variables
+   FW          FB
+
+Variables with special functions
+
+  Cluster variable      CLUS
+
+  Within variables
+   X1          X2
+
+  Between variables
+   W
+
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Maximum number of iterations                                   100
+Convergence criterion                                    0.100D-05
+Maximum number of EM iterations                                500
+Convergence criteria for the EM algorithm
+  Loglikelihood change                                   0.100D-02
+  Relative loglikelihood change                          0.100D-05
+  Derivative                                             0.100D-03
+Minimum variance                                         0.100D-03
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                         EMA
+
+Input data file(s)
+  ex9.6.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of clusters                        110
+
+     Average cluster size        9.091
+
+     Estimated Intraclass Correlations for the Y Variables
+
+                Intraclass              Intraclass              Intraclass
+     Variable  Correlation   Variable  Correlation   Variable  Correlation
+
+     Y1           0.125      Y2           0.121      Y3           0.106
+     Y4           0.115
+
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y1                   -0.064      -0.030      -5.991    0.10%      -1.687     -0.489     -0.031
+            1000.000       3.666       0.145       6.659    0.10%       0.391      1.525
+     Y2                   -0.058       0.082      -6.610    0.10%      -1.621     -0.604     -0.094
+            1000.000       3.591       0.231       7.316    0.10%       0.391      1.551
+     Y3                   -0.026       0.084      -6.435    0.10%      -1.613     -0.563     -0.115
+            1000.000       3.664       0.169       7.508    0.10%       0.394      1.637
+     Y4                   -0.011       0.085      -6.885    0.10%      -1.605     -0.627     -0.042
+            1000.000       3.730      -0.014       6.097    0.10%       0.436      1.614
+     X1                    0.007       0.007      -2.649    0.10%      -0.801     -0.241     -0.018
+            1000.000       0.985      -0.100       2.864    0.10%       0.245      0.829
+     X2                    0.014       0.163      -2.962    0.10%      -0.835     -0.308     -0.051
+            1000.000       1.017      -0.104       3.589    0.10%       0.237      0.864
+     W                     0.006       0.035      -2.141    0.91%      -0.726     -0.293     -0.051
+             110.000       0.815      -0.114       2.583    0.91%       0.309      0.737
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       19
+
+Loglikelihood
+
+          H0 Value                       -6544.186
+          H0 Scaling Correction Factor      1.0294
+            for MLR
+          H1 Value                       -6542.255
+          H1 Scaling Correction Factor      0.8831
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                   13126.372
+          Bayesian (BIC)                 13219.620
+          Sample-Size Adjusted BIC       13159.275
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              5.368*
+          Degrees of Freedom                    17
+          P-Value                           0.9965
+          Scaling Correction Factor         0.7196
+            for MLR
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.004
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           4264.565
+          Degrees of Freedom                    24
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value for Within                   0.005
+          Value for Between                  0.018
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Within Level
+
+ FW       BY
+    Y1                 1.000      0.000    999.000    999.000
+    Y2                 0.999      0.033     29.954      0.000
+    Y3                 0.995      0.041     24.549      0.000
+    Y4                 1.017      0.033     30.529      0.000
+
+ FW         ON
+    X1                 0.973      0.048     20.256      0.000
+    X2                 0.510      0.039     13.017      0.000
+
+ Residual Variances
+    Y1                 0.981      0.059     16.608      0.000
+    Y2                 0.947      0.054     17.464      0.000
+    Y3                 1.070      0.057     18.714      0.000
+    Y4                 1.014      0.059     17.193      0.000
+    FW                 0.980      0.083     11.778      0.000
+
+Between Level
+
+ FB       BY
+    Y1                 1.000      0.000    999.000    999.000
+    Y2                 0.960      0.070     13.617      0.000
+    Y3                 0.924      0.075     12.292      0.000
+    Y4                 0.949      0.068     13.908      0.000
+
+ FB         ON
+    W                  0.344      0.079      4.339      0.000
+
+ Intercepts
+    Y1                -0.083      0.072     -1.143      0.253
+    Y2                -0.077      0.073     -1.058      0.290
+    Y3                -0.045      0.069     -0.647      0.518
+    Y4                -0.030      0.072     -0.413      0.679
+
+ Residual Variances
+    Y1                 0.000      0.000    999.000    999.000
+    Y2                 0.000      0.000    999.000    999.000
+    Y3                 0.000      0.000    999.000    999.000
+    Y4                 0.000      0.000    999.000    999.000
+    FB                 0.361      0.072      5.041      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.178E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:19:58
+        Ending Time:  11:19:58
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen

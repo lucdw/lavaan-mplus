@@ -1,0 +1,191 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/09/2024  11:19 AM
+
+INPUT INSTRUCTIONS
+
+
+    TITLE:	this is an example of a path analysis
+    	with categorical dependent variables using
+    	the Theta parameterization
+    DATA:	FILE IS ex3.13.dat;
+    VARIABLE:	NAMES ARE u1-u3 x1-x3;
+    	CATEGORICAL ARE u1-u3;
+    ANALYSIS:	PARAMETERIZATION = THETA;
+    MODEL:	u1 u2 ON x1 x2 x3;
+    	u3 ON u1 u2 x2;
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a path analysis
+with categorical dependent variables using
+the Theta parameterization
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        1000
+
+Number of dependent variables                                    3
+Number of independent variables                                  3
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   U1          U2          U3
+
+Observed independent variables
+   X1          X2          X3
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Parameterization                                             THETA
+Link                                                        PROBIT
+
+Input data file(s)
+  ex3.13.dat
+
+Input data format  FREE
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    U1
+      Category 1    0.420          420.000
+      Category 2    0.207          207.000
+      Category 3    0.373          373.000
+    U2
+      Category 1    0.544          544.000
+      Category 2    0.456          456.000
+    U3
+      Category 1    0.434          434.000
+      Category 2    0.110          110.000
+      Category 3    0.101          101.000
+      Category 4    0.355          355.000
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     X1                    0.004       0.016      -3.519    0.10%      -0.883     -0.223     -0.003
+            1000.000       1.078       0.179       3.468    0.10%       0.248      0.838
+     X2                   -0.014      -0.058      -3.639    0.10%      -0.895     -0.236      0.040
+            1000.000       1.047      -0.113       2.993    0.10%       0.274      0.825
+     X3                   -0.030       0.163      -3.238    0.10%      -0.895     -0.313     -0.053
+            1000.000       1.064       0.241       4.046    0.10%       0.165      0.814
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       15
+
+Chi-Square Test of Model Fit
+
+          Value                              6.871*
+          Degrees of Freedom                     3
+          P-Value                           0.0761
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.036
+          90 Percent C.I.                    0.000  0.072
+          Probability RMSEA <= .05           0.691
+
+CFI/TLI
+
+          CFI                                0.998
+          TLI                                0.991
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1810.771
+          Degrees of Freedom                    12
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.019
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.33719784D-02
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ U1       ON
+    X1                 2.917      0.152     19.148      0.000
+    X2                 1.926      0.103     18.655      0.000
+    X3                 1.030      0.077     13.461      0.000
+
+ U2       ON
+    X1                 1.046      0.105      9.933      0.000
+    X2                 2.084      0.175     11.908      0.000
+    X3                 3.213      0.230     13.984      0.000
+
+ U3       ON
+    U1                 1.110      0.184      6.023      0.000
+    U2                -1.027      0.196     -5.248      0.000
+    X2                 2.188      0.324      6.757      0.000
+
+ Thresholds
+    U1$1              -0.957      0.081    -11.783      0.000
+    U1$2               1.109      0.087     12.761      0.000
+    U2$1               0.064      0.080      0.806      0.420
+    U3$1              -0.653      0.127     -5.135      0.000
+    U3$2               0.523      0.124      4.219      0.000
+    U3$3               1.593      0.225      7.068      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.172E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:19:52
+        Ending Time:  11:19:52
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen

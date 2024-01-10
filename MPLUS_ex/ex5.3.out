@@ -1,17 +1,29 @@
-Mplus VERSION 8.8
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-04/20/2022   3:54 PM
+01/09/2024  11:19 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:	this is an example of a CFA with
-  	continuous and categorical factor
-  	indicators
-  DATA:	FILE IS ex5.3.dat;
-  VARIABLE:	NAMES ARE u1-u3 y4-y6;
-  	CATEGORICAL ARE u1 u2 u3;
-  MODEL:	f1 BY u1-u3;
-  	f2 BY y4-y6;
+
+
+
+        TITLE:	this is an example of a CFA with
+        	continuous and categorical factor
+        	indicators
+        DATA:	FILE IS ex5.3.dat;
+        VARIABLE:	NAMES ARE u1-u3 y4-y6;
+        	CATEGORICAL ARE u1 u2 u3;
+        MODEL:	f1 BY u1-u3;
+        	f2 BY y4-y6;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -115,7 +127,7 @@ RMSEA (Root Mean Square Error Of Approximation)
 CFI/TLI
 
           CFI                                1.000
-          TLI                                1.000
+          TLI                                1.005
 
 Chi-Square Test of Model Fit for the Baseline Model
 
@@ -171,12 +183,6 @@ MODEL RESULTS
     Y6                 0.218      0.021     10.507      0.000
 
 
-QUALITY OF NUMERICAL RESULTS
-
-     Condition Number for the Information Matrix              0.393E-02
-       (ratio of smallest to largest eigenvalue)
-
-
 R-SQUARE
 
     Observed                   Residual
@@ -190,8 +196,14 @@ R-SQUARE
     Y6                 0.779
 
 
-     Beginning Time:  15:54:32
-        Ending Time:  15:54:32
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.393E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:19:56
+        Ending Time:  11:19:56
        Elapsed Time:  00:00:00
 
 
@@ -205,4 +217,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2022 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

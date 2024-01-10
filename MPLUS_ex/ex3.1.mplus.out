@@ -1,17 +1,29 @@
-Mplus VERSION 8 (Linux)
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-10/17/2017  11:28 AM
+01/09/2024  11:19 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:	this is an example of a simple linear
-  	regression for a continuous observed
-  	dependent variable with two covariates
-  DATA:	FILE IS ex3.1.dat;
-  VARIABLE:	NAMES ARE y1 x1 x3;
-  analysis: convergence = 0.0000001;
-  MODEL:	y1 ON x1 x3;
-  output: standardized;
+
+
+
+        TITLE:	this is an example of a simple linear
+        	regression for a continuous observed
+        	dependent variable with two covariates
+        DATA:	FILE IS ex3.1.dat;
+        VARIABLE:	NAMES ARE y1 x1 x3;
+        analysis: convergence = 0.0000001;
+        MODEL:	y1 ON x1 x3;
+        output: standardized;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -200,8 +212,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:28:32
-        Ending Time:  11:28:32
+     Beginning Time:  11:19:52
+        Ending Time:  11:19:52
        Elapsed Time:  00:00:00
 
 
@@ -215,4 +227,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2017 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

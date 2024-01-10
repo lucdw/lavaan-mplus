@@ -1,16 +1,28 @@
-Mplus VERSION 8
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-04/10/2017   4:39 AM
+01/09/2024  11:19 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:	this is an example of a probit regression
-          for a binary or categorical observed
-          dependent variable with two covariates
-  DATA:	FILE IS ex3.4.dat;
-  VARIABLE:	NAMES ARE u1 x1 x3;
-  	CATEGORICAL = u1;
-  MODEL:	u1 ON x1 x3;
+
+
+
+        TITLE:	this is an example of a probit regression
+                for a binary or categorical observed
+                dependent variable with two covariates
+        DATA:	FILE IS ex3.4.dat;
+        VARIABLE:	NAMES ARE u1 x1 x3;
+        	CATEGORICAL = u1;
+        MODEL:	u1 ON x1 x3;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -111,9 +123,13 @@ Chi-Square Test of Model Fit for the Baseline Model
           Degrees of Freedom                     2
           P-Value                           0.0000
 
-WRMR (Weighted Root Mean Square Residual)
+SRMR (Standardized Root Mean Square Residual)
 
-          Value                              0.001
+          Value                              0.000
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.59857825D-08
 
 
 
@@ -144,8 +160,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  04:39:40
-        Ending Time:  04:39:40
+     Beginning Time:  11:19:53
+        Ending Time:  11:19:53
        Elapsed Time:  00:00:00
 
 
@@ -159,4 +175,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2017 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

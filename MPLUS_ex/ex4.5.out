@@ -1,0 +1,1093 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/09/2024  11:19 AM
+
+INPUT INSTRUCTIONS
+
+
+    TITLE:	this is an example of a two-level exploratory
+    	factor analysis with continuous factor indicators
+    DATA:	FILE IS ex4.5.dat;
+    VARIABLE:	NAMES ARE y1-y6 x1 x2 w clus;
+    	USEVARIABLES = y1-y6;
+    	CLUSTER = clus;
+    ANALYSIS:	TYPE = TWOLEVEL EFA 1 2 UW 1 1 UB;
+
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a two-level exploratory
+factor analysis with continuous factor indicators
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        1000
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   Y1          Y2          Y3          Y4          Y5          Y6
+
+Variables with special functions
+
+  Cluster variable      CLUS
+
+Estimator                                                       ML
+Rotation                                                    GEOMIN
+Row standardization                                    CORRELATION
+Type of rotation                                           OBLIQUE
+Epsilon value                                               Varies
+Information matrix                                        OBSERVED
+Maximum number of iterations                                   100
+Convergence criterion                                    0.100D-05
+Maximum number of EM iterations                                500
+Convergence criteria for the EM algorithm
+  Loglikelihood change                                   0.100D-02
+  Relative loglikelihood change                          0.100D-05
+  Derivative                                             0.100D-03
+Minimum variance                                         0.100D-03
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization Specifications for the Exploratory Factor Analysis
+Rotation Algorithm
+  Number of random starts                                       30
+  Maximum number of iterations                               10000
+  Derivative convergence criterion                       0.100D-04
+Optimization algorithm                                         EMA
+
+Input data file(s)
+  ex4.5.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of clusters                        110
+
+     Average cluster size        9.091
+
+     Estimated Intraclass Correlations for the Y Variables
+
+                Intraclass              Intraclass              Intraclass
+     Variable  Correlation   Variable  Correlation   Variable  Correlation
+
+     Y1           0.399      Y2           0.407      Y3           0.369
+     Y4           0.371      Y5           0.424      Y6           0.445
+
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y1                    0.007      -0.185      -7.948    0.10%      -1.862     -0.499      0.086
+            1000.000       4.923       0.113       6.878    0.10%       0.629      1.903
+     Y2                    0.034       0.018      -7.942    0.10%      -1.868     -0.451      0.113
+            1000.000       4.605       0.157       8.366    0.10%       0.509      1.815
+     Y3                    0.083      -0.042      -7.565    0.10%      -1.748     -0.393      0.129
+            1000.000       4.282      -0.092       6.520    0.10%       0.702      1.746
+     Y4                    0.059       0.007      -6.365    0.10%      -1.664     -0.390      0.146
+            1000.000       4.069      -0.204       5.934    0.10%       0.639      1.702
+     Y5                    0.000      -0.051      -6.815    0.10%      -1.819     -0.478      0.040
+            1000.000       4.849       0.131       8.749    0.10%       0.575      1.855
+     Y6                    0.165      -0.059      -5.888    0.10%      -1.611     -0.373      0.141
+            1000.000       4.235      -0.286       5.591    0.10%       0.715      1.929
+
+
+RESULTS FOR EXPLORATORY FACTOR ANALYSIS
+
+
+           EIGENVALUES FOR WITHIN LEVEL SAMPLE CORRELATION MATRIX
+                  1             2             3             4             5
+              ________      ________      ________      ________      ________
+                2.960         1.522         0.424         0.382         0.364
+
+
+           EIGENVALUES FOR WITHIN LEVEL SAMPLE CORRELATION MATRIX
+                  6
+              ________
+                0.348
+
+
+           EIGENVALUES FOR BETWEEN LEVEL SAMPLE CORRELATION MATRIX
+                  1             2             3             4             5
+              ________      ________      ________      ________      ________
+                5.178         0.249         0.188         0.168         0.122
+
+
+           EIGENVALUES FOR BETWEEN LEVEL SAMPLE CORRELATION MATRIX
+                  6
+              ________
+                0.096
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 1 WITHIN FACTOR(S) AND 1 BETWEEN FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       30
+
+Loglikelihood
+
+          H0 Value                      -11160.512
+          H1 Value                      -10754.176
+
+Information Criteria
+
+          Akaike (AIC)                   22381.023
+          Bayesian (BIC)                 22528.256
+          Sample-Size Adjusted BIC       22432.974
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            812.672
+          Degrees of Freedom                    18
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.210
+
+CFI/TLI
+
+          CFI                                0.711
+          TLI                                0.519
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2783.122
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value for Within                   0.179
+          Value for Between                  0.034
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       2.30287
+
+
+
+WITHIN LEVEL RESULTS
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ Y1             0.795*
+ Y2             0.779*
+ Y3             0.780*
+ Y4             0.377*
+ Y5             0.389*
+ Y6             0.402*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.368         0.393         0.392         0.858         0.849
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.838
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1             0.017
+ Y2             0.018
+ Y3             0.018
+ Y4             0.034
+ Y5             0.034
+ Y6             0.033
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.028         0.028         0.028         0.025         0.026
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.026
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1            45.472
+ Y2            43.113
+ Y3            43.345
+ Y4            11.207
+ Y5            11.595
+ Y6            12.225
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+               13.259        13.952        13.951        33.827        32.507
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+               31.690
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 1 WITHIN FACTOR(S) AND 1 BETWEEN FACTOR(S):
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       5.13290
+
+
+
+BETWEEN LEVEL RESULTS
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ Y1             0.910*
+ Y2             0.901*
+ Y3             0.912*
+ Y4             0.913*
+ Y5             0.977*
+ Y6             0.934*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.173         0.188         0.168         0.166         0.046
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.127
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1             0.025
+ Y2             0.026
+ Y3             0.026
+ Y4             0.029
+ Y5             0.019
+ Y6             0.023
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.046         0.048         0.047         0.052         0.037
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.043
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1            36.211
+ Y2            34.131
+ Y3            35.583
+ Y4            31.903
+ Y5            52.100
+ Y6            40.502
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                3.781         3.955         3.585         3.179         1.246
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                2.953
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 WITHIN FACTOR(S) AND 1 BETWEEN FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       35
+
+Loglikelihood
+
+          H0 Value                      -10759.644
+          H1 Value                      -10754.176
+
+Information Criteria
+
+          Akaike (AIC)                   21589.288
+          Bayesian (BIC)                 21761.059
+          Sample-Size Adjusted BIC       21649.897
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             10.937
+          Degrees of Freedom                    13
+          P-Value                           0.6161
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.002
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2783.122
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value for Within                   0.007
+          Value for Between                  0.015
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.06784
+
+
+
+WITHIN LEVEL RESULTS
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2
+              ________      ________
+ Y1             0.801*        0.006
+ Y2             0.797*       -0.009
+ Y3             0.788*        0.002
+ Y4            -0.002         0.765*
+ Y5            -0.008         0.815*
+ Y6             0.027         0.758*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2
+              ________      ________
+      1         1.000
+      2         0.374*        1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.354         0.371         0.378         0.415         0.340
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.410
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ Y1             0.021         0.022
+ Y2             0.022         0.025
+ Y3             0.020         0.017
+ Y4             0.014         0.021
+ Y5             0.023         0.022
+ Y6             0.032         0.025
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.038         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.029         0.029         0.029         0.030         0.031
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.030
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ Y1            38.200         0.283
+ Y2            36.324        -0.366
+ Y3            38.799         0.109
+ Y4            -0.138        35.786
+ Y5            -0.342        36.721
+ Y6             0.838        30.414
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         9.914         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+               12.343        12.730        13.110        13.674        11.021
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+               13.628
+
+
+           FACTOR STRUCTURE
+                  1             2
+              ________      ________
+ Y1             0.803         0.306
+ Y2             0.793         0.289
+ Y3             0.789         0.297
+ Y4             0.285         0.765
+ Y5             0.297         0.812
+ Y6             0.310         0.768
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 WITHIN FACTOR(S) AND 1 BETWEEN FACTOR(S):
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       5.06570
+
+
+
+BETWEEN LEVEL RESULTS
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ Y1             0.931*
+ Y2             0.915*
+ Y3             0.928*
+ Y4             0.886*
+ Y5             0.949*
+ Y6             0.903*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.134         0.163         0.138         0.216         0.100
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.184
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1             0.021
+ Y2             0.024
+ Y3             0.023
+ Y4             0.030
+ Y5             0.020
+ Y6             0.026
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.040         0.045         0.042         0.053         0.037
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.047
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1            43.365
+ Y2            37.478
+ Y3            40.759
+ Y4            29.445
+ Y5            48.228
+ Y6            35.016
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                3.349         3.651         3.264         4.047         2.689
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                3.949
+
+
+EXPLORATORY FACTOR ANALYSIS WITH UNRESTRICTED WITHIN COVARIANCE AND 1 BETWEEN FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       18
+
+Loglikelihood
+
+          H0 Value                      -10757.461
+          H1 Value                      -10754.176
+
+Information Criteria
+
+          Akaike (AIC)                   21550.922
+          Bayesian (BIC)                 21639.262
+          Sample-Size Adjusted BIC       21582.093
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              6.571
+          Degrees of Freedom                     9
+          P-Value                           0.6817
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.003
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2783.122
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value for Within                   0.000
+          Value for Between                  0.015
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       5.06118
+
+
+
+BETWEEN LEVEL RESULTS
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ Y1             0.930*
+ Y2             0.914*
+ Y3             0.928*
+ Y4             0.885*
+ Y5             0.948*
+ Y6             0.903*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.134         0.164         0.139         0.216         0.102
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.185
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1             0.021
+ Y2             0.024
+ Y3             0.023
+ Y4             0.030
+ Y5             0.020
+ Y6             0.026
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.040         0.045         0.042         0.053         0.037
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.047
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1            43.560
+ Y2            37.450
+ Y3            40.935
+ Y4            29.536
+ Y5            48.440
+ Y6            35.038
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                3.382         3.675         3.293         4.067         2.748
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                3.964
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 1 WITHIN FACTOR(S) AND UNRESTRICTED BETWEEN COVARIANCE:
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       18
+
+Loglikelihood
+
+          H0 Value                      -11156.190
+          H1 Value                      -10754.176
+
+Information Criteria
+
+          Akaike (AIC)                   22348.380
+          Bayesian (BIC)                 22436.719
+          Sample-Size Adjusted BIC       22379.550
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            804.028
+          Degrees of Freedom                     9
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.161
+
+CFI/TLI
+
+          CFI                                0.711
+          TLI                                0.037
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2783.122
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value for Within                   0.177
+          Value for Between                  0.000
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       2.30369
+
+
+
+WITHIN LEVEL RESULTS
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ Y1             0.789*
+ Y2             0.774*
+ Y3             0.774*
+ Y4             0.389*
+ Y5             0.404*
+ Y6             0.409*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.378         0.401         0.400         0.849         0.837
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.832
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1             0.018
+ Y2             0.018
+ Y3             0.018
+ Y4             0.033
+ Y5             0.033
+ Y6             0.033
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.028         0.028         0.028         0.026         0.027
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.027
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ Y1            44.292
+ Y2            42.126
+ Y3            42.282
+ Y4            11.689
+ Y5            12.302
+ Y6            12.525
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+               13.467        14.081        14.108        32.809        31.525
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+               31.084
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 WITHIN FACTOR(S) AND UNRESTRICTED BETWEEN COVARIANCE:
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       23
+
+Loglikelihood
+
+          H0 Value                      -10756.649
+          H1 Value                      -10754.176
+
+Information Criteria
+
+          Akaike (AIC)                   21559.297
+          Bayesian (BIC)                 21672.175
+          Sample-Size Adjusted BIC       21599.126
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              4.946
+          Degrees of Freedom                     4
+          P-Value                           0.2929
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                0.997
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2783.122
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value for Within                   0.006
+          Value for Between                  0.000
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.06852
+
+
+
+WITHIN LEVEL RESULTS
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2
+              ________      ________
+ Y1             0.798*        0.009
+ Y2             0.799*       -0.012
+ Y3             0.788*        0.001
+ Y4            -0.002         0.763*
+ Y5            -0.008         0.814*
+ Y6             0.023         0.760*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2
+              ________      ________
+      1         1.000
+      2         0.382*        1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.358         0.369         0.379         0.418         0.342
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.409
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ Y1             0.022         0.025
+ Y2             0.022         0.027
+ Y3             0.020         0.013
+ Y4             0.014         0.021
+ Y5             0.023         0.023
+ Y6             0.031         0.025
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.038         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.029         0.029         0.029         0.030         0.031
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+                0.030
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ Y1            36.516         0.378
+ Y2            35.556        -0.456
+ Y3            39.844         0.101
+ Y4            -0.116        35.590
+ Y5            -0.348        36.177
+ Y6             0.716        30.410
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         9.977         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+               12.488        12.674        13.141        13.760        11.094
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6
+              ________
+               13.586
+
+
+           FACTOR STRUCTURE
+                  1             2
+              ________      ________
+ Y1             0.801         0.314
+ Y2             0.794         0.293
+ Y3             0.788         0.302
+ Y4             0.290         0.763
+ Y5             0.303         0.811
+ Y6             0.313         0.769
+
+
+     Beginning Time:  11:19:53
+        Ending Time:  11:19:53
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen

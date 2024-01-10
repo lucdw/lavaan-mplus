@@ -2,16 +2,21 @@ wd <- getwd()
 testdirs <- list.dirs(full.names = FALSE, recursive = FALSE)
 testdirs <- testdirs[grepl("^[^.]", testdirs)]
 mplusgen <- "mplus_gen"
-group.environment <- "emmpty"
+group.environment <- "empty"
 cat("Creating input files for MPlus regeneration of output.\n")
 cat("STARTING TIME:", format(Sys.time()), "\n")
 for (testdir.i in seq_along(testdirs)) {
   setwd(testdirs[testdir.i])
   if (!dir.exists("mplus_gen")) dir.create(mplusgen)
+  existingfiles <- list.files("mplus_gen")
+  if (length(existingfiles) > 0L) {
+    file.remove(paste("mplus_gen", existingfiles, sep="/"))
+  }
   linuxcom <- file(paste0(mplusgen, "/rerun_mplus.sh"), "w")
   cat("#!/bin/sh\n", file = linuxcom)
   windowscom <- file(paste0(mplusgen, "/rerun_mplus.bat"), "w")
   cat("@echo off\n", file = windowscom)
+  cat("cd \"", normalizePath(getwd()), "\"\n", sep = "", file = windowscom)
   on.exit({
     setwd(wd)
   })

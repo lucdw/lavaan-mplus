@@ -1,0 +1,905 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/09/2024  11:19 AM
+
+INPUT INSTRUCTIONS
+
+
+    TITLE:	this is an example of an exploratory
+    	factor analysis with categorical factor
+            indicators
+    DATA:	FILE IS ex4.2.dat;
+    VARIABLE:	NAMES ARE  u1-u12;
+    	CATEGORICAL ARE u1-u12;
+    ANALYSIS:	TYPE = EFA 1 4;
+
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of an exploratory
+factor analysis with categorical factor
+indicators
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                   12
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   U1          U2          U3          U4          U5          U6
+   U7          U8          U9          U10         U11         U12
+
+
+Estimator                                                    WLSMV
+Rotation                                                    GEOMIN
+Row standardization                                    CORRELATION
+Type of rotation                                           OBLIQUE
+Epsilon value                                               Varies
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Optimization Specifications for the Exploratory Factor Analysis
+Rotation Algorithm
+  Number of random starts                                       30
+  Maximum number of iterations                               10000
+  Derivative convergence criterion                       0.100D-04
+Link                                                        PROBIT
+
+Input data file(s)
+  ex4.2.dat
+
+Input data format  FREE
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    U1
+      Category 1    0.494          247.000
+      Category 2    0.506          253.000
+    U2
+      Category 1    0.484          242.000
+      Category 2    0.516          258.000
+    U3
+      Category 1    0.528          264.000
+      Category 2    0.472          236.000
+    U4
+      Category 1    0.504          252.000
+      Category 2    0.496          248.000
+    U5
+      Category 1    0.486          243.000
+      Category 2    0.514          257.000
+    U6
+      Category 1    0.504          252.000
+      Category 2    0.496          248.000
+    U7
+      Category 1    0.496          248.000
+      Category 2    0.504          252.000
+    U8
+      Category 1    0.492          246.000
+      Category 2    0.508          254.000
+    U9
+      Category 1    0.514          257.000
+      Category 2    0.486          243.000
+    U10
+      Category 1    0.496          248.000
+      Category 2    0.504          252.000
+    U11
+      Category 1    0.490          245.000
+      Category 2    0.510          255.000
+    U12
+      Category 1    0.502          251.000
+      Category 2    0.498          249.000
+
+
+
+SUMMARY OF MODEL FIT INFORMATION
+
+
+                   Number of                   Degrees of
+     Model        Parameters      Chi-Square    Freedom     P-Value
+
+     1-factor          12            730.699        54       0.0000
+     2-factor          23            485.520        43       0.0000
+     3-factor          33            268.580        33       0.0000
+     4-factor          42             22.796        24       0.5319
+
+                                               Degrees of
+     Models Compared              Chi-Square    Freedom     P-Value
+
+     1-factor against 2-factor       228.003        11       0.0000
+     2-factor against 3-factor       183.837        10       0.0000
+     3-factor against 4-factor       158.815         9       0.0000
+
+
+
+RESULTS FOR EXPLORATORY FACTOR ANALYSIS
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  1             2             3             4             5
+              ________      ________      ________      ________      ________
+                2.326         2.230         2.009         1.710         0.659
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  6             7             8             9            10
+              ________      ________      ________      ________      ________
+                0.655         0.524         0.496         0.471         0.350
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                 11            12
+              ________      ________
+                0.320         0.248
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 1 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       12
+
+Chi-Square Test of Model Fit
+
+          Value                            730.699*
+          Degrees of Freedom                    54
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.158
+          90 Percent C.I.                    0.148  0.169
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.230
+          TLI                                0.059
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            944.923
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.205
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       1.89948
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ U1             0.608*
+ U2             0.689*
+ U3             0.596*
+ U4             0.038
+ U5            -0.019
+ U6             0.099
+ U7             0.460*
+ U8             0.398*
+ U9             0.390*
+ U10           -0.249*
+ U11           -0.286*
+ U12           -0.143*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                0.630         0.526         0.645         0.999         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                0.990         0.788         0.841         0.848         0.938
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                0.918         0.980
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ U1             0.057
+ U2             0.056
+ U3             0.055
+ U4             0.069
+ U5             0.069
+ U6             0.068
+ U7             0.060
+ U8             0.062
+ U9             0.061
+ U10            0.066
+ U11            0.065
+ U12            0.067
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                0.069         0.078         0.065         0.005         0.003
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                0.013         0.055         0.050         0.048         0.033
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                0.037         0.019
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ U1            10.660
+ U2            12.218
+ U3            10.939
+ U4             0.549
+ U5            -0.274
+ U6             1.448
+ U7             7.711
+ U8             6.403
+ U9             6.358
+ U10           -3.784
+ U11           -4.375
+ U12           -2.125
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                9.078         6.766         9.917       192.068       386.794
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+               73.492        14.351        16.993        17.691        28.597
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+               24.568        50.944
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       23
+
+Chi-Square Test of Model Fit
+
+          Value                            485.520*
+          Degrees of Freedom                    43
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.143
+          90 Percent C.I.                    0.132  0.155
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.497
+          TLI                                0.227
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            944.923
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.160
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.76540
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2
+              ________      ________
+ U1             0.630*        0.109
+ U2             0.793*       -0.004
+ U3             0.670*       -0.008
+ U4            -0.171*        0.361*
+ U5            -0.290*        0.452*
+ U6            -0.126         0.438*
+ U7             0.326*        0.431*
+ U8             0.256*        0.422*
+ U9             0.267*        0.382*
+ U10           -0.012        -0.475*
+ U11           -0.001        -0.599*
+ U12            0.132        -0.499*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2
+              ________      ________
+      1         1.000
+      2        -0.054         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                0.599         0.371         0.551         0.834         0.697
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                0.786         0.723         0.767         0.793         0.775
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                0.642         0.727
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ U1             0.057         0.071
+ U2             0.055         0.020
+ U3             0.055         0.048
+ U4             0.079         0.066
+ U5             0.080         0.067
+ U6             0.079         0.064
+ U7             0.078         0.067
+ U8             0.080         0.066
+ U9             0.075         0.066
+ U10            0.063         0.062
+ U11            0.012         0.057
+ U12            0.070         0.062
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.108         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                0.071         0.088         0.074         0.052         0.067
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                0.057         0.062         0.059         0.055         0.059
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                0.069         0.064
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ U1            11.113         1.522
+ U2            14.296        -0.213
+ U3            12.127        -0.175
+ U4            -2.173         5.458
+ U5            -3.637         6.731
+ U6            -1.593         6.828
+ U7             4.151         6.417
+ U8             3.219         6.354
+ U9             3.588         5.771
+ U10           -0.195        -7.657
+ U11           -0.083       -10.457
+ U12            1.891        -8.108
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2        -0.493         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                8.481         4.216         7.465        16.093        10.416
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+               13.705        11.617        13.112        14.527        13.168
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                9.363        11.426
+
+
+           FACTOR STRUCTURE
+                  1             2
+              ________      ________
+ U1             0.624         0.075
+ U2             0.793        -0.047
+ U3             0.670        -0.044
+ U4            -0.190         0.370
+ U5            -0.314         0.468
+ U6            -0.149         0.445
+ U7             0.303         0.413
+ U8             0.234         0.409
+ U9             0.247         0.368
+ U10            0.013        -0.474
+ U11            0.031        -0.599
+ U12            0.159        -0.506
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 3 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       33
+
+Chi-Square Test of Model Fit
+
+          Value                            268.580*
+          Degrees of Freedom                    33
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.119
+          90 Percent C.I.                    0.106  0.133
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.732
+          TLI                                0.464
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            944.923
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.103
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.20241
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2             3
+              ________      ________      ________
+ U1             0.646*        0.105        -0.047
+ U2             0.875*       -0.007         0.025
+ U3             0.713*       -0.013         0.021
+ U4            -0.014        -0.115        -0.502*
+ U5            -0.181*       -0.007        -0.536*
+ U6            -0.046         0.068        -0.468*
+ U7             0.018         0.807*        0.023
+ U8            -0.039         0.722*       -0.016
+ U9            -0.002         0.667*        0.002
+ U10           -0.181*        0.029         0.566*
+ U11           -0.145        -0.073         0.639*
+ U12           -0.004        -0.001         0.573*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2             3
+              ________      ________      ________
+      1         1.000
+      2         0.025         1.000
+      3         0.064        -0.057         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                0.570         0.230         0.490         0.740         0.668
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                0.768         0.349         0.478         0.555         0.661
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                0.571         0.672
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2             3
+              ________      ________      ________
+ U1             0.057         0.073         0.068
+ U2             0.057         0.035         0.043
+ U3             0.056         0.050         0.042
+ U4             0.043         0.073         0.065
+ U5             0.071         0.036         0.062
+ U6             0.073         0.074         0.063
+ U7             0.043         0.061         0.056
+ U8             0.070         0.059         0.049
+ U9             0.039         0.059         0.045
+ U10            0.085         0.070         0.063
+ U11            0.084         0.085         0.062
+ U12            0.059         0.069         0.062
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2             3
+              ________      ________      ________
+      1         0.000
+      2         0.080         0.000
+      3         0.096         0.092         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                0.074         0.100         0.080         0.066         0.070
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                0.060         0.097         0.085         0.078         0.072
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                0.078         0.070
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2             3
+              ________      ________      ________
+ U1            11.336         1.437        -0.683
+ U2            15.239        -0.210         0.592
+ U3            12.670        -0.267         0.501
+ U4            -0.323        -1.570        -7.759
+ U5            -2.538        -0.186        -8.592
+ U6            -0.625         0.917        -7.412
+ U7             0.412        13.267         0.406
+ U8            -0.563        12.195        -0.323
+ U9            -0.046        11.365         0.052
+ U10           -2.131         0.417         9.054
+ U11           -1.721        -0.862        10.329
+ U12           -0.068        -0.020         9.300
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2             3
+              ________      ________      ________
+      1         0.000
+      2         0.318         0.000
+      3         0.661        -0.617         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                7.692         2.310         6.154        11.275         9.514
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+               12.887         3.582         5.624         7.104         9.151
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                7.351         9.596
+
+
+           FACTOR STRUCTURE
+                  1             2             3
+              ________      ________      ________
+ U1             0.645         0.124        -0.011
+ U2             0.877         0.013         0.081
+ U3             0.714         0.004         0.067
+ U4            -0.049        -0.087        -0.496
+ U5            -0.215         0.019        -0.547
+ U6            -0.074         0.093        -0.475
+ U7             0.040         0.806        -0.022
+ U8            -0.022         0.721        -0.059
+ U9             0.015         0.667        -0.036
+ U10           -0.144        -0.008         0.553
+ U11           -0.106        -0.113         0.634
+ U12            0.032        -0.034         0.572
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 4 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       42
+
+Chi-Square Test of Model Fit
+
+          Value                             22.796*
+          Degrees of Freedom                    24
+          P-Value                           0.5319
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.034
+          Probability RMSEA <= .05           0.998
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.004
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            944.923
+          Degrees of Freedom                    66
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.026
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.38499
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2             3             4
+              ________      ________      ________      ________
+ U1             0.628*       -0.003         0.098        -0.060
+ U2             0.937*        0.041        -0.011         0.071
+ U3             0.690*       -0.072        -0.020        -0.037
+ U4             0.072         0.705*       -0.121        -0.005
+ U5            -0.130         0.805*        0.018         0.016
+ U6             0.015         0.602*        0.089        -0.045
+ U7             0.026        -0.014         0.805*        0.009
+ U8            -0.036        -0.003         0.720*       -0.029
+ U9             0.017         0.034         0.669*        0.025
+ U10           -0.066        -0.017         0.057         0.654*
+ U11           -0.005         0.040        -0.056         0.872*
+ U12            0.110        -0.069         0.022         0.624*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2             3             4
+              ________      ________      ________      ________
+      1         1.000
+      2        -0.026         1.000
+      3         0.025         0.033         1.000
+      4        -0.030        -0.150*       -0.059         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                0.586         0.122         0.515         0.491         0.331
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                0.615         0.352         0.479         0.550         0.563
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                0.239         0.586
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2             3             4
+              ________      ________      ________      ________
+ U1             0.057         0.049         0.066         0.062
+ U2             0.060         0.040         0.029         0.049
+ U3             0.057         0.064         0.047         0.043
+ U4             0.058         0.067         0.074         0.048
+ U5             0.078         0.072         0.017         0.043
+ U6             0.033         0.064         0.070         0.065
+ U7             0.041         0.044         0.060         0.042
+ U8             0.051         0.047         0.059         0.053
+ U9             0.048         0.056         0.059         0.052
+ U10            0.060         0.049         0.058         0.064
+ U11            0.019         0.043         0.049         0.070
+ U12            0.066         0.065         0.044         0.064
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2             3             4
+              ________      ________      ________      ________
+      1         0.000
+      2         0.083         0.000
+      3         0.067         0.077         0.000
+      4         0.070         0.070         0.071         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                0.072         0.112         0.078         0.093         0.114
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                0.075         0.096         0.084         0.078         0.083
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                0.120         0.078
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2             3             4
+              ________      ________      ________      ________
+ U1            11.004        -0.066         1.500        -0.976
+ U2            15.616         1.038        -0.394         1.432
+ U3            12.047        -1.129        -0.424        -0.857
+ U4             1.237        10.455        -1.641        -0.103
+ U5            -1.680        11.109         1.091         0.376
+ U6             0.465         9.382         1.283        -0.698
+ U7             0.648        -0.309        13.376         0.214
+ U8            -0.707        -0.057        12.202        -0.546
+ U9             0.363         0.598        11.403         0.493
+ U10           -1.112        -0.353         0.985        10.153
+ U11           -0.270         0.926        -1.146        12.389
+ U12            1.664        -1.061         0.497         9.795
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2             3             4
+              ________      ________      ________      ________
+      1         0.000
+      2        -0.310         0.000
+      3         0.368         0.422         0.000
+      4        -0.427        -2.152        -0.831         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U1            U2            U3            U4            U5
+              ________      ________      ________      ________      ________
+                8.086         1.085         6.582         5.280         2.913
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U6            U7            U8            U9            U10
+              ________      ________      ________      ________      ________
+                8.158         3.652         5.670         7.047         6.797
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              U11           U12
+              ________      ________
+                1.987         7.474
+
+
+           FACTOR STRUCTURE
+                  1             2             3             4
+              ________      ________      ________      ________
+ U1             0.633        -0.007         0.117        -0.084
+ U2             0.934         0.006         0.009         0.037
+ U3             0.692        -0.085        -0.003        -0.045
+ U4             0.051         0.700        -0.096        -0.106
+ U5            -0.151         0.807         0.040        -0.102
+ U6             0.003         0.612         0.112        -0.141
+ U7             0.046         0.011         0.804        -0.037
+ U8            -0.017         0.026         0.721        -0.070
+ U9             0.032         0.051         0.669        -0.020
+ U10           -0.084        -0.112         0.016         0.655
+ U11           -0.033        -0.093        -0.107         0.870
+ U12            0.094        -0.164        -0.014         0.630
+
+
+     Beginning Time:  11:19:53
+        Ending Time:  11:19:53
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen

@@ -8,14 +8,16 @@ options(warn = 1)
 execute_test <- function(mplus.out, lavaan.model, lavaan.call, lavaan.args, comment = "", group.environment = NULL) {
   stopifnot(is.character(mplus.out), length(mplus.out) == 1L)
   stopifnot(is.character(lavaan.call), length(lavaan.call) == 1L)
-  stopifnot(is.character(lavaan.model))
   stopifnot(is.list(lavaan.args))
+  if (lavaan.call == "efa") lavaan.model <- NULL
   if (!file.exists(mplus.out)) {
     stop("Cannot find ", mplus.out, " in ", getwd(), "!")
   }
   sink(tempfile())
   mplus.model <- readModels(mplus.out)
   sink()
+  if (is.null(mplus.model$parameters)) return("Error: Mplus parameters NULL!")
+  if (length(mplus.model$parameters) == 0) return("Error: 0 Mplus parameters!")
   lavaan.args$call <- lavaan.call
   lavaan.args$model <- lavaan.model
   lavaan.args$data <- create_r_data(mplus.model)
@@ -43,7 +45,7 @@ execute_test <- function(mplus.out, lavaan.model, lavaan.call, lavaan.args, comm
     assign(paste0("lav", ich), res1[[2]], group.environment)
     assign(paste0("mpl", ich), res2[[2]], group.environment)
   }
-  invisible()
+  invisible(TRUE)
 }
 
 split_range <- function(x) {
@@ -83,7 +85,7 @@ create_r_data <- function(mplus.model) {
     }
   }
   if (!is.null(mplusinputgrouping)) {
-    i1 <- regexpr(" ", mplusinputgrouping, fixed = TRUE)
+    i1 <- regexpr("[ (]", mplusinputgrouping, fixed = FALSE)
     groupvar <- substring(mplusinputgrouping, 1L, i1 - 1L)
     elements <- strsplit(substring(mplusinputgrouping, i1 + 2L, nchar(mplusinputgrouping) - 1L),
                          "[ ,]+")[[1]]
@@ -183,7 +185,6 @@ match_mplus_param <- function(lav = NULL, mpl = NULL, group.label = character(0)
     }
     # check if found
     if (length(idx) == 0L) {
-      browser()
       stop("lav param not found in mpl: ",
            paste(lav$lhs[i], lav$op[i], lav$rhs[i], sep = ""))
     } else if (length(idx) > 1L) {
@@ -266,61 +267,6 @@ join_fit_lav_mplus <- function(lav, mpl) {
       mplname <- names.mpl[j]
       if (any(mplname == names(mpl))) fit[i] <- round(mpl[1, mplname], 3)
     }
-    # if (lav.names[i] == "chisq" ||
-    #    lav.names[i] == "chisq.scaled") {
-    #   fit[i] <- mpl[1, "ChiSqM_Value"]
-    # } else if (lav.names[i] == "df" ||
-    #           lav.names[i] == "df.scaled") {
-    #   fit[i] <- mpl[1, "ChiSqM_DF"]
-    # } else if (lav.names[i] == "pvalue" ||
-    #           lav.names[i] == "pvalue.scaled") {
-    #   fit[i] <- round(mpl[1, "ChiSqM_PValue"], 3)
-    # } else if (lav.names[i] == "baseline.chisq" ||
-    #           lav.names[i] == "baseline.chisq.scaled") {
-    #   fit[i] <- mpl[1, "ChiSqBaseline_Value"]
-    # } else if (lav.names[i] == "chisq.scaling.factor") {
-    #   fit[i] <- mpl[1, "ChiSqM_ScalingCorrection"]
-    # }else if (lav.names[i] == "baseline.df" ||
-    #          lav.names[i] == "baseline.df.scaled") {
-    #   fit[i] <- mpl[1, "ChiSqBaseline_DF"]
-    # } else if (lav.names[i] == "baseline.pvalue" ||
-    #           lav.names[i] == "baseline.pvalue.scaled") {
-    #   fit[i] <- mpl[1, "ChiSqBaseline_PValue"]
-    # } else if (lav.names[i] == "cfi" ||
-    #           lav.names[i] == "cfi.scaled") {
-    #   fit[i] <- mpl[1, "CFI"]
-    # } else if (lav.names[i] == "tli" ||
-    #           lav.names[i] == "tli.scaled") {
-    #   fit[i] <- mpl[1, "TLI"]
-    # } else if (lav.names[i] == "logl") {
-    #   fit[i] <- mpl[1, "LL"]
-    # } else if (lav.names[i] == "unrestricted.logl") {
-    #   fit[i] <- mpl[1, "UnrestrictedLL"]
-    # } else if (lav.names[i] == "npar") {
-    #   fit[i] <- mpl[1, "Parameters"]
-    # } else if (lav.names[i] == "aic") {
-    #   fit[i] <- mpl[1, "AIC"]
-    # } else if (lav.names[i] == "bic") {
-    #   fit[i] <- mpl[1, "BIC"]
-    # } else if (lav.names[i] == "ntotal") {
-    #   fit[i] <- mpl[1, "Observations"]
-    # } else if (lav.names[i] == "bic2") {
-    #   fit[i] <- mpl[1, "aBIC"]
-    # } else if (lav.names[i] == "rmsea" ||
-    #           lav.names[i] == "rmsea.scaled") {
-    #   fit[i] <- mpl[1, "RMSEA_Estimate"]
-    # } else if (lav.names[i] == "rmsea.ci.lower" ||
-    #           lav.names[i] == "rmsea.ci.lower.scaled") {
-    #   fit[i] <- mpl[1, "RMSEA_90CI_LB"]
-    # } else if (lav.names[i] == "rmsea.ci.upper" ||
-    #           lav.names[i] == "rmsea.ci.upper.scaled") {
-    #   fit[i] <- mpl[1, "RMSEA_90CI_UB"]
-    # } else if (lav.names[i] == "rmsea.pvalue" ||
-    #           lav.names[i] == "rmsea.pvalue.scaled") {
-    #   fit[i] <- mpl[1, "RMSEA_pLT05"]
-    # } else if (lav.names[i] == "srmr") {
-    #   fit[i] <- mpl[1, "SRMR"]
-    # }
   }
   lav.df <- data.frame(fit = names(lav),
                      lav = round(as.numeric(lav), 3),
@@ -334,21 +280,11 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   on.exit({
     if (isOpen(logfile)) close(logfile)
     })
-  cat("Mplus file:", mpl.file, "\n", file = logfile)
-  cat(strrep("=", 12 + nchar(mpl.file)), "\n", file = logfile)
-  showarguments <- within(test.object, {
-    rm(data, call)
-    })
-  cat("lavaan call:\n", test.object$call, "(model = lavaan.model, data = <data.via.mplusfile>,\n",
-      strrep(" ", nchar(test.object$call) + 1L),
-      paste(sapply(seq_along(showarguments), function(ii) {
-        paste(names(showarguments)[[ii]], "=",
-            ifelse(is.character(showarguments[[ii]]), encodeString(showarguments[[ii]], quote = '"'),
-                   showarguments[[ii]]))
-        }),
-        collapse = ", "),
-      ")\n",
-      sep = "", file = logfile)
+  log.file <- paste(mpl.file, "_mim", test.object$mimic, ".log", sep = "")
+  cat("Mplus file:", mpl.file,
+      ", detailed lavaan output:", log.file,
+      "\n", sep = "", file = logfile)
+  cat(strrep("=", 37 + nchar(mpl.file) + nchar(log.file)), "\n", file = logfile)
   if (test.comment != "") {
     cat("test comment:\n",
         gsub("\n", "\n# ", gsub("^ *\n", "# ", gsub("\n *$", "", test.comment))),
@@ -356,17 +292,29 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   }
   lavfunc <- test.object$call
   test.object$call <- NULL
-  fit <- do.call(lavfunc, test.object)
-  cat("Lavaan total timing: ", fit@timing$total, "\n", file = logfile)
-  cat("       number of iterations: ", fit@optim$iterations, "\n", file = logfile)
+  fit <- try(do.call(lavfunc, test.object), silent = TRUE)
+  if (inherits(fit, "try-error")) {
+    sink(logfile)
+    str(fit)
+    cat("\n")
+    sink()
+    return(list(c(0L, 0L, 0L), readLines(logfile)))
+  }
   mpl.par <- mplus.model$parameters
-  lav.par <- parameterEstimates(fit, ci = FALSE, fmi = FALSE,
+  lav.par <- try(parameterEstimates(fit, ci = FALSE, fmi = FALSE,
                                 remove.system.eq = FALSE,
                                 remove.eq = FALSE, remove.ineq = FALSE,
-                                standardized = TRUE)
+                                standardized = TRUE))
+  if (inherits(lav.par, "try-error")) {
+    sink(logfile)
+    str(lav.par)
+    cat("\n")
+    sink()
+    return(list(c(0L, 0L, 0L), readLines(logfile)))
+  }
   if (fit@SampleStats@ngroups == 1L) lav.par$group <- rep(1L, length(lav.par$lhs))
   # remove some (fixed) parameters from lav.par (since they will not
-  # be included in mpl.par
+  # be included in mpl.par)
   ov.names <- lavaan:::vnames(fit@ParTable, "ov")
   lv.names <- lavaan:::vnames(fit@ParTable, "lv")
   ov.ord   <- lavaan:::vnames(fit@ParTable, "ov.ord")
@@ -379,14 +327,14 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   # fixed ov intercepts?
   idx <- which(lav.par$op == "~1" & lav.par$lhs %in% ov.names
                & lav.par$se == 0.0)
-  if (length(idx) > 0L && !fit@call$int.ov.free) {
+  if (length(idx) > 0L && !fit@Options$int.ov.free) {
     lav.par <- lav.par[-idx, ]
     partable    <- partable[-idx, ]
   }
   # fixed lv intercepts?
   idx <- which(lav.par$op == "~1" & lav.par$lhs %in% lv.names
                & lav.par$se == 0.0)
-  if (length(idx) > 0L && !fit@call$int.lv.free) {
+  if (length(idx) > 0L && !fit@Options$int.lv.free) {
     lav.par <- lav.par[-idx, ]
     partable    <- partable[-idx, ]
   }
@@ -426,12 +374,20 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
     partable    <- partable[-idx, ]
   }
   # join parameters lav and mpl
-  lav.df.par <- join_par_lav_mplus(lav = lav.par, mpl = mpl.par,
-                             group.label = fit@Data@group.label)
+  lav.df.par <- try(join_par_lav_mplus(lav = lav.par, mpl = mpl.par,
+                             group.label = fit@Data@group.label))
+  if (inherits(lav.df.par, "try-error")) {
+    sink(logfile)
+    str(lav.df.par)
+    cat("\n")
+    sink()
+    return(list(c(0L, 0L, 0L), readLines(logfile)))
+  }
   # get fit measures
   mpl.fit <- mplus.model$summaries
   lav.fit <- fitMeasures(fit)
   # remove some fit values
+  if (is.null(test.object$estimator)) test.object$estimator <- fit@Options$estimator
   if (test.object$estimator %in% c("WLS", "WLSM", "WLSMV", "ULS", "ULSM", "ULSMV")) {
     idx <- which(names(lav.fit) == "srmr")
     if (length(idx) > 0L) lav.fit <- lav.fit[-idx]
@@ -457,7 +413,6 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   # joint fit measures lav mpl
   lav.df.fit <- join_fit_lav_mplus(lav = lav.fit, mpl = mpl.fit)
   # write log
-  log.file <- paste(mpl.file, "_mim", test.object$mimic, ".log", sep = "")
   sink(log.file)
   # header
   version <- read.dcf(file = system.file("DESCRIPTION", package = "lavaan"),
@@ -469,7 +424,7 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   cat("\n")
   print(lav.df.fit, max = 10000L)
   sink()
-  cat("Detailed output lavaan in", normalizePath(log.file), "\n", file = logfile)
+  # cat("Detailed output lavaan in", normalizePath(log.file), "\n", file = logfile)
   par.idx <- which(abs(lav.df.par$delta) > 0.0005)
   cat("parameter values: number of delta's > 0.0005: ",
       length(par.idx), "\n", file = logfile)

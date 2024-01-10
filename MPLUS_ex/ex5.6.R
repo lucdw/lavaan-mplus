@@ -8,7 +8,6 @@ f5 =~ f1  + f2  + f3  + f4
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-   estimator = "ML",
    information = "observed",
    meanstructure = TRUE)
 test.comment <- ''

@@ -9,7 +9,6 @@ f4 ~ f3
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-   estimator = "ML",
    information = "observed",
    meanstructure = TRUE)
 test.comment <- ''

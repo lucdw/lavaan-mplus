@@ -1,19 +1,31 @@
-Mplus VERSION 8 (Linux)
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-10/17/2017  11:28 AM
+01/09/2024  11:19 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:	this is an example of a mean structure CFA
-  	for continuous factor indicators
-  	DATA:	FILE IS ex5.9.dat;
-  VARIABLE:	NAMES ARE y1a-y1c y2a-y2c;
-  analysis: convergence = 0.0000001;
-  MODEL:	f1 BY y1a y1b@1 y1c@1;
-  	f2 BY y2a y2b@1 y2c@1;
-  	[y1a y1b y1c] (1);	
-  	[y2a y2b y2c] (2);
-  output: standardized;
+
+
+
+        TITLE:	this is an example of a mean structure CFA
+        	for continuous factor indicators
+        	DATA:	FILE IS ex5.9.dat;
+        VARIABLE:	NAMES ARE y1a-y1c y2a-y2c;
+        analysis: convergence = 0.0000001;
+        MODEL:	f1 BY y1a y1b@1 y1c@1;
+        	f2 BY y2a y2b@1 y2c@1;
+        	[y1a y1b y1c] (1);	
+        	[y2a y2b y2c] (2);
+        output: standardized;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -304,8 +316,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:28:32
-        Ending Time:  11:28:32
+     Beginning Time:  11:19:56
+        Ending Time:  11:19:56
        Elapsed Time:  00:00:00
 
 
@@ -319,4 +331,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2017 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

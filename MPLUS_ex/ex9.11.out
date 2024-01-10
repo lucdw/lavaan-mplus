@@ -1,0 +1,386 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/09/2024  11:19 AM
+
+INPUT INSTRUCTIONS
+
+
+    TITLE:	this is an example of a two-level
+    	multiple group CFA with continuous
+    	factor indicators
+    DATA: 	FILE IS ex9.11.dat;
+    VARIABLE:	NAMES ARE y1-y6 g clus;
+    	GROUPING = g (1 = g1 2 = g2);
+    	CLUSTER = clus;
+    ANALYSIS:	TYPE = TWOLEVEL;
+    MODEL:	
+    	%WITHIN%
+    	fw1 BY y1-y3;
+    	fw2 BY y4-y6;
+    	%BETWEEN%
+    	fb1 BY y1-y3;
+    	fb2 BY y4-y6;
+    MODEL g2:
+    	%WITHIN%
+    	fw1 BY y2-y3;
+    	fw2 BY y5-y6;
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a two-level
+multiple group CFA with continuous
+factor indicators
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group G1                                                   1000
+   Group G2                                                    800
+   Total sample size                                          1800
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            4
+
+Observed dependent variables
+
+  Continuous
+   Y1          Y2          Y3          Y4          Y5          Y6
+
+Continuous latent variables
+   FW1         FW2         FB1         FB2
+
+Variables with special functions
+
+  Grouping variable     G
+  Cluster variable      CLUS
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Maximum number of iterations                                   100
+Convergence criterion                                    0.100D-05
+Maximum number of EM iterations                                500
+Convergence criteria for the EM algorithm
+  Loglikelihood change                                   0.100D-02
+  Relative loglikelihood change                          0.100D-05
+  Derivative                                             0.100D-03
+Minimum variance                                         0.100D-03
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                         EMA
+
+Input data file(s)
+  ex9.11.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group G1
+     Number of clusters                        110
+
+     Average cluster size        9.091
+
+     Estimated Intraclass Correlations for the Y Variables
+
+                Intraclass              Intraclass              Intraclass
+     Variable  Correlation   Variable  Correlation   Variable  Correlation
+
+     Y1           0.234      Y2           0.223      Y3           0.177
+     Y4           0.192      Y5           0.171      Y6           0.220
+
+
+   Group G2
+     Number of clusters                        120
+
+     Average cluster size        6.667
+
+     Estimated Intraclass Correlations for the Y Variables
+
+                Intraclass              Intraclass              Intraclass
+     Variable  Correlation   Variable  Correlation   Variable  Correlation
+
+     Y1           0.227      Y2           0.276      Y3           0.236
+     Y4           0.221      Y5           0.234      Y6           0.215
+
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR G1
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y1                    0.039      -0.038     -10.482    0.10%      -2.287     -0.727      0.023
+            1000.000       7.547       0.027       9.270    0.10%       0.760      2.384
+     Y2                   -0.048       0.036      -8.051    0.10%      -2.546     -0.698     -0.098
+            1000.000       7.853      -0.119       9.519    0.10%       0.586      2.386
+     Y3                    0.018      -0.012      -8.469    0.10%      -2.363     -0.657      0.039
+            1000.000       7.613      -0.158       8.359    0.10%       0.794      2.309
+     Y4                   -0.091      -0.053      -8.408    0.10%      -2.320     -0.776     -0.005
+            1000.000       7.125      -0.139       8.326    0.10%       0.645      2.159
+     Y5                   -0.251      -0.052      -8.861    0.10%      -2.681     -0.849     -0.189
+            1000.000       7.721      -0.159       7.993    0.10%       0.475      2.019
+     Y6                    0.079      -0.027      -9.090    0.10%      -2.255     -0.716      0.010
+            1000.000       7.587      -0.134       9.057    0.10%       0.762      2.457
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR G2
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y1                    0.023      -0.024      -8.121    0.12%      -2.387     -0.549      0.050
+             800.000       7.811      -0.067       9.895    0.12%       0.738      2.360
+     Y2                   -0.043       0.035      -7.130    0.12%      -2.249     -0.749     -0.050
+             800.000       6.071      -0.246       7.398    0.12%       0.678      2.023
+     Y3                    0.034      -0.014      -9.265    0.12%      -2.107     -0.612     -0.039
+             800.000       6.257      -0.224       6.839    0.12%       0.697      2.216
+     Y4                   -0.083      -0.024      -9.785    0.12%      -2.370     -0.873     -0.131
+             800.000       7.503       0.152       8.708    0.12%       0.646      2.272
+     Y5                   -0.115       0.050      -8.827    0.12%      -2.345     -0.846     -0.299
+             800.000       7.110      -0.053       7.914    0.12%       0.606      2.128
+     Y6                    0.123       0.064      -7.570    0.12%      -2.155     -0.526      0.050
+             800.000       6.789      -0.091       9.445    0.12%       0.737      2.425
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       56
+
+Loglikelihood
+
+          H0 Value                      -24926.956
+          H0 Scaling Correction Factor      1.0118
+            for MLR
+          H1 Value                      -24909.987
+          H1 Scaling Correction Factor      0.9597
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                   49965.913
+          Bayesian (BIC)                 50273.663
+          Sample-Size Adjusted BIC       50095.754
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             38.271*
+          Degrees of Freedom                    40
+          P-Value                           0.5483
+          Scaling Correction Factor         0.8868
+            for MLR
+
+Chi-Square Contribution From Each Group
+
+          G1                                15.435
+          G2                                22.835
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.002
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1130.168
+          Degrees of Freedom                    60
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value for Within                   0.010
+          Value for Between                  0.074
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group G1
+
+Within Level
+
+ FW1      BY
+    Y1                 1.000      0.000    999.000    999.000
+    Y2                 1.129      0.117      9.681      0.000
+    Y3                 1.218      0.132      9.233      0.000
+
+ FW2      BY
+    Y4                 1.000      0.000    999.000    999.000
+    Y5                 0.969      0.107      9.090      0.000
+    Y6                 1.083      0.146      7.412      0.000
+
+ FW2      WITH
+    FW1                0.948      0.151      6.264      0.000
+
+ Variances
+    FW1                1.590      0.254      6.261      0.000
+    FW2                1.795      0.310      5.797      0.000
+
+ Residual Variances
+    Y1                 4.139      0.246     16.841      0.000
+    Y2                 4.089      0.252     16.205      0.000
+    Y3                 3.898      0.291     13.399      0.000
+    Y4                 3.953      0.277     14.250      0.000
+    Y5                 4.715      0.240     19.650      0.000
+    Y6                 3.797      0.271     13.991      0.000
+
+Between Level
+
+ FB1      BY
+    Y1                 1.000      0.000    999.000    999.000
+    Y2                 1.382      0.893      1.547      0.122
+    Y3                 0.587      0.172      3.404      0.001
+
+ FB2      BY
+    Y4                 1.000      0.000    999.000    999.000
+    Y5                 0.799      0.702      1.138      0.255
+    Y6                 0.942      1.056      0.893      0.372
+
+ FB2      WITH
+    FB1                0.053      0.219      0.244      0.807
+
+ Means
+    FB1                0.000      0.000    999.000    999.000
+    FB2                0.000      0.000    999.000    999.000
+
+ Intercepts
+    Y1                 0.046      0.131      0.349      0.727
+    Y2                -0.044      0.148     -0.299      0.765
+    Y3                 0.078      0.108      0.721      0.471
+    Y4                -0.130      0.125     -1.037      0.300
+    Y5                -0.223      0.127     -1.756      0.079
+    Y6                 0.076      0.143      0.535      0.593
+
+ Variances
+    FB1                0.707      0.530      1.335      0.182
+    FB2                0.462      0.594      0.777      0.437
+
+ Residual Variances
+    Y1                 0.984      0.496      1.983      0.047
+    Y2                 0.439      0.820      0.535      0.593
+    Y3                 1.071      0.231      4.626      0.000
+    Y4                 0.883      0.505      1.749      0.080
+    Y5                 0.964      0.269      3.587      0.000
+    Y6                 1.329      0.473      2.808      0.005
+
+Group G2
+
+Within Level
+
+ FW1      BY
+    Y1                 1.000      0.000    999.000    999.000
+    Y2                 0.576      0.107      5.395      0.000
+    Y3                 0.519      0.100      5.198      0.000
+
+ FW2      BY
+    Y4                 1.000      0.000    999.000    999.000
+    Y5                 0.690      0.100      6.901      0.000
+    Y6                 0.754      0.093      8.121      0.000
+
+ FW2      WITH
+    FW1                1.054      0.214      4.934      0.000
+
+ Variances
+    FW1                2.530      0.512      4.938      0.000
+    FW2                2.663      0.421      6.321      0.000
+
+ Residual Variances
+    Y1                 3.484      0.532      6.554      0.000
+    Y2                 3.483      0.217     16.068      0.000
+    Y3                 4.072      0.238     17.139      0.000
+    Y4                 3.113      0.368      8.458      0.000
+    Y5                 4.200      0.312     13.454      0.000
+    Y6                 3.808      0.250     15.256      0.000
+
+Between Level
+
+ FB1      BY
+    Y1                 1.000      0.000    999.000    999.000
+    Y2                 1.382      0.893      1.547      0.122
+    Y3                 0.587      0.172      3.404      0.001
+
+ FB2      BY
+    Y4                 1.000      0.000    999.000    999.000
+    Y5                 0.799      0.702      1.138      0.255
+    Y6                 0.942      1.056      0.893      0.372
+
+ FB2      WITH
+    FB1                0.042      0.279      0.151      0.880
+
+ Means
+    FB1               -0.015      0.148     -0.098      0.922
+    FB2                0.096      0.163      0.586      0.558
+
+ Intercepts
+    Y1                 0.046      0.131      0.349      0.727
+    Y2                -0.044      0.148     -0.299      0.765
+    Y3                 0.078      0.108      0.721      0.471
+    Y4                -0.130      0.125     -1.037      0.300
+    Y5                -0.223      0.127     -1.756      0.079
+    Y6                 0.076      0.143      0.535      0.593
+
+ Variances
+    FB1                0.656      0.387      1.696      0.090
+    FB2                0.408      0.544      0.750      0.453
+
+ Residual Variances
+    Y1                 1.162      0.422      2.756      0.006
+    Y2                 0.399      0.922      0.432      0.665
+    Y3                 1.244      0.280      4.449      0.000
+    Y4                 1.210      0.496      2.441      0.015
+    Y5                 1.452      0.323      4.502      0.000
+    Y6                 1.052      0.409      2.571      0.010
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.236E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:19:57
+        Ending Time:  11:19:57
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen

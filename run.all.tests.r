@@ -16,12 +16,17 @@ for (testdir.i in seq_along(testdirs)) {
     testfile <- testfiles[test.i]
     cat("        handling ", testfile, "\n")
     source(testfile)
-    execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment, group.environment)
+    extest <- execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment, group.environment)
+    if (is.character(extest)) cat(extest, "\n")
   }
   setwd(wd)
 }
 max.i <- get("i", group.environment)
 reportcon <- file("report.txt", "wt")
+cat("Current lavaan version :", 
+    packageDescription("lavaan", fields = "Version"), 
+    "\n*******************************\n\n",
+    file = reportcon)
 for (i in seq_len(max.i)) {
   ich <- formatC(i, width=4, flag="0")
   df1 <- get(paste0("res", ich), group.environment)

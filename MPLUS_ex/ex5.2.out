@@ -1,16 +1,28 @@
-Mplus VERSION 8.8
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-04/20/2022   3:54 PM
+01/09/2024  11:19 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:	this is an example of a CFA with
-  	categorical factor indicators
-  DATA:	FILE IS ex5.2.dat;
-  VARIABLE:	NAMES ARE u1-u6;
-  	CATEGORICAL ARE u1-u6;
-  MODEL:	f1 BY u1-u3;
-  	f2 BY u4-u6;
+
+
+
+        TITLE:	this is an example of a CFA with
+        	categorical factor indicators
+        DATA:	FILE IS ex5.2.dat;
+        VARIABLE:	NAMES ARE u1-u6;
+        	CATEGORICAL ARE u1-u6;
+        MODEL:	f1 BY u1-u3;
+        	f2 BY u4-u6;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -103,7 +115,7 @@ RMSEA (Root Mean Square Error Of Approximation)
 CFI/TLI
 
           CFI                                1.000
-          TLI                                1.000
+          TLI                                1.002
 
 Chi-Square Test of Model Fit for the Baseline Model
 
@@ -152,12 +164,6 @@ MODEL RESULTS
     F2                 0.736      0.052     14.099      0.000
 
 
-QUALITY OF NUMERICAL RESULTS
-
-     Condition Number for the Information Matrix              0.200E-01
-       (ratio of smallest to largest eigenvalue)
-
-
 R-SQUARE
 
     Observed                   Residual
@@ -171,8 +177,14 @@ R-SQUARE
     U6                 0.781      0.219
 
 
-     Beginning Time:  15:54:27
-        Ending Time:  15:54:27
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.200E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:19:55
+        Ending Time:  11:19:55
        Elapsed Time:  00:00:00
 
 
@@ -186,4 +198,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2022 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

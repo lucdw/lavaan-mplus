@@ -1,0 +1,212 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/09/2024  11:19 AM
+
+INPUT INSTRUCTIONS
+
+
+    TITLE:	this is an example of a linear growth model
+    	for a continuous outcome with first-order auto correlated
+    	residuals using non-linear constraints
+    DATA:	FILE = ex6.17.dat;
+    VARIABLE:	NAMES = y1-y4;
+    MODEL:	i s | y1@0 y2@1 y3@2 y4@3;
+    	y1-y4 (resvar);
+    	y1-y3 PWITH y2-y4 (p1);
+    	y1-y2 PWITH y3-y4 (p2);
+    	y1 WITH y4 (p3);
+    MODEL CONSTRAINT:
+    	NEW (corr);
+    	p1 = resvar*corr;
+    	p2 = resvar*corr**2;
+    	p3 = resvar*corr**3;
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a linear growth model
+for a continuous outcome with first-order auto correlated
+residuals using non-linear constraints
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        1000
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Continuous
+   Y1          Y2          Y3          Y4
+
+Continuous latent variables
+   I           S
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  ex6.17.dat
+
+Input data format  FREE
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y1                    0.016      -0.084      -3.687    0.10%      -1.132     -0.303      0.040
+            1000.000       1.897      -0.258       3.792    0.10%       0.356      1.232
+     Y2                    1.027       0.027      -4.043    0.10%      -0.230      0.641      1.018
+            1000.000       2.295      -0.038       5.854    0.10%       1.391      2.277
+     Y3                    2.001       0.047      -3.213    0.10%       0.509      1.454      1.958
+            1000.000       2.982      -0.329       8.140    0.10%       2.467      3.566
+     Y4                    3.053       0.044      -3.040    0.10%       1.292      2.538      3.081
+            1000.000       4.006      -0.019       9.244    0.10%       3.546      4.687
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        7
+
+Loglikelihood
+
+          H0 Value                       -6593.460
+          H1 Value                       -6592.226
+
+Information Criteria
+
+          Akaike (AIC)                   13200.921
+          Bayesian (BIC)                 13235.275
+          Sample-Size Adjusted BIC       13213.043
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              2.469
+          Degrees of Freedom                     7
+          P-Value                           0.9294
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.012
+          Probability RMSEA <= .05           1.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.002
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2118.221
+          Degrees of Freedom                     6
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.006
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ I        |
+    Y1                 1.000      0.000    999.000    999.000
+    Y2                 1.000      0.000    999.000    999.000
+    Y3                 1.000      0.000    999.000    999.000
+    Y4                 1.000      0.000    999.000    999.000
+
+ S        |
+    Y1                 0.000      0.000    999.000    999.000
+    Y2                 1.000      0.000    999.000    999.000
+    Y3                 2.000      0.000    999.000    999.000
+    Y4                 3.000      0.000    999.000    999.000
+
+ S        WITH
+    I                  0.139      0.052      2.680      0.007
+
+ Y1       WITH
+    Y2                 0.734      0.209      3.507      0.000
+    Y3                 0.368      0.154      2.397      0.017
+    Y4                 0.185      0.102      1.820      0.069
+
+ Y2       WITH
+    Y3                 0.734      0.209      3.507      0.000
+    Y4                 0.368      0.154      2.397      0.017
+
+ Y3       WITH
+    Y4                 0.734      0.209      3.507      0.000
+
+ Means
+    I                  0.011      0.042      0.266      0.790
+    S                  1.011      0.021     49.078      0.000
+
+ Intercepts
+    Y1                 0.000      0.000    999.000    999.000
+    Y2                 0.000      0.000    999.000    999.000
+    Y3                 0.000      0.000    999.000    999.000
+    Y4                 0.000      0.000    999.000    999.000
+
+ Variances
+    I                  0.424      0.253      1.676      0.094
+    S                  0.142      0.034      4.135      0.000
+
+ Residual Variances
+    Y1                 1.462      0.225      6.490      0.000
+    Y2                 1.462      0.225      6.490      0.000
+    Y3                 1.462      0.225      6.490      0.000
+    Y4                 1.462      0.225      6.490      0.000
+
+New/Additional Parameters
+    CORR               0.502      0.067      7.543      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.159E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:19:57
+        Ending Time:  11:19:57
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen

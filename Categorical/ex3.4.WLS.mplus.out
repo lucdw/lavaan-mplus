@@ -1,19 +1,23 @@
-Mplus VERSION 6.11 (Linux)
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-07/18/2012   4:23 PM
+01/08/2024   9:54 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:        this is an example of a probit regression
-          for a binary or categorical observed
-          dependent variable with two covariates
-  DATA:        FILE IS ex3.4.dat;
-  VARIABLE:        NAMES ARE u1 x1 x3;
-          CATEGORICAL = u1;
-  ANALYSIS: estimator=WLS;
-  CONVERGENCE = 1E-10;
-  MODEL:        u1 ON x1 x3;
-  OUTPUT: standardized;
+
+    TITLE:        this is an example of a probit regression
+            for a binary or categorical observed
+            dependent variable with two covariates
+    DATA:        FILE IS ex3.4.dat;
+    VARIABLE:        NAMES ARE u1 x1 x3;
+            CATEGORICAL = u1;
+    ANALYSIS: estimator=WLS;
+    CONVERGENCE = 1E-10;
+    MODEL:        u1 ON x1 x3;
+    OUTPUT: standardized;
+
+
+
 
 
 
@@ -48,6 +52,7 @@ Maximum number of iterations                                  1000
 Convergence criterion                                    0.100D-09
 Maximum number of steepest descent iterations                   20
 Parameterization                                             DELTA
+Link                                                        PROBIT
 
 Input data file(s)
   ex3.4.dat
@@ -58,9 +63,23 @@ Input data format  FREE
 UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
 
     U1
-      Category 1    0.642      321.000
-      Category 2    0.358      179.000
+      Category 1    0.642          321.000
+      Category 2    0.358          179.000
 
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     X1                    0.001      -0.133      -3.145    0.20%      -0.922     -0.235      0.023
+             500.000       1.094      -0.162       2.920    0.20%       0.304      0.876
+     X3                   -0.042      -0.057      -3.139    0.20%      -0.921     -0.353     -0.040
+             500.000       0.957      -0.357       2.875    0.20%       0.274      0.859
 
 
 THE MODEL ESTIMATION TERMINATED NORMALLY
@@ -94,6 +113,14 @@ Chi-Square Test of Model Fit for the Baseline Model
           Degrees of Freedom                     2
           P-Value                           0.0000
 
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.67255367D-19
+
 
 
 MODEL RESULTS
@@ -111,23 +138,52 @@ MODEL RESULTS
 
 STANDARDIZED MODEL RESULTS
 
-                      StdYX        Std
-                    Estimate   Estimate
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
 
  U1       ON
-    X1                 0.375      1.022
-    X3                 0.848      2.474
+    X1                 0.375      0.035     10.852      0.000
+    X3                 0.848      0.023     37.085      0.000
 
  Thresholds
-    U1$1               0.344      0.984
+    U1$1               0.344      0.036      9.586      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ U1       ON
+    X1                 0.358      0.032     11.316      0.000
+    X3                 0.866      0.030     28.852      0.000
+
+ Thresholds
+    U1$1               0.344      0.036      9.586      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ U1       ON
+    X1                 1.022      0.121      8.459      0.000
+    X3                 2.474      0.224     11.031      0.000
+
+ Thresholds
+    U1$1               0.984      0.119      8.298      0.000
 
 
 R-SQUARE
 
-    Observed                   Residual
-    Variable        Estimate   Variance
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
 
-    U1                 0.877      1.000
+    U1                 0.877      0.020     43.583      0.000      1.000
 
 
 QUALITY OF NUMERICAL RESULTS
@@ -136,8 +192,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  16:23:17
-        Ending Time:  16:23:17
+     Beginning Time:  09:54:16
+        Ending Time:  09:54:16
        Elapsed Time:  00:00:00
 
 
@@ -151,4 +207,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2011 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

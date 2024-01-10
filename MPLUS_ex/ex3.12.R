@@ -5,7 +5,7 @@ u1 + u2 ~ x1 + x2 + x3
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-   estimator = "WLSMV"
+  baseline.conditional.x.free.slopes = FALSE
 )
 test.comment <- ''
 if (!exists("group.environment") || is.null(group.environment)) {

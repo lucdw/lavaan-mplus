@@ -5,7 +5,6 @@ y1 + y2 ~ x1 + x2 + x3
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-   estimator = "ML",
    information = "observed",
    meanstructure = TRUE)
 test.comment <- ''

@@ -1,22 +1,34 @@
-Mplus VERSION 8 (Linux)
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-10/17/2017  11:28 AM
+01/09/2024  11:19 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:	this is an example of a linear growth
-  	model for a continuous outcome with time-
-  	invariant and time-varying covariates
-  DATA:	FILE IS ex6.10.dat;
-  VARIABLE:	NAMES ARE y11-y14 x1 x2 a31-a34;
-  analysis: convergence = 0.0000001;
-  MODEL:	i s | y11@0 y12@1 y13@2 y14@3;
-  	i s ON x1 x2;
-  	y11 ON a31;
-  	y12 ON a32;
-  	y13 ON a33;
-  	y14 ON a34;
-  output: standardized;
+
+
+
+        TITLE:	this is an example of a linear growth
+        	model for a continuous outcome with time-
+        	invariant and time-varying covariates
+        DATA:	FILE IS ex6.10.dat;
+        VARIABLE:	NAMES ARE y11-y14 x1 x2 a31-a34;
+        analysis: convergence = 0.0000001;
+        MODEL:	i s | y11@0 y12@1 y13@2 y14@3;
+        	i s ON x1 x2;
+        	y11 ON a31;
+        	y12 ON a32;
+        	y13 ON a33;
+        	y14 ON a34;
+        output: standardized;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -137,7 +149,7 @@ Chi-Square Test of Model Fit for the Baseline Model
 
 SRMR (Standardized Root Mean Square Residual)
 
-          Value                              0.013
+          Value                              0.017
 
 
 
@@ -395,8 +407,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:28:32
-        Ending Time:  11:28:33
+     Beginning Time:  11:19:56
+        Ending Time:  11:19:57
        Elapsed Time:  00:00:01
 
 
@@ -410,4 +422,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2017 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

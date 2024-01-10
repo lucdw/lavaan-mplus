@@ -5,7 +5,7 @@ lavaan.model <- '
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-  estimator = "WLSMV"
+  ordered = TRUE
 )
 test.comment <- ''
 if (!exists("group.environment") || is.null(group.environment)) {

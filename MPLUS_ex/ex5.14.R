@@ -6,10 +6,7 @@ f1 + f2 ~ x1 + x2 + x3
 '
 lavaan.call <-  "sem" 
 lavaan.args <- list(
-   estimator = "ML",
-   information = "expected",
    meanstructure = FALSE,
-   missing = "listwise",
    group = "g",
    group.equal = "loadings",
    group.partial = "f1=~y3")

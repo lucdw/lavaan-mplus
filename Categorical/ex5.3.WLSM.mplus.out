@@ -1,20 +1,24 @@
-Mplus VERSION 6.11 (Linux)
+Mplus VERSION 8.2
 MUTHEN & MUTHEN
-07/18/2012   4:23 PM
+01/08/2024   9:54 AM
 
 INPUT INSTRUCTIONS
 
-  TITLE:        this is an example of a CFA with
-          continuous and categorical factor
-          indicators
-  DATA:        FILE IS ex5.3.dat;
-  VARIABLE:        NAMES ARE u1-u3 y4-y6;
-          CATEGORICAL ARE u1 u2 u3;
-  ANALYSIS: estimator = WLSM;
-  !          parameterization = theta;
-  MODEL:        f1 BY u1-u3;
-          f2 BY y4-y6;
-  OUTPUT: standardized;
+
+    TITLE:        this is an example of a CFA with
+            continuous and categorical factor
+            indicators
+    DATA:        FILE IS ex5.3.dat;
+    VARIABLE:        NAMES ARE u1-u3 y4-y6;
+            CATEGORICAL ARE u1 u2 u3;
+    ANALYSIS: estimator = WLSM;
+    !          parameterization = theta;
+    MODEL:        f1 BY u1-u3;
+            f2 BY y4-y6;
+    OUTPUT: standardized;
+
+
+
 
 
 
@@ -52,6 +56,7 @@ Maximum number of iterations                                  1000
 Convergence criterion                                    0.500D-04
 Maximum number of steepest descent iterations                   20
 Parameterization                                             DELTA
+Link                                                        PROBIT
 
 Input data file(s)
   ex5.3.dat
@@ -62,15 +67,31 @@ Input data format  FREE
 UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
 
     U1
-      Category 1    0.504      252.000
-      Category 2    0.496      248.000
+      Category 1    0.504          252.000
+      Category 2    0.496          248.000
     U2
-      Category 1    0.506      253.000
-      Category 2    0.494      247.000
+      Category 1    0.506          253.000
+      Category 2    0.494          247.000
     U3
-      Category 1    0.496      248.000
-      Category 2    0.504      252.000
+      Category 1    0.496          248.000
+      Category 2    0.504          252.000
 
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y4                   -0.016      -0.016      -3.215    0.20%      -0.786     -0.287     -0.048
+             500.000       1.025       0.246       3.033    0.20%       0.212      0.795
+     Y5                   -0.016      -0.103      -3.132    0.20%      -0.955     -0.257     -0.033
+             500.000       1.026      -0.236       3.199    0.20%       0.257      0.903
+     Y6                    0.014       0.036      -3.294    0.20%      -0.859     -0.292     -0.042
+             500.000       0.988      -0.336       2.803    0.20%       0.285      0.921
 
 
 THE MODEL ESTIMATION TERMINATED NORMALLY
@@ -86,7 +107,7 @@ Chi-Square Test of Model Fit
           Value                              2.403*
           Degrees of Freedom                     8
           P-Value                           0.9661
-          Scaling Correction Factor          0.394
+          Scaling Correction Factor         0.3942
             for WLSM
 
 *   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
@@ -111,9 +132,13 @@ Chi-Square Test of Model Fit for the Baseline Model
           Degrees of Freedom                    15
           P-Value                           0.0000
 
-WRMR (Weighted Root Mean Square Residual)
+SRMR (Standardized Root Mean Square Residual)
 
-          Value                              0.199
+          Value                              0.010
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.94739409D-03
 
 
 
@@ -169,9 +194,9 @@ STDYX Standardization
     U3                 0.896      0.026     35.039      0.000
 
  F2       BY
-    Y4                 0.869      0.015     58.508      0.000
+    Y4                 0.869      0.015     58.507      0.000
     Y5                 0.913      0.012     73.904      0.000
-    Y6                 0.883      0.013     66.010      0.000
+    Y6                 0.883      0.013     66.009      0.000
 
  F2       WITH
     F1                -0.005      0.055     -0.094      0.925
@@ -191,7 +216,7 @@ STDYX Standardization
     F2                 1.000      0.000    999.000    999.000
 
  Residual Variances
-    Y4                 0.245      0.026      9.467      0.000
+    Y4                 0.245      0.026      9.468      0.000
     Y5                 0.166      0.023      7.338      0.000
     Y6                 0.221      0.024      9.368      0.000
 
@@ -207,9 +232,9 @@ STDY Standardization
     U3                 0.896      0.026     35.039      0.000
 
  F2       BY
-    Y4                 0.869      0.015     58.508      0.000
+    Y4                 0.869      0.015     58.507      0.000
     Y5                 0.913      0.012     73.904      0.000
-    Y6                 0.883      0.013     66.010      0.000
+    Y6                 0.883      0.013     66.009      0.000
 
  F2       WITH
     F1                -0.005      0.055     -0.094      0.925
@@ -229,7 +254,7 @@ STDY Standardization
     F2                 1.000      0.000    999.000    999.000
 
  Residual Variances
-    Y4                 0.245      0.026      9.467      0.000
+    Y4                 0.245      0.026      9.468      0.000
     Y5                 0.166      0.023      7.338      0.000
     Y6                 0.221      0.024      9.368      0.000
 
@@ -291,8 +316,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  16:23:20
-        Ending Time:  16:23:20
+     Beginning Time:  09:54:18
+        Ending Time:  09:54:18
        Elapsed Time:  00:00:00
 
 
@@ -306,4 +331,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2011 Muthen & Muthen
+Copyright (c) 1998-2018 Muthen & Muthen

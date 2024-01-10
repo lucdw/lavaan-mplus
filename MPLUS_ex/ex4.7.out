@@ -1,0 +1,483 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/09/2024  11:19 AM
+
+INPUT INSTRUCTIONS
+
+
+    TITLE:	this is an example of a bi-factor exploratory factor analysis with
+    		continuous indicators
+    DATA:		FILE = ex4.7.dat;
+    VARIABLE:	NAMES = y1-y10;
+    ANALYSIS:	TYPE = EFA 2 3;
+    		ROTATION = BI-GEOMIN;
+
+
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a bi-factor exploratory factor analysis with
+continuous indicators
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        5000
+
+Number of dependent variables                                   10
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   Y1          Y2          Y3          Y4          Y5          Y6
+   Y7          Y8          Y9          Y10
+
+
+Estimator                                                       ML
+Rotation                                                 BI-GEOMIN
+Row standardization                                    CORRELATION
+Type of rotation                                           OBLIQUE
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Optimization Specifications for the Exploratory Factor Analysis
+Rotation Algorithm
+  Number of random starts                                       30
+  Maximum number of iterations                               10000
+  Derivative convergence criterion                       0.100D-04
+
+Input data file(s)
+  ex4.7.dat
+
+Input data format  FREE
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y1                   -0.069      -0.021      -8.072    0.02%      -1.718     -0.593     -0.064
+            5000.000       3.951      -0.050       6.765    0.02%       0.462      1.615
+     Y2                   -0.033      -0.006      -6.509    0.02%      -1.453     -0.460     -0.037
+            5000.000       2.984       0.094       5.992    0.02%       0.387      1.390
+     Y3                   -0.055       0.025      -6.330    0.02%      -1.584     -0.497     -0.048
+            5000.000       3.306      -0.003       7.279    0.02%       0.380      1.484
+     Y4                   -0.058       0.027      -9.738    0.02%      -2.313     -0.792     -0.069
+            5000.000       7.133      -0.044      10.394    0.02%       0.631      2.219
+     Y5                   -0.040      -0.037      -7.276    0.02%      -1.509     -0.483     -0.022
+            5000.000       3.001      -0.047       5.370    0.02%       0.382      1.433
+     Y6                   -0.018      -0.040      -6.045    0.02%      -1.526     -0.459     -0.024
+            5000.000       3.279      -0.094       5.984    0.02%       0.438      1.524
+     Y7                   -0.005       0.053      -6.998    0.02%      -1.642     -0.510     -0.054
+            5000.000       3.754      -0.061       8.425    0.02%       0.435      1.667
+     Y8                    0.004      -0.043      -7.447    0.02%      -1.703     -0.485      0.013
+            5000.000       4.190       0.108       7.341    0.02%       0.528      1.702
+     Y9                    0.015       0.006      -7.174    0.02%      -1.687     -0.505      0.007
+            5000.000       4.002      -0.018       6.831    0.02%       0.536      1.702
+     Y10                   0.016      -0.018      -7.589    0.02%      -1.796     -0.510      0.035
+            5000.000       4.599      -0.098       8.354    0.02%       0.581      1.825
+
+
+SUMMARY OF MODEL FIT INFORMATION
+
+
+                   Number of                   Degrees of
+     Model        Parameters      Chi-Square    Freedom     P-Value
+
+     2-factor          39             90.091        26       0.0000
+     3-factor          47             24.364        18       0.1435
+
+                                               Degrees of
+     Models Compared              Chi-Square    Freedom     P-Value
+
+     2-factor against 3-factor        65.727         8       0.0000
+
+
+
+RESULTS FOR EXPLORATORY FACTOR ANALYSIS
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  1             2             3             4             5
+              ________      ________      ________      ________      ________
+                3.031         1.670         0.847         0.786         0.709
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  6             7             8             9            10
+              ________      ________      ________      ________      ________
+                0.697         0.639         0.575         0.561         0.485
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       39
+
+Loglikelihood
+
+          H0 Value                     -100466.860
+          H1 Value                     -100421.815
+
+Information Criteria
+
+          Akaike (AIC)                  201011.721
+          Bayesian (BIC)                201265.891
+          Sample-Size Adjusted BIC      201141.963
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             90.091
+          Degrees of Freedom                    26
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.022
+          90 Percent C.I.                    0.017  0.027
+          Probability RMSEA <= .05           1.000
+
+CFI/TLI
+
+          CFI                                0.993
+          TLI                                0.988
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           8960.687
+          Degrees of Freedom                    45
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.014
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       1.09375
+
+
+
+           BI-GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2
+              ________      ________
+ Y1             0.415*        0.485*
+ Y2             0.338*        0.232*
+ Y3             0.382*        0.361*
+ Y4             0.436*        0.624*
+ Y5             0.392*       -0.049*
+ Y6             0.500*       -0.169*
+ Y7             0.550*       -0.211*
+ Y8             0.610*       -0.243*
+ Y9             0.577*       -0.275*
+ Y10            0.602*       -0.272*
+
+
+           BI-GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2
+              ________      ________
+      1         1.000
+      2         0.000         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.593         0.832         0.724         0.420         0.844
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6            Y7            Y8            Y9            Y10
+              ________      ________      ________      ________      ________
+                0.722         0.653         0.569         0.592         0.563
+
+
+           S.E. BI-GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ Y1             0.011         0.015
+ Y2             0.013         0.016
+ Y3             0.012         0.015
+ Y4             0.009         0.015
+ Y5             0.014         0.017
+ Y6             0.012         0.016
+ Y7             0.012         0.016
+ Y8             0.011         0.016
+ Y9             0.011         0.016
+ Y10            0.011         0.016
+
+
+           S.E. BI-GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.000         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.017         0.012         0.014         0.021         0.011
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6            Y7            Y8            Y9            Y10
+              ________      ________      ________      ________      ________
+                0.013         0.014         0.014         0.014         0.014
+
+
+           Est./S.E. BI-GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ Y1            39.445        33.121
+ Y2            25.126        14.194
+ Y3            31.999        23.663
+ Y4            47.407        41.471
+ Y5            28.426        -2.852
+ Y6            40.779       -10.357
+ Y7            47.804       -13.176
+ Y8            56.987       -15.519
+ Y9            52.535       -17.650
+ Y10           56.367       -17.397
+
+
+           Est./S.E. BI-GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2        -0.124         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+               35.882        71.462        52.080        20.043        77.325
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6            Y7            Y8            Y9            Y10
+              ________      ________      ________      ________      ________
+               54.886        47.309        40.027        41.338        39.208
+
+
+           FACTOR STRUCTURE
+                  1             2
+              ________      ________
+ Y1             0.415         0.485
+ Y2             0.338         0.232
+ Y3             0.382         0.361
+ Y4             0.436         0.624
+ Y5             0.392        -0.049
+ Y6             0.500        -0.169
+ Y7             0.550        -0.211
+ Y8             0.610        -0.243
+ Y9             0.577        -0.275
+ Y10            0.602        -0.272
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 3 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       47
+
+Loglikelihood
+
+          H0 Value                     -100433.997
+          H1 Value                     -100421.815
+
+Information Criteria
+
+          Akaike (AIC)                  200961.994
+          Bayesian (BIC)                201268.302
+          Sample-Size Adjusted BIC      201118.952
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             24.364
+          Degrees of Freedom                    18
+          P-Value                           0.1435
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.008
+          90 Percent C.I.                    0.000  0.016
+          Probability RMSEA <= .05           1.000
+
+CFI/TLI
+
+          CFI                                0.999
+          TLI                                0.998
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           8960.687
+          Degrees of Freedom                    45
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.007
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.16024
+
+
+
+           BI-GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2             3
+              ________      ________      ________
+ Y1             0.468*        0.365        -0.023
+ Y2             0.446*        0.124         0.004
+ Y3             0.460*        0.260        -0.006
+ Y4             0.388         0.843*        0.004
+ Y5             0.383*       -0.042         0.217*
+ Y6             0.304*       -0.003         0.431*
+ Y7             0.298*        0.010         0.508*
+ Y8             0.318*        0.004         0.575*
+ Y9             0.300*       -0.031         0.560*
+ Y10            0.274*        0.014         0.610*
+
+
+           BI-GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2             3
+              ________      ________      ________
+      1         1.000
+      2         0.000*        1.000
+      3         0.000        -0.029         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.646         0.785         0.721         0.138         0.804
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              Y6            Y7            Y8            Y9            Y10
+              ________      ________      ________      ________      ________
+                0.722         0.654         0.569         0.594         0.553
+
+
+           S.E. BI-GEOMIN ROTATED LOADINGS
+                  1             2             3
+              ________      ________      ________
+ Y1             0.156         0.216         0.019
+ Y2             0.054         0.172         0.026
+ Y3             0.114         0.197         0.013
+ Y4             0.302         0.113         0.003
+ Y5             0.054         0.084         0.041
+ Y6             0.034         0.021         0.025
+ Y7             0.040         0.014         0.027
+ Y8             0.036         0.012         0.022
+ Y9             0.053         0.019         0.028
+ Y10            0.038         0.018         0.021
+
+
+           S.E. BI-GEOMIN FACTOR CORRELATIONS
+                  1             2             3
+              ________      ________      ________
+      1         0.000
+      2         0.000         0.000
+      3         0.000         0.182         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+                0.022         0.020         0.018         0.181         0.021
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6            Y7            Y8            Y9            Y10
+              ________      ________      ________      ________      ________
+                0.013         0.014         0.014         0.014         0.015
+
+
+           Est./S.E. BI-GEOMIN ROTATED LOADINGS
+                  1             2             3
+              ________      ________      ________
+ Y1             2.997         1.691        -1.214
+ Y2             8.304         0.724         0.172
+ Y3             4.046         1.319        -0.420
+ Y4             1.284         7.466         1.156
+ Y5             7.152        -0.497         5.237
+ Y6             8.824        -0.136        17.261
+ Y7             7.386         0.732        18.781
+ Y8             8.822         0.374        25.556
+ Y9             5.699        -1.697        20.009
+ Y10            7.141         0.784        29.258
+
+
+           Est./S.E. BI-GEOMIN FACTOR CORRELATIONS
+                  1             2             3
+              ________      ________      ________
+      1         0.000
+      2        -7.217         0.000
+      3        -0.155        -0.161         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y1            Y2            Y3            Y4            Y5
+              ________      ________      ________      ________      ________
+               29.962        38.370        40.477         0.765        38.907
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              Y6            Y7            Y8            Y9            Y10
+              ________      ________      ________      ________      ________
+               54.911        47.178        39.388        41.556        35.786
+
+
+           FACTOR STRUCTURE
+                  1             2             3
+              ________      ________      ________
+ Y1             0.468         0.366        -0.033
+ Y2             0.446         0.124         0.001
+ Y3             0.460         0.260        -0.013
+ Y4             0.388         0.843        -0.021
+ Y5             0.383        -0.048         0.218
+ Y6             0.304        -0.015         0.432
+ Y7             0.298        -0.005         0.508
+ Y8             0.318        -0.012         0.575
+ Y9             0.300        -0.048         0.561
+ Y10            0.274        -0.004         0.610
+
+
+     Beginning Time:  11:19:54
+        Ending Time:  11:19:54
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen

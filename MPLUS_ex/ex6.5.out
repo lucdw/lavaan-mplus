@@ -1,0 +1,202 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/09/2024  11:19 AM
+
+INPUT INSTRUCTIONS
+
+
+    TITLE:	this is an example of a linear growth
+    	model for a categorical outcome using the
+    	Theta parameterization
+    DATA:	FILE IS ex6.5.dat;
+    VARIABLE:	NAMES ARE u11-u14;
+    	CATEGORICAL ARE u11-u14;
+    ANALYSIS:	PARAMETERIZATION = THETA;
+    MODEL:	i s | u11@0 u12@1 u13@2 u14@3;
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a linear growth
+model for a categorical outcome using the
+Theta parameterization
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   U11         U12         U13         U14
+
+Continuous latent variables
+   I           S
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Parameterization                                             THETA
+Link                                                        PROBIT
+
+Input data file(s)
+  ex6.5.dat
+
+Input data format  FREE
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    U11
+      Category 1    0.236          118.000
+      Category 2    0.248          124.000
+      Category 3    0.264          132.000
+      Category 4    0.252          126.000
+    U12
+      Category 1    0.388          194.000
+      Category 2    0.282          141.000
+      Category 3    0.168           84.000
+      Category 4    0.162           81.000
+    U13
+      Category 1    0.594          297.000
+      Category 2    0.130           65.000
+      Category 3    0.148           74.000
+      Category 4    0.128           64.000
+    U14
+      Category 1    0.676          338.000
+      Category 2    0.126           63.000
+      Category 3    0.090           45.000
+      Category 4    0.108           54.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       10
+
+Chi-Square Test of Model Fit
+
+          Value                             12.014*
+          Degrees of Freedom                     8
+          P-Value                           0.1506
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.032
+          90 Percent C.I.                    0.000  0.066
+          Probability RMSEA <= .05           0.777
+
+CFI/TLI
+
+          CFI                                0.992
+          TLI                                0.994
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            491.173
+          Degrees of Freedom                     6
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.021
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.67589863D-02
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ I        |
+    U11                1.000      0.000    999.000    999.000
+    U12                1.000      0.000    999.000    999.000
+    U13                1.000      0.000    999.000    999.000
+    U14                1.000      0.000    999.000    999.000
+
+ S        |
+    U11                0.000      0.000    999.000    999.000
+    U12                1.000      0.000    999.000    999.000
+    U13                2.000      0.000    999.000    999.000
+    U14                3.000      0.000    999.000    999.000
+
+ S        WITH
+    I                 -0.047      0.118     -0.400      0.689
+
+ Means
+    I                  0.000      0.000    999.000    999.000
+    S                 -0.772      0.107     -7.189      0.000
+
+ Thresholds
+    U11$1             -1.144      0.152     -7.524      0.000
+    U11$2             -0.071      0.078     -0.913      0.361
+    U11$3              1.001      0.143      7.001      0.000
+    U12$1             -1.144      0.152     -7.524      0.000
+    U12$2             -0.071      0.078     -0.913      0.361
+    U12$3              1.001      0.143      7.001      0.000
+    U13$1             -1.144      0.152     -7.524      0.000
+    U13$2             -0.071      0.078     -0.913      0.361
+    U13$3              1.001      0.143      7.001      0.000
+    U14$1             -1.144      0.152     -7.524      0.000
+    U14$2             -0.071      0.078     -0.913      0.361
+    U14$3              1.001      0.143      7.001      0.000
+
+ Variances
+    I                  1.451      0.500      2.900      0.004
+    S                  0.313      0.135      2.312      0.021
+
+ Residual Variances
+    U11                1.000      0.000    999.000    999.000
+    U12                1.334      0.409      3.264      0.001
+    U13                2.417      0.688      3.513      0.000
+    U14                3.330      1.005      3.311      0.001
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.314E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  11:19:57
+        Ending Time:  11:19:57
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen
