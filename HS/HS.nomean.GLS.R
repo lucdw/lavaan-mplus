@@ -1,16 +1,17 @@
-mplus.out <- "HS.nomean.GLS.mplus.out" 
-lavaan.model <- '
+mplus.out <- "HS.nomean.GLS.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("HS.raw", na.strings = "-999999", 
+col.names = c("x1", "x2", "x3", "x4", "x5", "x6", "x7", "x8", "x9"))
+
+model <- '
   visual  =~ x1 + x2 + x3
   textual =~ x4 + x5 + x6
   speed   =~ x7 + x8 + x9
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(
-   estimator = "GLS",
-   meanstructure = FALSE,
-   missing = "listwise")
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , estimator  = "GLS"
+    , meanstructure  = FALSE
+    , missing  = "listwise"
+    )
+summary(fit)  # summary(...): removed if executed in batch

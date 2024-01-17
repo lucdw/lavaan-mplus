@@ -1,5 +1,17 @@
-mplus.out <- "ex5.16.out" 
-lavaan.model <- '
+mplus.out <- "ex5.16.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("ex5.16.dat", na.strings = "-999999", 
+col.names = c("u1", "u2", "u3", "u4", "u5", "u6", "x1", "x2", "x3", "g"))
+
+elements <- c("1=male", "2=female")
+groupnew <- vector("character", length(Data[["g"]]))
+for (element in elements) {
+  elems <- strsplit(element, "=", fixed = TRUE)[[1]]
+  groupnew[Data[["g"]] == as.integer(elems[1])] <- elems[2]
+}
+Data[["g"]] <- groupnew
+model <- '
            f1 =~ u1 + u2 + c(l3,l3b)*u3
            f2 =~ u4 + u5 + u6
 
@@ -11,13 +23,9 @@ lavaan.model <- '
            # fix scale of u3-star to 1 in second group
            u3 ~*~ c(1,1)*u3
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(
-   group = "g",
-   group.equal = c("loadings", "thresholds")
-   )
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , group  = "g"
+    , group.equal  = c("loadings", "thresholds")
+    , ordered  = c("u1", "u2", "u3", "u4", "u5", "u6")
+    )
+summary(fit, fit.measures = TRUE)

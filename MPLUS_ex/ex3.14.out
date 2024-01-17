@@ -1,20 +1,24 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:42 AM
 
 INPUT INSTRUCTIONS
 
 
 
 
-        TITLE:	this is an example of a path analysis
-        	with a combination of continuous and
-        	categorical dependent variables
-        DATA:	FILE IS ex3.14.dat;
-        VARIABLE:	NAMES ARE y1 y2 u1 x1-x3;
-        	CATEGORICAL IS u1;
-        MODEL:	y1 y2 ON x1 x2 x3;
-        	u1 ON y1 y2 x2;
+
+          TITLE:	this is an example of a path analysis
+          	with a combination of continuous and
+          	categorical dependent variables
+          DATA:	FILE IS ex3.14.dat;
+          VARIABLE:	NAMES ARE y1 y2 u1 x1-x3;
+          	CATEGORICAL IS u1;
+          MODEL:	y1 y2 ON x1 x2 x3;
+          	u1 ON y1 y2 x2;
+
+
+
 
 
 
@@ -191,8 +195,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:19:52
-        Ending Time:  11:19:52
+     Beginning Time:  07:42:50
+        Ending Time:  07:42:50
        Elapsed Time:  00:00:00
 
 

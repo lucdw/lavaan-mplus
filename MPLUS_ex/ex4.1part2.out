@@ -1,17 +1,21 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:42 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of an exploratory factor
-    		analysis with continuous factor indicators
-    		using exploratory structural equation modeling (ESEM)
-    DATA:		FILE IS ex4.1b.dat;
-    VARIABLE:	NAMES ARE y1-y12;
-    MODEL:	f1-f4 BY y1-y12 (*1);
-    OUTPUT:	MODINDICES standardized;
+
+      TITLE:	this is an example of an exploratory factor
+      		analysis with continuous factor indicators
+      		using exploratory structural equation modeling (ESEM)
+      DATA:		FILE IS ex4.1b.dat;
+      VARIABLE:	NAMES ARE y1-y12;
+      MODEL:	f1-f4 BY y1-y12 (*1);
+      OUTPUT:	MODINDICES standardized;
+
+
+
 
 
 
@@ -626,8 +630,8 @@ No modification indices above the minimum value.
 
 
 
-     Beginning Time:  11:19:53
-        Ending Time:  11:19:53
+     Beginning Time:  07:42:53
+        Ending Time:  07:42:53
        Elapsed Time:  00:00:00
 
 

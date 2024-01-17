@@ -1,6 +1,20 @@
-mplus.out <- "ex9.11.out" 
-lavaan.model <- '
-   group: 1
+# test compare with mplus not executed because lavaan abort if run with mimic = "Mplus"
+# mplus.out <- "ex9.11.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("ex9.11.dat", na.strings = "-999999", 
+col.names = c("y1", "y2", "y3", "y4", "y5", "y6", "g", "clus"))
+
+elements <- c("1=g1", "2=g2")
+groupnew <- vector("character", length(Data[["g"]]))
+for (element in elements) {
+  elems <- strsplit(element, "=", fixed = TRUE)[[1]]
+  groupnew[Data[["g"]] == as.integer(elems[1])] <- elems[2]
+}
+Data[["g"]] <- groupnew
+
+model <- '
+   group: "g1"
         level: 1
             fw1 =~ y1 + y2 + y3
             fw2 =~ y4 + y5 + y6
@@ -15,7 +29,7 @@ lavaan.model <- '
             y5 ~ i5*1
             y6 ~ i6*1
 
-    group: 2
+   group: "g2"
         level: 1
             fw1 =~ y1 + y2 + y3
             fw2 =~ y4 + y5 + y6
@@ -33,10 +47,14 @@ lavaan.model <- '
             fb1 ~ 1
             fb2 ~ 1
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(cluster = "clus", group = "g", estimator = "MLR")
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , cluster  = "clus"
+    , group  = "g"
+    , estimator  = "MLR"
+    )
+test.comment = '
+ lavaan abort if run with mimic = "Mplus": 
+ Error in lav_partable_vnames(partable, "ov.nox", group = g) : 
+  lavaan ERROR: group column does not contain value "1"
+'
+summary(fit, fit.measures = TRUE)

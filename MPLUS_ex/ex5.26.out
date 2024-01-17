@@ -1,20 +1,24 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:43 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of an EFA
-    at two timepoints with factor loading
-    invariance and correlated residuals across time
-    DATA:	FILE IS ex5.26.dat;
-    VARIABLE:	NAMES ARE y1-y12;
-    MODEL:	f1-f2 BY y1-y6 (*t1 1);
-    	f3-f4 BY y7-y12 (*t2 1);
-    	f3-f4 WITH f1-f2;
-    	y1-y6 PWITH y7-y12;
-    OUTPUT:	TECH1 STANDARDIZED;
+
+      TITLE:	this is an example of an EFA
+      at two timepoints with factor loading
+      invariance and correlated residuals across time
+      DATA:	FILE IS ex5.26.dat;
+      VARIABLE:	NAMES ARE y1-y12;
+      MODEL:	f1-f2 BY y1-y6 (*t1 1);
+      	f3-f4 BY y7-y12 (*t2 1);
+      	f3-f4 WITH f1-f2;
+      	y1-y6 PWITH y7-y12;
+      OUTPUT:	TECH1 STANDARDIZED;
+
+
+
 
 
 
@@ -993,8 +997,8 @@ TECHNICAL 1 OUTPUT
  F4             0.000         0.000         0.000         1.000
 
 
-     Beginning Time:  11:19:55
-        Ending Time:  11:19:55
+     Beginning Time:  07:43:02
+        Ending Time:  07:43:02
        Elapsed Time:  00:00:00
 
 

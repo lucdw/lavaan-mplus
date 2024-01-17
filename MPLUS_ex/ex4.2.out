@@ -1,17 +1,21 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:42 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of an exploratory
-    	factor analysis with categorical factor
-            indicators
-    DATA:	FILE IS ex4.2.dat;
-    VARIABLE:	NAMES ARE  u1-u12;
-    	CATEGORICAL ARE u1-u12;
-    ANALYSIS:	TYPE = EFA 1 4;
+
+      TITLE:	this is an example of an exploratory
+      	factor analysis with categorical factor
+              indicators
+      DATA:	FILE IS ex4.2.dat;
+      VARIABLE:	NAMES ARE  u1-u12;
+      	CATEGORICAL ARE u1-u12;
+      ANALYSIS:	TYPE = EFA 1 4;
+
+
+
 
 
 
@@ -887,9 +891,9 @@ MINIMUM ROTATION FUNCTION VALUE       0.38499
  U12            0.094        -0.164        -0.014         0.630
 
 
-     Beginning Time:  11:19:53
-        Ending Time:  11:19:53
-       Elapsed Time:  00:00:00
+     Beginning Time:  07:42:53
+        Ending Time:  07:42:54
+       Elapsed Time:  00:00:01
 
 
 

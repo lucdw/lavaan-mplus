@@ -1,5 +1,10 @@
-mplus.out <- "ex6.15.out" 
-lavaan.model <- '
+mplus.out <- "ex6.15.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("ex6.15.dat", na.strings = "-999999", 
+col.names = c("u11", "u21", "u31", "u12", "u22", "u32", "u13", "u23", "u33"))
+
+model <- '
     f1 =~ 1*u11 + l2*u21 + l3*u31
     f2 =~ 1*u12 + l2*u22 + l3*u32
     f3 =~ 1*u13 + l2*u23 + l3*u33
@@ -31,10 +36,8 @@ lavaan.model <- '
     i ~ 0*1
     s ~ 1
 '
-lavaan.call <-  "lavaan" 
-lavaan.args <- list()
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  lavaan (model, data = Data
+    , ordered  = c("u11", "u21", "u31", "u12", "u22", "u32", "u13", "u23", "u33"
+)
+    )
+summary(fit, fit.measures = TRUE, rsquare = TRUE)

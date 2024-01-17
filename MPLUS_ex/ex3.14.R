@@ -1,14 +1,17 @@
-mplus.out <- "ex3.14.out" 
-lavaan.model <- '
+mplus.out <- "ex3.14.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("ex3.14.dat", na.strings = "-999999", 
+col.names = c("y1", "y2", "u1", "x1", "x2", "x3"))
+
+model <- '
 y1 + y2 ~ x1 + x2 + x3
      u1 ~ y1 + y2 + x2 
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(
-  baseline.conditional.x.free.slopes = FALSE
-)
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , baseline.conditional.x.free.slopes  = FALSE
+    , ordered  = "u1"
+    )
+summary(fit, fit.measures = TRUE, rsquare = TRUE)
+
+

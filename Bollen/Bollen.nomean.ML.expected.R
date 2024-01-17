@@ -1,5 +1,10 @@
-mplus.out <- "Bollen.nomean.ML.expected.mplus.out" 
-lavaan.model <- '
+mplus.out <- "Bollen.nomean.ML.expected.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("democindus.txt", na.strings = "-999999", 
+col.names = c("y1", "y2", "y3", "y4", "y5", "y6", "y7", "y8", "x1", "x2", "x3"))
+
+model <- '
   # measurement model
     dem60 =~ y1 + y2 + y3 + y4
     dem65 =~ y5 + equal("dem60=~y2")*y6
@@ -18,14 +23,10 @@ lavaan.model <- '
     y4 ~~ y8
     y6 ~~ y8
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(
-   estimator = "ML",
-   information = "expected",
-   meanstructure = FALSE,
-   missing = "listwise")
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , estimator  = "ML"
+    , information  = "expected"
+    , meanstructure  = FALSE
+    , missing  = "listwise"
+    )
+summary(fit)  # summary(...): removed if executed in batch

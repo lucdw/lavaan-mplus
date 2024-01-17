@@ -4,7 +4,7 @@ this project is intended to compare the results (parameters and fit measures) fo
 
 There are two main procedures:
 
--   create_rerun_mplus.R which creates input files and batch jobs (linux and windows) to re-execute the mplus program
+-   rerun_mplus.R which recreates the Mplus output files (mplus program must be installed, of course)
 
 -   run.all.tests.r which performs all comparisons defined in the subdirectories
 
@@ -29,39 +29,54 @@ To perform a test one must have the output of a Mplus run, in a file which you l
 Then we have a R source file, typically looking as follows:
 
 ```         
-mplus.out <- "HS.mean.GLS.mplus.out" 
-lavaan.model <- '
-  visual  =~ x1 + x2 + x3
-  textual =~ x4 + x5 + x6
-  speed   =~ x7 + x8 + x9
+mplus.out <- "BB.mean.ML.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("BB.missing.raw", na.strings = "-999999", 
+col.names = c("y1", "y2", "y3", "y4", "y5", "y6", "y7", "y8", "x1", "x2", "x3"))
+
+model <- '
+  # measurement model
+    dem60 =~ y1 + y2 + y3 + y4
+    dem65 =~ y5 + equal("dem60=~y2")*y6
+                + equal("dem60=~y3")*y7
+                + equal("dem60=~y4")*y8
+    ind60 =~ x1 + x2 + x3
+
+  # regressions
+    dem60 ~ ind60
+    dem65 ~ ind60 + dem60
+
+  # residual correlations
+    y1 ~~ y5
+    y2 ~~ y4 + y6
+    y3 ~~ y7
+    y4 ~~ y8
+    y6 ~~ y8
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(
-   estimator = "GLS",
-   meanstructure = TRUE)
-test.comment <- 'demo comment here'
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , estimator  = "ML"
+    , information  = "observed"
+    , meanstructure  = TRUE
+    , missing  = "ml"
+    )
+summary(fit)  # summary(...): removed if executed in batch
+
 ```
 
 The following values are set:
 
--   mplus.out : the name of the mplus out file
+-   mplus.out : the name of the mplus out file, when omitted the comparison with Mplus value will be skipped in run.all.tests
 
--   lavaan.model : the model to use in lavaan
+-   model : the model to use in lavaan
 
--   lavaan.call : the model type to use in lavaan (sem, cfa, growth, ...)
+-   Data : the data.frame to use in lavaan (read from Mplus data + modify if necessary)
 
--   lavaan.args : the parameters to specify for the call (except model, data and mimic)
+-   fit : fit the model with the data and possibly other parameters (do NOT specify mimic)
 
 -   test.comment : optional comment on the test, which will also be copied in the logging.
 
-The following lines execute the test if the file is sourced directly (not as a result of sourcing run.all.tests.r, where this is done in the 'calling' script).
+When executing run.all.tests:
 
-When executing:
-
-The name and structure of the mplus input file is, with the help of the MplusAutomation R package, derived from the content of the mplus output file, whereafter the input data.frame for lavaan is created.
-
-Then the lavaan function is called and the resulting parameters are compared with those from Mplus. A logging of the differences and the output summary of the lavaan calls are generated.
+The R-file is executed with added parameter mimic ("lavaan"/"Mplus") and suppression of lines starting with 'summary'.
+The resulting parameters from object fit are compared with those from Mplus. A logging of the differences and the output summary of the lavaan calls are generated.

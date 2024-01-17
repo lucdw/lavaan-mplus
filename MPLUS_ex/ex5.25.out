@@ -1,19 +1,23 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:43 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of a SEM with
-    EFA and CFA factors with continuous factor indicators
-    DATA:	FILE IS ex5.25.dat;
-    VARIABLE:	NAMES ARE y1-y12;
-    MODEL:	f1-f2 BY y1-y6 (*1);
-    	f3 BY y7-y9;
-    	f4 BY y10-y12;
-    	f3 ON f1-f2;
-    	f4 ON f3;
+
+      TITLE:	this is an example of a SEM with
+      EFA and CFA factors with continuous factor indicators
+      DATA:	FILE IS ex5.25.dat;
+      VARIABLE:	NAMES ARE y1-y12;
+      MODEL:	f1-f2 BY y1-y6 (*1);
+      	f3 BY y7-y9;
+      	f4 BY y10-y12;
+      	f3 ON f1-f2;
+      	f4 ON f3;
+
+
+
 
 
 
@@ -236,8 +240,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:19:55
-        Ending Time:  11:19:55
+     Beginning Time:  07:43:01
+        Ending Time:  07:43:01
        Elapsed Time:  00:00:00
 
 

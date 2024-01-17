@@ -1,33 +1,37 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:43 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of a CFA with parameter
-    	constraints
-    DATA:	FILE = ex5.20.dat;
-    VARIABLE: 	NAMES = y1-y6;
-    MODEL:	f1 BY y1
-    	y2-y3(lam2-lam3);
-    	f2 BY y4
-    	y5-y6(lam5-lam6);
-    	f1 (vf1);
-    	f2 (vf2);
-    	y1-y3 (ve1-ve3);
-    	y4-y6 (ve4-ve6);
-    MODEL CONSTRAINT:
-    	NEW(rel2 rel5 stan3 stan6);
-    	rel2 = lam2**2*vf1/(lam2**2*vf1 + ve2);
-    	rel5 = lam5**2*vf2/(lam5**2*vf2 + ve5);
-    	rel5 = rel2;
-    	stan3 = lam3*SQRT(vf1)/SQRT(lam3**2*vf1 + ve3);
-    	stan6 = lam6*SQRT(vf2)/SQRT(lam6**2*vf2 + ve6);
-    	0 = stan6 - stan3;
-    	ve2 > ve5;
-    	ve4 > 0;
-    OUTPUT:	STANDARDIZED;
+
+      TITLE:	this is an example of a CFA with parameter
+      	constraints
+      DATA:	FILE = ex5.20.dat;
+      VARIABLE: 	NAMES = y1-y6;
+      MODEL:	f1 BY y1
+      	y2-y3(lam2-lam3);
+      	f2 BY y4
+      	y5-y6(lam5-lam6);
+      	f1 (vf1);
+      	f2 (vf2);
+      	y1-y3 (ve1-ve3);
+      	y4-y6 (ve4-ve6);
+      MODEL CONSTRAINT:
+      	NEW(rel2 rel5 stan3 stan6);
+      	rel2 = lam2**2*vf1/(lam2**2*vf1 + ve2);
+      	rel5 = lam5**2*vf2/(lam5**2*vf2 + ve5);
+      	rel5 = rel2;
+      	stan3 = lam3*SQRT(vf1)/SQRT(lam3**2*vf1 + ve3);
+      	stan6 = lam6*SQRT(vf2)/SQRT(lam6**2*vf2 + ve6);
+      	0 = stan6 - stan3;
+      	ve2 > ve5;
+      	ve4 > 0;
+      OUTPUT:	STANDARDIZED;
+
+
+
 
 
 
@@ -327,8 +331,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:19:55
-        Ending Time:  11:19:55
+     Beginning Time:  07:43:00
+        Ending Time:  07:43:00
        Elapsed Time:  00:00:00
 
 

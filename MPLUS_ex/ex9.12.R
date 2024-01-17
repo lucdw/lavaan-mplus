@@ -1,5 +1,10 @@
-mplus.out <- "ex9.12.out" 
-lavaan.model <- '
+mplus.out <- "ex9.12.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("ex9.12.dat", na.strings = "-999999", 
+col.names = c("y1", "y2", "y3", "y4", "x", "w", "clus"))
+
+model <- '
     level: 1
         iw =~ 1*y1 + 1*y2 + 1*y3 + 1*y4
         sw =~ 0*y1 + 1*y2 + 2*y3 + 3*y4
@@ -32,10 +37,8 @@ lavaan.model <- '
 
         ib + sb ~ w
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(cluster = "clus", estimator = "MLR")
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , cluster  = "clus"
+    , estimator  = "MLR"
+    )
+summary(fit, fit.measures = TRUE)

@@ -2,103 +2,74 @@ library(lavaan)
 options(warn = -1)
 suppressMessages(library(MplusAutomation, quietly = TRUE))
 options(warn = 1)
+# function to read the R file, modify the line 'fit <- ...' to include mimic = ...,
+# remove lines beginning with 'summary' and source the result
+adapt_and_source <- function(rfile, mimic = c("lavaan", "Mplus")) {
+  mimic <- match.arg(mimic)
+  rfilenu <- parse(file = rfile, keep.source = TRUE)
+  rfiledf <- getParseData(rfilenu, includeText = TRUE)
+  fitje <- which(grepl("^fit *<- ", rfiledf$text))
+  fitjeendline <- rfiledf$line2[fitje]
+  fitjeendcol <- rfiledf$col2[fitje]
+  rfilelines <- readLines(rfile)
+  rfilelines[fitjeendline] <- paste0(
+    substr(rfilelines[fitjeendline], 1, fitjeendcol - 1),
+    ", mimic = \"", mimic, "\"",
+    substr(rfilelines[fitjeendline], fitjeendcol, nchar(rfilelines[fitjeendcol]))
+  )
+  todelete <- grepl("^ *summary", rfilelines)
+  if (any(todelete)) rfilelines <- rfilelines[!todelete]
+  txtcon <- textConnection(rfilelines, name = "adapted")
+  source(txtcon)
+  close(txtcon)
+}
+
 # function to execute test with parameters set in .R files in subdirectories
 # group.environment is NULL when function is called from this R-file
 # the logging of differences is stored in the group.environment or displayed immediately
-execute_test <- function(mplus.out, lavaan.model, lavaan.call, lavaan.args, comment = "", group.environment = NULL) {
-  stopifnot(is.character(mplus.out), length(mplus.out) == 1L)
-  stopifnot(is.character(lavaan.call), length(lavaan.call) == 1L)
-  stopifnot(is.list(lavaan.args))
-  if (lavaan.call == "efa") lavaan.model <- NULL
-  if (!file.exists(mplus.out)) {
-    stop("Cannot find ", mplus.out, " in ", getwd(), "!")
+execute_test <- function(rfile, group.environment = NULL) {
+  stopifnot(is.character(rfile), length(rfile) == 1L)
+  for (mimic in c("lavaan", "Mplus")) {
+    test.comment <- ""
+    if (exists("mplus.out")) rm(mplus.out, inherits = TRUE)
+    if (exists("fit")) rm(fit, inherits = TRUE)
+    adapt_and_source(rfile, mimic)
+    if (!exists("mplus.out")) {
+      return(paste0("Warning: mplus.out not defined!"))
+    }
+    if (!exists("fit")) {
+      return(paste0("Error: fit not defined!"))
+    }
+    if (!file.exists(mplus.out)) {
+      return(paste0("Error: Cannot find ", mplus.out, " in ", getwd(), "!"))
+    }
+    sink(tempfile())
+    mplus.model <- readModels(mplus.out)
+    sink()
+    if (is.null(mplus.model$parameters)) return("Error: Mplus parameters NULL!")
+    if (length(mplus.model$parameters) == 0) return("Error: 0 Mplus parameters!")
+    res <- one_test_mplus(mplus.out, fit, mimic, mplus.model, test.comment)
+    if (mimic == "Mplus") res2 <- res
+    if (mimic != "Mplus") res1 <- res
   }
-  sink(tempfile())
-  mplus.model <- readModels(mplus.out)
-  sink()
-  if (is.null(mplus.model$parameters)) return("Error: Mplus parameters NULL!")
-  if (length(mplus.model$parameters) == 0) return("Error: 0 Mplus parameters!")
-  lavaan.args$call <- lavaan.call
-  lavaan.args$model <- lavaan.model
-  lavaan.args$data <- create_r_data(mplus.model)
-  lavaan.args$mimic <- "lavaan"
-  res1 <- one_test_mplus(mplus.out, lavaan.args, mplus.model, comment)
-  if (is.null(group.environment)) cat(paste(res1[[2]], collapse = "\n"))
-  lavaan.args$mimic <- "Mplus"
-  res2 <- one_test_mplus(mplus.out, lavaan.args, mplus.model, comment)
-  if (is.null(group.environment)) cat(paste(res2[[2]], collapse = "\n"))
-  if (!is.null(group.environment)) {
-    i <- get("i", group.environment)
-    i <- i + 1L
-    assign("i", i, group.environment)
-    ich <- formatC(i, width = 4, flag = "0")
-    df1 <- data.frame(
-      mplus.out = mplus.out,
-      lavDpar = res1[[1]][1],
-      lavNApar = res1[[1]][2],
-      lavDfit = res1[[1]][3],
-      mplDpar = res2[[1]][1],
-      mplNApar = res2[[1]][2],
-      mplDfit = res2[[1]][3]
-    )
-    assign(paste0("res", ich), df1, group.environment)
-    assign(paste0("lav", ich), res1[[2]], group.environment)
-    assign(paste0("mpl", ich), res2[[2]], group.environment)
-  }
+  i <- get("i", group.environment)
+  i <- i + 1L
+  assign("i", i, group.environment)
+  ich <- formatC(i, width = 4, flag = "0")
+  df1 <- data.frame(
+    mplus.out = mplus.out,
+    lavDpar = res1[[1]][1],
+    lavNApar = res1[[1]][2],
+    lavDfit = res1[[1]][3],
+    mplDpar = res2[[1]][1],
+    mplNApar = res2[[1]][2],
+    mplDfit = res2[[1]][3]
+  )
+  assign(paste0("res", ich), df1, group.environment)
+  assign(paste0("lav", ich), res1[[2]], group.environment)
+  assign(paste0("mpl", ich), res2[[2]], group.environment)
   invisible(TRUE)
 }
-
-split_range <- function(x) {
-  if (!grepl("-", x, fixed = TRUE)) return(x)
-  delen <- strsplit(x, "-", fixed = TRUE)[[1]]
-  jj <- 1
-  while (substr(delen[1], 1, jj) == substr(delen[2], 1, jj) && all(jj < nchar(delen))) jj <- jj + 1
-  jja1 <- substring(delen[1], jj)
-  jja2 <- substring(delen[2], jj)
-  if (any(jja1 == letters)) {
-    jj1 <- which(jja1 == letters)
-    jj2 <- which(jja2 == letters)
-    return(paste0(substr(delen[1], 1, jj - 1L), letters[seq.int(jj1, jj2)]))
-  }
-  if (any(jja1 == LETTERS)) {
-    jj1 <- which(jja1 == LETTERS)
-    jj2 <- which(jja2 == LETTERS)
-    return(paste0(substr(delen[1], 1, jj - 1L), LETTERS[seq.int(jj1, jj2)]))
-  }
-  jj1 <- as.integer(substring(delen[1], jj))
-  jj2 <- as.integer(substring(delen[2], jj))
-  return(paste0(substr(delen[1], 1, jj - 1L), seq.int(jj1, jj2)))
-}
-create_r_data <- function(mplus.model) {
-  mplusdatafile <- mplus.model$input$data$file
-  mplusinputvariablenames <-  mplus.model$input$variable$names
-  mplusinputcategoricals <- mplus.model$input$variable$categorical
-  mplusinputgrouping <- mplus.model$input$variable$grouping
-  mplusinputvariables <- strsplit(mplusinputvariablenames, " ", fixed = TRUE)[[1]]
-  columnnames <- unlist(lapply(mplusinputvariables, split_range))
-  the.data <- read.table(mplusdatafile, na.strings = "-999999", col.names = columnnames)
-  if (!is.null(mplusinputcategoricals)) {
-    mpluscategoricalvariables <- strsplit(mplusinputcategoricals, " ", fixed = TRUE)[[1]]
-    factornames <- unlist(lapply(mpluscategoricalvariables, split_range))
-    for (x in factornames) {
-      the.data[[x]] <- ordered(the.data[[x]])
-    }
-  }
-  if (!is.null(mplusinputgrouping)) {
-    i1 <- regexpr("[ (]", mplusinputgrouping, fixed = FALSE)
-    groupvar <- substring(mplusinputgrouping, 1L, i1 - 1L)
-    elements <- strsplit(substring(mplusinputgrouping, i1 + 2L, nchar(mplusinputgrouping) - 1L),
-                         "[ ,]+")[[1]]
-    groupnew <- vector("character", length(the.data[[groupvar]]))
-    for (element in elements) {
-      elems <- strsplit(element, "=", fixed = TRUE)[[1]]
-      groupnew[the.data[[groupvar]] == as.integer(elems[1])] <- elems[2]
-    }
-    the.data[[groupvar]] <- groupnew
-  }
-  the.data
-}
-
 # match Mplus parameters with lavaan parameters
 # (based on the names and variable type)
 match_mplus_param <- function(lav = NULL, mpl = NULL, group.label = character(0)) {
@@ -125,7 +96,7 @@ match_mplus_param <- function(lav = NULL, mpl = NULL, group.label = character(0)
     mpl.group <- rep(1L, length(mpl.lhs))
     #lav$group <- rep(1L, length(lav$lhs))
   }
-
+  mpl.idx <- rep(NA_integer_, length(lav$lhs))
   for (i in seq_along(lav$lhs)) {
     idx <- integer(0L)
     # find corresponding Mplus parameter
@@ -185,11 +156,11 @@ match_mplus_param <- function(lav = NULL, mpl = NULL, group.label = character(0)
     }
     # check if found
     if (length(idx) == 0L) {
-      stop("lav param not found in mpl: ",
-           paste(lav$lhs[i], lav$op[i], lav$rhs[i], sep = ""))
+      cat("lav param not found in mpl: ",
+          paste(lav$lhs[i], lav$op[i], lav$rhs[i], sep = ""), "\n")
     } else if (length(idx) > 1L) {
-      stop("lav param matched multiple elements in mpl: ",
-           paste(lav$lhs[i], lav$op[i], lav$rhs[i], sep = ""))
+      cat("lav param matched multiple elements in mpl: ",
+          paste(lav$lhs[i], lav$op[i], lav$rhs[i], sep = ""), "\n")
     } else {
       mpl.idx[i] <- idx
     }
@@ -201,48 +172,87 @@ match_mplus_param <- function(lav = NULL, mpl = NULL, group.label = character(0)
 # otherwise, the table would be too wide
 join_par_lav_mplus <- function(lav = NULL, mpl = NULL, group.label = character(0)) {
   mpl.idx <- match_mplus_param(lav = lav, mpl = mpl, group.label = group.label)
-  if (length(mpl) == 5L) { # unstandardized + r2 + stdyx + stdy + std
-    lav.df <- data.frame(lhs = rep(lav$lhs, times = 5),
-                       op = rep(lav$op,  times = 5),
-                       rhs = rep(lav$rhs, times = 5),
-                       group = rep(lav$group, times = 5),
-                       type = rep(c("est", "se",
-                                    "est.std", "est.std.all", "est.std.nox"),
-                                  each = nrow(lav)),
-                       lav = round(c(lav$est, lav$se,
-                                      lav$std.lv, lav$std.all,
-                                      lav$std.nox), 3),
-                       mpl = c(mpl$unstandardized$est[mpl.idx],
-                               mpl$unstandardized$se[mpl.idx],
-                               mpl$std.standardized$est[mpl.idx],
-                               mpl$stdyx.standardized$est[mpl.idx],
-                               mpl$stdy.standardized$est[mpl.idx]))
-  } else if (length(mpl) == 4L) { # unstandardized + r2 + stdyx + std
-    lav.df <- data.frame(lhs = rep(lav$lhs, times = 4),
-                       op = rep(lav$op,  times = 4),
-                       rhs = rep(lav$rhs, times = 4),
-                       group = rep(lav$group, times = 4),
-                       type = rep(c("est", "se",
-                                    "est.std", "est.std.all"),
-                                  each = nrow(lav)),
-                       lav = round(c(lav$est, lav$se,
-                                      lav$std.lv, lav$std.all), 3),
-                       mpl = c(mpl$unstandardized$est[mpl.idx],
-                               mpl$unstandardized$se[mpl.idx],
-                               mpl$std.standardized$est[mpl.idx],
-                               mpl$stdyx.standardized$est[mpl.idx]))
-  } else if (length(mpl) == 1L) { # unstandardized + se
-    lav.df <- data.frame(lhs = rep(lav$lhs, times = 2),
-                       op = rep(lav$op,  times = 2),
-                       rhs = rep(lav$rhs, times = 2),
-                       group = rep(lav$group, times = 2),
-                       type = rep(c("est", "se"), each = nrow(lav)),
-                       lav = round(c(lav$est, lav$se), 3),
-                       mpl = c(mpl$unstandardized$est[mpl.idx],
-                               mpl$unstandardized$se[mpl.idx]))
-  } else {
-    stop("length(mpl) == ", length(mpl))
+  if (!is.null(mpl$unstandardized)) {
+    lav.df <- data.frame(lhs = lav$lhs, op = lav$op, rhs = lav$rhs, group = lav$group,
+                     type = "est", lav = round(lav$est, 3),
+                     mpl = mpl$unstandardized$est[mpl.idx])
+    df1 <- data.frame(lhs = lav$lhs, op = lav$op, rhs = lav$rhs, group = lav$group,
+                      type = "se", lav = round(lav$se, 3),
+                      mpl = mpl$unstandardized$se[mpl.idx])
+    lav.df <- rbind(lav.df, df1, make.row.names = FALSE)
   }
+  if (!is.null(mpl$std.standardized)) {
+    df1 <- data.frame(lhs = lav$lhs, op = lav$op, rhs = lav$rhs, group = lav$group,
+                      type = "est.std", lav = round(lav$std.lv, 3),
+                      mpl = mpl$std.standardized$est[mpl.idx])
+    if (exists("lav.df", inherits = FALSE)) {
+      lav.df <- rbind(lav.df, df1, make.row.names = FALSE)
+    } else {
+      lav.df <- df1
+    }
+  }
+  if (!is.null(mpl$stdyx.standardized)) {
+    df1 <- data.frame(lhs = lav$lhs, op = lav$op, rhs = lav$rhs, group = lav$group,
+                      type = "est.std.all", lav = round(lav$std.all, 3),
+                      mpl = mpl$stdyx.standardized$est[mpl.idx])
+    if (exists("lav.df", inherits = FALSE)) {
+      lav.df <- rbind(lav.df, df1, make.row.names = FALSE)
+    } else {
+      lav.df <- df1
+    }
+  }
+  if (!is.null(mpl$stdy.standardized)) {
+    df1 <- data.frame(lhs = lav$lhs, op = lav$op, rhs = lav$rhs, group = lav$group,
+                      type = "est.std.nox", lav = round(lav$std.nox, 3),
+                      mpl = mpl$stdy.standardized$est[mpl.idx])
+    if (exists("lav.df", inherits = FALSE)) {
+      lav.df <- rbind(lav.df, df1, make.row.names = FALSE)
+    } else {
+      lav.df <- df1
+    }
+  }
+  # if (length(mpl) == 5L) { # unstandardized + r2 + stdyx + stdy + std
+  #   lav.df <- data.frame(lhs = rep(lav$lhs, times = 5),
+  #                      op = rep(lav$op,  times = 5),
+  #                      rhs = rep(lav$rhs, times = 5),
+  #                      group = rep(lav$group, times = 5),
+  #                      type = rep(c("est", "se",
+  #                                   "est.std", "est.std.all", "est.std.nox"),
+  #                                 each = nrow(lav)),
+  #                      lav = round(c(lav$est, lav$se,
+  #                                     lav$std.lv, lav$std.all,
+  #                                     lav$std.nox), 3),
+  #                      mpl = c(mpl$unstandardized$est[mpl.idx],
+  #                              mpl$unstandardized$se[mpl.idx],
+  #                              mpl$std.standardized$est[mpl.idx],
+  #                              mpl$stdyx.standardized$est[mpl.idx],
+  #                              mpl$stdy.standardized$est[mpl.idx]))
+  # } else if (length(mpl) == 4L) { # unstandardized + r2 + stdyx + std
+  #   lav.df <- data.frame(lhs = rep(lav$lhs, times = 4),
+  #                      op = rep(lav$op,  times = 4),
+  #                      rhs = rep(lav$rhs, times = 4),
+  #                      group = rep(lav$group, times = 4),
+  #                      type = rep(c("est", "se",
+  #                                   "est.std", "est.std.all"),
+  #                                 each = nrow(lav)),
+  #                      lav = round(c(lav$est, lav$se,
+  #                                     lav$std.lv, lav$std.all), 3),
+  #                      mpl = c(mpl$unstandardized$est[mpl.idx],
+  #                              mpl$unstandardized$se[mpl.idx],
+  #                              mpl$std.standardized$est[mpl.idx],
+  #                              mpl$stdyx.standardized$est[mpl.idx]))
+  # } else if (length(mpl) == 1L) { # unstandardized + se
+  #   lav.df <- data.frame(lhs = rep(lav$lhs, times = 2),
+  #                      op = rep(lav$op,  times = 2),
+  #                      rhs = rep(lav$rhs, times = 2),
+  #                      group = rep(lav$group, times = 2),
+  #                      type = rep(c("est", "se"), each = nrow(lav)),
+  #                      lav = round(c(lav$est, lav$se), 3),
+  #                      mpl = c(mpl$unstandardized$est[mpl.idx],
+  #                              mpl$unstandardized$se[mpl.idx]))
+  # } else {
+  #   stop("length(mpl) == ", length(mpl))
+  # }
   lav.df$delta <- (round(lav.df$lav, 3) - lav.df$mpl)
   lav.df
 }
@@ -275,30 +285,22 @@ join_fit_lav_mplus <- function(lav, mpl) {
   lav.df
 }
 
-one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
+one_test_mplus <- function(mpl.file, fit, mimic, mplus.model, test.comment) {
   logfile <- file() # anonymous file connection, see R-help for file, examples
   on.exit({
     if (isOpen(logfile)) close(logfile)
     })
-  log.file <- paste(mpl.file, "_mim", test.object$mimic, ".log", sep = "")
-  cat("Mplus file:", mpl.file,
-      ", detailed lavaan output:", log.file,
-      "\n", sep = "", file = logfile)
-  cat(strrep("=", 37 + nchar(mpl.file) + nchar(log.file)), "\n", file = logfile)
+  log.file <- paste(mpl.file, "_mim", mimic, ".log", sep = "")
+  mpl.file.dir <- basename(dirname(normalizePath(mpl.file)))
+  cat("Mplus file: ", mpl.file.dir, "/", mpl.file,
+      " (mimic = \"", mimic, "\")\n",
+      sep = "", file = logfile)
+  cat(strrep("=", 26 + nchar(mpl.file) + nchar(mpl.file.dir) + nchar(mimic)),
+      "\n", file = logfile)
   if (test.comment != "") {
     cat("test comment:\n",
         gsub("\n", "\n# ", gsub("^ *\n", "# ", gsub("\n *$", "", test.comment))),
         "\n", sep = "", file = logfile)
-  }
-  lavfunc <- test.object$call
-  test.object$call <- NULL
-  fit <- try(do.call(lavfunc, test.object), silent = TRUE)
-  if (inherits(fit, "try-error")) {
-    sink(logfile)
-    str(fit)
-    cat("\n")
-    sink()
-    return(list(c(0L, 0L, 0L), readLines(logfile)))
   }
   mpl.par <- mplus.model$parameters
   lav.par <- try(parameterEstimates(fit, ci = FALSE, fmi = FALSE,
@@ -387,16 +389,16 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
   mpl.fit <- mplus.model$summaries
   lav.fit <- fitMeasures(fit)
   # remove some fit values
-  if (is.null(test.object$estimator)) test.object$estimator <- fit@Options$estimator
-  if (test.object$estimator %in% c("WLS", "WLSM", "WLSMV", "ULS", "ULSM", "ULSMV")) {
+  estimator <- fit@Options$estimator
+  if (estimator %in% c("WLS", "WLSM", "WLSMV", "ULS", "ULSM", "ULSMV")) {
     idx <- which(names(lav.fit) == "srmr")
     if (length(idx) > 0L) lav.fit <- lav.fit[-idx]
   }
-  if (test.object$estimator %in% c("MLMV", "MLMVS", "WLSM", "WLSMV", "ULSM", "ULSMV")) {
+  if (estimator %in% c("MLMV", "MLMVS", "WLSM", "WLSMV", "ULSM", "ULSMV")) {
     idx <- which(names(lav.fit) == "chisq.scaling.factor")
     if (length(idx) > 0L) lav.fit <- lav.fit[-idx]
   }
-  if (test.object$estimator %in% c("MLM", "MLMV", "MLMVS", "MLR",
+  if (estimator %in% c("MLM", "MLMV", "MLMVS", "MLR",
                       "WLSM", "WLSMV", "ULSM", "ULSMV")) {
     # remove all non-scaled versions
     idx <- which(names(lav.fit) %in% c("chisq", "df", "pvalue",
@@ -406,10 +408,10 @@ one_test_mplus <- function(mpl.file, test.object, mplus.model, test.comment) {
                                         "rmsea.pvalue"))
     lav.fit <- lav.fit[-idx]
   }
-  if (!is.null(test.object$group)) {
+  # if (!is.null(test.object$group)) {
     idx <- which(names(lav.fit) == "ntotal")
     if (length(idx)) lav.fit <- lav.fit[-idx]
-  }
+  # }
   # joint fit measures lav mpl
   lav.df.fit <- join_fit_lav_mplus(lav = lav.fit, mpl = mpl.fit)
   # write log

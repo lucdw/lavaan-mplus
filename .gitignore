@@ -8,6 +8,6 @@ lavaan-mplus.Rproj
 *.bat
 *.sh
 *.rds
-*/mplus_gen/*
+*/temp/*
 _*
 */_*

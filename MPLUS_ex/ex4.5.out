@@ -1,17 +1,21 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:42 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of a two-level exploratory
-    	factor analysis with continuous factor indicators
-    DATA:	FILE IS ex4.5.dat;
-    VARIABLE:	NAMES ARE y1-y6 x1 x2 w clus;
-    	USEVARIABLES = y1-y6;
-    	CLUSTER = clus;
-    ANALYSIS:	TYPE = TWOLEVEL EFA 1 2 UW 1 1 UB;
+
+      TITLE:	this is an example of a two-level exploratory
+      	factor analysis with continuous factor indicators
+      DATA:	FILE IS ex4.5.dat;
+      VARIABLE:	NAMES ARE y1-y6 x1 x2 w clus;
+      	USEVARIABLES = y1-y6;
+      	CLUSTER = clus;
+      ANALYSIS:	TYPE = TWOLEVEL EFA 1 2 UW 1 1 UB;
+
+
+
 
 
 
@@ -1075,8 +1079,8 @@ WITHIN LEVEL RESULTS
  Y6             0.313         0.769
 
 
-     Beginning Time:  11:19:53
-        Ending Time:  11:19:53
+     Beginning Time:  07:42:54
+        Ending Time:  07:42:54
        Elapsed Time:  00:00:00
 
 

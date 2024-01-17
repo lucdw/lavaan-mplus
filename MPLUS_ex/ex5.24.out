@@ -1,19 +1,23 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:43 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of an EFA with covariates (MIMIC)
-        with continuous factor indicators and direct effects
-    DATA:	FILE IS ex5.24.dat;
-    VARIABLE:	NAMES ARE y1-y8 x1 x2;
-    MODEL:	f1-f2 BY y1-y8(*1);
-        	f1-f2 ON x1-x2;
-        	y1 ON x1;
-        	y8 ON x2;
-    OUTPUT:	TECH1;
+
+      TITLE:	this is an example of an EFA with covariates (MIMIC)
+          with continuous factor indicators and direct effects
+      DATA:	FILE IS ex5.24.dat;
+      VARIABLE:	NAMES ARE y1-y8 x1 x2;
+      MODEL:	f1-f2 BY y1-y8(*1);
+          	f1-f2 ON x1-x2;
+          	y1 ON x1;
+          	y8 ON x2;
+      OUTPUT:	TECH1;
+
+
+
 
 
 
@@ -716,8 +720,8 @@ TECHNICAL 1 OUTPUT
  X2             0.945
 
 
-     Beginning Time:  11:19:55
-        Ending Time:  11:19:55
+     Beginning Time:  07:43:01
+        Ending Time:  07:43:01
        Elapsed Time:  00:00:00
 
 

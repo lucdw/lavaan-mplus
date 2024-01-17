@@ -1,5 +1,10 @@
-mplus.out <- "ex5.26.out" 
-lavaan.model <- '
+mplus.out <- "ex5.26.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("ex5.26.dat", na.strings = "-999999", 
+col.names = c("y1", "y2", "y3", "y4", "y5", "y6", "y7", "y8", "y9", "y10", "y11", "y12"))
+
+model <- '
     efa("time1")*f1 =~ a*y1 + b*y2 + c*y3 + d*y4 + e*y5 + f*y6
     efa("time1")*f2 =~ g*y1 + h*y2 + i*y3 + j*y4 + k*y5 + l*y6
 
@@ -17,16 +22,10 @@ lavaan.model <- '
     f3 ~~ NA*f3 + start(1)*f3
     f4 ~~ NA*f4 + start(1)*f4
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(
-  information = "observed",
-  meanstructure = TRUE,
-  rotation = "geomin",
-  rotation.args = list(rstarts = 30, geomin.epsilon = 0.0001,
-                       std.ov = FALSE)
-)
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , information  = "observed"
+    , meanstructure  = TRUE
+    , rotation  = "geomin"
+    , rotation.args  = list(30, 1e-04, FALSE)
+    )
+summary(fit, fit.measures = TRUE)

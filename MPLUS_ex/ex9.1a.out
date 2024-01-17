@@ -1,25 +1,29 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:43 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of a two-level
-    	regression analysis for a continuous
-    	dependent variable with a random intercept and an observed covariate
-    DATA:	FILE = ex9.1a.dat;
-    VARIABLE:	NAMES = y x w xm clus;
-    	WITHIN = x;
-    	BETWEEN = w xm;
-    	CLUSTER = clus;
-    DEFINE:	CENTER x (GRANDMEAN);
-    ANALYSIS:	TYPE = TWOLEVEL;
-    MODEL:
-    	%WITHIN%	
-    	y ON x;
-    	%BETWEEN%
-    	y ON w xm;
+
+      TITLE:	this is an example of a two-level
+      	regression analysis for a continuous
+      	dependent variable with a random intercept and an observed covariate
+      DATA:	FILE = ex9.1a.dat;
+      VARIABLE:	NAMES = y x w xm clus;
+      	WITHIN = x;
+      	BETWEEN = w xm;
+      	CLUSTER = clus;
+      DEFINE:	CENTER x (GRANDMEAN);
+      ANALYSIS:	TYPE = TWOLEVEL;
+      MODEL:
+      	%WITHIN%	
+      	y ON x;
+      	%BETWEEN%
+      	y ON w xm;
+
+
+
 
 
 
@@ -211,9 +215,9 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:19:58
-        Ending Time:  11:19:58
-       Elapsed Time:  00:00:00
+     Beginning Time:  07:43:11
+        Ending Time:  07:43:12
+       Elapsed Time:  00:00:01
 
 
 

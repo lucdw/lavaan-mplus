@@ -1,3 +1,5 @@
+rm(list =ls())
+if (!file.exists("utilities.R")) stop("utilities.R not in current directory, wrong working directory?")
 wd <- getwd()
 testdirs <- list.dirs(full.names = FALSE, recursive = FALSE)
 testdirs <- testdirs[grepl("^[^.]", testdirs)]
@@ -5,6 +7,7 @@ source("utilities.R")
 group.environment <- new.env()
 assign("i", 0L, group.environment)
 cat("STARTING TIME:", format(Sys.time()), "\n")
+extesterrors <- file()
 for (testdir.i in seq_along(testdirs)) {
   setwd(testdirs[testdir.i])
   on.exit({
@@ -15,9 +18,12 @@ for (testdir.i in seq_along(testdirs)) {
   for (test.i in seq_along(testfiles)) {
     testfile <- testfiles[test.i]
     cat("        handling ", testfile, "\n")
-    source(testfile)
-    extest <- execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment, group.environment)
-    if (is.character(extest)) cat(extest, "\n")
+    extest <- execute_test(testfile, group.environment)
+    if (is.character(extest)) {
+      cat("Comparison skipped: ", extest, "\n")
+      cat(testfile, " --> ", extest, "\n", file = extesterrors)
+      if (exists("test.comment")) cat(test.comment, "\n", file = extesterrors)
+    }
   }
   setwd(wd)
 }
@@ -27,6 +33,11 @@ cat("Current lavaan version :",
     packageDescription("lavaan", fields = "Version"), 
     "\n*******************************\n\n",
     file = reportcon)
+cat("\nTests where comparison with Mplus is skipped: \n---------------------------------------------\n\n", file = reportcon)
+cat(paste(readLines(extesterrors), collapse = "\n"), file=reportcon)
+close(extesterrors)
+cat("\n---------------------------------------------\n\n", file = reportcon)
+
 for (i in seq_len(max.i)) {
   ich <- formatC(i, width=4, flag="0")
   df1 <- get(paste0("res", ich), group.environment)

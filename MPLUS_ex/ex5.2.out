@@ -1,19 +1,23 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:42 AM
 
 INPUT INSTRUCTIONS
 
 
 
 
-        TITLE:	this is an example of a CFA with
-        	categorical factor indicators
-        DATA:	FILE IS ex5.2.dat;
-        VARIABLE:	NAMES ARE u1-u6;
-        	CATEGORICAL ARE u1-u6;
-        MODEL:	f1 BY u1-u3;
-        	f2 BY u4-u6;
+
+          TITLE:	this is an example of a CFA with
+          	categorical factor indicators
+          DATA:	FILE IS ex5.2.dat;
+          VARIABLE:	NAMES ARE u1-u6;
+          	CATEGORICAL ARE u1-u6;
+          MODEL:	f1 BY u1-u3;
+          	f2 BY u4-u6;
+
+
+
 
 
 
@@ -183,8 +187,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:19:55
-        Ending Time:  11:19:55
+     Beginning Time:  07:42:59
+        Ending Time:  07:42:59
        Elapsed Time:  00:00:00
 
 

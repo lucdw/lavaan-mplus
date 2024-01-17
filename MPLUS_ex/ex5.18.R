@@ -1,5 +1,17 @@
-mplus.out <- "ex5.18.out" 
-lavaan.model <- '
+mplus.out <- "ex5.18.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("ex5.18.dat", na.strings = "-999999", 
+col.names = c("y1", "y2", "g"))
+
+elements <- c("1=mz", "2=dz")
+groupnew <- vector("character", length(Data[["g"]]))
+for (element in elements) {
+  elems <- strsplit(element, "=", fixed = TRUE)[[1]]
+  groupnew[Data[["g"]] == as.integer(elems[1])] <- elems[2]
+}
+Data[["g"]] <- groupnew
+model <- '
     y1 ~ c(a,a)*1
     y2 ~ c(a,a)*1
 
@@ -13,14 +25,11 @@ lavaan.model <- '
     a1 ~~ c(1,0.5)*a2
     c1 ~~ c(1,1)*c2
 '
-lavaan.call <-  "lavaan" 
-lavaan.args <- list(
-   information = "observed",
-   group = "g",
-   std.lv = TRUE
-   )
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  lavaan (model, data = Data
+    , information  = "observed"
+    , group  = "g"
+    , std.lv  = TRUE
+    , missing = "listwise"
+    )
+summary(fit, fit.measures = TRUE)
+

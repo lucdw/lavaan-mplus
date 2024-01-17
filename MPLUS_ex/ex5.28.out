@@ -1,19 +1,23 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:43 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of an EFA with residual variances constrained to be greater th
-    DATA:	FILE = ex5.28.dat;
-    VARIABLE:	NAMES = y1-y10;
-    ANALYSIS:	ROTATION = GEOMIN;
-    MODEL:	f1-f2 BY y1-y10 (*1);
-    	y1-y10 (v1-v10);
-    MODEL CONSTRAINT:
-    	DO(1,10) v#>0;
-    OUTPUT:	STDY;
+
+      TITLE:	this is an example of an EFA with residual variances constrained to be greater
+      DATA:	FILE = ex5.28.dat;
+      VARIABLE:	NAMES = y1-y10;
+      ANALYSIS:	ROTATION = GEOMIN;
+      MODEL:	f1-f2 BY y1-y10 (*1);
+      	y1-y10 (v1-v10);
+      MODEL CONSTRAINT:
+      	DO(1,10) v#>0;
+      OUTPUT:	STDY;
+
+
+
 
 
 
@@ -24,12 +28,12 @@ INPUT INSTRUCTIONS
 
 *** WARNING
   Input line exceeded 90 characters. Some input may be truncated.
-    TITLE:	this is an example of an EFA with residual variances constrained to be greater tha
+      TITLE:	this is an example of an EFA with residual variances constrained to be greater t
    1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
 
 
 
-this is an example of an EFA with residual variances constrained to be greater tha
+this is an example of an EFA with residual variances constrained to be greater t
 
 SUMMARY OF ANALYSIS
 
@@ -301,8 +305,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:19:56
-        Ending Time:  11:19:56
+     Beginning Time:  07:43:04
+        Ending Time:  07:43:04
        Elapsed Time:  00:00:00
 
 

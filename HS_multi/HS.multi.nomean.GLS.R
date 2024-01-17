@@ -1,17 +1,25 @@
-mplus.out <- "HS.multi.nomean.GLS.mplus.out" 
-lavaan.model <- '
+mplus.out <- "HS.multi.nomean.GLS.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("HS.multi.raw", na.strings = "-999999", 
+col.names = c("school", "x1", "x2", "x3", "x4", "x5", "x6", "x7", "x8", "x9"))
+
+elements <- c("1=Pasteur", "2=GrantWhite")
+groupnew <- vector("character", length(Data[["school"]]))
+for (element in elements) {
+  elems <- strsplit(element, "=", fixed = TRUE)[[1]]
+  groupnew[Data[["school"]] == as.integer(elems[1])] <- elems[2]
+}
+Data[["school"]] <- groupnew
+model <- '
             visual  =~ x1 + x2 + x3
             textual =~ x4 + x5 + x6
             speed   =~ x7 + x8 + x9
 '
-lavaan.call <-  "sem" 
-lavaan.args <- list(
-   estimator = "GLS",
-   meanstructure = FALSE,
-   group = "school",
-   group.equal = "none")
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  sem (model, data = Data
+    , estimator  = "GLS"
+    , meanstructure  = FALSE
+    , group  = "school"
+    , group.equal  = "none"
+    )
+summary(fit)  # summary(...): removed if executed in batch

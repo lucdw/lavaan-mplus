@@ -1,0 +1,309 @@
+Mplus VERSION 8.2
+MUTHEN & MUTHEN
+01/17/2024   7:42 AM
+
+INPUT INSTRUCTIONS
+
+
+
+      TITLE:        this is an example of a path analysis
+              with a combination of continuous and
+              categorical dependent variables
+      DATA:        FILE IS ex3.14.dat;
+      VARIABLE:        NAMES ARE y1 y2 u1 x1-x3;
+              CATEGORICAL IS u1;
+      ANALYSIS: estimator=WLSM;
+      CONVERGENCE = 1E-9;
+      MODEL:        y1 y2 ON x1 x2 x3;
+              u1 ON y1 y2 x2;
+      OUTPUT: standardized;
+
+
+
+
+
+
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+this is an example of a path analysis
+with a combination of continuous and
+categorical dependent variables
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         500
+
+Number of dependent variables                                    3
+Number of independent variables                                  3
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   Y1          Y2
+
+  Binary and ordered categorical (ordinal)
+   U1
+
+Observed independent variables
+   X1          X2          X3
+
+
+Estimator                                                     WLSM
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.100D-08
+Maximum number of steepest descent iterations                   20
+Parameterization                                             DELTA
+Link                                                        PROBIT
+
+Input data file(s)
+  ex3.14.dat
+
+Input data format  FREE
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    U1
+      Category 1    0.664          332.000
+      Category 2    0.336          168.000
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y1                    0.950       0.007      -1.278    0.20%       0.160      0.742      0.984
+             500.000       0.716      -0.427       3.170    0.20%       1.178      1.722
+     Y2                    1.987       0.050       0.186    0.20%       1.432      1.803      2.001
+             500.000       0.424      -0.114       4.374    0.20%       2.141      2.559
+     X1                    0.046       0.006      -3.268    0.20%      -0.875     -0.207      0.030
+             500.000       1.143       0.311       3.468    0.20%       0.358      0.873
+     X2                   -0.027      -0.152      -2.818    0.20%      -0.986     -0.221      0.093
+             500.000       1.066      -0.277       2.993    0.20%       0.341      0.820
+     X3                   -0.012       0.034      -3.229    0.20%      -0.798     -0.270     -0.038
+             500.000       1.074       0.285       3.252    0.20%       0.219      0.851
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       14
+
+Chi-Square Test of Model Fit
+
+          Value                              1.526*
+          Degrees of Freedom                     3
+          P-Value                           0.6763
+          Scaling Correction Factor         0.7808
+            for WLSM
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.058
+          Probability RMSEA <= .05           0.919
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.008
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            733.355
+          Degrees of Freedom                    12
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.010
+
+Optimum Function Value for Weighted Least-Squares Estimator
+
+          Value                     0.11912808D-02
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.088      0.031      2.861      0.004
+    X2                 0.201      0.032      6.271      0.000
+    X3                 0.347      0.036      9.542      0.000
+
+ Y2       ON
+    X1                 0.275      0.023     12.053      0.000
+    X2                 0.196      0.024      8.242      0.000
+    X3                 0.105      0.024      4.369      0.000
+
+ U1       ON
+    Y1                 1.013      0.060     16.994      0.000
+    Y2                -1.061      0.103    -10.356      0.000
+    X2                 2.057      0.192     10.710      0.000
+
+ Intercepts
+    Y1                 0.955      0.033     29.106      0.000
+    Y2                 1.981      0.024     82.469      0.000
+
+ Thresholds
+    U1$1              -0.078      0.243     -0.322      0.748
+
+ Residual Variances
+    Y1                 0.526      0.035     14.881      0.000
+    Y2                 0.280      0.019     14.399      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.111      0.038      2.896      0.004
+    X2                 0.245      0.038      6.523      0.000
+    X3                 0.424      0.040     10.644      0.000
+
+ Y2       ON
+    X1                 0.452      0.035     12.878      0.000
+    X2                 0.311      0.037      8.514      0.000
+    X3                 0.168      0.038      4.423      0.000
+
+ U1       ON
+    Y1                 0.360      0.036     10.111      0.000
+    Y2                -0.290      0.036     -7.976      0.000
+    X2                 0.893      0.026     34.438      0.000
+
+ Intercepts
+    Y1                 1.127      0.056     19.969      0.000
+    Y2                 3.042      0.106     28.824      0.000
+
+ Thresholds
+    U1$1              -0.033      0.103     -0.320      0.749
+
+ Residual Variances
+    Y1                 0.732      0.036     20.161      0.000
+    Y2                 0.659      0.036     18.209      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.103      0.036      2.908      0.004
+    X2                 0.237      0.036      6.642      0.000
+    X3                 0.409      0.037     11.033      0.000
+
+ Y2       ON
+    X1                 0.422      0.031     13.555      0.000
+    X2                 0.301      0.034      8.760      0.000
+    X3                 0.162      0.036      4.465      0.000
+
+ U1       ON
+    Y1                 0.360      0.036     10.111      0.000
+    Y2                -0.290      0.036     -7.976      0.000
+    X2                 0.864      0.033     26.258      0.000
+
+ Intercepts
+    Y1                 1.127      0.056     19.969      0.000
+    Y2                 3.042      0.106     28.824      0.000
+
+ Thresholds
+    U1$1              -0.033      0.103     -0.320      0.749
+
+ Residual Variances
+    Y1                 0.732      0.036     20.161      0.000
+    Y2                 0.659      0.036     18.209      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y1       ON
+    X1                 0.088      0.031      2.861      0.004
+    X2                 0.201      0.032      6.271      0.000
+    X3                 0.347      0.036      9.542      0.000
+
+ Y2       ON
+    X1                 0.275      0.023     12.053      0.000
+    X2                 0.196      0.024      8.242      0.000
+    X3                 0.105      0.024      4.369      0.000
+
+ U1       ON
+    Y1                 1.013      0.060     16.994      0.000
+    Y2                -1.061      0.103    -10.356      0.000
+    X2                 2.057      0.192     10.710      0.000
+
+ Intercepts
+    Y1                 0.955      0.033     29.106      0.000
+    Y2                 1.981      0.024     82.469      0.000
+
+ Thresholds
+    U1$1              -0.078      0.243     -0.322      0.748
+
+ Residual Variances
+    Y1                 0.526      0.035     14.881      0.000
+    Y2                 0.280      0.019     14.399      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    Y1                 0.268      0.036      7.370      0.000
+    Y2                 0.341      0.036      9.408      0.000
+    U1                 0.974      0.014     70.145      0.000      0.145
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.262E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  07:42:29
+        Ending Time:  07:42:29
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2018 Muthen & Muthen

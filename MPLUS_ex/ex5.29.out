@@ -1,16 +1,20 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:43 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of a bi-factor EFA
-    DATA:	FILE = ex5.29.dat;
-    VARIABLE:	NAMES = y1-y10;
-    ANALYSIS:	ROTATION = BI-GEOMIN;
-    MODEL:	fg f1 f2 BY y1-y10 (*1);
-    OUTPUT:	STDY;
+
+      TITLE:	this is an example of a bi-factor EFA
+      DATA:	FILE = ex5.29.dat;
+      VARIABLE:	NAMES = y1-y10;
+      ANALYSIS:	ROTATION = BI-GEOMIN;
+      MODEL:	fg f1 f2 BY y1-y10 (*1);
+      OUTPUT:	STDY;
+
+
+
 
 
 
@@ -329,9 +333,9 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:19:56
-        Ending Time:  11:19:56
-       Elapsed Time:  00:00:00
+     Beginning Time:  07:43:04
+        Ending Time:  07:43:05
+       Elapsed Time:  00:00:01
 
 
 

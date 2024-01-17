@@ -1,28 +1,32 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/09/2024  11:19 AM
+01/17/2024   7:43 AM
 
 INPUT INSTRUCTIONS
 
 
-    TITLE:	this is an example of a two-level
-    	regression analysis for a continuous
-    	dependent variable with a random intercept and a latent covariate
-    DATA:	FILE = ex9.1b.dat;
-    VARIABLE:	NAMES = y x w clus;
-    	BETWEEN = w;
-    	CLUSTER = clus;
-    DEFINE: CENTER x (GRANDMEAN);
-    ANALYSIS:	TYPE = TWOLEVEL;
-    MODEL:
-    	%WITHIN%	
-    	y ON x (gamma10);
-    	%BETWEEN%
-    	y ON w
-    	x (gamma01);
-    MODEL CONSTRAINT:
-    	NEW(betac);
-    	betac = gamma01 - gamma10;
+
+      TITLE:	this is an example of a two-level
+      	regression analysis for a continuous
+      	dependent variable with a random intercept and a latent covariate
+      DATA:	FILE = ex9.1b.dat;
+      VARIABLE:	NAMES = y x w clus;
+      	BETWEEN = w;
+      	CLUSTER = clus;
+      DEFINE: CENTER x (GRANDMEAN);
+      ANALYSIS:	TYPE = TWOLEVEL;
+      MODEL:
+      	%WITHIN%	
+      	y ON x (gamma10);
+      	%BETWEEN%
+      	y ON w
+      	x (gamma01);
+      MODEL CONSTRAINT:
+      	NEW(betac);
+      	betac = gamma01 - gamma10;
+
+
+
 
 
 
@@ -211,8 +215,8 @@ QUALITY OF NUMERICAL RESULTS
        (ratio of smallest to largest eigenvalue)
 
 
-     Beginning Time:  11:19:58
-        Ending Time:  11:19:58
+     Beginning Time:  07:43:12
+        Ending Time:  07:43:12
        Elapsed Time:  00:00:00
 
 

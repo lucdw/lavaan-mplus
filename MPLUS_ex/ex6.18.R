@@ -1,5 +1,17 @@
-mplus.out <- "ex6.18.out" 
-lavaan.model <- '
+mplus.out <- "ex6.18.out" # needed for batch-execution
+library(lavaan)
+
+Data <- read.table("ex6.18.dat", na.strings = "-999999", 
+col.names = c("y1", "y2", "y3", "y4", "x", "a21", "a22", "a23", "a24", "g"))
+
+elements <- c("1=1990", "2=1989", "3=1988")
+groupnew <- vector("character", length(Data[["g"]]))
+for (element in elements) {
+  elems <- strsplit(element, "=", fixed = TRUE)[[1]]
+  groupnew[Data[["g"]] == as.integer(elems[1])] <- elems[2]
+}
+Data[["g"]] <- groupnew
+model <- '
     i =~ c(1,1,1)*y1 + c(1,1,1)*y2 + c(1,1,1)*y3 + c(1,1,1)*y4
     s =~ c(0,0.1,0.2)*y1 + c(0.2,0.3,0.4)*y2 + 
          c(0.4,0.5,0.6)*y3 + c(0.6,0.7,0.8)*y4 
@@ -22,10 +34,8 @@ lavaan.model <- '
     y3 ~~ c(ry31, ry32, ry41)*y3
     y4 ~~ c(ry41, ry42, ry43)*y4
 '
-lavaan.call <-  "lavaan" 
-lavaan.args <- list(information = "observed", group = "g")
-test.comment <- ''
-if (!exists("group.environment") || is.null(group.environment)) {
-   source("../utilities.R", chdir = TRUE)
-   execute_test(mplus.out, lavaan.model, lavaan.call, lavaan.args, test.comment)
-}
+fit <-  lavaan (model, data = Data
+    , information  = "observed"
+    , group  = "g"
+    )
+summary(fit, fit.measures = TRUE)
