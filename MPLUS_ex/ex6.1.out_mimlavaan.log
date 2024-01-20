@@ -1,0 +1,137 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:27:54 2024 
+# file:  ex6.1.out 
+
+   lhs op rhs group        type   lav   mpl delta
+1    i =~ y11     1         est 1.000 1.000     0
+2    i =~ y12     1         est 1.000 1.000     0
+3    i =~ y13     1         est 1.000 1.000     0
+4    i =~ y14     1         est 1.000 1.000     0
+5    s =~ y11     1         est 0.000 0.000     0
+6    s =~ y12     1         est 1.000 1.000     0
+7    s =~ y13     1         est 2.000 2.000     0
+8    s =~ y14     1         est 3.000 3.000     0
+9    i ~~   s     1         est 0.133 0.133     0
+10   i ~1         1         est 0.523 0.523     0
+11   s ~1         1         est 1.026 1.026     0
+12 y11 ~~ y11     1         est 0.475 0.475     0
+13 y12 ~~ y12     1         est 0.482 0.482     0
+14 y13 ~~ y13     1         est 0.473 0.473     0
+15 y14 ~~ y14     1         est 0.545 0.545     0
+16   i ~~   i     1         est 0.989 0.989     0
+17   s ~~   s     1         est 0.224 0.224     0
+18   i =~ y11     1          se 0.000 0.000     0
+19   i =~ y12     1          se 0.000 0.000     0
+20   i =~ y13     1          se 0.000 0.000     0
+21   i =~ y14     1          se 0.000 0.000     0
+22   s =~ y11     1          se 0.000 0.000     0
+23   s =~ y12     1          se 0.000 0.000     0
+24   s =~ y13     1          se 0.000 0.000     0
+25   s =~ y14     1          se 0.000 0.000     0
+26   i ~~   s     1          se 0.032 0.032     0
+27   i ~1         1          se 0.051 0.051     0
+28   s ~1         1          se 0.025 0.025     0
+29 y11 ~~ y11     1          se 0.058 0.058     0
+30 y12 ~~ y12     1          se 0.040 0.040     0
+31 y13 ~~ y13     1          se 0.047 0.047     0
+32 y14 ~~ y14     1          se 0.083 0.083     0
+33   i ~~   i     1          se 0.088 0.088     0
+34   s ~~   s     1          se 0.022 0.022     0
+35   i =~ y11     1     est.std 0.994 0.994     0
+36   i =~ y12     1     est.std 0.994 0.994     0
+37   i =~ y13     1     est.std 0.994 0.994     0
+38   i =~ y14     1     est.std 0.994 0.994     0
+39   s =~ y11     1     est.std 0.000 0.000     0
+40   s =~ y12     1     est.std 0.473 0.473     0
+41   s =~ y13     1     est.std 0.946 0.946     0
+42   s =~ y14     1     est.std 1.419 1.419     0
+43   i ~~   s     1     est.std 0.283 0.283     0
+44   i ~1         1     est.std 0.526 0.526     0
+45   s ~1         1     est.std 2.170 2.170     0
+46 y11 ~~ y11     1     est.std 0.475 0.475     0
+47 y12 ~~ y12     1     est.std 0.482 0.482     0
+48 y13 ~~ y13     1     est.std 0.473 0.473     0
+49 y14 ~~ y14     1     est.std 0.545 0.545     0
+50   i ~~   i     1     est.std 1.000 1.000     0
+51   s ~~   s     1     est.std 1.000 1.000     0
+52   i =~ y11     1 est.std.all 0.822 0.822     0
+53   i =~ y12     1 est.std.all 0.710 0.710     0
+54   i =~ y13     1 est.std.all 0.585 0.585     0
+55   i =~ y14     1 est.std.all 0.477 0.477     0
+56   s =~ y11     1 est.std.all 0.000 0.000     0
+57   s =~ y12     1 est.std.all 0.338 0.338     0
+58   s =~ y13     1 est.std.all 0.557 0.557     0
+59   s =~ y14     1 est.std.all 0.681 0.681     0
+60   i ~~   s     1 est.std.all 0.283 0.283     0
+61   i ~1         1 est.std.all 0.526 0.526     0
+62   s ~1         1 est.std.all 2.170 2.170     0
+63 y11 ~~ y11     1 est.std.all 0.324 0.324     0
+64 y12 ~~ y12     1 est.std.all 0.246 0.246     0
+65 y13 ~~ y13     1 est.std.all 0.164 0.164     0
+66 y14 ~~ y14     1 est.std.all 0.125 0.125     0
+67   i ~~   i     1 est.std.all 1.000 1.000     0
+68   s ~~   s     1 est.std.all 1.000 1.000     0
+69   i =~ y11     1 est.std.nox 0.822 0.822     0
+70   i =~ y12     1 est.std.nox 0.710 0.710     0
+71   i =~ y13     1 est.std.nox 0.585 0.585     0
+72   i =~ y14     1 est.std.nox 0.477 0.477     0
+73   s =~ y11     1 est.std.nox 0.000 0.000     0
+74   s =~ y12     1 est.std.nox 0.338 0.338     0
+75   s =~ y13     1 est.std.nox 0.557 0.557     0
+76   s =~ y14     1 est.std.nox 0.681 0.681     0
+77   i ~~   s     1 est.std.nox 0.283 0.283     0
+78   i ~1         1 est.std.nox 0.526 0.526     0
+79   s ~1         1 est.std.nox 2.170 2.170     0
+80 y11 ~~ y11     1 est.std.nox 0.324 0.324     0
+81 y12 ~~ y12     1 est.std.nox 0.246 0.246     0
+82 y13 ~~ y13     1 est.std.nox 0.164 0.164     0
+83 y14 ~~ y14     1 est.std.nox 0.125 0.125     0
+84   i ~~   i     1 est.std.nox 1.000 1.000     0
+85   s ~~   s     1 est.std.nox 1.000 1.000     0
+
+                     fit       lav       mpl  delta
+1                   npar     9.000     9.000  0.000
+2                   fmin     0.005        NA     NA
+3                  chisq     4.593     4.593  0.000
+4                     df     5.000     5.000  0.000
+5                 pvalue     0.468     0.468  0.000
+6         baseline.chisq  1439.722  1439.722  0.000
+7            baseline.df     6.000     6.000  0.000
+8        baseline.pvalue     0.000     0.000  0.000
+9                    cfi     1.000     1.000  0.000
+10                   tli     1.000     1.000  0.000
+11                  nnfi     1.000        NA     NA
+12                   rfi     0.996        NA     NA
+13                   nfi     0.997        NA     NA
+14                  pnfi     0.831        NA     NA
+15                   ifi     1.000        NA     NA
+16                   rni     1.000        NA     NA
+17                  logl -3016.386 -3016.386  0.000
+18     unrestricted.logl -3014.089 -3014.089  0.000
+19                   aic  6050.772  6050.772  0.000
+20                   bic  6088.703  6088.703  0.000
+21                  bic2  6060.137  6060.137  0.000
+22                 rmsea     0.000     0.000  0.000
+23        rmsea.ci.lower     0.000     0.000  0.000
+24        rmsea.ci.upper     0.060     0.060  0.000
+25        rmsea.ci.level     0.900        NA     NA
+26          rmsea.pvalue     0.894     0.894  0.000
+27        rmsea.close.h0     0.050        NA     NA
+28 rmsea.notclose.pvalue     0.005        NA     NA
+29     rmsea.notclose.h0     0.080        NA     NA
+30                   rmr     0.024        NA     NA
+31            rmr_nomean     0.027        NA     NA
+32                  srmr     0.009     0.010 -0.001
+33          srmr_bentler     0.009        NA     NA
+34   srmr_bentler_nomean     0.010        NA     NA
+35                  crmr     0.008        NA     NA
+36           crmr_nomean     0.009        NA     NA
+37            srmr_mplus     0.010        NA     NA
+38     srmr_mplus_nomean     0.010        NA     NA
+39                 cn_05  1206.090        NA     NA
+40                 cn_01  1643.231        NA     NA
+41                   gfi     0.998        NA     NA
+42                  agfi     0.995        NA     NA
+43                  pgfi     0.357        NA     NA
+44                   mfi     1.000        NA     NA
+45                  ecvi     0.045        NA     NA

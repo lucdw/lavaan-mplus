@@ -1,0 +1,121 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:21:39 2024 
+# file:  ex5.10.WLS.out 
+
+   lhs op rhs group        type    lav    mpl delta
+1   f1 =~ u1a     1         est  1.000  1.000 0.000
+2   f1 =~ u1b     1         est  1.000  1.000 0.000
+3   f1 =~ u1c     1         est  1.000  1.000 0.000
+4   f2 =~ u2a     1         est  1.000  1.000 0.000
+5   f2 =~ u2b     1         est  1.000  1.000 0.000
+6   f2 =~ u2c     1         est  1.000  1.000 0.000
+7  u1a  |  t1     1         est -0.510 -0.510 0.000
+8  u1b  |  t1     1         est -0.510 -0.510 0.000
+9  u1c  |  t1     1         est -0.510 -0.510 0.000
+10 u2a  |  t1     1         est  0.537  0.537 0.000
+11 u2b  |  t1     1         est  0.537  0.537 0.000
+12 u2c  |  t1     1         est  0.537  0.537 0.000
+13  f1 ~~  f1     1         est  0.515  0.515 0.000
+14  f2 ~~  f2     1         est  0.540  0.540 0.000
+15  f1 ~~  f2     1         est  0.181  0.181 0.000
+16  f1 =~ u1a     1          se  0.000  0.000 0.000
+17  f1 =~ u1b     1          se  0.000  0.000 0.000
+18  f1 =~ u1c     1          se  0.000  0.000 0.000
+19  f2 =~ u2a     1          se  0.000  0.000 0.000
+20  f2 =~ u2b     1          se  0.000  0.000 0.000
+21  f2 =~ u2c     1          se  0.000  0.000 0.000
+22 u1a  |  t1     1          se  0.043  0.043 0.000
+23 u1b  |  t1     1          se  0.043  0.043 0.000
+24 u1c  |  t1     1          se  0.043  0.043 0.000
+25 u2a  |  t1     1          se  0.044  0.044 0.000
+26 u2b  |  t1     1          se  0.044  0.044 0.000
+27 u2c  |  t1     1          se  0.044  0.044 0.000
+28  f1 ~~  f1     1          se  0.043  0.043 0.000
+29  f2 ~~  f2     1          se  0.043  0.043 0.000
+30  f1 ~~  f2     1          se  0.040  0.039 0.001
+31  f1 =~ u1a     1     est.std  0.718  0.718 0.000
+32  f1 =~ u1b     1     est.std  0.718  0.718 0.000
+33  f1 =~ u1c     1     est.std  0.718  0.718 0.000
+34  f2 =~ u2a     1     est.std  0.735  0.735 0.000
+35  f2 =~ u2b     1     est.std  0.735  0.735 0.000
+36  f2 =~ u2c     1     est.std  0.735  0.735 0.000
+37 u1a  |  t1     1     est.std -0.510 -0.510 0.000
+38 u1b  |  t1     1     est.std -0.510 -0.510 0.000
+39 u1c  |  t1     1     est.std -0.510 -0.510 0.000
+40 u2a  |  t1     1     est.std  0.537  0.537 0.000
+41 u2b  |  t1     1     est.std  0.537  0.537 0.000
+42 u2c  |  t1     1     est.std  0.537  0.537 0.000
+43  f1 ~~  f1     1     est.std  1.000  1.000 0.000
+44  f2 ~~  f2     1     est.std  1.000  1.000 0.000
+45  f1 ~~  f2     1     est.std  0.344  0.344 0.000
+46  f1 =~ u1a     1 est.std.all  0.718  0.718 0.000
+47  f1 =~ u1b     1 est.std.all  0.718  0.718 0.000
+48  f1 =~ u1c     1 est.std.all  0.718  0.718 0.000
+49  f2 =~ u2a     1 est.std.all  0.735  0.735 0.000
+50  f2 =~ u2b     1 est.std.all  0.735  0.735 0.000
+51  f2 =~ u2c     1 est.std.all  0.735  0.735 0.000
+52 u1a  |  t1     1 est.std.all -0.510 -0.510 0.000
+53 u1b  |  t1     1 est.std.all -0.510 -0.510 0.000
+54 u1c  |  t1     1 est.std.all -0.510 -0.510 0.000
+55 u2a  |  t1     1 est.std.all  0.537  0.537 0.000
+56 u2b  |  t1     1 est.std.all  0.537  0.537 0.000
+57 u2c  |  t1     1 est.std.all  0.537  0.537 0.000
+58  f1 ~~  f1     1 est.std.all  1.000  1.000 0.000
+59  f2 ~~  f2     1 est.std.all  1.000  1.000 0.000
+60  f1 ~~  f2     1 est.std.all  0.344  0.344 0.000
+61  f1 =~ u1a     1 est.std.nox  0.718  0.718 0.000
+62  f1 =~ u1b     1 est.std.nox  0.718  0.718 0.000
+63  f1 =~ u1c     1 est.std.nox  0.718  0.718 0.000
+64  f2 =~ u2a     1 est.std.nox  0.735  0.735 0.000
+65  f2 =~ u2b     1 est.std.nox  0.735  0.735 0.000
+66  f2 =~ u2c     1 est.std.nox  0.735  0.735 0.000
+67 u1a  |  t1     1 est.std.nox -0.510 -0.510 0.000
+68 u1b  |  t1     1 est.std.nox -0.510 -0.510 0.000
+69 u1c  |  t1     1 est.std.nox -0.510 -0.510 0.000
+70 u2a  |  t1     1 est.std.nox  0.537  0.537 0.000
+71 u2b  |  t1     1 est.std.nox  0.537  0.537 0.000
+72 u2c  |  t1     1 est.std.nox  0.537  0.537 0.000
+73  f1 ~~  f1     1 est.std.nox  1.000  1.000 0.000
+74  f2 ~~  f2     1 est.std.nox  1.000  1.000 0.000
+75  f1 ~~  f2     1 est.std.nox  0.344  0.344 0.000
+
+                     fit     lav     mpl  delta
+1                   npar   5.000   5.000  0.000
+2                   fmin   0.017      NA     NA
+3                  chisq  16.858  16.891 -0.033
+4                     df  16.000  16.000  0.000
+5                 pvalue   0.395   0.393  0.002
+6         baseline.chisq 327.331 327.987 -0.656
+7            baseline.df  15.000  15.000  0.000
+8        baseline.pvalue   0.000   0.000  0.000
+9                    cfi   0.997   0.997  0.000
+10                   tli   0.997   0.997  0.000
+11                  nnfi   0.997      NA     NA
+12                   rfi      NA      NA     NA
+13                   nfi      NA      NA     NA
+14                  pnfi   1.012      NA     NA
+15                   ifi   0.997      NA     NA
+16                   rni   0.997      NA     NA
+17                 rmsea   0.010   0.011 -0.001
+18        rmsea.ci.lower   0.000   0.000  0.000
+19        rmsea.ci.upper   0.043   0.043  0.000
+20        rmsea.ci.level   0.900      NA     NA
+21          rmsea.pvalue   0.983   0.983  0.000
+22        rmsea.close.h0   0.050      NA     NA
+23 rmsea.notclose.pvalue   0.000      NA     NA
+24     rmsea.notclose.h0   0.080      NA     NA
+25                   rmr   0.047      NA     NA
+26            rmr_nomean   0.050      NA     NA
+27          srmr_bentler   0.047      NA     NA
+28   srmr_bentler_nomean   0.050      NA     NA
+29                  crmr   0.054      NA     NA
+30           crmr_nomean   0.059      NA     NA
+31            srmr_mplus      NA      NA     NA
+32     srmr_mplus_nomean      NA      NA     NA
+33                 cn_05 779.393      NA     NA
+34                 cn_01 948.227      NA     NA
+35                   gfi   0.977      NA     NA
+36                  agfi   0.970      NA     NA
+37                  pgfi   0.744      NA     NA
+38                   mfi   0.999      NA     NA
+39                  wrmr   0.896      NA     NA

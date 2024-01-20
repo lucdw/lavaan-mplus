@@ -1,0 +1,129 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:28:55 2024 
+# file:  ex9.6.out 
+
+   lhs op rhs group type    lav    mpl  delta
+1   fw =~  y1     1  est  1.000  1.000  0.000
+2   fw =~  y2     1  est  0.999  0.999  0.000
+3   fw =~  y3     1  est  0.995  0.995  0.000
+4   fw =~  y4     1  est  1.017  1.017  0.000
+5   fw  ~  x1     1  est  0.973  0.973  0.000
+6   fw  ~  x2     1  est  0.510  0.510  0.000
+7   y1 ~~  y1     1  est  0.981     NA     NA
+8   y2 ~~  y2     1  est  0.947     NA     NA
+9   y3 ~~  y3     1  est  1.070     NA     NA
+10  y4 ~~  y4     1  est  1.014     NA     NA
+11  fw ~~  fw     1  est  0.980  0.980  0.000
+12  y1 ~1         1  est  0.000 -0.083  0.083
+13  y2 ~1         1  est  0.000 -0.077  0.077
+14  y3 ~1         1  est  0.000 -0.045  0.045
+15  y4 ~1         1  est  0.000 -0.030  0.030
+16  fb =~  y1     1  est  1.000  1.000  0.000
+17  fb =~  y2     1  est  0.960  0.960  0.000
+18  fb =~  y3     1  est  0.924  0.924  0.000
+19  fb =~  y4     1  est  0.949  0.949  0.000
+20  y1 ~~  y1     1  est  0.000     NA     NA
+21  y2 ~~  y2     1  est  0.000     NA     NA
+22  y3 ~~  y3     1  est  0.000     NA     NA
+23  y4 ~~  y4     1  est  0.000     NA     NA
+24  fb  ~   w     1  est  0.344  0.344  0.000
+25  fb ~~  fb     1  est  0.361  0.361  0.000
+26  y1 ~1         1  est -0.083 -0.083  0.000
+27  y2 ~1         1  est -0.077 -0.077  0.000
+28  y3 ~1         1  est -0.045 -0.045  0.000
+29  y4 ~1         1  est -0.030 -0.030  0.000
+30  fw =~  y1     1   se  0.000  0.000  0.000
+31  fw =~  y2     1   se  0.033  0.033  0.000
+32  fw =~  y3     1   se  0.040  0.041 -0.001
+33  fw =~  y4     1   se  0.033  0.033  0.000
+34  fw  ~  x1     1   se  0.048  0.048  0.000
+35  fw  ~  x2     1   se  0.039  0.039  0.000
+36  y1 ~~  y1     1   se  0.059     NA     NA
+37  y2 ~~  y2     1   se  0.054     NA     NA
+38  y3 ~~  y3     1   se  0.057     NA     NA
+39  y4 ~~  y4     1   se  0.059     NA     NA
+40  fw ~~  fw     1   se  0.083  0.083  0.000
+41  y1 ~1         1   se  0.000  0.072 -0.072
+42  y2 ~1         1   se  0.000  0.073 -0.073
+43  y3 ~1         1   se  0.000  0.069 -0.069
+44  y4 ~1         1   se  0.000  0.072 -0.072
+45  fb =~  y1     1   se  0.000  0.000  0.000
+46  fb =~  y2     1   se  0.070  0.070  0.000
+47  fb =~  y3     1   se  0.075  0.075  0.000
+48  fb =~  y4     1   se  0.068  0.068  0.000
+49  y1 ~~  y1     1   se  0.000     NA     NA
+50  y2 ~~  y2     1   se  0.000     NA     NA
+51  y3 ~~  y3     1   se  0.000     NA     NA
+52  y4 ~~  y4     1   se  0.000     NA     NA
+53  fb  ~   w     1   se  0.079  0.079  0.000
+54  fb ~~  fb     1   se  0.072  0.072  0.000
+55  y1 ~1         1   se  0.072  0.072  0.000
+56  y2 ~1         1   se  0.073  0.073  0.000
+57  y3 ~1         1   se  0.069  0.069  0.000
+58  y4 ~1         1   se  0.072  0.072  0.000
+
+                             fit       lav       mpl    delta
+1                           npar    19.000    19.000    0.000
+2                           fmin     3.913        NA       NA
+3                          chisq     2.615     5.368   -2.753
+4                             df    17.000    17.000    0.000
+5                         pvalue     1.000     0.997    0.003
+6                   chisq.scaled     2.700     5.368   -2.668
+7                      df.scaled    17.000    17.000    0.000
+8                  pvalue.scaled     1.000     0.997    0.003
+9           chisq.scaling.factor     0.969     0.720    0.249
+10                baseline.chisq  3282.316  4264.565 -982.249
+11                   baseline.df    24.000    24.000    0.000
+12               baseline.pvalue     0.000     0.000    0.000
+13         baseline.chisq.scaled        NA  4264.565       NA
+14            baseline.df.scaled    24.000    24.000    0.000
+15        baseline.pvalue.scaled        NA     0.000       NA
+16 baseline.chisq.scaling.factor        NA        NA       NA
+17                           cfi     1.000     1.000    0.000
+18                           tli     1.006     1.004    0.002
+19                    cfi.scaled        NA     1.000       NA
+20                    tli.scaled        NA     1.004       NA
+21                    cfi.robust        NA        NA       NA
+22                    tli.robust        NA        NA       NA
+23                          nnfi     1.006        NA       NA
+24                           rfi     0.999        NA       NA
+25                           nfi     0.999        NA       NA
+26                          pnfi     0.708        NA       NA
+27                           ifi     1.004        NA       NA
+28                           rni     1.004        NA       NA
+29                   nnfi.scaled        NA        NA       NA
+30                    rfi.scaled        NA        NA       NA
+31                    nfi.scaled        NA        NA       NA
+32                   pnfi.scaled        NA        NA       NA
+33                    ifi.scaled        NA        NA       NA
+34                    rni.scaled        NA        NA       NA
+35                   nnfi.robust        NA        NA       NA
+36                    rni.robust        NA        NA       NA
+37                          logl -6544.187 -6544.186   -0.001
+38             unrestricted.logl -6542.880 -6542.255   -0.625
+39                           aic 13126.374 13126.372    0.002
+40                           bic 13219.622 13219.620    0.002
+41                          bic2 13159.277 13159.275    0.002
+42             scaling.factor.h1     1.001        NA       NA
+43             scaling.factor.h0     1.029        NA       NA
+44                         rmsea     0.000     0.000    0.000
+45                rmsea.ci.lower     0.000        NA       NA
+46                rmsea.ci.upper     0.000        NA       NA
+47                rmsea.ci.level     0.900        NA       NA
+48                  rmsea.pvalue     1.000        NA       NA
+49                rmsea.close.h0     0.050        NA       NA
+50         rmsea.notclose.pvalue     0.000        NA       NA
+51             rmsea.notclose.h0     0.080        NA       NA
+52                  rmsea.scaled     0.000     0.000    0.000
+53         rmsea.ci.lower.scaled     0.000        NA       NA
+54         rmsea.ci.upper.scaled     0.000        NA       NA
+55           rmsea.pvalue.scaled     1.000        NA       NA
+56  rmsea.notclose.pvalue.scaled     0.000        NA       NA
+57                  rmsea.robust        NA        NA       NA
+58         rmsea.ci.lower.robust        NA        NA       NA
+59         rmsea.ci.upper.robust        NA        NA       NA
+60           rmsea.pvalue.robust        NA        NA       NA
+61  rmsea.notclose.pvalue.robust        NA        NA       NA
+62                          srmr     0.015        NA       NA
+63                   srmr_within     0.004        NA       NA
+64                  srmr_between     0.011        NA       NA

@@ -1,0 +1,166 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:22:31 2024 
+# file:  HS.nomean.WLS.out 
+
+        lhs op     rhs group        type   lav   mpl delta
+1    visual =~      x1     1         est 1.000 1.000     0
+2    visual =~      x2     1         est 0.515 0.515     0
+3    visual =~      x3     1         est 0.823 0.823     0
+4   textual =~      x4     1         est 1.000 1.000     0
+5   textual =~      x5     1         est 1.063 1.063     0
+6   textual =~      x6     1         est 0.914 0.914     0
+7     speed =~      x7     1         est 1.000 1.000     0
+8     speed =~      x8     1         est 1.109 1.109     0
+9     speed =~      x9     1         est 1.132 1.132     0
+10       x1 ~~      x1     1         est 0.572 0.572     0
+11       x2 ~~      x2     1         est 1.047 1.047     0
+12       x3 ~~      x3     1         est 0.789 0.789     0
+13       x4 ~~      x4     1         est 0.308 0.308     0
+14       x5 ~~      x5     1         est 0.378 0.378     0
+15       x6 ~~      x6     1         est 0.304 0.304     0
+16       x7 ~~      x7     1         est 0.633 0.633     0
+17       x8 ~~      x8     1         est 0.436 0.436     0
+18       x9 ~~      x9     1         est 0.413 0.413     0
+19   visual ~~  visual     1         est 0.619 0.619     0
+20  textual ~~ textual     1         est 1.010 1.010     0
+21    speed ~~   speed     1         est 0.438 0.438     0
+22   visual ~~ textual     1         est 0.383 0.383     0
+23   visual ~~   speed     1         est 0.318 0.318     0
+24  textual ~~   speed     1         est 0.194 0.194     0
+25   visual =~      x1     1          se 0.000 0.000     0
+26   visual =~      x2     1          se 0.097 0.097     0
+27   visual =~      x3     1          se 0.117 0.117     0
+28  textual =~      x4     1          se 0.000 0.000     0
+29  textual =~      x5     1          se 0.058 0.058     0
+30  textual =~      x6     1          se 0.051 0.051     0
+31    speed =~      x7     1          se 0.000 0.000     0
+32    speed =~      x8     1          se 0.114 0.114     0
+33    speed =~      x9     1          se 0.112 0.112     0
+34       x1 ~~      x1     1          se 0.105 0.105     0
+35       x2 ~~      x2     1          se 0.094 0.094     0
+36       x3 ~~      x3     1          se 0.074 0.074     0
+37       x4 ~~      x4     1          se 0.047 0.047     0
+38       x5 ~~      x5     1          se 0.047 0.047     0
+39       x6 ~~      x6     1          se 0.042 0.042     0
+40       x7 ~~      x7     1          se 0.068 0.068     0
+41       x8 ~~      x8     1          se 0.061 0.061     0
+42       x9 ~~      x9     1          se 0.059 0.059     0
+43   visual ~~  visual     1          se 0.126 0.126     0
+44  textual ~~ textual     1          se 0.113 0.113     0
+45    speed ~~   speed     1          se 0.078 0.078     0
+46   visual ~~ textual     1          se 0.074 0.074     0
+47   visual ~~   speed     1          se 0.054 0.054     0
+48  textual ~~   speed     1          se 0.053 0.053     0
+49   visual =~      x1     1     est.std 0.787 0.787     0
+50   visual =~      x2     1     est.std 0.405 0.405     0
+51   visual =~      x3     1     est.std 0.648 0.648     0
+52  textual =~      x4     1     est.std 1.005 1.005     0
+53  textual =~      x5     1     est.std 1.068 1.068     0
+54  textual =~      x6     1     est.std 0.919 0.919     0
+55    speed =~      x7     1     est.std 0.661 0.661     0
+56    speed =~      x8     1     est.std 0.734 0.734     0
+57    speed =~      x9     1     est.std 0.748 0.748     0
+58       x1 ~~      x1     1     est.std 0.572 0.572     0
+59       x2 ~~      x2     1     est.std 1.047 1.047     0
+60       x3 ~~      x3     1     est.std 0.789 0.789     0
+61       x4 ~~      x4     1     est.std 0.308 0.308     0
+62       x5 ~~      x5     1     est.std 0.378 0.378     0
+63       x6 ~~      x6     1     est.std 0.304 0.304     0
+64       x7 ~~      x7     1     est.std 0.633 0.633     0
+65       x8 ~~      x8     1     est.std 0.436 0.436     0
+66       x9 ~~      x9     1     est.std 0.413 0.413     0
+67   visual ~~  visual     1     est.std 1.000 1.000     0
+68  textual ~~ textual     1     est.std 1.000 1.000     0
+69    speed ~~   speed     1     est.std 1.000 1.000     0
+70   visual ~~ textual     1     est.std 0.484 0.484     0
+71   visual ~~   speed     1     est.std 0.611 0.611     0
+72  textual ~~   speed     1     est.std 0.292 0.292     0
+73   visual =~      x1     1 est.std.all 0.721 0.721     0
+74   visual =~      x2     1 est.std.all 0.368 0.368     0
+75   visual =~      x3     1 est.std.all 0.589 0.589     0
+76  textual =~      x4     1 est.std.all 0.876 0.876     0
+77  textual =~      x5     1 est.std.all 0.867 0.867     0
+78  textual =~      x6     1 est.std.all 0.858 0.858     0
+79    speed =~      x7     1 est.std.all 0.639 0.639     0
+80    speed =~      x8     1 est.std.all 0.743 0.743     0
+81    speed =~      x9     1 est.std.all 0.759 0.759     0
+82       x1 ~~      x1     1 est.std.all 0.480 0.480     0
+83       x2 ~~      x2     1 est.std.all 0.864 0.864     0
+84       x3 ~~      x3     1 est.std.all 0.653 0.653     0
+85       x4 ~~      x4     1 est.std.all 0.233 0.233     0
+86       x5 ~~      x5     1 est.std.all 0.249 0.249     0
+87       x6 ~~      x6     1 est.std.all 0.265 0.265     0
+88       x7 ~~      x7     1 est.std.all 0.591 0.591     0
+89       x8 ~~      x8     1 est.std.all 0.447 0.447     0
+90       x9 ~~      x9     1 est.std.all 0.424 0.424     0
+91   visual ~~  visual     1 est.std.all 1.000 1.000     0
+92  textual ~~ textual     1 est.std.all 1.000 1.000     0
+93    speed ~~   speed     1 est.std.all 1.000 1.000     0
+94   visual ~~ textual     1 est.std.all 0.484 0.484     0
+95   visual ~~   speed     1 est.std.all 0.611 0.611     0
+96  textual ~~   speed     1 est.std.all 0.292 0.292     0
+97   visual =~      x1     1 est.std.nox 0.721 0.721     0
+98   visual =~      x2     1 est.std.nox 0.368 0.368     0
+99   visual =~      x3     1 est.std.nox 0.589 0.589     0
+100 textual =~      x4     1 est.std.nox 0.876 0.876     0
+101 textual =~      x5     1 est.std.nox 0.867 0.867     0
+102 textual =~      x6     1 est.std.nox 0.858 0.858     0
+103   speed =~      x7     1 est.std.nox 0.639 0.639     0
+104   speed =~      x8     1 est.std.nox 0.743 0.743     0
+105   speed =~      x9     1 est.std.nox 0.759 0.759     0
+106      x1 ~~      x1     1 est.std.nox 0.480 0.480     0
+107      x2 ~~      x2     1 est.std.nox 0.864 0.864     0
+108      x3 ~~      x3     1 est.std.nox 0.653 0.653     0
+109      x4 ~~      x4     1 est.std.nox 0.233 0.233     0
+110      x5 ~~      x5     1 est.std.nox 0.249 0.249     0
+111      x6 ~~      x6     1 est.std.nox 0.265 0.265     0
+112      x7 ~~      x7     1 est.std.nox 0.591 0.591     0
+113      x8 ~~      x8     1 est.std.nox 0.447 0.447     0
+114      x9 ~~      x9     1 est.std.nox 0.424 0.424     0
+115  visual ~~  visual     1 est.std.nox 1.000 1.000     0
+116 textual ~~ textual     1 est.std.nox 1.000 1.000     0
+117   speed ~~   speed     1 est.std.nox 1.000 1.000     0
+118  visual ~~ textual     1 est.std.nox 0.484 0.484     0
+119  visual ~~   speed     1 est.std.nox 0.611 0.611     0
+120 textual ~~   speed     1 est.std.nox 0.292 0.292     0
+
+                     fit     lav     mpl delta
+1                   npar  21.000  21.000 0.000
+2                   fmin   0.139      NA    NA
+3                  chisq  83.472  83.472 0.000
+4                     df  24.000  24.000 0.000
+5                 pvalue   0.000   0.000 0.000
+6         baseline.chisq 390.936 390.936 0.000
+7            baseline.df  36.000  36.000 0.000
+8        baseline.pvalue   0.000   0.000 0.000
+9                    cfi   0.832   0.832 0.000
+10                   tli   0.749   0.749 0.000
+11                  nnfi   0.749      NA    NA
+12                   rfi   0.680      NA    NA
+13                   nfi   0.786      NA    NA
+14                  pnfi   0.524      NA    NA
+15                   ifi   0.838      NA    NA
+16                   rni   0.832      NA    NA
+17                 rmsea   0.091   0.091 0.000
+18        rmsea.ci.lower   0.070   0.070 0.000
+19        rmsea.ci.upper   0.113   0.112 0.001
+20        rmsea.ci.level   0.900      NA    NA
+21          rmsea.pvalue   0.001   0.001 0.000
+22        rmsea.close.h0   0.050      NA    NA
+23 rmsea.notclose.pvalue   0.815      NA    NA
+24     rmsea.notclose.h0   0.080      NA    NA
+25                   rmr   0.105      NA    NA
+26            rmr_nomean   0.105      NA    NA
+27          srmr_bentler   0.081      NA    NA
+28   srmr_bentler_nomean   0.081      NA    NA
+29                  crmr   0.087      NA    NA
+30           crmr_nomean   0.087      NA    NA
+31            srmr_mplus   0.086      NA    NA
+32     srmr_mplus_nomean   0.086      NA    NA
+33                 cn_05 131.876      NA    NA
+34                 cn_01 155.470      NA    NA
+35                   gfi   0.947      NA    NA
+36                  agfi   0.900      NA    NA
+37                  pgfi   0.505      NA    NA
+38                   mfi   0.906      NA    NA
+39                  ecvi   0.418      NA    NA

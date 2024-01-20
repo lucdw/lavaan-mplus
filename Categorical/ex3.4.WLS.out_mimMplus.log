@@ -1,0 +1,61 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:21:35 2024 
+# file:  ex3.4.WLS.out 
+
+   lhs op rhs group        type   lav   mpl delta
+1   u1  ~  x1     1         est 1.022 1.022 0.000
+2   u1  ~  x3     1         est 2.474 2.474 0.000
+3   u1  |  t1     1         est 0.984 0.984 0.000
+4   u1  ~  x1     1          se 0.121 0.121 0.000
+5   u1  ~  x3     1          se 0.225 0.224 0.001
+6   u1  |  t1     1          se 0.119 0.119 0.000
+7   u1  ~  x1     1     est.std 1.022 1.022 0.000
+8   u1  ~  x3     1     est.std 2.474 2.474 0.000
+9   u1  |  t1     1     est.std 0.984 0.984 0.000
+10  u1  ~  x1     1 est.std.all 0.375 0.375 0.000
+11  u1  ~  x3     1 est.std.all 0.848 0.848 0.000
+12  u1  |  t1     1 est.std.all 0.344 0.344 0.000
+13  u1  ~  x1     1 est.std.nox 0.358 0.358 0.000
+14  u1  ~  x3     1 est.std.nox 0.866 0.866 0.000
+15  u1  |  t1     1 est.std.nox 0.344 0.344 0.000
+
+                     fit  lav     mpl    delta
+1                   npar 3.00   3.000    0.000
+2                   fmin 0.00      NA       NA
+3                  chisq 0.00   0.000    0.000
+4                     df 0.00   0.000    0.000
+5                 pvalue   NA   0.000       NA
+6         baseline.chisq 0.00 129.273 -129.273
+7            baseline.df 0.00   2.000   -2.000
+8        baseline.pvalue   NA   0.000       NA
+9                    cfi 1.00   1.000    0.000
+10                   tli 1.00   1.000    0.000
+11                  nnfi 1.00      NA       NA
+12                   rfi 1.00      NA       NA
+13                   nfi   NA      NA       NA
+14                  pnfi   NA      NA       NA
+15                   ifi   NA      NA       NA
+16                   rni   NA      NA       NA
+17                 rmsea 0.00   0.000    0.000
+18        rmsea.ci.lower 0.00   0.000    0.000
+19        rmsea.ci.upper 0.00   0.000    0.000
+20        rmsea.ci.level 0.90      NA       NA
+21          rmsea.pvalue   NA   0.000       NA
+22        rmsea.close.h0 0.05      NA       NA
+23 rmsea.notclose.pvalue   NA      NA       NA
+24     rmsea.notclose.h0 0.08      NA       NA
+25                   rmr 0.00      NA       NA
+26            rmr_nomean 0.00      NA       NA
+27          srmr_bentler 0.00      NA       NA
+28   srmr_bentler_nomean 0.00      NA       NA
+29                  crmr 0.00      NA       NA
+30           crmr_nomean 0.00      NA       NA
+31            srmr_mplus   NA      NA       NA
+32     srmr_mplus_nomean   NA      NA       NA
+33                 cn_05 1.00      NA       NA
+34                 cn_01 1.00      NA       NA
+35                   gfi 1.00      NA       NA
+36                  agfi 1.00      NA       NA
+37                  pgfi 0.00      NA       NA
+38                   mfi 1.00      NA       NA
+39                  wrmr 0.00      NA       NA

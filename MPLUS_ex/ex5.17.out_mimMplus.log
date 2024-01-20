@@ -1,0 +1,189 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:25:44 2024 
+# file:  ex5.17.out 
+
+    lhs  op rhs group type    lav    mpl  delta
+1    f1  =~  u1     1  est  1.000  1.000  0.000
+2    f1  =~  u2     1  est  0.860  0.861 -0.001
+3    f1  =~  u3     1  est  0.922  0.922  0.000
+4    f2  =~  u4     1  est  1.000  1.000  0.000
+5    f2  =~  u5     1  est  1.005  1.006 -0.001
+6    f2  =~  u6     1  est  0.973  0.973  0.000
+7    f1   ~  x1     1  est  0.981  0.981  0.000
+8    f1   ~  x2     1  est  1.081  1.081  0.000
+9    f1   ~  x3     1  est  1.317  1.317  0.000
+10   f2   ~  x1     1  est  1.159  1.158  0.001
+11   f2   ~  x2     1  est  1.113  1.113  0.000
+12   f2   ~  x3     1  est  0.810  0.810  0.000
+13   u3   |  t1     1  est -0.425 -0.425  0.000
+14   u1   |  t1     1  est -1.777 -1.778  0.001
+15   u2   |  t1     1  est -0.946 -0.945 -0.001
+16   u4   |  t1     1  est -0.024 -0.024  0.000
+17   u5   |  t1     1  est  0.358  0.358  0.000
+18   u6   |  t1     1  est  0.881  0.881  0.000
+19   f1  ~~  f1     1  est  2.856  2.856  0.000
+20   f2  ~~  f2     1  est  2.238  2.237  0.001
+21   f1  ~~  f2     1  est  0.018  0.018  0.000
+22   u1 ~*~  u1     1  est  0.509     NA     NA
+23   u2 ~*~  u2     1  est  0.567     NA     NA
+24   u3 ~*~  u3     1  est  0.540     NA     NA
+25   u4 ~*~  u4     1  est  0.556     NA     NA
+26   u5 ~*~  u5     1  est  0.554     NA     NA
+27   u6 ~*~  u6     1  est  0.566     NA     NA
+28   f1  =~  u1     2  est  1.000  1.000  0.000
+29   f1  =~  u2     2  est  0.860  0.861 -0.001
+30   f1  =~  u3     2  est  0.456  0.453  0.003
+31   f2  =~  u4     2  est  1.000  1.000  0.000
+32   f2  =~  u5     2  est  1.005  1.006 -0.001
+33   f2  =~  u6     2  est  0.973  0.973  0.000
+34   f1   ~  x1     2  est  0.780  0.785 -0.005
+35   f1   ~  x2     2  est  0.925  0.931 -0.006
+36   f1   ~  x3     2  est  1.024  1.030 -0.006
+37   f2   ~  x1     2  est  1.404  1.403  0.001
+38   f2   ~  x2     2  est  1.165  1.165  0.000
+39   f2   ~  x3     2  est  0.954  0.954  0.000
+40   u3   |  t1     2  est  0.496  0.500 -0.004
+41   u1   |  t1     2  est -1.777 -1.778  0.001
+42   u2   |  t1     2  est -0.946 -0.945 -0.001
+43   u4   |  t1     2  est -0.024 -0.024  0.000
+44   u5   |  t1     2  est  0.358  0.358  0.000
+45   u6   |  t1     2  est  0.881  0.881  0.000
+46   f1  ~~  f1     2  est  1.579  1.599 -0.020
+47   f2  ~~  f2     2  est  2.686  2.684  0.002
+48   f1  ~~  f2     2  est -0.138 -0.139  0.001
+49   u1 ~*~  u1     2  est  0.687     NA     NA
+50   u2 ~*~  u2     2  est  0.768     NA     NA
+51   u3 ~*~  u3     2  est  0.868     NA     NA
+52   u4 ~*~  u4     2  est  0.522     NA     NA
+53   u5 ~*~  u5     2  est  0.516     NA     NA
+54   u6 ~*~  u6     2  est  0.519     NA     NA
+55   f1  ~1         2  est -0.337 -0.330 -0.007
+56   f2  ~1         2  est -0.063 -0.062 -0.001
+57   f1  =~  u1     1   se  0.000  0.000  0.000
+58   f1  =~  u2     1   se  0.152  0.152  0.000
+59   f1  =~  u3     1   se  0.167  0.167  0.000
+60   f2  =~  u4     1   se  0.000  0.000  0.000
+61   f2  =~  u5     1   se  0.143  0.143  0.000
+62   f2  =~  u6     1   se  0.140  0.140  0.000
+63   f1   ~  x1     1   se  0.145  0.145  0.000
+64   f1   ~  x2     1   se  0.153  0.153  0.000
+65   f1   ~  x3     1   se  0.177  0.177  0.000
+66   f2   ~  x1     1   se  0.130  0.130  0.000
+67   f2   ~  x2     1   se  0.124  0.124  0.000
+68   f2   ~  x3     1   se  0.104  0.104  0.000
+69   u3   |  t1     1   se  0.096  0.096  0.000
+70   u1   |  t1     1   se  0.224  0.223  0.001
+71   u2   |  t1     1   se  0.129  0.129  0.000
+72   u4   |  t1     1   se  0.081  0.081  0.000
+73   u5   |  t1     1   se  0.083  0.083  0.000
+74   u6   |  t1     1   se  0.112  0.112  0.000
+75   f1  ~~  f1     1   se  0.757  0.756  0.001
+76   f2  ~~  f2     1   se  0.466  0.466  0.000
+77   f1  ~~  f2     1   se  0.152  0.152  0.000
+78   u1 ~*~  u1     1   se  0.000     NA     NA
+79   u2 ~*~  u2     1   se  0.000     NA     NA
+80   u3 ~*~  u3     1   se  0.000     NA     NA
+81   u4 ~*~  u4     1   se  0.000     NA     NA
+82   u5 ~*~  u5     1   se  0.000     NA     NA
+83   u6 ~*~  u6     1   se  0.000     NA     NA
+84   f1  =~  u1     2   se  0.000  0.000  0.000
+85   f1  =~  u2     2   se  0.152  0.152  0.000
+86   f1  =~  u3     2   se  0.107  0.106  0.001
+87   f2  =~  u4     2   se  0.000  0.000  0.000
+88   f2  =~  u5     2   se  0.143  0.143  0.000
+89   f2  =~  u6     2   se  0.140  0.140  0.000
+90   f1   ~  x1     2   se  0.181  0.182 -0.001
+91   f1   ~  x2     2   se  0.211  0.212 -0.001
+92   f1   ~  x3     2   se  0.233  0.234 -0.001
+93   f2   ~  x1     2   se  0.249  0.249  0.000
+94   f2   ~  x2     2   se  0.211  0.211  0.000
+95   f2   ~  x3     2   se  0.178  0.177  0.001
+96   u3   |  t1     2   se  0.149  0.148  0.001
+97   u1   |  t1     2   se  0.224  0.223  0.001
+98   u2   |  t1     2   se  0.129  0.129  0.000
+99   u4   |  t1     2   se  0.081  0.081  0.000
+100  u5   |  t1     2   se  0.083  0.083  0.000
+101  u6   |  t1     2   se  0.112  0.112  0.000
+102  f1  ~~  f1     2   se  0.711  0.719 -0.008
+103  f2  ~~  f2     2   se  0.935  0.934  0.001
+104  f1  ~~  f2     2   se  0.130  0.130  0.000
+105  u1 ~*~  u1     2   se  0.000     NA     NA
+106  u2 ~*~  u2     2   se  0.000     NA     NA
+107  u3 ~*~  u3     2   se  0.000     NA     NA
+108  u4 ~*~  u4     2   se  0.000     NA     NA
+109  u5 ~*~  u5     2   se  0.000     NA     NA
+110  u6 ~*~  u6     2   se  0.000     NA     NA
+111  f1  ~1         2   se  0.259  0.259  0.000
+112  f2  ~1         2   se  0.115  0.115  0.000
+
+                             fit      lav      mpl     delta
+1                           npar   37.000   37.000     0.000
+2                           fmin    0.005       NA        NA
+3                          chisq   21.350   33.719   -12.369
+4                             df   41.000   41.000     0.000
+5                         pvalue    0.995    0.783     0.212
+6                   chisq.scaled   33.720   33.719     0.001
+7                      df.scaled   41.000   41.000     0.000
+8                  pvalue.scaled    0.783    0.783     0.000
+9           chisq.scaling.factor    0.735       NA        NA
+10                baseline.chisq 3503.156 6573.773 -3070.617
+11                   baseline.df   30.000   66.000   -36.000
+12               baseline.pvalue    0.000    0.000     0.000
+13         baseline.chisq.scaled 2832.276 6573.773 -3741.497
+14            baseline.df.scaled   30.000   66.000   -36.000
+15        baseline.pvalue.scaled    0.000    0.000     0.000
+16 baseline.chisq.scaling.factor    1.239       NA        NA
+17                           cfi    1.000    1.000     0.000
+18                           tli    1.004    1.002     0.002
+19                    cfi.scaled    1.000    1.000     0.000
+20                    tli.scaled    1.002    1.002     0.000
+21                    cfi.robust       NA       NA        NA
+22                    tli.robust       NA       NA        NA
+23                          nnfi    1.004       NA        NA
+24                           rfi       NA       NA        NA
+25                           nfi       NA       NA        NA
+26                          pnfi    1.358       NA        NA
+27                           ifi    1.006       NA        NA
+28                           rni    1.006       NA        NA
+29                   nnfi.scaled    1.002       NA        NA
+30                    rfi.scaled       NA       NA        NA
+31                    nfi.scaled       NA       NA        NA
+32                   pnfi.scaled    1.350       NA        NA
+33                    ifi.scaled    1.003       NA        NA
+34                    rni.scaled    1.003       NA        NA
+35                   nnfi.robust       NA       NA        NA
+36                    rni.robust       NA       NA        NA
+37                         rmsea    0.000    0.000     0.000
+38                rmsea.ci.lower    0.000    0.000     0.000
+39                rmsea.ci.upper    0.000    0.014    -0.014
+40                rmsea.ci.level    0.900       NA        NA
+41                  rmsea.pvalue    1.000    1.000     0.000
+42                rmsea.close.h0    0.050       NA        NA
+43         rmsea.notclose.pvalue    0.000       NA        NA
+44             rmsea.notclose.h0    0.080       NA        NA
+45                  rmsea.scaled    0.000    0.000     0.000
+46         rmsea.ci.lower.scaled    0.000    0.000     0.000
+47         rmsea.ci.upper.scaled    0.014    0.014     0.000
+48           rmsea.pvalue.scaled    1.000    1.000     0.000
+49  rmsea.notclose.pvalue.scaled    0.000       NA        NA
+50                  rmsea.robust       NA       NA        NA
+51         rmsea.ci.lower.robust       NA       NA        NA
+52         rmsea.ci.upper.robust       NA       NA        NA
+53           rmsea.pvalue.robust       NA       NA        NA
+54  rmsea.notclose.pvalue.robust       NA       NA        NA
+55                           rmr    0.024       NA        NA
+56                    rmr_nomean    0.027       NA        NA
+57                          srmr    0.027    0.016     0.011
+58                  srmr_bentler    0.024       NA        NA
+59           srmr_bentler_nomean    0.027       NA        NA
+60                          crmr    0.029       NA        NA
+61                   crmr_nomean    0.034       NA        NA
+62                    srmr_mplus       NA       NA        NA
+63             srmr_mplus_nomean       NA       NA        NA
+64                         cn_05 5863.375       NA        NA
+65                         cn_01 6687.788       NA        NA
+66                           gfi    0.998       NA        NA
+67                          agfi    0.996       NA        NA
+68                          pgfi    0.524       NA        NA
+69                           mfi    1.004       NA        NA
+70                          wrmr    0.740       NA        NA

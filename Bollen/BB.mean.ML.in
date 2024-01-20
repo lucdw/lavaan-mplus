@@ -1,0 +1,32 @@
+
+
+    Title:     Bollen's political democracy example
+    Data:      File      = BB.missing.raw;
+               Type      = individual;
+    Variable:  Names     = y1 y2 y3 y4 y5 y6 y7 y8 x1 x2 x3;
+               missing are all (-999999);
+    Analysis:
+               Estimator = ML;
+    !           information = expected;
+               convergence = 0.0000001;
+               h1convergence = 0.00000001;
+    Model:
+               dem60 by y1 (1);
+               dem60 by y2 (2);
+               dem60 by y3 (3);
+               dem60 by y4 (4);
+               dem65 by y5 (1);
+               dem65 by y6 (2);
+               dem65 by y7 (3);
+               dem65 by y8 (4);
+               ind60 by x1 x2 x3;
+               dem60 on ind60;
+               dem65 on ind60 dem60;
+               y1 y2 y3 y4 y2 y6 pwith y5 y6 y7 y8 y4 y8;
+    Output:    standardized;
+
+
+
+
+
+

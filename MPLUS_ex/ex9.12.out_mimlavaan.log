@@ -1,0 +1,159 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:28:19 2024 
+# file:  ex9.12.out 
+
+   lhs op rhs group type   lav   mpl delta
+1   iw =~  y1     1  est 1.000 1.000 0.000
+2   iw =~  y2     1  est 1.000 1.000 0.000
+3   iw =~  y3     1  est 1.000 1.000 0.000
+4   iw =~  y4     1  est 1.000 1.000 0.000
+5   sw =~  y1     1  est 0.000 0.000 0.000
+6   sw =~  y2     1  est 1.000 1.000 0.000
+7   sw =~  y3     1  est 2.000 2.000 0.000
+8   sw =~  y4     1  est 3.000 3.000 0.000
+9   iw ~~  iw     1  est 1.024 1.024 0.000
+10  sw ~~  sw     1  est 0.473 0.473 0.000
+11  iw ~~  sw     1  est 0.022 0.022 0.000
+12  y1 ~~  y1     1  est 0.511    NA    NA
+13  y2 ~~  y2     1  est 0.511    NA    NA
+14  y3 ~~  y3     1  est 0.511    NA    NA
+15  y4 ~~  y4     1  est 0.511    NA    NA
+16  iw  ~   x     1  est 1.006 1.006 0.000
+17  sw  ~   x     1  est 0.167 0.167 0.000
+18  y1 ~1         1  est 0.000 0.000 0.000
+19  y2 ~1         1  est 0.000 0.000 0.000
+20  y3 ~1         1  est 0.000 0.000 0.000
+21  y4 ~1         1  est 0.000 0.000 0.000
+22  ib =~  y1     1  est 1.000 1.000 0.000
+23  ib =~  y2     1  est 1.000 1.000 0.000
+24  ib =~  y3     1  est 1.000 1.000 0.000
+25  ib =~  y4     1  est 1.000 1.000 0.000
+26  sb =~  y1     1  est 0.000 0.000 0.000
+27  sb =~  y2     1  est 1.000 1.000 0.000
+28  sb =~  y3     1  est 2.000 2.000 0.000
+29  sb =~  y4     1  est 3.000 3.000 0.000
+30  ib ~~  ib     1  est 0.459 0.459 0.000
+31  sb ~~  sb     1  est 0.214 0.214 0.000
+32  ib ~~  sb     1  est 0.023 0.023 0.000
+33  ib ~1         1  est 1.059 1.059 0.000
+34  sb ~1         1  est 0.461 0.461 0.000
+35  y1 ~1         1  est 0.000 0.000 0.000
+36  y2 ~1         1  est 0.000 0.000 0.000
+37  y3 ~1         1  est 0.000 0.000 0.000
+38  y4 ~1         1  est 0.000 0.000 0.000
+39  y1 ~~  y1     1  est 0.000    NA    NA
+40  y2 ~~  y2     1  est 0.000    NA    NA
+41  y3 ~~  y3     1  est 0.000    NA    NA
+42  y4 ~~  y4     1  est 0.000    NA    NA
+43  ib  ~   w     1  est 0.574 0.574 0.000
+44  sb  ~   w     1  est 0.227 0.227 0.000
+45  iw =~  y1     1   se 0.000 0.000 0.000
+46  iw =~  y2     1   se 0.000 0.000 0.000
+47  iw =~  y3     1   se 0.000 0.000 0.000
+48  iw =~  y4     1   se 0.000 0.000 0.000
+49  sw =~  y1     1   se 0.000 0.000 0.000
+50  sw =~  y2     1   se 0.000 0.000 0.000
+51  sw =~  y3     1   se 0.000 0.000 0.000
+52  sw =~  y4     1   se 0.000 0.000 0.000
+53  iw ~~  iw     1   se 0.070 0.070 0.000
+54  sw ~~  sw     1   se 0.025 0.025 0.000
+55  iw ~~  sw     1   se 0.032 0.032 0.000
+56  y1 ~~  y1     1   se 0.015    NA    NA
+57  y2 ~~  y2     1   se 0.015    NA    NA
+58  y3 ~~  y3     1   se 0.015    NA    NA
+59  y4 ~~  y4     1   se 0.015    NA    NA
+60  iw  ~   x     1   se 0.038 0.038 0.000
+61  sw  ~   x     1   se 0.027 0.027 0.000
+62  y1 ~1         1   se 0.000 0.000 0.000
+63  y2 ~1         1   se 0.000 0.000 0.000
+64  y3 ~1         1   se 0.000 0.000 0.000
+65  y4 ~1         1   se 0.000 0.000 0.000
+66  ib =~  y1     1   se 0.000 0.000 0.000
+67  ib =~  y2     1   se 0.000 0.000 0.000
+68  ib =~  y3     1   se 0.000 0.000 0.000
+69  ib =~  y4     1   se 0.000 0.000 0.000
+70  sb =~  y1     1   se 0.000 0.000 0.000
+71  sb =~  y2     1   se 0.000 0.000 0.000
+72  sb =~  y3     1   se 0.000 0.000 0.000
+73  sb =~  y4     1   se 0.000 0.000 0.000
+74  ib ~~  ib     1   se 0.081 0.080 0.001
+75  sb ~~  sb     1   se 0.035 0.035 0.000
+76  ib ~~  sb     1   se 0.042 0.042 0.000
+77  ib ~1         1   se 0.076 0.076 0.000
+78  sb ~1         1   se 0.051 0.051 0.000
+79  y1 ~1         1   se 0.000 0.000 0.000
+80  y2 ~1         1   se 0.000 0.000 0.000
+81  y3 ~1         1   se 0.000 0.000 0.000
+82  y4 ~1         1   se 0.000 0.000 0.000
+83  y1 ~~  y1     1   se 0.000    NA    NA
+84  y2 ~~  y2     1   se 0.000    NA    NA
+85  y3 ~~  y3     1   se 0.000    NA    NA
+86  y4 ~~  y4     1   se 0.000    NA    NA
+87  ib  ~   w     1   se 0.080 0.080 0.000
+88  sb  ~   w     1   se 0.041 0.041 0.000
+
+                             fit       lav       mpl     delta
+1                           npar    13.000    13.000     0.000
+2                           fmin     3.395        NA        NA
+3                          chisq    17.469    26.337    -8.868
+4                             df    19.000    19.000     0.000
+5                         pvalue     0.558     0.121     0.437
+6                   chisq.scaled    19.446    26.337    -6.891
+7                      df.scaled    19.000    19.000     0.000
+8                  pvalue.scaled     0.429     0.121     0.308
+9           chisq.scaling.factor     0.898     0.663     0.235
+10                baseline.chisq  4882.544  7171.664 -2289.120
+11                   baseline.df    20.000    20.000     0.000
+12               baseline.pvalue     0.000     0.000     0.000
+13         baseline.chisq.scaled  5401.215  7171.664 -1770.449
+14            baseline.df.scaled    20.000    20.000     0.000
+15        baseline.pvalue.scaled     0.000     0.000     0.000
+16 baseline.chisq.scaling.factor     0.904        NA        NA
+17                           cfi     1.000     0.999     0.001
+18                           tli     1.000     0.999     0.001
+19                    cfi.scaled     1.000     0.999     0.001
+20                    tli.scaled     1.000     0.999     0.001
+21                    cfi.robust     1.000        NA        NA
+22                    tli.robust     1.000        NA        NA
+23                          nnfi     1.000        NA        NA
+24                           rfi     0.996        NA        NA
+25                           nfi     0.996        NA        NA
+26                          pnfi     0.947        NA        NA
+27                           ifi     1.000        NA        NA
+28                           rni     1.000        NA        NA
+29                   nnfi.scaled     1.000        NA        NA
+30                    rfi.scaled     0.996        NA        NA
+31                    nfi.scaled     0.996        NA        NA
+32                   pnfi.scaled     0.947        NA        NA
+33                    ifi.scaled     1.000        NA        NA
+34                    rni.scaled     1.000        NA        NA
+35                   nnfi.robust     1.000        NA        NA
+36                    rni.robust     1.000        NA        NA
+37                          logl -6531.551 -6531.551     0.000
+38             unrestricted.logl -6522.817 -6522.817     0.000
+39                           aic 13089.103 13089.103     0.000
+40                           bic 13152.904 13152.904     0.000
+41                          bic2 13111.615 13111.615     0.000
+42             scaling.factor.h1     0.922        NA        NA
+43             scaling.factor.h0     0.777        NA        NA
+44                         rmsea     0.000     0.020    -0.020
+45                rmsea.ci.lower     0.000        NA        NA
+46                rmsea.ci.upper     0.025        NA        NA
+47                rmsea.ci.level     0.900        NA        NA
+48                  rmsea.pvalue     1.000        NA        NA
+49                rmsea.close.h0     0.050        NA        NA
+50         rmsea.notclose.pvalue     0.000        NA        NA
+51             rmsea.notclose.h0     0.080        NA        NA
+52                  rmsea.scaled     0.005     0.020    -0.015
+53         rmsea.ci.lower.scaled     0.000        NA        NA
+54         rmsea.ci.upper.scaled     0.029        NA        NA
+55           rmsea.pvalue.scaled     1.000        NA        NA
+56  rmsea.notclose.pvalue.scaled     0.000        NA        NA
+57                  rmsea.robust     0.005        NA        NA
+58         rmsea.ci.lower.robust     0.000        NA        NA
+59         rmsea.ci.upper.robust     0.027        NA        NA
+60           rmsea.pvalue.robust     1.000        NA        NA
+61  rmsea.notclose.pvalue.robust     0.000        NA        NA
+62                          srmr     0.014        NA        NA
+63                   srmr_within     0.008        NA        NA
+64                  srmr_between     0.006        NA        NA

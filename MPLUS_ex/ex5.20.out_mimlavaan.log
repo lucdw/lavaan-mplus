@@ -1,0 +1,197 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:25:52 2024 
+# file:  ex5.20.out 
+
+      lhs op                                 rhs group        type    lav    mpl  delta
+1      f1 =~                                  y1     1         est  1.000  1.000  0.000
+2      f1 =~                                  y2     1         est  1.060  1.060  0.000
+3      f1 =~                                  y3     1         est  0.998  0.998  0.000
+4      f2 =~                                  y4     1         est  1.000  1.000  0.000
+5      f2 =~                                  y5     1         est  0.876  0.876  0.000
+6      f2 =~                                  y6     1         est  0.813  0.813  0.000
+7      f1 ~~                                  f1     1         est  0.942  0.942  0.000
+8      f2 ~~                                  f2     1         est  0.937  0.937  0.000
+9      y1 ~~                                  y1     1         est  0.529  0.529  0.000
+10     y2 ~~                                  y2     1         est  0.408  0.408  0.000
+11     y3 ~~                                  y3     1         est  0.509  0.509  0.000
+12     y4 ~~                                  y4     1         est  0.424  0.424  0.000
+13     y5 ~~                                  y5     1         est  0.277  0.277  0.000
+14     y6 ~~                                  y6     1         est  0.336  0.336  0.000
+15     f1 ~~                                  f2     1         est -0.024 -0.024  0.000
+16     y1 ~1                                         1         est -0.019 -0.019  0.000
+17     y2 ~1                                         1         est  0.015  0.015  0.000
+18     y3 ~1                                         1         est  0.022  0.022  0.000
+19     y4 ~1                                         1         est -0.018 -0.018  0.000
+20     y5 ~1                                         1         est -0.015 -0.015  0.000
+21     y6 ~1                                         1         est  0.022  0.022  0.000
+22   rel2 :=         lam2^2*vf1/(lam2^2*vf1+ve2)     1         est  0.722     NA     NA
+23   rel5 :=         lam5^2*vf2/(lam5^2*vf2+ve5)     1         est  0.722     NA     NA
+24   rel5 ==                                rel2     1         est  0.000     NA     NA
+25  stan3 := lam3*sqrt(vf1)/sqrt(lam3^2*vf1+ve3)     1         est  0.805     NA     NA
+26  stan6 := lam6*sqrt(vf2)/sqrt(lam6^2*vf2+ve6)     1         est  0.805     NA     NA
+27      0 ==                         stan6-stan3     1         est  0.000     NA     NA
+28    ve2  >                                 ve5     1         est  0.131     NA     NA
+29    ve4  >                                   0     1         est  0.424     NA     NA
+30     f1 =~                                  y1     1          se  0.000  0.000  0.000
+31     f1 =~                                  y2     1          se  0.052  0.052  0.000
+32     f1 =~                                  y3     1          se  0.050  0.051 -0.001
+33     f2 =~                                  y4     1          se  0.000  0.000  0.000
+34     f2 =~                                  y5     1          se  0.041  0.041  0.000
+35     f2 =~                                  y6     1          se  0.040  0.040  0.000
+36     f1 ~~                                  f1     1          se  0.091  0.092 -0.001
+37     f2 ~~                                  f2     1          se  0.088  0.087  0.001
+38     y1 ~~                                  y1     1          se  0.048  0.048  0.000
+39     y2 ~~                                  y2     1          se  0.037  0.037  0.000
+40     y3 ~~                                  y3     1          se  0.039  0.039  0.000
+41     y4 ~~                                  y4     1          se  0.042  0.042  0.000
+42     y5 ~~                                  y5     1          se  0.025  0.025  0.000
+43     y6 ~~                                  y6     1          se  0.025  0.026 -0.001
+44     f1 ~~                                  f2     1          se  0.049  0.049  0.000
+45     y1 ~1                                         1          se  0.054  0.054  0.000
+46     y2 ~1                                         1          se  0.054  0.054  0.000
+47     y3 ~1                                         1          se  0.054  0.054  0.000
+48     y4 ~1                                         1          se  0.052  0.052  0.000
+49     y5 ~1                                         1          se  0.045  0.045  0.000
+50     y6 ~1                                         1          se  0.044  0.044  0.000
+51   rel2 :=         lam2^2*vf1/(lam2^2*vf1+ve2)     1          se  0.024     NA     NA
+52   rel5 :=         lam5^2*vf2/(lam5^2*vf2+ve5)     1          se  0.024     NA     NA
+53   rel5 ==                                rel2     1          se  0.000     NA     NA
+54  stan3 := lam3*sqrt(vf1)/sqrt(lam3^2*vf1+ve3)     1          se  0.015     NA     NA
+55  stan6 := lam6*sqrt(vf2)/sqrt(lam6^2*vf2+ve6)     1          se  0.015     NA     NA
+56      0 ==                         stan6-stan3     1          se  0.000     NA     NA
+57    ve2  >                                 ve5     1          se  0.000     NA     NA
+58    ve4  >                                   0     1          se  0.000     NA     NA
+59     f1 =~                                  y1     1     est.std  0.971  0.971  0.000
+60     f1 =~                                  y2     1     est.std  1.029  1.029  0.000
+61     f1 =~                                  y3     1     est.std  0.969  0.969  0.000
+62     f2 =~                                  y4     1     est.std  0.968  0.968  0.000
+63     f2 =~                                  y5     1     est.std  0.848  0.848  0.000
+64     f2 =~                                  y6     1     est.std  0.787  0.787  0.000
+65     f1 ~~                                  f1     1     est.std  1.000  1.000  0.000
+66     f2 ~~                                  f2     1     est.std  1.000  1.000  0.000
+67     y1 ~~                                  y1     1     est.std  0.529  0.529  0.000
+68     y2 ~~                                  y2     1     est.std  0.408  0.408  0.000
+69     y3 ~~                                  y3     1     est.std  0.509  0.509  0.000
+70     y4 ~~                                  y4     1     est.std  0.424  0.424  0.000
+71     y5 ~~                                  y5     1     est.std  0.277  0.277  0.000
+72     y6 ~~                                  y6     1     est.std  0.336  0.336  0.000
+73     f1 ~~                                  f2     1     est.std -0.026 -0.026  0.000
+74     y1 ~1                                         1     est.std -0.019 -0.019  0.000
+75     y2 ~1                                         1     est.std  0.015  0.015  0.000
+76     y3 ~1                                         1     est.std  0.022  0.022  0.000
+77     y4 ~1                                         1     est.std -0.018 -0.018  0.000
+78     y5 ~1                                         1     est.std -0.015 -0.015  0.000
+79     y6 ~1                                         1     est.std  0.022  0.022  0.000
+80   rel2 :=         lam2^2*vf1/(lam2^2*vf1+ve2)     1     est.std  0.722     NA     NA
+81   rel5 :=         lam5^2*vf2/(lam5^2*vf2+ve5)     1     est.std  0.722     NA     NA
+82   rel5 ==                                rel2     1     est.std  0.000     NA     NA
+83  stan3 := lam3*sqrt(vf1)/sqrt(lam3^2*vf1+ve3)     1     est.std  0.805     NA     NA
+84  stan6 := lam6*sqrt(vf2)/sqrt(lam6^2*vf2+ve6)     1     est.std  0.805     NA     NA
+85      0 ==                         stan6-stan3     1     est.std  0.000     NA     NA
+86    ve2  >                                 ve5     1     est.std  0.131     NA     NA
+87    ve4  >                                   0     1     est.std  0.424     NA     NA
+88     f1 =~                                  y1     1 est.std.all  0.800  0.800  0.000
+89     f1 =~                                  y2     1 est.std.all  0.850  0.850  0.000
+90     f1 =~                                  y3     1 est.std.all  0.805  0.805  0.000
+91     f2 =~                                  y4     1 est.std.all  0.830  0.830  0.000
+92     f2 =~                                  y5     1 est.std.all  0.850  0.850  0.000
+93     f2 =~                                  y6     1 est.std.all  0.805  0.805  0.000
+94     f1 ~~                                  f1     1 est.std.all  1.000  1.000  0.000
+95     f2 ~~                                  f2     1 est.std.all  1.000  1.000  0.000
+96     y1 ~~                                  y1     1 est.std.all  0.359  0.359  0.000
+97     y2 ~~                                  y2     1 est.std.all  0.278  0.278  0.000
+98     y3 ~~                                  y3     1 est.std.all  0.352  0.352  0.000
+99     y4 ~~                                  y4     1 est.std.all  0.311  0.311  0.000
+100    y5 ~~                                  y5     1 est.std.all  0.278  0.278  0.000
+101    y6 ~~                                  y6     1 est.std.all  0.352  0.352  0.000
+102    f1 ~~                                  f2     1 est.std.all -0.026 -0.026  0.000
+103    y1 ~1                                         1 est.std.all -0.016 -0.016  0.000
+104    y2 ~1                                         1 est.std.all  0.012  0.012  0.000
+105    y3 ~1                                         1 est.std.all  0.019  0.019  0.000
+106    y4 ~1                                         1 est.std.all -0.016 -0.016  0.000
+107    y5 ~1                                         1 est.std.all -0.015 -0.015  0.000
+108    y6 ~1                                         1 est.std.all  0.022  0.022  0.000
+109  rel2 :=         lam2^2*vf1/(lam2^2*vf1+ve2)     1 est.std.all  0.722     NA     NA
+110  rel5 :=         lam5^2*vf2/(lam5^2*vf2+ve5)     1 est.std.all  0.722     NA     NA
+111  rel5 ==                                rel2     1 est.std.all  0.000     NA     NA
+112 stan3 := lam3*sqrt(vf1)/sqrt(lam3^2*vf1+ve3)     1 est.std.all  0.805     NA     NA
+113 stan6 := lam6*sqrt(vf2)/sqrt(lam6^2*vf2+ve6)     1 est.std.all  0.805     NA     NA
+114     0 ==                         stan6-stan3     1 est.std.all  0.000     NA     NA
+115   ve2  >                                 ve5     1 est.std.all  0.000     NA     NA
+116   ve4  >                                   0     1 est.std.all  0.311     NA     NA
+117    f1 =~                                  y1     1 est.std.nox  0.800  0.800  0.000
+118    f1 =~                                  y2     1 est.std.nox  0.850  0.850  0.000
+119    f1 =~                                  y3     1 est.std.nox  0.805  0.805  0.000
+120    f2 =~                                  y4     1 est.std.nox  0.830  0.830  0.000
+121    f2 =~                                  y5     1 est.std.nox  0.850  0.850  0.000
+122    f2 =~                                  y6     1 est.std.nox  0.805  0.805  0.000
+123    f1 ~~                                  f1     1 est.std.nox  1.000  1.000  0.000
+124    f2 ~~                                  f2     1 est.std.nox  1.000  1.000  0.000
+125    y1 ~~                                  y1     1 est.std.nox  0.359  0.359  0.000
+126    y2 ~~                                  y2     1 est.std.nox  0.278  0.278  0.000
+127    y3 ~~                                  y3     1 est.std.nox  0.352  0.352  0.000
+128    y4 ~~                                  y4     1 est.std.nox  0.311  0.311  0.000
+129    y5 ~~                                  y5     1 est.std.nox  0.278  0.278  0.000
+130    y6 ~~                                  y6     1 est.std.nox  0.352  0.352  0.000
+131    f1 ~~                                  f2     1 est.std.nox -0.026 -0.026  0.000
+132    y1 ~1                                         1 est.std.nox -0.016 -0.016  0.000
+133    y2 ~1                                         1 est.std.nox  0.012  0.012  0.000
+134    y3 ~1                                         1 est.std.nox  0.019  0.019  0.000
+135    y4 ~1                                         1 est.std.nox -0.016 -0.016  0.000
+136    y5 ~1                                         1 est.std.nox -0.015 -0.015  0.000
+137    y6 ~1                                         1 est.std.nox  0.022  0.022  0.000
+138  rel2 :=         lam2^2*vf1/(lam2^2*vf1+ve2)     1 est.std.nox  0.722     NA     NA
+139  rel5 :=         lam5^2*vf2/(lam5^2*vf2+ve5)     1 est.std.nox  0.722     NA     NA
+140  rel5 ==                                rel2     1 est.std.nox  0.000     NA     NA
+141 stan3 := lam3*sqrt(vf1)/sqrt(lam3^2*vf1+ve3)     1 est.std.nox  0.805     NA     NA
+142 stan6 := lam6*sqrt(vf2)/sqrt(lam6^2*vf2+ve6)     1 est.std.nox  0.805     NA     NA
+143     0 ==                         stan6-stan3     1 est.std.nox  0.000     NA     NA
+144   ve2  >                                 ve5     1 est.std.nox  0.000     NA     NA
+145   ve4  >                                   0     1 est.std.nox  0.311     NA     NA
+
+                     fit       lav       mpl delta
+1                   npar    17.000    17.000     0
+2                   fmin     0.004        NA    NA
+3                  chisq     4.090     4.090     0
+4                     df    10.000    10.000     0
+5                 pvalue     0.943     0.943     0
+6         baseline.chisq  1418.024  1418.024     0
+7            baseline.df    15.000    15.000     0
+8        baseline.pvalue     0.000     0.000     0
+9                    cfi     1.000     1.000     0
+10                   tli     1.006     1.006     0
+11                  nnfi     1.006        NA    NA
+12                   rfi     0.996        NA    NA
+13                   nfi     0.997        NA    NA
+14                  pnfi     0.665        NA    NA
+15                   ifi     1.004        NA    NA
+16                   rni     1.004        NA    NA
+17                  logl -3898.949 -3898.949     0
+18     unrestricted.logl -3896.904 -3896.904     0
+19                   aic  7831.898  7831.898     0
+20                   bic  7903.547  7903.547     0
+21                  bic2  7849.588  7849.588     0
+22                 rmsea     0.000     0.000     0
+23        rmsea.ci.lower     0.000     0.000     0
+24        rmsea.ci.upper     0.009     0.009     0
+25        rmsea.ci.level     0.900        NA    NA
+26          rmsea.pvalue     0.999     0.999     0
+27        rmsea.close.h0     0.050        NA    NA
+28 rmsea.notclose.pvalue     0.000        NA    NA
+29     rmsea.notclose.h0     0.080        NA    NA
+30                   rmr     0.015        NA    NA
+31            rmr_nomean     0.017        NA    NA
+32                  srmr     0.012     0.012     0
+33          srmr_bentler     0.012        NA    NA
+34   srmr_bentler_nomean     0.014        NA    NA
+35                  crmr     0.013        NA    NA
+36           crmr_nomean     0.015        NA    NA
+37            srmr_mplus     0.012        NA    NA
+38     srmr_mplus_nomean     0.013        NA    NA
+39                 cn_05  2239.218        NA    NA
+40                 cn_01  2838.563        NA    NA
+41                   gfi     0.997        NA    NA
+42                  agfi     0.993        NA    NA
+43                  pgfi     0.369        NA    NA
+44                   mfi     1.006        NA    NA
+45                  ecvi     0.076        NA    NA

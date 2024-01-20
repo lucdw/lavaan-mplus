@@ -1,0 +1,83 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:28:32 2024 
+# file:  ex9.1a.out 
+
+   lhs op rhs group type   lav   mpl  delta
+1    y  ~   x     1  est 0.724 0.724  0.000
+2    y ~~   y     1  est 1.022    NA     NA
+3    y ~1         1  est 0.000 1.991 -1.991
+4    y  ~   w     1  est 0.570 0.570  0.000
+5    y  ~  xm     1  est 0.976 0.976  0.000
+6    y ~~   y     1  est 0.570    NA     NA
+7    y ~1         1  est 1.975 1.991 -0.016
+8    y  ~   x     1   se 0.033 0.033  0.000
+9    y ~~   y     1   se 0.041    NA     NA
+10   y ~1         1   se 0.000 0.080 -0.080
+11   y  ~   w     1   se 0.108 0.108  0.000
+12   y  ~  xm     1   se 0.160 0.160  0.000
+13   y ~~   y     1   se 0.088    NA     NA
+14   y ~1         1   se 0.080 0.080  0.000
+
+                             fit       lav       mpl  delta
+1                           npar     6.000     6.000  0.000
+2                           fmin     1.135        NA     NA
+3                          chisq     0.000     0.000  0.000
+4                             df     0.000     0.000  0.000
+5                         pvalue        NA     0.000     NA
+6                   chisq.scaled     0.000     0.000  0.000
+7                      df.scaled     0.000     0.000  0.000
+8                  pvalue.scaled        NA     0.000     NA
+9           chisq.scaling.factor        NA     1.000     NA
+10                baseline.chisq   488.572   491.881 -3.309
+11                   baseline.df     3.000     3.000  0.000
+12               baseline.pvalue     0.000     0.000  0.000
+13         baseline.chisq.scaled   491.932   491.881  0.051
+14            baseline.df.scaled     3.000     3.000  0.000
+15        baseline.pvalue.scaled     0.000     0.000  0.000
+16 baseline.chisq.scaling.factor     0.993        NA     NA
+17                           cfi     1.000     1.000  0.000
+18                           tli     1.000     1.000  0.000
+19                    cfi.scaled     1.000     1.000  0.000
+20                    tli.scaled     1.000     1.000  0.000
+21                    cfi.robust        NA        NA     NA
+22                    tli.robust        NA        NA     NA
+23                          nnfi     1.000        NA     NA
+24                           rfi     1.000        NA     NA
+25                           nfi     1.000        NA     NA
+26                          pnfi     0.000        NA     NA
+27                           ifi     1.000        NA     NA
+28                           rni     1.000        NA     NA
+29                   nnfi.scaled     1.000        NA     NA
+30                    rfi.scaled     1.000        NA     NA
+31                    nfi.scaled     1.000        NA     NA
+32                   pnfi.scaled     0.000        NA     NA
+33                    ifi.scaled     1.000        NA     NA
+34                    rni.scaled     1.000        NA     NA
+35                   nnfi.robust        NA        NA     NA
+36                    rni.robust        NA        NA     NA
+37                          logl -1525.938 -1525.938  0.000
+38             unrestricted.logl -1525.938 -1525.938  0.000
+39                           aic  3063.876  3063.876  0.000
+40                           bic  3093.322  3093.322  0.000
+41                          bic2  3074.266  3074.266  0.000
+42                         rmsea     0.000     0.000  0.000
+43                rmsea.ci.lower     0.000        NA     NA
+44                rmsea.ci.upper     0.000        NA     NA
+45                rmsea.ci.level     0.900        NA     NA
+46                  rmsea.pvalue        NA        NA     NA
+47                rmsea.close.h0     0.050        NA     NA
+48         rmsea.notclose.pvalue        NA        NA     NA
+49             rmsea.notclose.h0     0.080        NA     NA
+50                  rmsea.scaled        NA     0.000     NA
+51         rmsea.ci.lower.scaled        NA        NA     NA
+52         rmsea.ci.upper.scaled        NA        NA     NA
+53           rmsea.pvalue.scaled        NA        NA     NA
+54  rmsea.notclose.pvalue.scaled        NA        NA     NA
+55                  rmsea.robust     0.000        NA     NA
+56         rmsea.ci.lower.robust     0.000        NA     NA
+57         rmsea.ci.upper.robust     0.000        NA     NA
+58           rmsea.pvalue.robust        NA        NA     NA
+59  rmsea.notclose.pvalue.robust        NA        NA     NA
+60                          srmr     0.000        NA     NA
+61                   srmr_within     0.000        NA     NA
+62                  srmr_between     0.000        NA     NA

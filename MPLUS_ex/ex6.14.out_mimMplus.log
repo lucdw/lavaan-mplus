@@ -1,0 +1,141 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:27:59 2024 
+# file:  ex6.14.out 
+
+   lhs op rhs group type    lav    mpl delta
+1   f1 =~ y11     1  est  1.000  1.000     0
+2   f1 =~ y21     1  est  1.003  1.003     0
+3   f1 =~ y31     1  est  0.960  0.960     0
+4   f2 =~ y12     1  est  1.000  1.000     0
+5   f2 =~ y22     1  est  1.003  1.003     0
+6   f2 =~ y32     1  est  0.960  0.960     0
+7   f3 =~ y13     1  est  1.000  1.000     0
+8   f3 =~ y23     1  est  1.003  1.003     0
+9   f3 =~ y33     1  est  0.960  0.960     0
+10 y11 ~1         1  est -0.519 -0.519     0
+11 y12 ~1         1  est -0.519 -0.519     0
+12 y13 ~1         1  est -0.519 -0.519     0
+13 y21 ~1         1  est -0.017 -0.017     0
+14 y22 ~1         1  est -0.017 -0.017     0
+15 y23 ~1         1  est -0.017 -0.017     0
+16 y31 ~1         1  est  0.540  0.540     0
+17 y32 ~1         1  est  0.540  0.540     0
+18 y33 ~1         1  est  0.540  0.540     0
+19   i =~  f1     1  est  1.000  1.000     0
+20   i =~  f2     1  est  1.000  1.000     0
+21   i =~  f3     1  est  1.000  1.000     0
+22   s =~  f1     1  est  0.000  0.000     0
+23   s =~  f2     1  est  1.000  1.000     0
+24   s =~  f3     1  est  2.000  2.000     0
+25   i ~~   s     1  est -0.102 -0.102     0
+26   s ~1         1  est  1.023  1.023     0
+27 y11 ~~ y11     1  est  0.519  0.519     0
+28 y21 ~~ y21     1  est  0.466  0.466     0
+29 y31 ~~ y31     1  est  0.543  0.543     0
+30 y12 ~~ y12     1  est  0.520  0.520     0
+31 y22 ~~ y22     1  est  0.510  0.510     0
+32 y32 ~~ y32     1  est  0.497  0.497     0
+33 y13 ~~ y13     1  est  0.542  0.542     0
+34 y23 ~~ y23     1  est  0.378  0.378     0
+35 y33 ~~ y33     1  est  0.536  0.536     0
+36  f1 ~~  f1     1  est  0.329  0.329     0
+37  f2 ~~  f2     1  est  0.501  0.501     0
+38  f3 ~~  f3     1  est  0.210  0.210     0
+39   i ~~   i     1  est  1.125  1.125     0
+40   s ~~   s     1  est  0.269  0.269     0
+41  f1 =~ y11     1   se  0.000  0.000     0
+42  f1 =~ y21     1   se  0.018  0.018     0
+43  f1 =~ y31     1   se  0.018  0.018     0
+44  f2 =~ y12     1   se  0.000  0.000     0
+45  f2 =~ y22     1   se  0.018  0.018     0
+46  f2 =~ y32     1   se  0.018  0.018     0
+47  f3 =~ y13     1   se  0.000  0.000     0
+48  f3 =~ y23     1   se  0.018  0.018     0
+49  f3 =~ y33     1   se  0.018  0.018     0
+50 y11 ~1         1   se  0.059  0.059     0
+51 y12 ~1         1   se  0.059  0.059     0
+52 y13 ~1         1   se  0.059  0.059     0
+53 y21 ~1         1   se  0.059  0.059     0
+54 y22 ~1         1   se  0.059  0.059     0
+55 y23 ~1         1   se  0.059  0.059     0
+56 y31 ~1         1   se  0.057  0.057     0
+57 y32 ~1         1   se  0.057  0.057     0
+58 y33 ~1         1   se  0.057  0.057     0
+59   i =~  f1     1   se  0.000  0.000     0
+60   i =~  f2     1   se  0.000  0.000     0
+61   i =~  f3     1   se  0.000  0.000     0
+62   s =~  f1     1   se  0.000  0.000     0
+63   s =~  f2     1   se  0.000  0.000     0
+64   s =~  f3     1   se  0.000  0.000     0
+65   i ~~   s     1   se  0.066  0.066     0
+66   s ~1         1   se  0.033  0.033     0
+67 y11 ~~ y11     1   se  0.047  0.047     0
+68 y21 ~~ y21     1   se  0.045  0.045     0
+69 y31 ~~ y31     1   se  0.047  0.047     0
+70 y12 ~~ y12     1   se  0.046  0.046     0
+71 y22 ~~ y22     1   se  0.046  0.046     0
+72 y32 ~~ y32     1   se  0.044  0.044     0
+73 y13 ~~ y13     1   se  0.048  0.048     0
+74 y23 ~~ y23     1   se  0.040  0.040     0
+75 y33 ~~ y33     1   se  0.046  0.046     0
+76  f1 ~~  f1     1   se  0.111  0.111     0
+77  f2 ~~  f2     1   se  0.066  0.066     0
+78  f3 ~~  f3     1   se  0.126  0.126     0
+79   i ~~   i     1   se  0.129  0.129     0
+80   s ~~   s     1   se  0.060  0.060     0
+
+                            fit       lav       mpl delta
+1                          npar    21.000    21.000     0
+2                          fmin     0.037        NA    NA
+3                         chisq    36.949    36.949     0
+4                            df    33.000    33.000     0
+5                        pvalue     0.291     0.291     0
+6                baseline.chisq  3565.847  3565.847     0
+7                   baseline.df    36.000    36.000     0
+8               baseline.pvalue     0.000     0.000     0
+9                           cfi     0.999     0.999     0
+10                          tli     0.999     0.999     0
+11                   cfi.robust     0.999        NA    NA
+12                   tli.robust     0.999        NA    NA
+13                         nnfi     0.999        NA    NA
+14                          rfi     0.989        NA    NA
+15                          nfi     0.990        NA    NA
+16                         pnfi     0.907        NA    NA
+17                          ifi     0.999        NA    NA
+18                          rni     0.999        NA    NA
+19                  nnfi.robust     0.999        NA    NA
+20                   rni.robust     0.999        NA    NA
+21                         logl -6357.999 -6357.999     0
+22            unrestricted.logl -6339.524 -6339.524     0
+23                          aic 12757.998 12757.998     0
+24                          bic 12846.504 12846.504     0
+25                         bic2 12779.849 12779.849     0
+26                        rmsea     0.015     0.015     0
+27               rmsea.ci.lower     0.000     0.000     0
+28               rmsea.ci.upper     0.037     0.037     0
+29               rmsea.ci.level     0.900        NA    NA
+30                 rmsea.pvalue     0.998     0.998     0
+31               rmsea.close.h0     0.050        NA    NA
+32        rmsea.notclose.pvalue     0.000        NA    NA
+33            rmsea.notclose.h0     0.080        NA    NA
+34                 rmsea.robust     0.015        NA    NA
+35        rmsea.ci.lower.robust     0.000        NA    NA
+36        rmsea.ci.upper.robust     0.037        NA    NA
+37          rmsea.pvalue.robust     0.998        NA    NA
+38 rmsea.notclose.pvalue.robust     0.000        NA    NA
+39                          rmr     0.061        NA    NA
+40                   rmr_nomean     0.067        NA    NA
+41                         srmr     0.023     0.023     0
+42                 srmr_bentler     0.029        NA    NA
+43          srmr_bentler_nomean     0.031        NA    NA
+44                         crmr     0.016        NA    NA
+45                  crmr_nomean     0.016        NA    NA
+46                   srmr_mplus     0.023        NA    NA
+47            srmr_mplus_nomean     0.024        NA    NA
+48                        cn_05   642.420        NA    NA
+49                        cn_01   742.228        NA    NA
+50                          gfi     0.993        NA    NA
+51                         agfi     0.989        NA    NA
+52                         pgfi     0.607        NA    NA
+53                          mfi     0.996        NA    NA
+54                         ecvi     0.158        NA    NA

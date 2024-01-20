@@ -1,0 +1,23 @@
+
+
+
+
+        TITLE:	this is an example of a quadratic growth
+        	model for a continuous outcome
+        DATA:	FILE IS ex6.9.dat;
+        VARIABLE:	NAMES ARE y11-y14;
+        analysis: convergence = 0.0000001;
+        MODEL:	i s q | y11@0 y12@1 y13@2 y14@3;
+        output: standardized;
+
+
+
+
+
+
+
+
+
+
+
+

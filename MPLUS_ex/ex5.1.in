@@ -1,0 +1,24 @@
+
+
+
+
+        TITLE:	this is an example of a CFA with
+        	continuous factor indicators
+        DATA:	FILE IS ex5.1.dat;
+        VARIABLE:	NAMES ARE y1-y6;
+        analysis: convergence = 0.0000001;
+        MODEL:	f1 BY y1-y3;
+        	f2 BY y4-y6;
+        output: standardized;
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,11 +3,6 @@
 .RData
 .Ruserdata
 lavaan-mplus.Rproj
-*.log
-*.in
-*.bat
-*.sh
-*.rds
 */temp/*
 _*
 */_*

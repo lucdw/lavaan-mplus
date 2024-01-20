@@ -1,0 +1,135 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:26:06 2024 
+# file:  ex5.21.out 
+
+     lhs op               rhs group type   lav   mpl delta
+1     y1 ~1                       1  est 0.008    NA    NA
+2     y2 ~1                       1  est 0.008    NA    NA
+3     y1 ~~                y1     1  est 1.018    NA    NA
+4     y2 ~~                y2     1  est 1.018    NA    NA
+5     y1 ~~                y2     1  est 0.753    NA    NA
+6     fa =~                fa     1  est 0.000    NA    NA
+7     fa ~~                fa     1  est 0.801    NA    NA
+8     fc =~                fc     1  est 0.000    NA    NA
+9     fc ~~                fc     1  est 0.333    NA    NA
+10    fe =~                fe     1  est 0.000    NA    NA
+11    fe ~~                fe     1  est 0.515    NA    NA
+12    fh =~                fh     1  est 0.000    NA    NA
+13    fh ~~                fh     1  est 0.631    NA    NA
+14    y1 ~1                       2  est 0.008 0.008     0
+15    y2 ~1                       2  est 0.008 0.008     0
+16    y1 ~~                y1     2  est 1.018 1.018     0
+17    y2 ~~                y2     2  est 1.018 1.018     0
+18    y1 ~~                y2     2  est 0.432 0.432     0
+19    fa =~                fa     2  est 0.000    NA    NA
+20    fa ~~                fa     2  est 0.801    NA    NA
+21    fc =~                fc     2  est 0.000    NA    NA
+22    fc ~~                fc     2  est 0.333    NA    NA
+23    fe =~                fe     2  est 0.000    NA    NA
+24    fe ~~                fe     2  est 0.515    NA    NA
+25    fh =~                fh     2  est 0.000    NA    NA
+26    fh ~~                fh     2  est 0.631    NA    NA
+27    fa ~1                       2  est 0.000    NA    NA
+28    fc ~1                       2  est 0.000    NA    NA
+29    fe ~1                       2  est 0.000    NA    NA
+30    fh ~1                       2  est 0.000    NA    NA
+31   var ==       a^2+c^2+e^2     0  est 0.000    NA    NA
+32 covmz ==           a^2+c^2     0  est 0.000    NA    NA
+33 covdz ==       0.5*a^2+c^2     0  est 0.000    NA    NA
+34     h == a^2/(a^2+c^2+e^2)     0  est 0.000    NA    NA
+35     a  >                 0     0  est 0.801    NA    NA
+36     c  >                 0     0  est 0.333    NA    NA
+37     e  >                 0     0  est 0.515    NA    NA
+38    y1 ~1                       1   se 0.020    NA    NA
+39    y2 ~1                       1   se 0.020    NA    NA
+40    y1 ~~                y1     1   se 0.026    NA    NA
+41    y2 ~~                y2     1   se 0.026    NA    NA
+42    y1 ~~                y2     1   se 0.028    NA    NA
+43    fa =~                fa     1   se 0.000    NA    NA
+44    fa ~~                fa     1   se 0.035    NA    NA
+45    fc =~                fc     1   se 0.000    NA    NA
+46    fc ~~                fc     1   se 0.078    NA    NA
+47    fe =~                fe     1   se 0.000    NA    NA
+48    fe ~~                fe     1   se 0.011    NA    NA
+49    fh =~                fh     1   se 0.000    NA    NA
+50    fh ~~                fh     1   se 0.053    NA    NA
+51    y1 ~1                       2   se 0.020 0.020     0
+52    y2 ~1                       2   se 0.020 0.020     0
+53    y1 ~~                y1     2   se 0.026 0.026     0
+54    y2 ~~                y2     2   se 0.026 0.026     0
+55    y1 ~~                y2     2   se 0.031 0.031     0
+56    fa =~                fa     2   se 0.000    NA    NA
+57    fa ~~                fa     2   se 0.035    NA    NA
+58    fc =~                fc     2   se 0.000    NA    NA
+59    fc ~~                fc     2   se 0.078    NA    NA
+60    fe =~                fe     2   se 0.000    NA    NA
+61    fe ~~                fe     2   se 0.011    NA    NA
+62    fh =~                fh     2   se 0.000    NA    NA
+63    fh ~~                fh     2   se 0.053    NA    NA
+64    fa ~1                       2   se    NA    NA    NA
+65    fc ~1                       2   se    NA    NA    NA
+66    fe ~1                       2   se    NA    NA    NA
+67    fh ~1                       2   se    NA    NA    NA
+68   var ==       a^2+c^2+e^2     0   se 0.000    NA    NA
+69 covmz ==           a^2+c^2     0   se 0.000    NA    NA
+70 covdz ==       0.5*a^2+c^2     0   se 0.000    NA    NA
+71     h == a^2/(a^2+c^2+e^2)     0   se 0.000    NA    NA
+72     a  >                 0     0   se 0.000    NA    NA
+73     c  >                 0     0   se 0.000    NA    NA
+74     e  >                 0     0   se 0.000    NA    NA
+
+                            fit       lav       mpl  delta
+1                          npar     8.000     4.000  4.000
+2                          fmin     0.001        NA     NA
+3                         chisq     5.161     5.161  0.000
+4                            df     2.000     6.000 -4.000
+5                        pvalue     0.076     0.523 -0.447
+6                baseline.chisq   995.549   995.549  0.000
+7                   baseline.df     2.000     2.000  0.000
+8               baseline.pvalue     0.000     0.000  0.000
+9                           cfi     0.997     1.000 -0.003
+10                          tli     0.997     1.000 -0.003
+11                   cfi.robust     1.000        NA     NA
+12                   tli.robust     1.001        NA     NA
+13                         nnfi     0.997        NA     NA
+14                          rfi     0.995        NA     NA
+15                          nfi     0.995        NA     NA
+16                         pnfi     0.995        NA     NA
+17                          ifi     0.997        NA     NA
+18                          rni     0.997        NA     NA
+19                  nnfi.robust     1.001        NA     NA
+20                   rni.robust     1.001        NA     NA
+21                         logl -5216.004 -5216.004  0.000
+22            unrestricted.logl -5213.423 -5213.423  0.000
+23                          aic 10448.008 10440.008  8.000
+24                          bic 10492.815 10462.411 30.404
+25                         bic2 10467.398 10449.703 17.695
+26                        rmsea     0.040     0.000  0.040
+27               rmsea.ci.lower     0.000     0.000  0.000
+28               rmsea.ci.upper     0.084     0.038  0.046
+29               rmsea.ci.level     0.900        NA     NA
+30                 rmsea.pvalue     0.577     0.993 -0.416
+31               rmsea.close.h0     0.050        NA     NA
+32        rmsea.notclose.pvalue     0.069        NA     NA
+33            rmsea.notclose.h0     0.080        NA     NA
+34                 rmsea.robust     0.000        NA     NA
+35        rmsea.ci.lower.robust     0.000        NA     NA
+36        rmsea.ci.upper.robust     0.104        NA     NA
+37          rmsea.pvalue.robust     0.663        NA     NA
+38 rmsea.notclose.pvalue.robust     0.140        NA     NA
+39                          rmr     0.023        NA     NA
+40                   rmr_nomean     0.025        NA     NA
+41                         srmr     0.022     0.022  0.000
+42                 srmr_bentler     0.023        NA     NA
+43          srmr_bentler_nomean     0.025        NA     NA
+44                         crmr     0.015        NA     NA
+45                  crmr_nomean     0.001        NA     NA
+46                   srmr_mplus     0.022        NA     NA
+47            srmr_mplus_nomean     0.025        NA     NA
+48                        cn_05  2322.697        NA     NA
+49                        cn_01  3570.015        NA     NA
+50                          gfi     0.997        NA     NA
+51                         agfi     0.987        NA     NA
+52                         pgfi     0.199        NA     NA
+53                          mfi     0.999        NA     NA
+54                         ecvi     0.011        NA     NA

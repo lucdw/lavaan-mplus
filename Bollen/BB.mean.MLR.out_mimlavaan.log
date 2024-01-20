@@ -1,0 +1,309 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:21:11 2024 
+# file:  BB.mean.MLR.out 
+
+      lhs op   rhs group        type   lav   mpl delta
+1   dem60 =~    y1     1         est 1.000 1.000 0.000
+2   dem60 =~    y2     1         est 1.206 1.206 0.000
+3   dem60 =~    y3     1         est 1.215 1.215 0.000
+4   dem60 =~    y4     1         est 1.239 1.239 0.000
+5   dem65 =~    y5     1         est 1.000 1.000 0.000
+6   dem65 =~    y6     1         est 1.206 1.206 0.000
+7   dem65 =~    y7     1         est 1.215 1.215 0.000
+8   dem65 =~    y8     1         est 1.239 1.239 0.000
+9   ind60 =~    x1     1         est 1.000 1.000 0.000
+10  ind60 =~    x2     1         est 2.183 2.183 0.000
+11  ind60 =~    x3     1         est 1.825 1.825 0.000
+12  dem60  ~ ind60     1         est 1.475 1.475 0.000
+13  dem65  ~ ind60     1         est 0.598 0.598 0.000
+14  dem65  ~ dem60     1         est 0.836 0.836 0.000
+15     y1 ~~    y5     1         est 0.545 0.545 0.000
+16     y2 ~~    y4     1         est 1.414 1.414 0.000
+17     y2 ~~    y6     1         est 1.781 1.781 0.000
+18     y3 ~~    y7     1         est 1.481 1.481 0.000
+19     y4 ~~    y8     1         est 0.757 0.757 0.000
+20     y6 ~~    y8     1         est 1.425 1.425 0.000
+21     y1 ~~    y1     1         est 1.751 1.751 0.000
+22     y2 ~~    y2     1         est 7.658 7.658 0.000
+23     y3 ~~    y3     1         est 4.714 4.714 0.000
+24     y4 ~~    y4     1         est 3.611 3.611 0.000
+25     y5 ~~    y5     1         est 2.126 2.126 0.000
+26     y6 ~~    y6     1         est 4.854 4.854 0.000
+27     y7 ~~    y7     1         est 3.459 3.459 0.000
+28     y8 ~~    y8     1         est 3.471 3.471 0.000
+29     x1 ~~    x1     1         est 0.084 0.084 0.000
+30     x2 ~~    x2     1         est 0.125 0.125 0.000
+31     x3 ~~    x3     1         est 0.464 0.464 0.000
+32  dem60 ~~ dem60     1         est 3.969 3.969 0.000
+33  dem65 ~~ dem65     1         est 0.320 0.320 0.000
+34  ind60 ~~ ind60     1         est 0.446 0.446 0.000
+35     y1 ~1           1         est 5.576 5.576 0.000
+36     y2 ~1           1         est 4.295 4.295 0.000
+37     y3 ~1           1         est 6.514 6.514 0.000
+38     y4 ~1           1         est 4.416 4.416 0.000
+39     y5 ~1           1         est 5.244 5.244 0.000
+40     y6 ~1           1         est 2.964 2.964 0.000
+41     y7 ~1           1         est 6.259 6.259 0.000
+42     y8 ~1           1         est 4.084 4.084 0.000
+43     x1 ~1           1         est 5.059 5.059 0.000
+44     x2 ~1           1         est 4.792 4.792 0.000
+45     x3 ~1           1         est 3.558 3.558 0.000
+46  dem60 =~    y1     1          se 0.000 0.000 0.000
+47  dem60 =~    y2     1          se 0.140 0.140 0.000
+48  dem60 =~    y3     1          se 0.120 0.120 0.000
+49  dem60 =~    y4     1          se 0.141 0.141 0.000
+50  dem65 =~    y5     1          se 0.000 0.000 0.000
+51  dem65 =~    y6     1          se 0.140 0.140 0.000
+52  dem65 =~    y7     1          se 0.120 0.120 0.000
+53  dem65 =~    y8     1          se 0.141 0.141 0.000
+54  ind60 =~    x1     1          se 0.000 0.000 0.000
+55  ind60 =~    x2     1          se 0.148 0.148 0.000
+56  ind60 =~    x3     1          se 0.143 0.143 0.000
+57  dem60  ~ ind60     1          se 0.353 0.353 0.000
+58  dem65  ~ ind60     1          se 0.247 0.247 0.000
+59  dem65  ~ dem60     1          se 0.076 0.076 0.000
+60     y1 ~~    y5     1          se 0.469 0.469 0.000
+61     y2 ~~    y4     1          se 0.776 0.776 0.000
+62     y2 ~~    y6     1          se 0.966 0.966 0.000
+63     y3 ~~    y7     1          se 0.694 0.694 0.000
+64     y4 ~~    y8     1          se 0.532 0.532 0.000
+65     y6 ~~    y8     1          se 0.904 0.904 0.000
+66     y1 ~~    y1     1          se 0.497 0.497 0.000
+67     y2 ~~    y2     1          se 1.390 1.390 0.000
+68     y3 ~~    y3     1          se 1.150 1.150 0.000
+69     y4 ~~    y4     1          se 0.828 0.828 0.000
+70     y5 ~~    y5     1          se 0.518 0.518 0.000
+71     y6 ~~    y6     1          se 1.032 1.032 0.000
+72     y7 ~~    y7     1          se 0.712 0.712 0.000
+73     y8 ~~    y8     1          se 0.963 0.963 0.000
+74     x1 ~~    x1     1          se 0.019 0.019 0.000
+75     x2 ~~    x2     1          se 0.074 0.074 0.000
+76     x3 ~~    x3     1          se 0.083 0.083 0.000
+77  dem60 ~~ dem60     1          se 0.891 0.891 0.000
+78  dem65 ~~ dem65     1          se 0.258 0.258 0.000
+79  ind60 ~~ ind60     1          se 0.074 0.074 0.000
+80     y1 ~1           1          se 0.304 0.304 0.000
+81     y2 ~1           1          se 0.464 0.464 0.000
+82     y3 ~1           1          se 0.409 0.409 0.000
+83     y4 ~1           1          se 0.395 0.395 0.000
+84     y5 ~1           1          se 0.298 0.298 0.000
+85     y6 ~1           1          se 0.394 0.394 0.000
+86     y7 ~1           1          se 0.392 0.392 0.000
+87     y8 ~1           1          se 0.382 0.382 0.000
+88     x1 ~1           1          se 0.084 0.084 0.000
+89     x2 ~1           1          se 0.173 0.173 0.000
+90     x3 ~1           1          se 0.161 0.161 0.000
+91  dem60 =~    y1     1     est.std 2.222 2.222 0.000
+92  dem60 =~    y2     1     est.std 2.680 2.680 0.000
+93  dem60 =~    y3     1     est.std 2.701 2.701 0.000
+94  dem60 =~    y4     1     est.std 2.754 2.754 0.000
+95  dem65 =~    y5     1     est.std 2.142 2.142 0.000
+96  dem65 =~    y6     1     est.std 2.583 2.583 0.000
+97  dem65 =~    y7     1     est.std 2.603 2.603 0.000
+98  dem65 =~    y8     1     est.std 2.654 2.654 0.000
+99  ind60 =~    x1     1     est.std 0.668 0.668 0.000
+100 ind60 =~    x2     1     est.std 1.458 1.458 0.000
+101 ind60 =~    x3     1     est.std 1.219 1.219 0.000
+102 dem60  ~ ind60     1     est.std 0.443 0.443 0.000
+103 dem65  ~ ind60     1     est.std 0.187 0.187 0.000
+104 dem65  ~ dem60     1     est.std 0.867 0.867 0.000
+105    y1 ~~    y5     1     est.std 0.545 0.545 0.000
+106    y2 ~~    y4     1     est.std 1.414 1.414 0.000
+107    y2 ~~    y6     1     est.std 1.781 1.781 0.000
+108    y3 ~~    y7     1     est.std 1.481 1.481 0.000
+109    y4 ~~    y8     1     est.std 0.757 0.757 0.000
+110    y6 ~~    y8     1     est.std 1.425 1.425 0.000
+111    y1 ~~    y1     1     est.std 1.751 1.751 0.000
+112    y2 ~~    y2     1     est.std 7.658 7.658 0.000
+113    y3 ~~    y3     1     est.std 4.714 4.714 0.000
+114    y4 ~~    y4     1     est.std 3.611 3.611 0.000
+115    y5 ~~    y5     1     est.std 2.126 2.126 0.000
+116    y6 ~~    y6     1     est.std 4.854 4.854 0.000
+117    y7 ~~    y7     1     est.std 3.459 3.459 0.000
+118    y8 ~~    y8     1     est.std 3.471 3.471 0.000
+119    x1 ~~    x1     1     est.std 0.084 0.084 0.000
+120    x2 ~~    x2     1     est.std 0.125 0.125 0.000
+121    x3 ~~    x3     1     est.std 0.464 0.464 0.000
+122 dem60 ~~ dem60     1     est.std 0.804 0.804 0.000
+123 dem65 ~~ dem65     1     est.std 0.070 0.070 0.000
+124 ind60 ~~ ind60     1     est.std 1.000 1.000 0.000
+125    y1 ~1           1     est.std 5.576 5.576 0.000
+126    y2 ~1           1     est.std 4.295 4.295 0.000
+127    y3 ~1           1     est.std 6.514 6.514 0.000
+128    y4 ~1           1     est.std 4.416 4.416 0.000
+129    y5 ~1           1     est.std 5.244 5.244 0.000
+130    y6 ~1           1     est.std 2.964 2.964 0.000
+131    y7 ~1           1     est.std 6.259 6.259 0.000
+132    y8 ~1           1     est.std 4.084 4.084 0.000
+133    x1 ~1           1     est.std 5.059 5.059 0.000
+134    x2 ~1           1     est.std 4.792 4.792 0.000
+135    x3 ~1           1     est.std 3.558 3.558 0.000
+136 dem60 =~    y1     1 est.std.all 0.859 0.859 0.000
+137 dem60 =~    y2     1 est.std.all 0.696 0.696 0.000
+138 dem60 =~    y3     1 est.std.all 0.779 0.779 0.000
+139 dem60 =~    y4     1 est.std.all 0.823 0.823 0.000
+140 dem65 =~    y5     1 est.std.all 0.827 0.827 0.000
+141 dem65 =~    y6     1 est.std.all 0.761 0.761 0.000
+142 dem65 =~    y7     1 est.std.all 0.814 0.814 0.000
+143 dem65 =~    y8     1 est.std.all 0.818 0.818 0.000
+144 ind60 =~    x1     1 est.std.all 0.918 0.918 0.000
+145 ind60 =~    x2     1 est.std.all 0.972 0.972 0.000
+146 ind60 =~    x3     1 est.std.all 0.873 0.873 0.000
+147 dem60  ~ ind60     1 est.std.all 0.443 0.443 0.000
+148 dem65  ~ ind60     1 est.std.all 0.187 0.187 0.000
+149 dem65  ~ dem60     1 est.std.all 0.867 0.867 0.000
+150    y1 ~~    y5     1 est.std.all 0.282 0.282 0.000
+151    y2 ~~    y4     1 est.std.all 0.269 0.269 0.000
+152    y2 ~~    y6     1 est.std.all 0.292 0.292 0.000
+153    y3 ~~    y7     1 est.std.all 0.367 0.367 0.000
+154    y4 ~~    y8     1 est.std.all 0.214 0.214 0.000
+155    y6 ~~    y8     1 est.std.all 0.347 0.347 0.000
+156    y1 ~~    y1     1 est.std.all 0.262 0.262 0.000
+157    y2 ~~    y2     1 est.std.all 0.516 0.516 0.000
+158    y3 ~~    y3     1 est.std.all 0.393 0.393 0.000
+159    y4 ~~    y4     1 est.std.all 0.323 0.322 0.001
+160    y5 ~~    y5     1 est.std.all 0.317 0.317 0.000
+161    y6 ~~    y6     1 est.std.all 0.421 0.421 0.000
+162    y7 ~~    y7     1 est.std.all 0.338 0.338 0.000
+163    y8 ~~    y8     1 est.std.all 0.330 0.330 0.000
+164    x1 ~~    x1     1 est.std.all 0.158 0.158 0.000
+165    x2 ~~    x2     1 est.std.all 0.055 0.055 0.000
+166    x3 ~~    x3     1 est.std.all 0.238 0.238 0.000
+167 dem60 ~~ dem60     1 est.std.all 0.804 0.804 0.000
+168 dem65 ~~ dem65     1 est.std.all 0.070 0.070 0.000
+169 ind60 ~~ ind60     1 est.std.all 1.000 1.000 0.000
+170    y1 ~1           1 est.std.all 2.156 2.156 0.000
+171    y2 ~1           1 est.std.all 1.115 1.115 0.000
+172    y3 ~1           1 est.std.all 1.880 1.880 0.000
+173    y4 ~1           1 est.std.all 1.320 1.320 0.000
+174    y5 ~1           1 est.std.all 2.024 2.024 0.000
+175    y6 ~1           1 est.std.all 0.873 0.873 0.000
+176    y7 ~1           1 est.std.all 1.956 1.956 0.000
+177    y8 ~1           1 est.std.all 1.259 1.259 0.000
+178    x1 ~1           1 est.std.all 6.949 6.949 0.000
+179    x2 ~1           1 est.std.all 3.194 3.194 0.000
+180    x3 ~1           1 est.std.all 2.548 2.548 0.000
+181 dem60 =~    y1     1 est.std.nox 0.859 0.859 0.000
+182 dem60 =~    y2     1 est.std.nox 0.696 0.696 0.000
+183 dem60 =~    y3     1 est.std.nox 0.779 0.779 0.000
+184 dem60 =~    y4     1 est.std.nox 0.823 0.823 0.000
+185 dem65 =~    y5     1 est.std.nox 0.827 0.827 0.000
+186 dem65 =~    y6     1 est.std.nox 0.761 0.761 0.000
+187 dem65 =~    y7     1 est.std.nox 0.814 0.814 0.000
+188 dem65 =~    y8     1 est.std.nox 0.818 0.818 0.000
+189 ind60 =~    x1     1 est.std.nox 0.918 0.918 0.000
+190 ind60 =~    x2     1 est.std.nox 0.972 0.972 0.000
+191 ind60 =~    x3     1 est.std.nox 0.873 0.873 0.000
+192 dem60  ~ ind60     1 est.std.nox 0.443 0.443 0.000
+193 dem65  ~ ind60     1 est.std.nox 0.187 0.187 0.000
+194 dem65  ~ dem60     1 est.std.nox 0.867 0.867 0.000
+195    y1 ~~    y5     1 est.std.nox 0.282 0.282 0.000
+196    y2 ~~    y4     1 est.std.nox 0.269 0.269 0.000
+197    y2 ~~    y6     1 est.std.nox 0.292 0.292 0.000
+198    y3 ~~    y7     1 est.std.nox 0.367 0.367 0.000
+199    y4 ~~    y8     1 est.std.nox 0.214 0.214 0.000
+200    y6 ~~    y8     1 est.std.nox 0.347 0.347 0.000
+201    y1 ~~    y1     1 est.std.nox 0.262 0.262 0.000
+202    y2 ~~    y2     1 est.std.nox 0.516 0.516 0.000
+203    y3 ~~    y3     1 est.std.nox 0.393 0.393 0.000
+204    y4 ~~    y4     1 est.std.nox 0.323 0.322 0.001
+205    y5 ~~    y5     1 est.std.nox 0.317 0.317 0.000
+206    y6 ~~    y6     1 est.std.nox 0.421 0.421 0.000
+207    y7 ~~    y7     1 est.std.nox 0.338 0.338 0.000
+208    y8 ~~    y8     1 est.std.nox 0.330 0.330 0.000
+209    x1 ~~    x1     1 est.std.nox 0.158 0.158 0.000
+210    x2 ~~    x2     1 est.std.nox 0.055 0.055 0.000
+211    x3 ~~    x3     1 est.std.nox 0.238 0.238 0.000
+212 dem60 ~~ dem60     1 est.std.nox 0.804 0.804 0.000
+213 dem65 ~~ dem65     1 est.std.nox 0.070 0.070 0.000
+214 ind60 ~~ ind60     1 est.std.nox 1.000 1.000 0.000
+215    y1 ~1           1 est.std.nox 2.156 2.156 0.000
+216    y2 ~1           1 est.std.nox 1.115 1.115 0.000
+217    y3 ~1           1 est.std.nox 1.880 1.880 0.000
+218    y4 ~1           1 est.std.nox 1.320 1.320 0.000
+219    y5 ~1           1 est.std.nox 2.024 2.024 0.000
+220    y6 ~1           1 est.std.nox 0.873 0.873 0.000
+221    y7 ~1           1 est.std.nox 1.956 1.956 0.000
+222    y8 ~1           1 est.std.nox 1.259 1.259 0.000
+223    x1 ~1           1 est.std.nox 6.949 6.949 0.000
+224    x2 ~1           1 est.std.nox 3.194 3.194 0.000
+225    x3 ~1           1 est.std.nox 2.548 2.548 0.000
+
+                             fit       lav       mpl  delta
+1                           npar    39.000    39.000  0.000
+2                           fmin     0.283        NA     NA
+3                          chisq    42.486    45.265 -2.779
+4                             df    38.000    38.000  0.000
+5                         pvalue     0.284     0.195  0.089
+6                   chisq.scaled    45.266    45.265  0.001
+7                      df.scaled    38.000    38.000  0.000
+8                  pvalue.scaled     0.195     0.195  0.000
+9           chisq.scaling.factor     0.939     0.939  0.000
+10                baseline.chisq   654.879   623.291 31.588
+11                   baseline.df    55.000    55.000  0.000
+12               baseline.pvalue     0.000     0.000  0.000
+13         baseline.chisq.scaled   623.298   623.291  0.007
+14            baseline.df.scaled    55.000    55.000  0.000
+15        baseline.pvalue.scaled     0.000     0.000  0.000
+16 baseline.chisq.scaling.factor     1.051        NA     NA
+17                           cfi     0.993     0.987  0.006
+18                           tli     0.989     0.981  0.008
+19                    cfi.scaled     0.987     0.987  0.000
+20                    tli.scaled     0.981     0.981  0.000
+21                    cfi.robust     0.994        NA     NA
+22                    tli.robust     0.992        NA     NA
+23                          nnfi     0.989        NA     NA
+24                           rfi     0.906        NA     NA
+25                           nfi     0.935        NA     NA
+26                          pnfi     0.646        NA     NA
+27                           ifi     0.993        NA     NA
+28                           rni     0.993        NA     NA
+29                   nnfi.scaled     0.981        NA     NA
+30                    rfi.scaled     0.895        NA     NA
+31                    nfi.scaled     0.927        NA     NA
+32                   pnfi.scaled     0.641        NA     NA
+33                    ifi.scaled     0.988        NA     NA
+34                    rni.scaled     0.987        NA     NA
+35                   nnfi.robust     0.992        NA     NA
+36                    rni.robust     0.994        NA     NA
+37                          logl -1401.186 -1401.186  0.000
+38             unrestricted.logl -1379.943 -1379.943  0.000
+39                           aic  2880.373  2880.373  0.000
+40                           bic  2970.755  2970.755  0.000
+41                          bic2  2847.837  2847.837  0.000
+42             scaling.factor.h1     0.978        NA     NA
+43             scaling.factor.h0     0.943        NA     NA
+44                         rmsea     0.040     0.050 -0.010
+45                rmsea.ci.lower     0.000     0.000  0.000
+46                rmsea.ci.upper     0.093     0.100 -0.007
+47                rmsea.ci.level     0.900        NA     NA
+48                  rmsea.pvalue     0.575     0.465  0.110
+49                rmsea.close.h0     0.050        NA     NA
+50         rmsea.notclose.pvalue     0.124        NA     NA
+51             rmsea.notclose.h0     0.080        NA     NA
+52                  rmsea.scaled     0.050     0.050  0.000
+53         rmsea.ci.lower.scaled     0.000     0.000  0.000
+54         rmsea.ci.upper.scaled     0.101     0.100  0.001
+55           rmsea.pvalue.scaled     0.464     0.465 -0.001
+56  rmsea.notclose.pvalue.scaled     0.195        NA     NA
+57                  rmsea.robust     0.037        NA     NA
+58         rmsea.ci.lower.robust     0.000        NA     NA
+59         rmsea.ci.upper.robust     0.104        NA     NA
+60           rmsea.pvalue.robust     0.564        NA     NA
+61  rmsea.notclose.pvalue.robust     0.183        NA     NA
+62                           rmr     0.398        NA     NA
+63                    rmr_nomean     0.430        NA     NA
+64                          srmr     0.049     0.047  0.002
+65                  srmr_bentler     0.049        NA     NA
+66           srmr_bentler_nomean     0.053        NA     NA
+67                          crmr     0.048        NA     NA
+68                   crmr_nomean     0.052        NA     NA
+69                    srmr_mplus     0.047        NA     NA
+70             srmr_mplus_nomean     0.050        NA     NA
+71                         cn_05    95.237        NA     NA
+72                         cn_01   108.969        NA     NA
+73                           gfi     0.993        NA     NA
+74                          agfi     0.985        NA     NA
+75                          pgfi     0.490        NA     NA
+76                           mfi     0.971        NA     NA
+77                          ecvi     1.606        NA     NA

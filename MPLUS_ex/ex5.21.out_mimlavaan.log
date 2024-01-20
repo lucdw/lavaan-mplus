@@ -1,0 +1,118 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:26:02 2024 
+# file:  ex5.21.out 
+
+     lhs op               rhs group type   lav   mpl delta
+1     y1 ~1                       1  est 0.008    NA    NA
+2     y2 ~1                       1  est 0.008    NA    NA
+3     y1 ~~                y1     1  est 1.018    NA    NA
+4     y2 ~~                y2     1  est 1.018    NA    NA
+5     y1 ~~                y2     1  est 0.753    NA    NA
+6     fa =~                fa     1  est 0.000    NA    NA
+7     fa ~~                fa     1  est 0.801    NA    NA
+8     fc =~                fc     1  est 0.000    NA    NA
+9     fc ~~                fc     1  est 0.333    NA    NA
+10    fe =~                fe     1  est 0.000    NA    NA
+11    fe ~~                fe     1  est 0.515    NA    NA
+12    fh =~                fh     1  est 0.000    NA    NA
+13    fh ~~                fh     1  est 0.631    NA    NA
+14    y1 ~1                       2  est 0.008 0.008     0
+15    y2 ~1                       2  est 0.008 0.008     0
+16    y1 ~~                y1     2  est 1.018 1.018     0
+17    y2 ~~                y2     2  est 1.018 1.018     0
+18    y1 ~~                y2     2  est 0.432 0.432     0
+19    fa =~                fa     2  est 0.000    NA    NA
+20    fa ~~                fa     2  est 0.801    NA    NA
+21    fc =~                fc     2  est 0.000    NA    NA
+22    fc ~~                fc     2  est 0.333    NA    NA
+23    fe =~                fe     2  est 0.000    NA    NA
+24    fe ~~                fe     2  est 0.515    NA    NA
+25    fh =~                fh     2  est 0.000    NA    NA
+26    fh ~~                fh     2  est 0.631    NA    NA
+27   var ==       a^2+c^2+e^2     0  est 0.000    NA    NA
+28 covmz ==           a^2+c^2     0  est 0.000    NA    NA
+29 covdz ==       0.5*a^2+c^2     0  est 0.000    NA    NA
+30     h == a^2/(a^2+c^2+e^2)     0  est 0.000    NA    NA
+31     a  >                 0     0  est 0.801    NA    NA
+32     c  >                 0     0  est 0.333    NA    NA
+33     e  >                 0     0  est 0.515    NA    NA
+34    y1 ~1                       1   se 0.020    NA    NA
+35    y2 ~1                       1   se 0.020    NA    NA
+36    y1 ~~                y1     1   se 0.026    NA    NA
+37    y2 ~~                y2     1   se 0.026    NA    NA
+38    y1 ~~                y2     1   se 0.028    NA    NA
+39    fa =~                fa     1   se 0.000    NA    NA
+40    fa ~~                fa     1   se 0.035    NA    NA
+41    fc =~                fc     1   se 0.000    NA    NA
+42    fc ~~                fc     1   se 0.078    NA    NA
+43    fe =~                fe     1   se 0.000    NA    NA
+44    fe ~~                fe     1   se 0.011    NA    NA
+45    fh =~                fh     1   se 0.000    NA    NA
+46    fh ~~                fh     1   se 0.053    NA    NA
+47    y1 ~1                       2   se 0.020 0.020     0
+48    y2 ~1                       2   se 0.020 0.020     0
+49    y1 ~~                y1     2   se 0.026 0.026     0
+50    y2 ~~                y2     2   se 0.026 0.026     0
+51    y1 ~~                y2     2   se 0.031 0.031     0
+52    fa =~                fa     2   se 0.000    NA    NA
+53    fa ~~                fa     2   se 0.035    NA    NA
+54    fc =~                fc     2   se 0.000    NA    NA
+55    fc ~~                fc     2   se 0.078    NA    NA
+56    fe =~                fe     2   se 0.000    NA    NA
+57    fe ~~                fe     2   se 0.011    NA    NA
+58    fh =~                fh     2   se 0.000    NA    NA
+59    fh ~~                fh     2   se 0.053    NA    NA
+60   var ==       a^2+c^2+e^2     0   se 0.000    NA    NA
+61 covmz ==           a^2+c^2     0   se 0.000    NA    NA
+62 covdz ==       0.5*a^2+c^2     0   se 0.000    NA    NA
+63     h == a^2/(a^2+c^2+e^2)     0   se 0.000    NA    NA
+64     a  >                 0     0   se 0.000    NA    NA
+65     c  >                 0     0   se 0.000    NA    NA
+66     e  >                 0     0   se 0.000    NA    NA
+
+                     fit       lav       mpl delta
+1                   npar     4.000     4.000 0.000
+2                   fmin     0.001        NA    NA
+3                  chisq     5.161     5.161 0.000
+4                     df     6.000     6.000 0.000
+5                 pvalue     0.523     0.523 0.000
+6         baseline.chisq   995.549   995.549 0.000
+7            baseline.df     2.000     2.000 0.000
+8        baseline.pvalue     0.000     0.000 0.000
+9                    cfi     1.000     1.000 0.000
+10                   tli     1.000     1.000 0.000
+11                  nnfi     1.000        NA    NA
+12                   rfi        NA        NA    NA
+13                   nfi        NA        NA    NA
+14                  pnfi     2.984        NA    NA
+15                   ifi     1.001        NA    NA
+16                   rni     1.001        NA    NA
+17                  logl -5216.004 -5216.004 0.000
+18     unrestricted.logl -5213.423 -5213.423 0.000
+19                   aic 10440.008 10440.008 0.000
+20                   bic 10462.411 10462.411 0.000
+21                  bic2 10449.703 10449.703 0.000
+22                 rmsea     0.000     0.000 0.000
+23        rmsea.ci.lower     0.000     0.000 0.000
+24        rmsea.ci.upper     0.038     0.038 0.000
+25        rmsea.ci.level     0.900        NA    NA
+26          rmsea.pvalue     0.993     0.993 0.000
+27        rmsea.close.h0     0.050        NA    NA
+28 rmsea.notclose.pvalue     0.000        NA    NA
+29     rmsea.notclose.h0     0.080        NA    NA
+30                   rmr     0.023        NA    NA
+31            rmr_nomean     0.025        NA    NA
+32                  srmr     0.023     0.022 0.001
+33          srmr_bentler     0.023        NA    NA
+34   srmr_bentler_nomean     0.025        NA    NA
+35                  crmr     0.015        NA    NA
+36           crmr_nomean     0.001        NA    NA
+37            srmr_mplus     0.022        NA    NA
+38     srmr_mplus_nomean     0.025        NA    NA
+39                 cn_05  4880.252        NA    NA
+40                 cn_01  6515.624        NA    NA
+41                   gfi     0.997        NA    NA
+42                  agfi     0.996        NA    NA
+43                  pgfi     0.598        NA    NA
+44                   mfi     1.000        NA    NA
+45                  ecvi     0.007        NA    NA

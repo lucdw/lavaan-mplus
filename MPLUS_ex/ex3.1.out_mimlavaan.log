@@ -1,0 +1,72 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:23:10 2024 
+# file:  ex3.1.out 
+
+   lhs op rhs group        type   lav   mpl delta
+1   y1  ~  x1     1         est 0.969 0.969     0
+2   y1  ~  x3     1         est 0.649 0.649     0
+3   y1 ~~  y1     1         est 0.941 0.941     0
+4   y1 ~1         1         est 0.511 0.511     0
+5   y1  ~  x1     1          se 0.042 0.042     0
+6   y1  ~  x3     1          se 0.044 0.044     0
+7   y1 ~~  y1     1          se 0.060 0.060     0
+8   y1 ~1         1          se 0.043 0.043     0
+9   y1  ~  x1     1     est.std 0.969 0.969     0
+10  y1  ~  x3     1     est.std 0.649 0.649     0
+11  y1 ~~  y1     1     est.std 0.941 0.941     0
+12  y1 ~1         1     est.std 0.511 0.511     0
+13  y1  ~  x1     1 est.std.all 0.653 0.653     0
+14  y1  ~  x3     1 est.std.all 0.409 0.409     0
+15  y1 ~~  y1     1 est.std.all 0.391 0.391     0
+16  y1 ~1         1 est.std.all 0.329 0.329     0
+17  y1  ~  x1     1 est.std.nox 0.625 0.625     0
+18  y1  ~  x3     1 est.std.nox 0.418 0.418     0
+19  y1 ~~  y1     1 est.std.nox 0.391 0.391     0
+20  y1 ~1         1 est.std.nox 0.329 0.329     0
+
+                     fit      lav      mpl delta
+1                   npar    4.000    4.000     0
+2                   fmin    0.000       NA    NA
+3                  chisq    0.000    0.000     0
+4                     df    0.000    0.000     0
+5                 pvalue       NA    0.000    NA
+6         baseline.chisq  469.585  469.585     0
+7            baseline.df    2.000    2.000     0
+8        baseline.pvalue    0.000    0.000     0
+9                    cfi    1.000    1.000     0
+10                   tli    1.000    1.000     0
+11                  nnfi    1.000       NA    NA
+12                   rfi    1.000       NA    NA
+13                   nfi    1.000       NA    NA
+14                  pnfi    0.000       NA    NA
+15                   ifi    1.000       NA    NA
+16                   rni    1.000       NA    NA
+17                  logl -694.334 -694.334     0
+18     unrestricted.logl -694.334 -694.334     0
+19                   aic 1396.667 1396.667     0
+20                   bic 1413.526 1413.526     0
+21                  bic2 1400.830 1400.830     0
+22                 rmsea    0.000    0.000     0
+23        rmsea.ci.lower    0.000    0.000     0
+24        rmsea.ci.upper    0.000    0.000     0
+25        rmsea.ci.level    0.900       NA    NA
+26          rmsea.pvalue       NA    0.000    NA
+27        rmsea.close.h0    0.050       NA    NA
+28 rmsea.notclose.pvalue       NA       NA    NA
+29     rmsea.notclose.h0    0.080       NA    NA
+30                   rmr    0.000       NA    NA
+31            rmr_nomean    0.000       NA    NA
+32                  srmr    0.000    0.000     0
+33          srmr_bentler    0.000       NA    NA
+34   srmr_bentler_nomean    0.000       NA    NA
+35                  crmr    0.000       NA    NA
+36           crmr_nomean    0.000       NA    NA
+37            srmr_mplus    0.000       NA    NA
+38     srmr_mplus_nomean    0.000       NA    NA
+39                 cn_05       NA       NA    NA
+40                 cn_01       NA       NA    NA
+41                   gfi    1.000       NA    NA
+42                  agfi    1.000       NA    NA
+43                  pgfi    0.000       NA    NA
+44                   mfi    1.000       NA    NA
+45                  ecvi    0.016       NA    NA

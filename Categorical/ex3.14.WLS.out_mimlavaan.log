@@ -1,0 +1,116 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:21:31 2024 
+# file:  ex3.14.WLS.out 
+
+   lhs op rhs group        type    lav    mpl delta
+1   y1  ~  x1     1         est  0.094  0.094     0
+2   y1  ~  x2     1         est  0.203  0.203     0
+3   y1  ~  x3     1         est  0.337  0.337     0
+4   y2  ~  x1     1         est  0.270  0.270     0
+5   y2  ~  x2     1         est  0.196  0.196     0
+6   y2  ~  x3     1         est  0.109  0.109     0
+7   u1  ~  y1     1         est  1.012  1.012     0
+8   u1  ~  y2     1         est -1.060 -1.060     0
+9   u1  ~  x2     1         est  1.942  1.942     0
+10  u1  |  t1     1         est -0.118 -0.118     0
+11  y1 ~~  y1     1         est  0.536  0.536     0
+12  y2 ~~  y2     1         est  0.283  0.283     0
+13  y1 ~1         1         est  0.957  0.957     0
+14  y2 ~1         1         est  1.983  1.983     0
+15  y1  ~  x1     1          se  0.030  0.030     0
+16  y1  ~  x2     1          se  0.032  0.032     0
+17  y1  ~  x3     1          se  0.035  0.035     0
+18  y2  ~  x1     1          se  0.022  0.022     0
+19  y2  ~  x2     1          se  0.024  0.024     0
+20  y2  ~  x3     1          se  0.024  0.024     0
+21  u1  ~  y1     1          se  0.057  0.057     0
+22  u1  ~  y2     1          se  0.096  0.096     0
+23  u1  ~  x2     1          se  0.160  0.160     0
+24  u1  |  t1     1          se  0.228  0.228     0
+25  y1 ~~  y1     1          se  0.034  0.034     0
+26  y2 ~~  y2     1          se  0.019  0.019     0
+27  y1 ~1         1          se  0.033  0.033     0
+28  y2 ~1         1          se  0.024  0.024     0
+29  y1  ~  x1     1     est.std  0.094  0.094     0
+30  y1  ~  x2     1     est.std  0.203  0.203     0
+31  y1  ~  x3     1     est.std  0.337  0.337     0
+32  y2  ~  x1     1     est.std  0.270  0.270     0
+33  y2  ~  x2     1     est.std  0.196  0.196     0
+34  y2  ~  x3     1     est.std  0.109  0.109     0
+35  u1  ~  y1     1     est.std  1.012  1.012     0
+36  u1  ~  y2     1     est.std -1.060 -1.060     0
+37  u1  ~  x2     1     est.std  1.942  1.942     0
+38  u1  |  t1     1     est.std -0.118 -0.118     0
+39  y1 ~~  y1     1     est.std  0.536  0.536     0
+40  y2 ~~  y2     1     est.std  0.283  0.283     0
+41  y1 ~1         1     est.std  0.957  0.957     0
+42  y2 ~1         1     est.std  1.983  1.983     0
+43  y1  ~  x1     1 est.std.all  0.119  0.119     0
+44  y1  ~  x2     1 est.std.all  0.246  0.246     0
+45  y1  ~  x3     1 est.std.all  0.411  0.411     0
+46  y2  ~  x1     1 est.std.all  0.443  0.443     0
+47  y2  ~  x2     1 est.std.all  0.311  0.311     0
+48  y2  ~  x3     1 est.std.all  0.173  0.173     0
+49  u1  ~  y1     1 est.std.all  0.378  0.378     0
+50  u1  ~  y2     1 est.std.all -0.304 -0.304     0
+51  u1  ~  x2     1 est.std.all  0.882  0.882     0
+52  u1  |  t1     1 est.std.all -0.052 -0.052     0
+53  y1 ~~  y1     1 est.std.all  0.741  0.741     0
+54  y2 ~~  y2     1 est.std.all  0.666  0.666     0
+55  y1 ~1         1 est.std.all  1.125  1.125     0
+56  y2 ~1         1 est.std.all  3.041  3.041     0
+57  y1  ~  x1     1 est.std.nox  0.111  0.111     0
+58  y1  ~  x2     1 est.std.nox  0.238  0.238     0
+59  y1  ~  x3     1 est.std.nox  0.396  0.396     0
+60  y2  ~  x1     1 est.std.nox  0.414  0.414     0
+61  y2  ~  x2     1 est.std.nox  0.301  0.301     0
+62  y2  ~  x3     1 est.std.nox  0.167  0.167     0
+63  u1  ~  y1     1 est.std.nox  0.378  0.378     0
+64  u1  ~  y2     1 est.std.nox -0.304 -0.304     0
+65  u1  ~  x2     1 est.std.nox  0.854  0.854     0
+66  u1  |  t1     1 est.std.nox -0.052 -0.052     0
+67  y1 ~~  y1     1 est.std.nox  0.741  0.741     0
+68  y2 ~~  y2     1 est.std.nox  0.666  0.666     0
+69  y1 ~1         1 est.std.nox  1.125  1.125     0
+70  y2 ~1         1 est.std.nox  3.041  3.041     0
+
+                     fit      lav      mpl    delta
+1                   npar   14.000   14.000    0.000
+2                   fmin    0.002       NA       NA
+3                  chisq    1.501    1.504   -0.003
+4                     df    3.000    3.000    0.000
+5                 pvalue    0.682    0.681    0.001
+6         baseline.chisq  324.317 1060.013 -735.696
+7            baseline.df    3.000   12.000   -9.000
+8        baseline.pvalue    0.000    0.000    0.000
+9                    cfi    1.000    1.000    0.000
+10                   tli    1.005    1.006   -0.001
+11                  nnfi    1.005       NA       NA
+12                   rfi    0.995       NA       NA
+13                   nfi    0.995       NA       NA
+14                  pnfi    0.995       NA       NA
+15                   ifi    1.005       NA       NA
+16                   rni    1.005       NA       NA
+17                 rmsea    0.000    0.000    0.000
+18        rmsea.ci.lower    0.000    0.000    0.000
+19        rmsea.ci.upper    0.058    0.058    0.000
+20        rmsea.ci.level    0.900       NA       NA
+21          rmsea.pvalue    0.921    0.921    0.000
+22        rmsea.close.h0    0.050       NA       NA
+23 rmsea.notclose.pvalue    0.008       NA       NA
+24     rmsea.notclose.h0    0.080       NA       NA
+25                   rmr    0.015       NA       NA
+26            rmr_nomean    0.006       NA       NA
+27          srmr_bentler    0.017       NA       NA
+28   srmr_bentler_nomean    0.010       NA       NA
+29                  crmr    0.025       NA       NA
+30           crmr_nomean    0.014       NA       NA
+31            srmr_mplus       NA       NA       NA
+32     srmr_mplus_nomean       NA       NA       NA
+33                 cn_05 2599.045       NA       NA
+34                 cn_01 3772.657       NA       NA
+35                   gfi    1.000       NA       NA
+36                  agfi    0.999       NA       NA
+37                  pgfi    0.176       NA       NA
+38                   mfi    1.002       NA       NA
+39                  wrmr    0.297       NA       NA

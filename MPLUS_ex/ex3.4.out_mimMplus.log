@@ -1,0 +1,83 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:24:59 2024 
+# file:  ex3.4.out 
+
+  lhs op rhs group type   lav   mpl  delta
+1  u1  ~  x1     1  est 1.022 1.023 -0.001
+2  u1  ~  x3     1  est 2.474 2.474  0.000
+3  u1  |  t1     1  est 0.984 0.984  0.000
+4  u1  ~  x1     1   se 0.121 0.121  0.000
+5  u1  ~  x3     1   se 0.225 0.224  0.001
+6  u1  |  t1     1   se 0.119 0.119  0.000
+
+                             fit     lav     mpl   delta
+1                           npar   3.000   3.000   0.000
+2                           fmin   0.000      NA      NA
+3                          chisq   0.000   0.000   0.000
+4                             df   0.000   0.000   0.000
+5                         pvalue      NA   0.000      NA
+6                   chisq.scaled   0.000   0.000   0.000
+7                      df.scaled   0.000   0.000   0.000
+8                  pvalue.scaled      NA   0.000      NA
+9           chisq.scaling.factor      NA      NA      NA
+10                baseline.chisq 192.852 193.243  -0.391
+11                   baseline.df   2.000   2.000   0.000
+12               baseline.pvalue   0.000   0.000   0.000
+13         baseline.chisq.scaled 168.865 193.243 -24.378
+14            baseline.df.scaled   2.000   2.000   0.000
+15        baseline.pvalue.scaled   0.000   0.000   0.000
+16 baseline.chisq.scaling.factor   1.144      NA      NA
+17                           cfi   1.000   1.000   0.000
+18                           tli   1.000   1.000   0.000
+19                    cfi.scaled   1.000   1.000   0.000
+20                    tli.scaled   1.000   1.000   0.000
+21                    cfi.robust      NA      NA      NA
+22                    tli.robust      NA      NA      NA
+23                          nnfi   1.000      NA      NA
+24                           rfi   1.000      NA      NA
+25                           nfi   1.000      NA      NA
+26                          pnfi   0.000      NA      NA
+27                           ifi   1.000      NA      NA
+28                           rni   1.000      NA      NA
+29                   nnfi.scaled   1.000      NA      NA
+30                    rfi.scaled   1.000      NA      NA
+31                    nfi.scaled   1.000      NA      NA
+32                   pnfi.scaled   0.000      NA      NA
+33                    ifi.scaled   1.000      NA      NA
+34                    rni.scaled   1.000      NA      NA
+35                   nnfi.robust      NA      NA      NA
+36                    rni.robust      NA      NA      NA
+37                         rmsea   0.000   0.000   0.000
+38                rmsea.ci.lower   0.000   0.000   0.000
+39                rmsea.ci.upper   0.000   0.000   0.000
+40                rmsea.ci.level   0.900      NA      NA
+41                  rmsea.pvalue      NA   0.000      NA
+42                rmsea.close.h0   0.050      NA      NA
+43         rmsea.notclose.pvalue      NA      NA      NA
+44             rmsea.notclose.h0   0.080      NA      NA
+45                  rmsea.scaled   0.000   0.000   0.000
+46         rmsea.ci.lower.scaled   0.000   0.000   0.000
+47         rmsea.ci.upper.scaled   0.000   0.000   0.000
+48           rmsea.pvalue.scaled      NA   0.000      NA
+49  rmsea.notclose.pvalue.scaled      NA      NA      NA
+50                  rmsea.robust      NA      NA      NA
+51         rmsea.ci.lower.robust      NA      NA      NA
+52         rmsea.ci.upper.robust      NA      NA      NA
+53           rmsea.pvalue.robust      NA      NA      NA
+54  rmsea.notclose.pvalue.robust      NA      NA      NA
+55                           rmr   0.000      NA      NA
+56                    rmr_nomean   0.000      NA      NA
+57                          srmr   0.000   0.000   0.000
+58                  srmr_bentler   0.000      NA      NA
+59           srmr_bentler_nomean   0.000      NA      NA
+60                          crmr   0.000      NA      NA
+61                   crmr_nomean   0.000      NA      NA
+62                    srmr_mplus      NA      NA      NA
+63             srmr_mplus_nomean      NA      NA      NA
+64                         cn_05      NA      NA      NA
+65                         cn_01      NA      NA      NA
+66                           gfi   1.000      NA      NA
+67                          agfi   1.000      NA      NA
+68                          pgfi   0.000      NA      NA
+69                           mfi   1.000      NA      NA
+70                          wrmr   0.000      NA      NA

@@ -1,0 +1,243 @@
+# lavaan TESTsuite -- lavaan version  0.6-18 
+# date:  Wed Jan 17 15:04:41 2024 
+# file:  ex9.11.out 
+
+    lhs op rhs group type    lav mpl delta
+1   fw1 =~  y1  "g1"  est  1.000  NA    NA
+2   fw1 =~  y2  "g1"  est  1.129  NA    NA
+3   fw1 =~  y3  "g1"  est  1.218  NA    NA
+4   fw2 =~  y4  "g1"  est  1.000  NA    NA
+5   fw2 =~  y5  "g1"  est  0.969  NA    NA
+6   fw2 =~  y6  "g1"  est  1.084  NA    NA
+7    y1 ~~  y1  "g1"  est  4.139  NA    NA
+8    y2 ~~  y2  "g1"  est  4.089  NA    NA
+9    y3 ~~  y3  "g1"  est  3.898  NA    NA
+10   y4 ~~  y4  "g1"  est  3.954  NA    NA
+11   y5 ~~  y5  "g1"  est  4.716  NA    NA
+12   y6 ~~  y6  "g1"  est  3.796  NA    NA
+13  fw1 ~~ fw1  "g1"  est  1.589  NA    NA
+14  fw2 ~~ fw2  "g1"  est  1.794  NA    NA
+15  fw1 ~~ fw2  "g1"  est  0.947  NA    NA
+16   y1 ~1      "g1"  est  0.000  NA    NA
+17   y2 ~1      "g1"  est  0.000  NA    NA
+18   y3 ~1      "g1"  est  0.000  NA    NA
+19   y4 ~1      "g1"  est  0.000  NA    NA
+20   y5 ~1      "g1"  est  0.000  NA    NA
+21   y6 ~1      "g1"  est  0.000  NA    NA
+22  fb1 =~  y1  "g1"  est  1.000  NA    NA
+23  fb1 =~  y2  "g1"  est  1.343  NA    NA
+24  fb1 =~  y3  "g1"  est  0.584  NA    NA
+25  fb2 =~  y4  "g1"  est  1.000  NA    NA
+26  fb2 =~  y5  "g1"  est  0.817  NA    NA
+27  fb2 =~  y6  "g1"  est  0.917  NA    NA
+28   y1 ~1      "g1"  est  0.048  NA    NA
+29   y2 ~1      "g1"  est -0.045  NA    NA
+30   y3 ~1      "g1"  est  0.081  NA    NA
+31   y4 ~1      "g1"  est -0.123  NA    NA
+32   y5 ~1      "g1"  est -0.229  NA    NA
+33   y6 ~1      "g1"  est  0.074  NA    NA
+34   y1 ~~  y1  "g1"  est  0.966  NA    NA
+35   y2 ~~  y2  "g1"  est  0.470  NA    NA
+36   y3 ~~  y3  "g1"  est  1.067  NA    NA
+37   y4 ~~  y4  "g1"  est  0.879  NA    NA
+38   y5 ~~  y5  "g1"  est  0.953  NA    NA
+39   y6 ~~  y6  "g1"  est  1.341  NA    NA
+40  fb1 ~~ fb1  "g1"  est  0.731  NA    NA
+41  fb2 ~~ fb2  "g1"  est  0.467  NA    NA
+42  fb1 ~~ fb2  "g1"  est  0.059  NA    NA
+43  fw1 =~  y1  "g2"  est  1.000  NA    NA
+44  fw1 =~  y2  "g2"  est  0.576  NA    NA
+45  fw1 =~  y3  "g2"  est  0.519  NA    NA
+46  fw2 =~  y4  "g2"  est  1.000  NA    NA
+47  fw2 =~  y5  "g2"  est  0.690  NA    NA
+48  fw2 =~  y6  "g2"  est  0.755  NA    NA
+49   y1 ~~  y1  "g2"  est  3.485  NA    NA
+50   y2 ~~  y2  "g2"  est  3.483  NA    NA
+51   y3 ~~  y3  "g2"  est  4.072  NA    NA
+52   y4 ~~  y4  "g2"  est  3.114  NA    NA
+53   y5 ~~  y5  "g2"  est  4.200  NA    NA
+54   y6 ~~  y6  "g2"  est  3.807  NA    NA
+55  fw1 ~~ fw1  "g2"  est  2.529  NA    NA
+56  fw2 ~~ fw2  "g2"  est  2.662  NA    NA
+57  fw1 ~~ fw2  "g2"  est  1.054  NA    NA
+58   y1 ~1      "g2"  est  0.000  NA    NA
+59   y2 ~1      "g2"  est  0.000  NA    NA
+60   y3 ~1      "g2"  est  0.000  NA    NA
+61   y4 ~1      "g2"  est  0.000  NA    NA
+62   y5 ~1      "g2"  est  0.000  NA    NA
+63   y6 ~1      "g2"  est  0.000  NA    NA
+64  fb1 =~  y1  "g2"  est  1.000  NA    NA
+65  fb1 =~  y2  "g2"  est  1.343  NA    NA
+66  fb1 =~  y3  "g2"  est  0.584  NA    NA
+67  fb2 =~  y4  "g2"  est  1.000  NA    NA
+68  fb2 =~  y5  "g2"  est  0.817  NA    NA
+69  fb2 =~  y6  "g2"  est  0.917  NA    NA
+70   y1 ~1      "g2"  est  0.048  NA    NA
+71   y2 ~1      "g2"  est -0.045  NA    NA
+72   y3 ~1      "g2"  est  0.081  NA    NA
+73   y4 ~1      "g2"  est -0.123  NA    NA
+74   y5 ~1      "g2"  est -0.229  NA    NA
+75   y6 ~1      "g2"  est  0.074  NA    NA
+76  fb1 ~1      "g2"  est -0.016  NA    NA
+77  fb2 ~1      "g2"  est  0.096  NA    NA
+78   y1 ~~  y1  "g2"  est  1.147  NA    NA
+79   y2 ~~  y2  "g2"  est  0.429  NA    NA
+80   y3 ~~  y3  "g2"  est  1.242  NA    NA
+81   y4 ~~  y4  "g2"  est  1.211  NA    NA
+82   y5 ~~  y5  "g2"  est  1.444  NA    NA
+83   y6 ~~  y6  "g2"  est  1.066  NA    NA
+84  fb1 ~~ fb1  "g2"  est  0.675  NA    NA
+85  fb2 ~~ fb2  "g2"  est  0.407  NA    NA
+86  fb1 ~~ fb2  "g2"  est  0.044  NA    NA
+87  fw1 =~  y1  "g1"   se  0.000  NA    NA
+88  fw1 =~  y2  "g1"   se  0.125  NA    NA
+89  fw1 =~  y3  "g1"   se  0.142  NA    NA
+90  fw2 =~  y4  "g1"   se  0.000  NA    NA
+91  fw2 =~  y5  "g1"   se  0.115  NA    NA
+92  fw2 =~  y6  "g1"   se  0.157  NA    NA
+93   y1 ~~  y1  "g1"   se  0.265  NA    NA
+94   y2 ~~  y2  "g1"   se  0.272  NA    NA
+95   y3 ~~  y3  "g1"   se  0.313  NA    NA
+96   y4 ~~  y4  "g1"   se  0.299  NA    NA
+97   y5 ~~  y5  "g1"   se  0.259  NA    NA
+98   y6 ~~  y6  "g1"   se  0.292  NA    NA
+99  fw1 ~~ fw1  "g1"   se  0.273  NA    NA
+100 fw2 ~~ fw2  "g1"   se  0.333  NA    NA
+101 fw1 ~~ fw2  "g1"   se  0.163  NA    NA
+102  y1 ~1      "g1"   se  0.000  NA    NA
+103  y2 ~1      "g1"   se  0.000  NA    NA
+104  y3 ~1      "g1"   se  0.000  NA    NA
+105  y4 ~1      "g1"   se  0.000  NA    NA
+106  y5 ~1      "g1"   se  0.000  NA    NA
+107  y6 ~1      "g1"   se  0.000  NA    NA
+108 fb1 =~  y1  "g1"   se  0.000  NA    NA
+109 fb1 =~  y2  "g1"   se  0.764  NA    NA
+110 fb1 =~  y3  "g1"   se  0.176  NA    NA
+111 fb2 =~  y4  "g1"   se  0.000  NA    NA
+112 fb2 =~  y5  "g1"   se  0.732  NA    NA
+113 fb2 =~  y6  "g1"   se  0.939  NA    NA
+114  y1 ~1      "g1"   se  0.139  NA    NA
+115  y2 ~1      "g1"   se  0.158  NA    NA
+116  y3 ~1      "g1"   se  0.112  NA    NA
+117  y4 ~1      "g1"   se  0.134  NA    NA
+118  y5 ~1      "g1"   se  0.138  NA    NA
+119  y6 ~1      "g1"   se  0.149  NA    NA
+120  y1 ~~  y1  "g1"   se  0.477  NA    NA
+121  y2 ~~  y2  "g1"   se  0.731  NA    NA
+122  y3 ~~  y3  "g1"   se  0.239  NA    NA
+123  y4 ~~  y4  "g1"   se  0.493  NA    NA
+124  y5 ~~  y5  "g1"   se  0.299  NA    NA
+125  y6 ~~  y6  "g1"   se  0.449  NA    NA
+126 fb1 ~~ fb1  "g1"   se  0.490  NA    NA
+127 fb2 ~~ fb2  "g1"   se  0.565  NA    NA
+128 fb1 ~~ fb2  "g1"   se  0.228  NA    NA
+129 fw1 =~  y1  "g2"   se  0.000  NA    NA
+130 fw1 =~  y2  "g2"   se  0.099  NA    NA
+131 fw1 =~  y3  "g2"   se  0.092  NA    NA
+132 fw2 =~  y4  "g2"   se  0.000  NA    NA
+133 fw2 =~  y5  "g2"   se  0.093  NA    NA
+134 fw2 =~  y6  "g2"   se  0.086  NA    NA
+135  y1 ~~  y1  "g2"   se  0.491  NA    NA
+136  y2 ~~  y2  "g2"   se  0.200  NA    NA
+137  y3 ~~  y3  "g2"   se  0.219  NA    NA
+138  y4 ~~  y4  "g2"   se  0.340  NA    NA
+139  y5 ~~  y5  "g2"   se  0.288  NA    NA
+140  y6 ~~  y6  "g2"   se  0.231  NA    NA
+141 fw1 ~~ fw1  "g2"   se  0.474  NA    NA
+142 fw2 ~~ fw2  "g2"   se  0.390  NA    NA
+143 fw1 ~~ fw2  "g2"   se  0.197  NA    NA
+144  y1 ~1      "g2"   se  0.000  NA    NA
+145  y2 ~1      "g2"   se  0.000  NA    NA
+146  y3 ~1      "g2"   se  0.000  NA    NA
+147  y4 ~1      "g2"   se  0.000  NA    NA
+148  y5 ~1      "g2"   se  0.000  NA    NA
+149  y6 ~1      "g2"   se  0.000  NA    NA
+150 fb1 =~  y1  "g2"   se  0.000  NA    NA
+151 fb1 =~  y2  "g2"   se  0.764  NA    NA
+152 fb1 =~  y3  "g2"   se  0.176  NA    NA
+153 fb2 =~  y4  "g2"   se  0.000  NA    NA
+154 fb2 =~  y5  "g2"   se  0.732  NA    NA
+155 fb2 =~  y6  "g2"   se  0.939  NA    NA
+156  y1 ~1      "g2"   se  0.139  NA    NA
+157  y2 ~1      "g2"   se  0.158  NA    NA
+158  y3 ~1      "g2"   se  0.112  NA    NA
+159  y4 ~1      "g2"   se  0.134  NA    NA
+160  y5 ~1      "g2"   se  0.138  NA    NA
+161  y6 ~1      "g2"   se  0.149  NA    NA
+162 fb1 ~1      "g2"   se  0.152  NA    NA
+163 fb2 ~1      "g2"   se  0.168  NA    NA
+164  y1 ~~  y1  "g2"   se  0.380  NA    NA
+165  y2 ~~  y2  "g2"   se  0.793  NA    NA
+166  y3 ~~  y3  "g2"   se  0.257  NA    NA
+167  y4 ~~  y4  "g2"   se  0.470  NA    NA
+168  y5 ~~  y5  "g2"   se  0.308  NA    NA
+169  y6 ~~  y6  "g2"   se  0.359  NA    NA
+170 fb1 ~~ fb1  "g2"   se  0.350  NA    NA
+171 fb2 ~~ fb2  "g2"   se  0.520  NA    NA
+172 fb1 ~~ fb2  "g2"   se  0.254  NA    NA
+
+                             fit        lav        mpl   delta
+1                           npar     56.000     56.000   0.000
+2                           fmin      4.225         NA      NA
+3                          chisq     33.970     38.271  -4.301
+4                             df     40.000     40.000   0.000
+5                         pvalue      0.738      0.548   0.190
+6                   chisq.scaled     38.461     38.271   0.190
+7                      df.scaled     40.000     40.000   0.000
+8                  pvalue.scaled      0.540      0.548  -0.008
+9           chisq.scaling.factor      0.883      0.887  -0.004
+10                baseline.chisq   1094.431   1130.168 -35.737
+11                   baseline.df     60.000     60.000   0.000
+12               baseline.pvalue      0.000      0.000   0.000
+13         baseline.chisq.scaled   1134.517   1130.168   4.349
+14            baseline.df.scaled     60.000     60.000   0.000
+15        baseline.pvalue.scaled      0.000      0.000   0.000
+16 baseline.chisq.scaling.factor      0.965         NA      NA
+17                           cfi      1.000      1.000   0.000
+18                           tli      1.009      1.002   0.007
+19                    cfi.scaled      1.000      1.000   0.000
+20                    tli.scaled      1.002      1.002   0.000
+21                    cfi.robust      1.000         NA      NA
+22                    tli.robust      1.002         NA      NA
+23                          nnfi      1.009         NA      NA
+24                           rfi      0.953         NA      NA
+25                           nfi      0.969         NA      NA
+26                          pnfi      0.646         NA      NA
+27                           ifi      1.006         NA      NA
+28                           rni      1.006         NA      NA
+29                   nnfi.scaled      1.002         NA      NA
+30                    rfi.scaled      0.949         NA      NA
+31                    nfi.scaled      0.966         NA      NA
+32                   pnfi.scaled      0.644         NA      NA
+33                    ifi.scaled      1.001         NA      NA
+34                    rni.scaled      1.001         NA      NA
+35                   nnfi.robust      1.002         NA      NA
+36                    rni.robust      1.001         NA      NA
+37                          logl -24926.972 -24926.956  -0.016
+38             unrestricted.logl -24909.987 -24909.987   0.000
+39                           aic  49965.944  49965.913   0.031
+40                           bic  50273.694  50273.663   0.031
+41                          bic2  50095.786  50095.754   0.032
+42             scaling.factor.h1      0.960         NA      NA
+43             scaling.factor.h0      0.861         NA      NA
+44                         rmsea      0.000      0.000   0.000
+45                rmsea.ci.lower      0.000         NA      NA
+46                rmsea.ci.upper      0.017         NA      NA
+47                rmsea.ci.level      0.900         NA      NA
+48                  rmsea.pvalue      1.000         NA      NA
+49                rmsea.close.h0      0.050         NA      NA
+50         rmsea.notclose.pvalue      0.000         NA      NA
+51             rmsea.notclose.h0      0.080         NA      NA
+52                  rmsea.scaled      0.000      0.000   0.000
+53         rmsea.ci.lower.scaled      0.000         NA      NA
+54         rmsea.ci.upper.scaled      0.023         NA      NA
+55           rmsea.pvalue.scaled      1.000         NA      NA
+56  rmsea.notclose.pvalue.scaled      0.000         NA      NA
+57                  rmsea.robust      0.000         NA      NA
+58         rmsea.ci.lower.robust      0.000         NA      NA
+59         rmsea.ci.upper.robust      0.020         NA      NA
+60           rmsea.pvalue.robust      1.000         NA      NA
+61  rmsea.notclose.pvalue.robust      0.000         NA      NA
+62                          srmr      0.108         NA      NA
+63                   srmr_within      0.014         NA      NA
+64                  srmr_between      0.094         NA      NA
