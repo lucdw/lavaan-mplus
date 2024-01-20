@@ -1,6 +1,6 @@
 Mplus VERSION 8.2
 MUTHEN & MUTHEN
-01/17/2024   7:43 AM
+01/20/2024   8:47 PM
 
 INPUT INSTRUCTIONS
 
@@ -1015,8 +1015,8 @@ TECHNICAL OUTPUT FROM EM ALGORITHM ITERATIONS FOR THE H1 MODEL
           2 0.22038213D+00    0.0000000    0.0000000 0.551721D-05 -.232054D-14
 
 
-     Beginning Time:  07:43:13
-        Ending Time:  07:43:13
+     Beginning Time:  20:47:32
+        Ending Time:  20:47:32
        Elapsed Time:  00:00:00
 
 

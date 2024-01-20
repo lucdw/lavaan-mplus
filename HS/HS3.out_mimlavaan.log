@@ -1,5 +1,5 @@
-# lavaan TESTsuite -- lavaan version  0.6-18 
-# date:  Wed Jan 17 15:28:58 2024 
+# lavaan TESTsuite -- lavaan version  0.6-17 
+# date:  Sat Jan 20 20:48:51 2024 
 # file:  HS3.out 
 
         lhs op     rhs group        type   lav   mpl delta
@@ -169,58 +169,49 @@
 164      x8 ~1             1 est.std.nox 5.349 5.349     0
 165      x9 ~1             1 est.std.nox 5.400 5.400     0
 
-                            fit       lav       mpl delta
-1                          npar    27.000    27.000     0
-2                          fmin     0.168        NA    NA
-3                         chisq   101.288   101.288     0
-4                            df    27.000    27.000     0
-5                        pvalue     0.000     0.000     0
-6                baseline.chisq   918.852   918.852     0
-7                   baseline.df    36.000    36.000     0
-8               baseline.pvalue     0.000     0.000     0
-9                           cfi     0.916     0.916     0
-10                          tli     0.888     0.888     0
-11                   cfi.robust     0.916        NA    NA
-12                   tli.robust     0.888        NA    NA
-13                         nnfi     0.888        NA    NA
-14                          rfi     0.853        NA    NA
-15                          nfi     0.890        NA    NA
-16                         pnfi     0.667        NA    NA
-17                          ifi     0.917        NA    NA
-18                          rni     0.916        NA    NA
-19                  nnfi.robust     0.888        NA    NA
-20                   rni.robust     0.916        NA    NA
-21                         logl -3745.736 -3745.736     0
-22            unrestricted.logl -3695.092 -3695.092     0
-23                          aic  7545.473  7545.473     0
-24                          bic  7645.565  7645.565     0
-25                         bic2  7559.936  7559.936     0
-26                        rmsea     0.096     0.096     0
-27               rmsea.ci.lower     0.076     0.076     0
-28               rmsea.ci.upper     0.116     0.116     0
-29               rmsea.ci.level     0.900        NA    NA
-30                 rmsea.pvalue     0.000     0.000     0
-31               rmsea.close.h0     0.050        NA    NA
-32        rmsea.notclose.pvalue     0.909        NA    NA
-33            rmsea.notclose.h0     0.080        NA    NA
-34                 rmsea.robust     0.096        NA    NA
-35        rmsea.ci.lower.robust     0.076        NA    NA
-36        rmsea.ci.upper.robust     0.116        NA    NA
-37          rmsea.pvalue.robust     0.000        NA    NA
-38 rmsea.notclose.pvalue.robust     0.909        NA    NA
-39                          rmr     0.099        NA    NA
-40                   rmr_nomean     0.108        NA    NA
-41                         srmr     0.091     0.091     0
-42                 srmr_bentler     0.080        NA    NA
-43          srmr_bentler_nomean     0.087        NA    NA
-44                         crmr     0.076        NA    NA
-45                  crmr_nomean     0.085        NA    NA
-46                   srmr_mplus     0.091        NA    NA
-47            srmr_mplus_nomean     0.082        NA    NA
-48                        cn_05   120.205        NA    NA
-49                        cn_01   140.561        NA    NA
-50                          gfi     0.995        NA    NA
-51                         agfi     0.991        NA    NA
-52                         pgfi     0.498        NA    NA
-53                          mfi     0.884        NA    NA
-54                         ecvi     0.516        NA    NA
+                     fit       lav       mpl  delta
+1                   npar    27.000    27.000  0.000
+2                   fmin     0.168        NA     NA
+3                  chisq   101.288   101.288  0.000
+4                     df    27.000    27.000  0.000
+5                 pvalue     0.000     0.000  0.000
+6         baseline.chisq   918.852   918.852  0.000
+7            baseline.df    36.000    36.000  0.000
+8        baseline.pvalue     0.000     0.000  0.000
+9                    cfi     0.916     0.916  0.000
+10                   tli     0.888     0.888  0.000
+11                  nnfi     0.888        NA     NA
+12                   rfi     0.853        NA     NA
+13                   nfi     0.890        NA     NA
+14                  pnfi     0.667        NA     NA
+15                   ifi     0.917        NA     NA
+16                   rni     0.916        NA     NA
+17                  logl -3745.736 -3745.736  0.000
+18     unrestricted.logl -3695.092 -3695.092  0.000
+19                   aic  7545.473  7545.473  0.000
+20                   bic  7645.565  7645.565  0.000
+21                  bic2  7559.936  7559.936  0.000
+22                 rmsea     0.096     0.096  0.000
+23        rmsea.ci.lower     0.076     0.076  0.000
+24        rmsea.ci.upper     0.116     0.116  0.000
+25        rmsea.ci.level     0.900        NA     NA
+26          rmsea.pvalue     0.000     0.000  0.000
+27        rmsea.close.h0     0.050        NA     NA
+28 rmsea.notclose.pvalue     0.909        NA     NA
+29     rmsea.notclose.h0     0.080        NA     NA
+30                   rmr     0.099        NA     NA
+31            rmr_nomean     0.108        NA     NA
+32                  srmr     0.080     0.091 -0.011
+33          srmr_bentler     0.080        NA     NA
+34   srmr_bentler_nomean     0.087        NA     NA
+35                  crmr     0.076        NA     NA
+36           crmr_nomean     0.085        NA     NA
+37            srmr_mplus     0.091        NA     NA
+38     srmr_mplus_nomean     0.082        NA     NA
+39                 cn_05   120.205        NA     NA
+40                 cn_01   140.561        NA     NA
+41                   gfi     0.995        NA     NA
+42                  agfi     0.991        NA     NA
+43                  pgfi     0.498        NA     NA
+44                   mfi     0.884        NA     NA
+45                  ecvi     0.516        NA     NA

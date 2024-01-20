@@ -1,5 +1,5 @@
-# lavaan TESTsuite -- lavaan version  0.6-18 
-# date:  Wed Jan 17 15:22:32 2024 
+# lavaan TESTsuite -- lavaan version  0.6-17 
+# date:  Sat Jan 20 20:48:53 2024 
 # file:  HS.missing.mean.ML.expected.out 
 
         lhs op     rhs group        type   lav   mpl delta

@@ -1,8 +1,12 @@
 rm(list =ls())
 if (!file.exists("utilities.R")) stop("utilities.R not in current directory, wrong working directory?")
 wd <- getwd()
-testdirs <- list.dirs(full.names = FALSE, recursive = FALSE)
-testdirs <- testdirs[grepl("^[^.]", testdirs)]
+testdirs0 <- list.dirs(full.names = FALSE, recursive = FALSE)
+testdirs0 <- testdirs0[grepl("^[^.]", testdirs0)]
+testdirs <- c("HS", "HS_missing", "HS_multi", "Bollen", "Categorical", "MPLUS_ex")
+if (!setequal(testdirs0, testdirs)) {
+  warning("run.all.tests: some subdirectories in sorted list not in filesystem or vice versa")
+} 
 source("utilities.R")
 group.environment <- new.env()
 assign("i", 0L, group.environment)
@@ -15,6 +19,8 @@ for (testdir.i in seq_along(testdirs)) {
     })
   cat("Processing of tests in", basename(getwd()), "\n")
   testfiles <- list.files(pattern = "\\.R$")
+  sortkeys <- gsub("\\.([0-9])\\.", ".0\\1.", testfiles)
+  testfiles <- testfiles[order(sortkeys)]
   for (test.i in seq_along(testfiles)) {
     testfile <- testfiles[test.i]
     cat("        handling ", testfile, "\n")
